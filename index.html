@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Predicts Merch Ops Hub</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.js" crossorigin="anonymous"></script>
+<style>
+/* ── RESET & BASE ─────────────────────────────────────────────────────── */
+:root {
+  color-scheme: light;
+  --bg: #f1f5f9; --card: #ffffff; --border: #e2e8f0;
+  --accent: #0052cc; --text: #0f172a; --text2: #475569; --text3: #94a3b8;
+  --green: #16a34a; --yellow: #d97706; --red: #dc2626;
+  --green-b: #f0fdf4; --yellow-b: #fffbeb; --red-b: #fef2f2;
+  --hub-h: 46px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; overflow: hidden; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 13px; background: var(--bg); color: var(--text); }
+
+/* ── HUB NAV ─────────────────────────────────────────────────────────── */
+.hub-nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  height: var(--hub-h); background: #0a2e6e;
+  display: flex; align-items: stretch;
+  border-bottom: 2px solid #ffd700;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
+}
+.hub-brand {
+  padding: 0 18px; display: flex; align-items: center;
+  font-size: 13px; font-weight: 900; color: #fff;
+  letter-spacing: -.3px; white-space: nowrap;
+  border-right: 1px solid rgba(255,255,255,.15); flex-shrink: 0;
+  gap: 8px;
+}
+.hub-brand-dot { width: 8px; height: 8px; border-radius: 50%; background: #ffd700; flex-shrink: 0; }
+.hub-brand span { color: #ffd700; }
+.hub-tabs { display: flex; flex: 1; }
+.hub-tab {
+  padding: 0 20px; border: none; background: transparent;
+  color: rgba(255,255,255,.6); font-size: 12px; font-weight: 700;
+  cursor: pointer; transition: all .15s; letter-spacing: .3px;
+  display: flex; align-items: center; gap: 7px;
+  border-bottom: 3px solid transparent; margin-bottom: -2px;
+  border-right: 1px solid rgba(255,255,255,.08);
+}
+.hub-tab:hover { background: rgba(255,255,255,.07); color: rgba(255,255,255,.9); }
+.hub-tab.active { background: rgba(255,255,255,.1); color: #fff; border-bottom-color: #ffd700; }
+.hub-tab-icon { font-size: 14px; }
+.hub-right {
+  padding: 0 14px; display: flex; align-items: center; gap: 8px;
+  border-left: 1px solid rgba(255,255,255,.15); flex-shrink: 0; margin-left: auto;
+}
+.hub-ts { font-size: 11px; color: rgba(255,255,255,.5); white-space: nowrap; }
+.hub-btn {
+  background: rgba(255,255,255,.12); color: #fff;
+  border: 1px solid rgba(255,255,255,.25);
+  padding: 5px 11px; border-radius: 5px; font-size: 11px; font-weight: 700;
+  cursor: pointer; transition: all .15s; white-space: nowrap;
+}
+.hub-btn:hover { background: rgba(255,255,255,.22); }
+.hub-btn:disabled { opacity: .45; cursor: default; }
+
+/* ── TAB PANELS ──────────────────────────────────────────────────────── */
+.tab-panel {
+  position: fixed; top: var(--hub-h); left: 0; right: 0; bottom: 0;
+  display: none; overflow: hidden;
+}
+.tab-panel.active { display: block; }
+#tab-dashboard { overflow-y: auto; background: var(--bg); }
+.full-iframe { width: 100%; height: 100%; border: none; display: block; }
+
+/* ── STATS BAR ───────────────────────────────────────────────────────── */
+.stats {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 1px; background: var(--border); border-bottom: 1px solid var(--border);
+}
+.stat { background: #fff; padding: 12px 14px; }
+.stat-label { font-size: 10px; font-weight: 600; color: var(--text3); text-transform: uppercase; letter-spacing: .8px; margin-bottom: 4px; }
+.stat-val { font-size: 20px; font-weight: 800; line-height: 1; }
+.stat-val.accent { color: var(--accent); }
+
+/* ── DASHBOARD BODY ──────────────────────────────────────────────────── */
+.dash-body { padding: 12px; display: flex; flex-direction: column; gap: 12px; }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+.card-head { padding: 12px 14px 10px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+.card-head h2 { font-size: 12px; font-weight: 700; }
+.card-sub { font-size: 11px; color: var(--text3); }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+/* ── PRIORITY ────────────────────────────────────────────────────────── */
+.pcol-head { padding: 8px 14px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .8px; color: var(--text3); background: #f8fafc; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; }
+.prow { display: grid; grid-template-columns: 24px 1fr auto; gap: 10px; align-items: center; padding: 9px 14px; border-bottom: 1px solid #f1f5f9; border-left: 3px solid transparent; }
+.prow:last-child { border-bottom: none; }
+.prow.green  { background: var(--green-b);  border-left-color: var(--green); }
+.prow.yellow { background: var(--yellow-b); border-left-color: var(--yellow); }
+.prow.red    { background: var(--red-b);    border-left-color: var(--red); }
+.prank { font-size: 11px; font-weight: 800; color: var(--text3); }
+.pgame { font-size: 12px; font-weight: 600; display: flex; align-items: center; gap: 5px; flex-wrap: wrap; }
+.ptime { font-size: 10px; color: var(--text3); margin-top: 2px; }
+.pactivity { text-align: right; min-width: 80px; }
+.pact-orders { font-size: 13px; font-weight: 700; display: flex; align-items: center; gap: 5px; justify-content: flex-end; }
+.pact-rank { font-size: 10px; color: var(--text3); margin-top: 1px; }
+.pact-vol  { font-size: 10px; color: var(--text2); margin-top: 1px; }
+.odot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.odot.green  { background: var(--green); }
+.odot.yellow { background: var(--yellow); }
+.odot.red    { background: var(--red); }
+.odot.grey   { background: var(--text3); }
+.obar-wrap { height: 3px; background: var(--border); border-radius: 2px; margin-top: 5px; }
+.obar { height: 3px; border-radius: 2px; }
+.nodata { font-size: 11px; color: var(--text3); font-style: italic; }
+.legend { display: flex; gap: 16px; padding: 10px 14px; flex-wrap: wrap; border-top: 1px solid var(--border); }
+.leg { display: flex; align-items: center; gap: 5px; font-size: 11px; color: var(--text2); }
+.leg-dot { width: 7px; height: 7px; border-radius: 50%; }
+
+/* ── BADGES ──────────────────────────────────────────────────────────── */
+.badge { font-size: 9px; font-weight: 800; padding: 1px 5px; border-radius: 3px; text-transform: uppercase; flex-shrink: 0; }
+.b-NBA    { background: #fce7ec; color: #b91c1c; border: 1px solid #fca5a5; }
+.b-MLB    { background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
+.b-NHL    { background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; }
+.b-PGA    { background: #f0fdf4; color: #166534; border: 1px solid #86efac; }
+.b-Tennis { background: #f7fee7; color: #3f6212; border: 1px solid #bef264; }
+.b-Combo  { background: #fff7ed; color: #9a3412; border: 1px solid #fdba74; }
+.b-Futures{ background: #f5f3ff; color: #6d28d9; border: 1px solid #c4b5fd; }
+.b-Other  { background: #f8fafc; color: #475569; border: 1px solid #cbd5e1; }
+
+/* ── CHARTS ──────────────────────────────────────────────────────────── */
+.chart-wrap { position: relative; height: 220px; padding: 14px; }
+.donut-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; pointer-events: none; }
+.donut-total { font-size: 20px; font-weight: 800; }
+.donut-label { font-size: 10px; color: var(--text3); text-transform: uppercase; letter-spacing: .8px; }
+.bar-wrap { height: 220px; padding: 14px; position: relative; }
+
+/* ── SPORT TABLE ─────────────────────────────────────────────────────── */
+.stable { width: 100%; border-collapse: collapse; }
+.stable th { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .8px; color: var(--text3); padding: 8px 12px; border-bottom: 1px solid var(--border); text-align: left; }
+.stable td { padding: 8px 12px; border-bottom: 1px solid #f1f5f9; font-size: 12px; }
+.stable tr:last-child td { border-bottom: none; }
+.stable .num { color: var(--text3); font-weight: 700; font-size: 11px; }
+.stable .pct { color: var(--text2); }
+.delta-up   { color: var(--green); font-size: 11px; }
+.delta-down { color: var(--red); font-size: 11px; }
+.delta-flat { color: var(--text3); font-size: 11px; }
+
+/* ── TOP EVENTS ──────────────────────────────────────────────────────── */
+.evlist { padding: 4px 0; }
+.evrow { display: grid; grid-template-columns: 24px 1fr auto; gap: 8px; align-items: start; padding: 8px 14px; border-bottom: 1px solid #f1f5f9; }
+.evrow:last-child { border-bottom: none; }
+.evrank { font-size: 11px; font-weight: 800; color: var(--text3); padding-top: 1px; }
+.evrank.gold   { color: #b45309; }
+.evrank.silver { color: #475569; }
+.evrank.bronze { color: #92400e; }
+.evname { font-size: 12px; font-weight: 600; }
+.evmeta { margin-top: 2px; }
+.evcount { font-size: 12px; font-weight: 700; text-align: right; white-space: nowrap; }
+.evvol  { font-size: 10px; color: var(--text3); text-align: right; margin-top: 2px; }
+
+/* ── SYNC INFO ───────────────────────────────────────────────────────── */
+.sync-info { padding: 4px 0; }
+.sync-row { display: flex; justify-content: space-between; align-items: center; font-size: 12px; padding: 9px 14px; border-bottom: 1px solid #f1f5f9; }
+.sync-row:last-child { border-bottom: none; }
+.sync-label { color: var(--text3); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: .6px; }
+.sync-val { font-weight: 700; }
+.pill { padding: 2px 8px; border-radius: 10px; font-size: 10px; font-weight: 800; }
+.pill.green  { background: var(--green-b); color: var(--green); }
+.pill.yellow { background: var(--yellow-b); color: var(--yellow); }
+
+/* ── LOADING / ERROR ─────────────────────────────────────────────────── */
+.loading { padding: 32px; text-align: center; color: var(--text3); font-size: 12px; }
+.loader { display: inline-block; width: 20px; height: 20px; border: 2px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin .8s linear infinite; margin-bottom: 10px; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.err { padding: 36px; text-align: center; }
+.err-title { font-size: 14px; font-weight: 700; color: var(--yellow); margin-bottom: 8px; }
+.err-msg { color: var(--text2); margin-bottom: 14px; font-size: 12px; line-height: 1.6; }
+.err-btn { padding: 8px 18px; background: #0a2e6e; color: #ffd700; border: none; border-radius: 6px; font-size: 12px; font-weight: 700; cursor: pointer; }
+
+@media (max-width: 600px) {
+  .stats { grid-template-columns: 1fr 1fr; }
+  .two-col { grid-template-columns: 1fr; }
+  .hub-ts { display: none !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── HUB NAV ──────────────────────────────────────────────────────────── -->
+<nav class="hub-nav">
+  <div class="hub-brand">
+    <div class="hub-brand-dot"></div>
+    ⚡ <span>PREDICTS</span>&nbsp;MERCH OPS HUB
+  </div>
+  <div class="hub-tabs">
+    <button class="hub-tab active" onclick="showTab('dashboard',this)">
+      <span class="hub-tab-icon">📊</span> Dashboard
+    </button>
+    <button class="hub-tab" onclick="showTab('scheduler',this)">
+      <span class="hub-tab-icon">📋</span> Scheduler
+    </button>
+    <button class="hub-tab" onclick="showTab('combo',this)">
+      <span class="hub-tab-icon">🎯</span> Combo Builder
+    </button>
+  </div>
+  <div class="hub-right">
+    <span class="hub-ts" id="hubTs">—</span>
+    <button class="hub-btn" id="refreshBtn" onclick="loadData()">↻ Refresh</button>
+  </div>
+</nav>
+
+<!-- ── DASHBOARD PANEL ──────────────────────────────────────────────────── -->
+<div id="tab-dashboard" class="tab-panel active">
+
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-label">Orders Today</div>
+      <div class="stat-val" id="sOrders">—</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Volume Today</div>
+      <div class="stat-val accent" id="sVolume">—</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Top Sport</div>
+      <div class="stat-val" id="sTopSport" style="font-size:16px">—</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Active Events</div>
+      <div class="stat-val" id="sEvents">—</div>
+    </div>
+  </div>
+
+  <div class="dash-body">
+
+    <!-- Priority vs Live -->
+    <div class="card">
+      <div class="card-head">
+        <h2>📋 Display Priority vs. Live Activity</h2>
+        <div style="display:flex;gap:10px;align-items:center">
+          <span class="card-sub" id="dateLabel">—</span>
+          <span id="planSource" style="font-size:10px;color:var(--text3)">—</span>
+        </div>
+      </div>
+      <div id="priorityGrid">
+        <div class="loading">
+          <div class="loader"></div>
+          <div>Loading live data…</div>
+        </div>
+      </div>
+      <div class="legend">
+        <div class="leg"><div class="leg-dot" style="background:var(--green)"></div>Outperforming rank</div>
+        <div class="leg"><div class="leg-dot" style="background:var(--yellow)"></div>±3 positions</div>
+        <div class="leg"><div class="leg-dot" style="background:var(--red)"></div>Underperforming</div>
+      </div>
+    </div>
+
+    <!-- Sport Share -->
+    <div class="two-col">
+      <div class="card">
+        <div class="card-head"><h2>🥧 Sport Share — Today</h2></div>
+        <div class="chart-wrap">
+          <canvas id="sportChart"></canvas>
+          <div class="donut-center">
+            <div class="donut-total" id="donutTotal">—</div>
+            <div class="donut-label">orders</div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-head"><h2>Sport Rankings</h2><span class="card-sub">vs. yesterday</span></div>
+        <div id="sportTable"><div class="loading"><div class="loader"></div></div></div>
+      </div>
+    </div>
+
+    <!-- Market + Sync Info -->
+    <div class="two-col">
+      <div class="card">
+        <div class="card-head"><h2>📊 Orders by Market Type</h2></div>
+        <div class="bar-wrap"><canvas id="marketChart"></canvas></div>
+      </div>
+      <div class="card">
+        <div class="card-head"><h2>📡 Data Sync Status</h2></div>
+        <div class="sync-info">
+          <div class="sync-row"><span class="sync-label">Last Sync</span><span class="sync-val" id="syncTime">—</span></div>
+          <div class="sync-row"><span class="sync-label">Data Age</span><span class="sync-val" id="syncAge">—</span></div>
+          <div class="sync-row"><span class="sync-label">Plan Source</span><span class="sync-val" id="syncPlanSrc">—</span></div>
+          <div class="sync-row"><span class="sync-label">Next Refresh</span><span class="sync-val" id="syncNext">—</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Top Events -->
+    <div class="card">
+      <div class="card-head"><h2>🏆 Top 10 Events — Today</h2></div>
+      <div id="topEvents"><div class="loading"><div class="loader"></div></div></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ── SCHEDULER PANEL ──────────────────────────────────────────────────── -->
+<div id="tab-scheduler" class="tab-panel">
+  <iframe class="full-iframe" id="schedulerFrame" src="about:blank"
+    data-src="https://mendelowitzd.github.io/Predicts-MerchOps-Scheduler/"
+    title="Predicts Merchandising Scheduler"></iframe>
+</div>
+
+<!-- ── COMBO BUILDER PANEL ─────────────────────────────────────────────── -->
+<div id="tab-combo" class="tab-panel">
+  <iframe class="full-iframe" id="comboFrame" src="about:blank"
+    data-src="https://mendelowitzd.github.io/Predicts-Combo-Builder/"
+    title="Predicts Combo Builder"></iframe>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════════════════════════════
+// CONFIG
+// ═══════════════════════════════════════════════════════════════════════
+const GIST_URL   = 'https://gist.githubusercontent.com/mendelowitzd/2bb33074318d87d2da9fdc60e1c64a89/raw/data.json';
+const REFRESH_MS = 25 * 60 * 1000;
+let refreshTimer  = null;
+let nextRefreshAt = null;
+let sportChart = null, marketChart = null;
+
+// ═══════════════════════════════════════════════════════════════════════
+// DATA LOADING
+// ═══════════════════════════════════════════════════════════════════════
+async function loadData() {
+  const btn = document.getElementById('refreshBtn');
+  btn.disabled = true;
+  btn.textContent = '↻ Loading…';
+
+  try {
+    // Cache-bust so we always get the latest Gist content
+    const resp = await fetch(GIST_URL + '?_=' + Date.now());
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+    const data = await resp.json();
+
+    if (!data || !data.v) {
+      showWaiting();
+      return;
+    }
+
+    renderDashboard(data);
+    scheduleRefresh();
+
+  } catch(e) {
+    console.error('[loadData]', e);
+    showError(e.message);
+  } finally {
+    btn.disabled = false;
+    btn.textContent = '↻ Refresh';
+  }
+}
+
+function scheduleRefresh() {
+  if (refreshTimer) clearTimeout(refreshTimer);
+  nextRefreshAt = Date.now() + REFRESH_MS;
+  refreshTimer  = setTimeout(loadData, REFRESH_MS);
+  updateNextLabel();
+}
+
+function updateNextLabel() {
+  const el = document.getElementById('syncNext');
+  if (!el || !nextRefreshAt) return;
+  const ms = nextRefreshAt - Date.now();
+  if (ms <= 0) { el.textContent = 'refreshing…'; return; }
+  const min = Math.floor(ms / 60000);
+  const sec = Math.floor((ms % 60000) / 1000);
+  el.textContent = min > 0 ? `~${min}m` : `${sec}s`;
+  setTimeout(updateNextLabel, 20000);
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// EMPTY / ERROR STATES
+// ═══════════════════════════════════════════════════════════════════════
+function showWaiting() {
+  document.getElementById('priorityGrid').innerHTML = `
+    <div class="err">
+      <div class="err-title">⏳ Waiting for First Sync</div>
+      <div class="err-msg">The scheduled task hasn't run yet — it fires every 25 minutes.<br>You can manually trigger it from the Scheduled section in Cowork.</div>
+      <button class="err-btn" onclick="loadData()">↻ Check Again</button>
+    </div>`;
+}
+
+function showError(msg) {
+  document.getElementById('priorityGrid').innerHTML = `
+    <div class="err">
+      <div class="err-title">⚠️ Couldn't Load Data</div>
+      <div class="err-msg">${msg}</div>
+      <button class="err-btn" onclick="loadData()">↻ Retry</button>
+    </div>`;
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// RENDER DASHBOARD
+// ═══════════════════════════════════════════════════════════════════════
+function renderDashboard(data) {
+  document.getElementById('sOrders').textContent   = fmtN(data.stats?.orders);
+  document.getElementById('sVolume').textContent   = fmtD(data.stats?.volume);
+  document.getElementById('sTopSport').textContent = data.stats?.top_sport || '—';
+  document.getElementById('sEvents').textContent   = fmtN(data.stats?.events ?? data.events?.length);
+
+  const syncTime = new Date(data.ts);
+  const ageMin   = Math.round((Date.now() - syncTime) / 60000);
+  const ageStr   = ageMin < 2 ? 'just now' : ageMin < 60 ? `${ageMin}m ago` : `${Math.floor(ageMin/60)}h ${ageMin%60}m ago`;
+
+  document.getElementById('hubTs').textContent      = 'Synced ' + syncTime.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'});
+  document.getElementById('syncTime').textContent   = syncTime.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'});
+  document.getElementById('syncAge').textContent    = ageStr;
+  document.getElementById('syncPlanSrc').innerHTML  = data.plan_source === 'live'
+    ? '<span class="pill green">🟢 Live SharePoint</span>'
+    : '<span class="pill yellow">🟡 Cached plan</span>';
+
+  renderPriority(data.priority || [], data.plan_source);
+  renderSport(data.sports || {}, data.sports_prev || {});
+  marketChart = renderBar('marketChart', data.markets || {}, marketChart, '#0052cc');
+  renderTopEvents(data.events || []);
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// UTILS
+// ═══════════════════════════════════════════════════════════════════════
+const DAYS = ['SUNDAY','MONDAY','TUESDAY','WEDNESDAY','THURSDAY','FRIDAY','SATURDAY'];
+function todayKey() { const d = new Date(); return `${DAYS[d.getDay()]} ${d.getMonth()+1}/${d.getDate()}`; }
+function fmtN(n) { return (n == null || isNaN(n)) ? '—' : Number(n).toLocaleString(); }
+function fmtD(n) { if (!n || isNaN(n)) return '—'; if (n>=1e6) return `$${(n/1e6).toFixed(1)}M`; if (n>=1000) return `$${(n/1000).toFixed(1)}K`; return `$${Number(n).toFixed(0)}`; }
+function sportColor(s) { return {NBA:'#b91c1c',MLB:'#1e40af',NHL:'#1d4ed8',PGA:'#166534',Tennis:'#3f6212',Combo:'#9a3412',Futures:'#6d28d9',Other:'#475569'}[s]||'#475569'; }
+function snakeDisplay(k) {
+  const p = k.replace(/_at_/g,' @ ').split(' @ ');
+  return p.map(seg => seg.split('_').map((x,j) => j===0&&x.length<=4 ? x.toUpperCase() : x.charAt(0).toUpperCase()+x.slice(1)).join(' ')).join(' @ ');
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// RENDER: PRIORITY
+// ═══════════════════════════════════════════════════════════════════════
+function renderPriority(priorityArr, planSource) {
+  const el = document.getElementById('priorityGrid');
+  if (!priorityArr.length) {
+    el.innerHTML = '<div class="loading">No priority data available for today</div>';
+    return;
+  }
+  document.getElementById('dateLabel').textContent = new Date().toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'});
+  const ps = document.getElementById('planSource');
+  ps.textContent = planSource === 'live' ? '🟢 live from SharePoint' : '🟡 cached plan';
+  ps.style.color  = planSource === 'live' ? 'var(--green)' : 'var(--yellow)';
+
+  const maxOrd = Math.max(...priorityArr.map(r => r.orders || 0), 1);
+  const rows = priorityArr.map(row => {
+    const { rank, item, sport: s, time, orders, act_rank, status, volume } = row;
+    const sc       = status || 'grey';
+    const sportCls = {NBA:'b-NBA',MLB:'b-MLB',NHL:'b-NHL',PGA:'b-PGA',ATP:'b-Tennis',WTA:'b-Tennis',Tennis:'b-Tennis',UCL:'b-Combo',EPL:'b-Combo'}[s] || 'b-Other';
+    const clean    = (item||'').replace(/\s*\([^)]*\)/g,'').replace(/\d+:\d+\s*(AM|PM)/i,'').trim();
+    const bw       = orders && maxOrd ? Math.round(orders/maxOrd*100) : 0;
+    const bc       = {green:'var(--green)',yellow:'var(--yellow)',red:'var(--red)'}[sc] || 'var(--text3)';
+    return `<div class="prow ${sc!=='grey'?sc:''}">
+      <div class="prank">${rank}</div>
+      <div>
+        <div class="pgame"><span class="badge ${sportCls}">${s||'?'}</span>${clean}</div>
+        ${time?`<div class="ptime">${time}</div>`:''}
+      </div>
+      <div class="pactivity">
+        <div class="pact-orders">${orders!=null?fmtN(orders):'<span class="nodata">—</span>'}<div class="odot ${sc}"></div></div>
+        ${act_rank!=null?`<div class="pact-rank">Activity #${act_rank}</div>`:''}
+        ${volume?`<div class="pact-vol">${fmtD(volume)}</div>`:''}
+        ${orders!=null?`<div class="obar-wrap"><div class="obar" style="width:${bw}%;background:${bc}"></div></div>`:''}
+      </div>
+    </div>`;
+  }).join('');
+
+  el.innerHTML = `<div class="pcol-head"><span>PRIORITY — ${todayKey()}</span><span>LIVE ORDERS</span></div>${rows}`;
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// RENDER: SPORT DONUT + TABLE
+// ═══════════════════════════════════════════════════════════════════════
+function renderSport(sportToday, sportYest) {
+  const entries = Object.entries(sportToday).sort((a,b) => b[1]-a[1]);
+  const total   = entries.reduce((s,[,v]) => s+v, 0);
+  const totalY  = Object.values(sportYest).reduce((s,v) => s+v, 0);
+  document.getElementById('donutTotal').textContent = fmtN(total);
+  if (entries[0]) document.getElementById('sTopSport').textContent = entries[0][0];
+
+  const ctx = document.getElementById('sportChart').getContext('2d');
+  if (sportChart) sportChart.destroy();
+  sportChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: { labels: entries.map(([k])=>k), datasets:[{ data: entries.map(([,v])=>v), backgroundColor: entries.map(([k])=>sportColor(k)), borderColor:'#fff', borderWidth:2 }] },
+    options: { responsive:true, maintainAspectRatio:false, cutout:'62%',
+      plugins:{ legend:{display:false}, tooltip:{callbacks:{label:c=>` ${c.label}: ${fmtN(c.raw)} (${((c.raw/total)*100).toFixed(1)}%)`}} } }
+  });
+
+  const rows = entries.map(([s,cnt],i) => {
+    const pct = total>0?(cnt/total*100):0;
+    const yc  = sportYest[s]||0, yp = totalY>0?(yc/totalY*100):0;
+    let dc='delta-flat', dt='';
+    if (yp>0) { const d=pct-yp; dc=d>1?'delta-up':d<-1?'delta-down':'delta-flat'; dt=`${d>0?'+':''}${d.toFixed(1)}pp`; }
+    const dot = `<span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${sportColor(s)};margin-right:5px"></span>`;
+    return `<tr><td class="num">${i+1}</td><td>${dot}<span class="badge b-${s}">${s}</span></td><td>${fmtN(cnt)}</td><td class="pct">${pct.toFixed(1)}%</td><td class="${dc}">${dt||'—'}</td></tr>`;
+  }).join('');
+  document.getElementById('sportTable').innerHTML = `<table class="stable"><thead><tr><th>#</th><th>Sport</th><th>Orders</th><th>Share</th><th>vs Yday</th></tr></thead><tbody>${rows}</tbody></table>`;
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// RENDER: HORIZONTAL BAR
+// ═══════════════════════════════════════════════════════════════════════
+function renderBar(canvasId, dataObj, existing, color) {
+  const entries = Object.entries(dataObj).sort((a,b)=>b[1]-a[1]).slice(0,7);
+  if (!entries.length) return existing;
+  const pal = [color,'#3b82f6','#0ea5e9','#06b6d4','#14b8a6','#10b981','#6366f1'];
+  const ctx = document.getElementById(canvasId).getContext('2d');
+  if (existing) existing.destroy();
+  return new Chart(ctx, {
+    type:'bar',
+    data:{ labels:entries.map(([k])=>k), datasets:[{ data:entries.map(([,v])=>v), backgroundColor:pal.slice(0,entries.length), borderRadius:4, borderSkipped:false }] },
+    options:{ indexAxis:'y', responsive:true, maintainAspectRatio:false,
+      plugins:{ legend:{display:false}, tooltip:{callbacks:{label:c=>` ${fmtN(c.raw)} orders`}} },
+      scales:{ x:{grid:{color:'#f1f5f9'},ticks:{color:'#94a3b8',font:{size:10}}}, y:{grid:{display:false},ticks:{color:'#0f172a',font:{size:11}}} } }
+  });
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// RENDER: TOP EVENTS
+// ═══════════════════════════════════════════════════════════════════════
+function renderTopEvents(events) {
+  const top = (events||[]).slice(0,10);
+  document.getElementById('sEvents').textContent = fmtN(events.length||0);
+  if (!top.length) { document.getElementById('topEvents').innerHTML='<div class="loading">No data</div>'; return; }
+
+  const SF = {nuggets:'NBA',timberwolves:'NBA',celtics:'NBA','76_ers':'NBA',knicks:'NBA',hawks:'NBA',rockets:'NBA',lakers:'NBA',cavaliers:'NBA',raptors:'NBA',pistons:'NBA',magic:'NBA',thunder:'NBA',suns:'NBA',spurs:'NBA',blazers:'NBA',warriors:'NBA',bulls:'NBA',pacers:'NBA',nets:'NBA',wizards:'NBA',grizzlies:'NBA',mavericks:'NBA',clippers:'NBA',heat:'NBA',bucks:'NBA',hornets:'NBA',pelicans:'NBA',kings:'NBA',jazz:'NBA',tigers:'MLB',braves:'MLB',royals:'MLB',athletics:'MLB',blue_jays:'MLB',twins:'MLB',giants:'MLB',phillies:'MLB',astros:'MLB',orioles:'MLB',rockies:'MLB',reds:'MLB',cardinals:'MLB',pirates:'MLB',diamondbacks:'MLB',brewers:'MLB',nationals:'MLB',mets:'MLB',dodgers:'MLB',padres:'MLB',rangers:'MLB',yankees:'MLB',red_sox:'MLB',mariners:'MLB',rays:'MLB',guardians:'MLB',cubs:'MLB',white_sox:'MLB',angels:'MLB',marlins:'MLB',golden_knights:'NHL',stars:'NHL',wild:'NHL',oilers:'NHL',ducks:'NHL',lightning:'NHL',canadiens:'NHL',bruins:'NHL',sabres:'NHL',flyers:'NHL',penguins:'NHL',hurricanes:'NHL',madrid_open:'Tennis',ruud:'Tennis',zverev:'Tennis',sinner:'Tennis',cadillac:'PGA',bitcoin:'Futures',nasdaq:'Futures'};
+  function sportOf(k) { const lo=k.toLowerCase(); for(const [f,s] of Object.entries(SF)) if(lo.includes(f)) return s; return 'Other'; }
+
+  const html = top.map(({k,o,v},i) => {
+    const rank=i+1, rc=rank===1?'gold':rank===2?'silver':rank===3?'bronze':'';
+    const s=sportOf(k), cls=`b-${s}`;
+    return `<div class="evrow">
+      <div class="evrank ${rc}">${rank}</div>
+      <div><div class="evname">${snakeDisplay(k)}</div><div class="evmeta"><span class="badge ${cls}">${s}</span></div></div>
+      <div><div class="evcount">${fmtN(o)} orders</div>${v?`<div class="evvol">${fmtD(v)}</div>`:''}</div>
+    </div>`;
+  }).join('');
+  document.getElementById('topEvents').innerHTML = `<div class="evlist">${html}</div>`;
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// TAB SWITCHING
+// ═══════════════════════════════════════════════════════════════════════
+function showTab(name, btn) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.hub-tab').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + name).classList.add('active');
+  if (btn) btn.classList.add('active');
+
+  const isDb = name === 'dashboard';
+  document.getElementById('refreshBtn').style.display = isDb ? '' : 'none';
+  document.getElementById('hubTs').style.display      = isDb ? '' : 'none';
+
+  if (name === 'scheduler') {
+    const fr = document.getElementById('schedulerFrame');
+    if (!fr.src || fr.src === 'about:blank') fr.src = fr.dataset.src;
+  }
+  if (name === 'combo') {
+    const fr = document.getElementById('comboFrame');
+    if (!fr.src || fr.src === 'about:blank') fr.src = fr.dataset.src;
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════════════════════════════════
+window.addEventListener('DOMContentLoaded', loadData);
+</script>
+</body>
+</html>
