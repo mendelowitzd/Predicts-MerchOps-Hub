@@ -51,8 +51,20 @@ jobs:
               exit(0)
 
           text = data_msg['text']
+          text = text.replace('&amp;', '&').replace('&lt;', '<').replace('&gt;', '>')
           idx  = text.index(marker) + len(marker)
-          data = json.loads(text[idx:].strip())
+          json_str = text[idx:].strip()
+
+          depth, end = 0, 0
+          for i, ch in enumerate(json_str):
+              if ch == '{': depth += 1
+              elif ch == '}':
+                  depth -= 1
+                  if depth == 0:
+                      end = i + 1
+                      break
+
+          data = json.loads(json_str[:end])
 
           with open('data.json', 'w') as f:
               json.dump(data, f, separators=(',', ':'))
