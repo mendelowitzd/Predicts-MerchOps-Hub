@@ -1,15 +1,112 @@
 {
   "v": 1,
-  "updated": "2026-05-05T00:00:00Z",
+  "updated": "2026-05-06T21:18:04.183Z",
   "weeks": {
     "2026-05-04": {
       "MONDAY": [],
       "TUESDAY": [],
-      "WEDNESDAY": [],
+      "WEDNESDAY": [
+        {
+          "sport": "Combo",
+          "item": "Broadway & the Alamo",
+          "time": "7:10 PM"
+        },
+        {
+          "sport": "Combo",
+          "item": "Gridlock & Growl",
+          "time": "7:10 PM"
+        },
+        {
+          "sport": "Combo",
+          "item": "Lonestar & Liberty",
+          "time": "7:10 PM"
+        },
+        {
+          "sport": "MLB",
+          "item": "Padres @ Giants",
+          "time": "🔴 Live"
+        },
+        {
+          "sport": "MLB",
+          "item": "Braves @ Mariners",
+          "time": "🔴 Live"
+        },
+        {
+          "sport": "MLB",
+          "item": "White Sox @ Angels",
+          "time": "🔴 Live"
+        },
+        {
+          "sport": "NBA",
+          "item": "76ers @ Knicks",
+          "time": "7:00 PM ET"
+        },
+        {
+          "sport": "NBA",
+          "item": "Timberwolves @ Spurs",
+          "time": "9:30 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Athletics @ Phillies",
+          "time": "6:40 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Orioles @ Marlins",
+          "time": "6:40 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Red Sox @ Tigers",
+          "time": "6:40 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Twins @ Nationals",
+          "time": "6:45 PM ET"
+        },
+        {
+          "sport": "NHL",
+          "item": "Canadiens @ Sabres",
+          "time": "7:00 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Rangers @ Yankees",
+          "time": "7:05 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Reds @ Cubs",
+          "time": "7:40 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Guardians @ Royals",
+          "time": "7:40 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Mets @ Rockies",
+          "time": "9:20 PM ET"
+        },
+        {
+          "sport": "NHL",
+          "item": "Ducks @ Golden Knights",
+          "time": "9:30 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Pirates @ Diamondbacks",
+          "time": "9:40 PM ET"
+        }
+      ],
       "THURSDAY": [],
       "FRIDAY": [],
       "SATURDAY": [],
       "SUNDAY": []
     }
-  }
+  },
+  "popnav_weeks": {}
 }
