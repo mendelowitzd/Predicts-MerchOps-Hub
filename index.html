@@ -1,0 +1,1822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Predicts Merch Ops Hub</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0/dist/chart.umd.js" crossorigin="anonymous"></script>
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f1f5f9; --card: #ffffff; --border: #e2e8f0;
+  --accent: #0052cc; --text: #0f172a; --text2: #475569; --text3: #94a3b8;
+  --green: #16a34a; --yellow: #d97706; --red: #dc2626;
+  --green-b: #f0fdf4; --yellow-b: #fffbeb; --red-b: #fef2f2;
+  --hub-h: 46px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; overflow: hidden; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 13px; background: var(--bg); color: var(--text); }
+.hub-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; height: var(--hub-h); background: #0a2e6e; display: flex; align-items: stretch; border-bottom: 2px solid #ffd700; box-shadow: 0 2px 8px rgba(0,0,0,.25); }
+.hub-brand { padding: 0 18px; display: flex; align-items: center; font-size: 13px; font-weight: 900; color: #fff; letter-spacing: -.3px; white-space: nowrap; border-right: 1px solid rgba(255,255,255,.15); flex-shrink: 0; gap: 8px; }
+.hub-brand-dot { width: 8px; height: 8px; border-radius: 50%; background: #ffd700; flex-shrink: 0; }
+.hub-brand span { color: #ffd700; }
+.hub-tabs { display: flex; flex: 1; }
+.hub-tab { padding: 0 20px; border: none; background: transparent; color: rgba(255,255,255,.6); font-size: 12px; font-weight: 700; cursor: pointer; transition: all .15s; letter-spacing: .3px; display: flex; align-items: center; gap: 7px; border-bottom: 3px solid transparent; margin-bottom: -2px; border-right: 1px solid rgba(255,255,255,.08); }
+.hub-tab:hover { background: rgba(255,255,255,.07); color: rgba(255,255,255,.9); }
+.hub-tab.active { background: rgba(255,255,255,.1); color: #fff; border-bottom-color: #ffd700; }
+.hub-tab-icon { font-size: 14px; }
+.hub-right { padding: 0 14px; display: flex; align-items: center; gap: 8px; border-left: 1px solid rgba(255,255,255,.15); flex-shrink: 0; margin-left: auto; }
+.hub-ts { font-size: 11px; color: rgba(255,255,255,.5); white-space: nowrap; }
+.hub-btn { background: rgba(255,255,255,.12); color: #fff; border: 1px solid rgba(255,255,255,.25); padding: 5px 11px; border-radius: 5px; font-size: 11px; font-weight: 700; cursor: pointer; transition: all .15s; white-space: nowrap; }
+.hub-btn:hover { background: rgba(255,255,255,.22); }
+.hub-btn:disabled { opacity: .45; cursor: default; }
+.tab-panel { position: fixed; top: var(--hub-h); left: 0; right: 0; bottom: 0; display: none; overflow: hidden; }
+.tab-panel.active { display: flex; flex-direction: column; }
+#tab-dashboard { overflow-y: auto; display: block !important; background: var(--bg); }
+.full-iframe { width: 100%; height: 100%; border: none; display: block; flex: 1; }
+.stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--border); border-bottom: 1px solid var(--border); flex-shrink: 0; }
+.stat { background: #fff; padding: 12px 14px; }
+.stat-label { font-size: 10px; font-weight: 600; color: var(--text3); text-transform: uppercase; letter-spacing: .8px; margin-bottom: 4px; }
+.stat-val { font-size: 20px; font-weight: 800; line-height: 1; }
+.stat-val.accent { color: var(--accent); }
+.dash-body { padding: 12px; display: flex; flex-direction: column; gap: 12px; }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+.card-head { padding: 12px 14px 10px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+.card-head h2 { font-size: 12px; font-weight: 700; }
+.card-sub { font-size: 11px; color: var(--text3); }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.pcol-head { padding: 8px 14px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .8px; color: var(--text3); background: #f8fafc; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; }
+.prow { display: grid; grid-template-columns: 24px 1fr auto; gap: 10px; align-items: center; padding: 9px 14px; border-bottom: 1px solid #f1f5f9; border-left: 3px solid transparent; }
+.prow:last-child { border-bottom: none; }
+.prow.green  { background: var(--green-b);  border-left-color: var(--green); }
+.prow.yellow { background: var(--yellow-b); border-left-color: var(--yellow); }
+.prow.red    { background: var(--red-b);    border-left-color: var(--red); }
+.prank { font-size: 11px; font-weight: 800; color: var(--text3); }
+.pgame { font-size: 12px; font-weight: 600; display: flex; align-items: center; gap: 5px; flex-wrap: wrap; }
+.ptime { font-size: 10px; color: var(--text3); margin-top: 2px; }
+.pactivity { text-align: right; min-width: 80px; }
+.pact-orders { font-size: 13px; font-weight: 700; display: flex; align-items: center; gap: 5px; justify-content: flex-end; }
+.pact-rank { font-size: 10px; color: var(--text3); margin-top: 1px; }
+.pact-vol  { font-size: 10px; color: var(--text2); margin-top: 1px; }
+.odot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.odot.green  { background: var(--green); }
+.odot.yellow { background: var(--yellow); }
+.odot.red    { background: var(--red); }
+.odot.grey   { background: var(--text3); }
+.obar-wrap { height: 3px; background: var(--border); border-radius: 2px; margin-top: 5px; }
+.obar { height: 3px; border-radius: 2px; }
+.nodata { font-size: 11px; color: var(--text3); font-style: italic; }
+.legend { display: flex; gap: 16px; padding: 10px 14px; flex-wrap: wrap; border-top: 1px solid var(--border); }
+.leg { display: flex; align-items: center; gap: 5px; font-size: 11px; color: var(--text2); }
+.leg-dot { width: 7px; height: 7px; border-radius: 50%; }
+.badge { font-size: 9px; font-weight: 800; padding: 1px 5px; border-radius: 3px; text-transform: uppercase; flex-shrink: 0; }
+.b-NBA    { background: #fce7ec; color: #b91c1c; border: 1px solid #fca5a5; }
+.b-MLB    { background: #eff6ff; color: #1e40af; border: 1px solid #bfdbfe; }
+.b-NHL    { background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; }
+.b-PGA    { background: #f0fdf4; color: #166534; border: 1px solid #86efac; }
+.b-Tennis { background: #f7fee7; color: #3f6212; border: 1px solid #bef264; }
+.b-Combo  { background: #fff7ed; color: #9a3412; border: 1px solid #fdba74; }
+.b-Futures{ background: #f5f3ff; color: #6d28d9; border: 1px solid #c4b5fd; }
+.b-Other  { background: #f8fafc; color: #475569; border: 1px solid #cbd5e1; }
+.b-WNBA   { background: #fce7f3; color: #be185d; border: 1px solid #f9a8d4; }
+.b-NFL    { background: #fff7ed; color: #9a3412; border: 1px solid #fed7aa; }
+.b-CFB    { background: #fefce8; color: #854d0e; border: 1px solid #fde68a; }
+.b-CBB    { background: #fce7ec; color: #9b1c2b; border: 1px solid #fca5a5; }
+.b-EPL    { background: #ecfdf5; color: #065f46; border: 1px solid #6ee7b7; }
+.b-UCL    { background: #eff6ff; color: #1e3a8a; border: 1px solid #93c5fd; }
+.b-ATP    { background: #f7fee7; color: #3f6212; border: 1px solid #bef264; }
+.b-WTA    { background: #fdf4ff; color: #7e22ce; border: 1px solid #e9d5ff; }
+.chart-wrap { position: relative; height: 220px; padding: 14px; }
+.donut-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); text-align: center; pointer-events: none; }
+.donut-total { font-size: 20px; font-weight: 800; }
+.donut-label { font-size: 10px; color: var(--text3); text-transform: uppercase; letter-spacing: .8px; }
+.bar-wrap { height: 220px; padding: 14px; position: relative; }
+.stable { width: 100%; border-collapse: collapse; }
+.stable th { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .8px; color: var(--text3); padding: 8px 12px; border-bottom: 1px solid var(--border); text-align: left; }
+.stable td { padding: 8px 12px; border-bottom: 1px solid #f1f5f9; font-size: 12px; }
+.stable tr:last-child td { border-bottom: none; }
+.stable .num { color: var(--text3); font-weight: 700; font-size: 11px; }
+.stable .pct { color: var(--text2); }
+.delta-up   { color: var(--green); font-size: 11px; }
+.delta-down { color: var(--red); font-size: 11px; }
+.delta-flat { color: var(--text3); font-size: 11px; }
+.evlist { padding: 4px 0; }
+.evrow { display: grid; grid-template-columns: 24px 1fr auto; gap: 8px; align-items: start; padding: 8px 14px; border-bottom: 1px solid #f1f5f9; }
+.evrow:last-child { border-bottom: none; }
+.evrank { font-size: 11px; font-weight: 800; color: var(--text3); padding-top: 1px; }
+.evrank.gold   { color: #b45309; }
+.evrank.silver { color: #475569; }
+.evrank.bronze { color: #92400e; }
+.evname { font-size: 12px; font-weight: 600; }
+.evmeta { margin-top: 2px; }
+.evcount { font-size: 12px; font-weight: 700; text-align: right; white-space: nowrap; }
+.evvol  { font-size: 10px; color: var(--text3); text-align: right; margin-top: 2px; }
+.sync-info { padding: 4px 0; }
+.sync-row { display: flex; justify-content: space-between; align-items: center; font-size: 12px; padding: 9px 14px; border-bottom: 1px solid #f1f5f9; }
+.sync-row:last-child { border-bottom: none; }
+.sync-label { color: var(--text3); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: .6px; }
+.sync-val { font-weight: 700; }
+.pill { padding: 2px 8px; border-radius: 10px; font-size: 10px; font-weight: 800; }
+.pill.green  { background: var(--green-b); color: var(--green); }
+.pill.yellow { background: var(--yellow-b); color: var(--yellow); }
+.loading { padding: 32px; text-align: center; color: var(--text3); font-size: 12px; }
+.loader { display: inline-block; width: 20px; height: 20px; border: 2px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin .8s linear infinite; margin-bottom: 10px; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.err { padding: 36px; text-align: center; }
+.err-title { font-size: 14px; font-weight: 700; color: var(--yellow); margin-bottom: 8px; }
+.err-msg { color: var(--text2); margin-bottom: 14px; font-size: 12px; line-height: 1.6; }
+.err-btn { padding: 8px 18px; background: #0a2e6e; color: #ffd700; border: none; border-radius: 6px; font-size: 12px; font-weight: 700; cursor: pointer; }
+
+/* ══ SCHEDULER ══ */
+.sched-topbar { background: var(--card); border-bottom: 1px solid var(--border); padding: 10px 14px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; flex-shrink: 0; }
+.sched-topbar-left { display: flex; flex-direction: column; gap: 2px; }
+.sched-topbar-title { font-size: 13px; font-weight: 800; }
+.sched-topbar-sub { font-size: 11px; color: var(--text3); }
+.sched-topbar-right { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.sched-nav-btn { background: var(--bg); border: 1px solid var(--border); border-radius: 5px; padding: 5px 11px; font-size: 11px; font-weight: 600; cursor: pointer; color: var(--text2); transition: all .12s; }
+.sched-nav-btn:hover { background: var(--border); color: var(--text); }
+.sched-save-status { font-size: 10px; color: var(--text3); white-space: nowrap; }
+.sched-save-btn { background: var(--accent); color: #fff; border: none; border-radius: 5px; padding: 6px 14px; font-size: 12px; font-weight: 700; cursor: pointer; transition: all .15s; }
+.sched-save-btn:hover { background: #0041a3; }
+.sched-save-btn:disabled { opacity: .5; cursor: default; }
+.sched-save-btn.dirty { background: var(--green); }
+.sched-save-btn.dirty:hover { background: #15803d; }
+
+/* Sub-tabs */
+.sched-subtabs { display: flex; background: #fff; border-bottom: 2px solid var(--border); flex-shrink: 0; }
+.sched-subtab { padding: 9px 20px; border: none; background: transparent; font-size: 12px; font-weight: 700; cursor: pointer; color: var(--text2); border-bottom: 3px solid transparent; margin-bottom: -2px; transition: all .12s; display: flex; align-items: center; gap: 6px; white-space: nowrap; }
+.sched-subtab:hover { color: var(--text); background: #f8fafc; }
+.sched-subtab.active { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* Day tabs */
+.sched-day-tabs { display: flex; background: #0a2e6e; flex-shrink: 0; border-bottom: 2px solid rgba(255,215,0,.3); overflow-x: auto; }
+.sched-dtab { flex: 1; min-width: 72px; border: none; background: transparent; color: rgba(255,255,255,.55); padding: 8px 6px 6px; cursor: pointer; transition: all .12s; text-align: center; border-right: 1px solid rgba(255,255,255,.08); border-bottom: 3px solid transparent; margin-bottom: -2px; position: relative; }
+.sched-dtab:hover { background: rgba(255,255,255,.07); color: rgba(255,255,255,.85); }
+.sched-dtab.active { background: rgba(255,255,255,.12); color: #fff; border-bottom-color: #ffd700; }
+.sched-dtab.today .sched-dtab-name::after { content: ' ★'; color: #ffd700; }
+.sched-dtab-name { font-size: 11px; font-weight: 800; letter-spacing: .4px; display: block; }
+.sched-dtab-date { font-size: 10px; opacity: .65; display: block; margin-top: 1px; }
+.sched-dtab-count { display: inline-block; background: #ffd700; color: #0a2e6e; font-size: 8px; font-weight: 900; border-radius: 8px; padding: 1px 5px; margin-top: 3px; min-width: 16px; }
+.sched-dtab-count.zero { background: rgba(255,255,255,.2); color: rgba(255,255,255,.5); }
+
+/* Split panel */
+.sched-split { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 0; min-height: 0; overflow: hidden; }
+.sched-panel { display: flex; flex-direction: column; border-right: 1px solid var(--border); overflow: hidden; }
+.sched-panel:last-child { border-right: none; }
+.sched-panel-head { background: var(--card); border-bottom: 1px solid var(--border); padding: 9px 14px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+.sched-panel-title { font-size: 12px; font-weight: 800; white-space: nowrap; }
+.sched-panel-body { flex: 1; overflow-y: auto; background: var(--bg); }
+.sport-filters { display: flex; gap: 4px; flex-wrap: nowrap; overflow-x: auto; max-width: 100%; scrollbar-width: none; }
+.sport-filters::-webkit-scrollbar { display: none; }
+.sport-filter { background: rgba(255,255,255,.6); border: 1px solid var(--border); border-radius: 12px; padding: 2px 8px; font-size: 10px; font-weight: 700; cursor: pointer; color: var(--text2); transition: all .1s; }
+.sport-filter:hover { background: #fff; color: var(--text); }
+.sport-filter.active { background: #0a2e6e; color: #fff; border-color: #0a2e6e; }
+.espn-custom-btn { background: #fff7ed; color: #9a3412; border: 1px solid #fed7aa; border-radius: 5px; padding: 4px 10px; font-size: 11px; font-weight: 700; cursor: pointer; white-space: nowrap; flex-shrink: 0; transition: all .12s; }
+.espn-custom-btn:hover { background: #ffedd5; border-color: #fb923c; }
+.espn-sport-group { }
+.espn-sport-header { padding: 8px 14px 4px; font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: .7px; color: var(--text3); background: #f8fafc; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 6px; position: sticky; top: 0; z-index: 1; }
+.espn-game { display: flex; align-items: center; padding: 8px 14px; border-bottom: 1px solid #f1f5f9; gap: 10px; }
+.espn-game:last-child { border-bottom: none; }
+.espn-game-info { flex: 1; min-width: 0; }
+.espn-game-name { font-size: 12px; font-weight: 600; color: var(--text); }
+.espn-game-meta { display: flex; align-items: center; gap: 5px; margin-top: 3px; flex-wrap: wrap; }
+.espn-game-time { font-size: 10px; color: var(--text3); }
+.espn-net { display: inline-block; font-size: 8px; font-weight: 900; padding: 1px 5px; border-radius: 3px; letter-spacing: .3px; text-transform: uppercase; white-space: nowrap; background: #1e293b; color: #fff; }
+.espn-net.net-ESPN    { background: #d7242a; }
+.espn-net.net-ESPN2   { background: #d7242a; }
+.espn-net.net-ABC     { background: #0a2e6e; }
+.espn-net.net-NBC     { background: #101827; }
+.espn-net.net-FOX     { background: #2563eb; }
+.espn-net.net-FS1     { background: #1d4ed8; }
+.espn-net.net-CBS     { background: #1a56b0; }
+.espn-net.net-TNT     { background: #be185d; }
+.espn-net.net-TBS     { background: #7c3aed; }
+.espn-net.net-USA     { background: #0284c7; }
+.espn-net.net-Prime   { background: #00a8e0; color: #000; }
+.espn-net.net-Peacock { background: #7c3aed; }
+.espn-net.net-Netflix { background: #e50914; }
+.espn-net.net-AppleTV { background: #1c1c1e; }
+.espn-net.net-MLBNet  { background: #1e40af; }
+.espn-net.net-NBATV   { background: #b91c1c; }
+.espn-net.net-NHLNet  { background: #1d4ed8; }
+.espn-net.net-NFLNet  { background: #1a3a6e; }
+.espn-game-status { font-size: 9px; font-weight: 700; padding: 1px 5px; border-radius: 3px; }
+.espn-game-status.live { background: #fee2e2; color: var(--red); }
+.espn-game-status.final { background: #f1f5f9; color: var(--text3); }
+.espn-add-btn { background: #eff6ff; color: var(--accent); border: 1px solid #bfdbfe; border-radius: 4px; padding: 4px 10px; font-size: 11px; font-weight: 700; cursor: pointer; white-space: nowrap; flex-shrink: 0; transition: all .1s; }
+.espn-add-btn:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.espn-add-btn.added { background: var(--green-b); color: var(--green); border-color: #86efac; cursor: default; pointer-events: none; }
+.espn-no-games { padding: 32px 20px; text-align: center; color: var(--text3); font-size: 12px; }
+.espn-loading { padding: 32px; text-align: center; color: var(--text3); font-size: 12px; }
+.prio-list { padding: 8px; display: flex; flex-direction: column; gap: 4px; }
+.prio-empty { padding: 32px 20px; text-align: center; color: var(--text3); font-size: 12px; }
+.prio-add-row { padding: 10px 8px 8px; }
+.prio-add-btn { width: 100%; background: none; border: 1px dashed var(--border); border-radius: 6px; padding: 8px; text-align: center; font-size: 11px; color: var(--text3); cursor: pointer; transition: all .12s; }
+.prio-add-btn:hover { background: #f0f9ff; border-color: #93c5fd; color: var(--accent); }
+.prio-item { display: flex; align-items: center; gap: 8px; background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 8px 10px; transition: box-shadow .1s; }
+.prio-item:hover { box-shadow: 0 1px 4px rgba(0,0,0,.08); }
+.prio-rank { font-size: 11px; font-weight: 900; color: var(--text3); min-width: 20px; }
+.prio-badge-wrap { flex-shrink: 0; }
+.prio-info { flex: 1; min-width: 0; }
+.prio-name { font-size: 12px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.prio-time { font-size: 10px; color: var(--text3); margin-top: 2px; }
+.prio-actions { display: flex; gap: 2px; flex-shrink: 0; }
+.prio-btn { background: none; border: none; cursor: pointer; font-size: 11px; padding: 3px 5px; border-radius: 4px; color: var(--text3); line-height: 1; }
+.prio-btn:hover { background: var(--bg); color: var(--text); }
+.prio-btn.del:hover { background: #fee2e2; color: var(--red); }
+
+/* Modal */
+.sched-modal-bg { position: fixed; inset: 0; background: rgba(0,0,0,.45); z-index: 2000; display: flex; align-items: center; justify-content: center; }
+.sched-modal { background: var(--card); border-radius: 12px; padding: 22px 22px 18px; width: 340px; box-shadow: 0 12px 40px rgba(0,0,0,.22); animation: modal-in .15s ease; }
+@keyframes modal-in { from { transform: scale(.95); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+.sched-modal-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+.sched-modal-title { font-size: 13px; font-weight: 800; }
+.sched-modal-close { background: none; border: none; cursor: pointer; font-size: 16px; color: var(--text3); padding: 2px 6px; border-radius: 4px; }
+.sched-modal-close:hover { background: var(--bg); color: var(--text); }
+.sched-field { margin-bottom: 12px; }
+.sched-field label { display: block; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .6px; color: var(--text3); margin-bottom: 5px; }
+.sched-field input, .sched-field select { width: 100%; padding: 8px 10px; border: 1px solid var(--border); border-radius: 6px; font-size: 12px; background: var(--bg); color: var(--text); outline: none; transition: border-color .12s; }
+.sched-field input:focus, .sched-field select:focus { border-color: var(--accent); background: #fff; }
+.sched-modal-footer { display: flex; gap: 8px; justify-content: flex-end; margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--border); align-items: center; }
+.sched-modal-delete { background: #fef2f2; color: var(--red); border: 1px solid #fca5a5; border-radius: 6px; padding: 7px 14px; font-size: 11px; font-weight: 700; cursor: pointer; margin-right: auto; }
+.sched-modal-delete:hover { background: #fee2e2; }
+.sched-modal-cancel { background: none; border: 1px solid var(--border); border-radius: 6px; padding: 7px 14px; font-size: 11px; font-weight: 600; cursor: pointer; color: var(--text2); }
+.sched-modal-cancel:hover { background: var(--bg); }
+.sched-modal-save { background: var(--accent); color: #fff; border: none; border-radius: 6px; padding: 7px 16px; font-size: 11px; font-weight: 700; cursor: pointer; }
+.sched-modal-save:hover { background: #0041a3; }
+
+/* ══ POP NAV ══ */
+.popnav-section { flex: 1; display: grid; grid-template-columns: 1fr 1fr; min-height: 0; overflow: hidden; }
+.popnav-source-panel { display: flex; flex-direction: column; border-right: 1px solid var(--border); overflow: hidden; }
+.popnav-schedule-panel { display: flex; flex-direction: column; overflow: hidden; }
+.popnav-panel-head { background: var(--card); border-bottom: 1px solid var(--border); padding: 9px 14px; flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.popnav-panel-body { flex: 1; overflow-y: auto; background: var(--bg); }
+.pntile-group-head { padding: 8px 14px 4px; font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: .7px; color: var(--text3); background: #f8fafc; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 1; }
+.pntile-grid { display: flex; flex-wrap: wrap; gap: 8px; padding: 10px 14px; }
+.pntile-option { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 72px; min-height: 64px; padding: 8px 6px 6px; background: #dbeafe; border: 1.5px solid #93c5fd; border-radius: 10px; cursor: pointer; transition: all .12s; text-align: center; gap: 4px; position: relative; user-select: none; }
+.pntile-option:hover { background: #bfdbfe; border-color: var(--accent); transform: translateY(-1px); box-shadow: 0 2px 8px rgba(0,82,204,.18); }
+.pntile-option.added { background: #f0fdf4; border-color: #86efac; cursor: default; pointer-events: none; }
+.pntile-option.added::after { content: '✓'; position: absolute; top: 3px; right: 6px; font-size: 9px; color: var(--green); font-weight: 900; }
+.pntile-icon { font-size: 20px; }
+.pntile-label { font-size: 9px; font-weight: 800; color: #1e3a8a; line-height: 1.2; word-break: break-word; text-align: center; }
+.pntile-option.added .pntile-label { color: #166534; }
+.pntile-event { width: 90px; }
+.pn-preview { padding: 10px 12px; background: #0a2e6e; display: flex; gap: 8px; overflow-x: auto; min-height: 90px; align-items: flex-start; flex-shrink: 0; border-bottom: 2px solid rgba(255,215,0,.25); }
+.pn-preview::-webkit-scrollbar { height: 4px; }
+.pn-preview::-webkit-scrollbar-thumb { background: rgba(255,255,255,.2); border-radius: 2px; }
+.pn-preview-empty { padding: 20px; text-align: center; color: rgba(255,255,255,.35); font-size: 11px; width: 100%; align-self: center; font-style: italic; }
+.pn-preview-label { font-size: 9px; font-weight: 700; color: rgba(255,215,0,.6); text-transform: uppercase; letter-spacing: .6px; align-self: center; flex-shrink: 0; writing-mode: vertical-rl; transform: rotate(180deg); padding: 4px 0; }
+.pn-tile { display: flex; flex-direction: column; align-items: center; justify-content: flex-start; width: 66px; min-height: 66px; padding: 8px 5px 6px; background: rgba(255,255,255,.13); border: 1px solid rgba(255,255,255,.22); border-radius: 10px; text-align: center; gap: 4px; flex-shrink: 0; position: relative; }
+.pn-tile-num { position: absolute; top: 2px; left: 5px; font-size: 8px; font-weight: 900; color: rgba(255,215,0,.65); }
+.pn-tile-icon { font-size: 18px; margin-top: 4px; }
+.pn-tile-label { font-size: 8px; font-weight: 800; color: rgba(255,255,255,.9); line-height: 1.2; word-break: break-word; }
+.pn-list { padding: 8px; display: flex; flex-direction: column; gap: 4px; }
+.pn-item { display: flex; align-items: center; gap: 8px; background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 8px 10px; transition: box-shadow .1s; }
+.pn-item:hover { box-shadow: 0 1px 4px rgba(0,0,0,.08); }
+.pn-item-pos { font-size: 11px; font-weight: 900; color: var(--text3); min-width: 20px; }
+.pn-item-icon { font-size: 18px; flex-shrink: 0; }
+.pn-item-info { flex: 1; min-width: 0; }
+.pn-item-label { font-size: 12px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pn-item-type { font-size: 10px; color: var(--text3); margin-top: 1px; text-transform: uppercase; letter-spacing: .4px; }
+.pn-item-actions { display: flex; gap: 2px; flex-shrink: 0; }
+.pn-empty { padding: 32px 20px; text-align: center; color: var(--text3); font-size: 12px; line-height: 1.7; }
+.pn-no-day { padding: 32px 20px; text-align: center; color: var(--text3); font-size: 12px; }
+.pn-add-row { padding: 10px 8px 8px; }
+.pn-add-btn { width: 100%; background: none; border: 1px dashed var(--border); border-radius: 6px; padding: 8px; text-align: center; font-size: 11px; color: var(--text3); cursor: pointer; transition: all .12s; }
+.pn-add-btn:hover { background: #f0f9ff; border-color: #93c5fd; color: var(--accent); }
+.pn-modal-bg { position: fixed; inset: 0; background: rgba(0,0,0,.45); z-index: 2000; display: flex; align-items: center; justify-content: center; }
+.pn-modal { background: var(--card); border-radius: 12px; padding: 22px 22px 18px; width: 360px; box-shadow: 0 12px 40px rgba(0,0,0,.22); animation: modal-in .15s ease; }
+.pn-icon-preview { font-size: 32px; text-align: center; padding: 6px 0; min-height: 52px; display: flex; align-items: center; justify-content: center; background: #dbeafe; border-radius: 10px; margin-bottom: 12px; }
+
+@media (max-width: 700px) {
+  .sched-split { grid-template-columns: 1fr; }
+  .popnav-section { grid-template-columns: 1fr; }
+  .stats { grid-template-columns: 1fr 1fr; }
+  .two-col { grid-template-columns: 1fr; }
+  .hub-ts { display: none !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- ── HUB NAV ── -->
+<nav class="hub-nav">
+  <div class="hub-brand"><div class="hub-brand-dot"></div>⚡ <span>PREDICTS</span>&nbsp;MERCH OPS HUB</div>
+  <div class="hub-tabs">
+    <button class="hub-tab active" onclick="showTab('dashboard',this)"><span class="hub-tab-icon">📊</span> Dashboard</button>
+    <button class="hub-tab" onclick="showTab('scheduler',this)"><span class="hub-tab-icon">📋</span> Scheduler</button>
+    <button class="hub-tab" onclick="showTab('combo',this)"><span class="hub-tab-icon">🎯</span> Combo Builder</button>
+  </div>
+  <div class="hub-right">
+    <span class="hub-ts" id="hubTs">—</span>
+    <button class="hub-btn" id="refreshBtn" onclick="triggerRefresh()">↻ Refresh</button>
+  </div>
+</nav>
+
+<!-- ── DASHBOARD PANEL ── -->
+<div id="tab-dashboard" class="tab-panel active">
+  <div class="stats">
+    <div class="stat"><div class="stat-label">Orders Today</div><div class="stat-val" id="sOrders">—</div></div>
+    <div class="stat"><div class="stat-label">Volume Today</div><div class="stat-val accent" id="sVolume">—</div></div>
+    <div class="stat"><div class="stat-label">Top Sport</div><div class="stat-val" id="sTopSport" style="font-size:16px">—</div></div>
+    <div class="stat"><div class="stat-label">Active Events</div><div class="stat-val" id="sEvents">—</div></div>
+  </div>
+  <div class="dash-body">
+    <div class="card">
+      <div class="card-head">
+        <h2>📋 Display Priority vs. Live Activity</h2>
+        <div style="display:flex;gap:10px;align-items:center">
+          <span class="card-sub" id="dateLabel">—</span>
+          <span id="planSource" style="font-size:10px;color:var(--text3)">—</span>
+        </div>
+      </div>
+      <div id="priorityGrid"><div class="loading"><div class="loader"></div><div>Loading live data…</div></div></div>
+      <div class="legend">
+        <div class="leg"><div class="leg-dot" style="background:var(--green)"></div>Outperforming rank</div>
+        <div class="leg"><div class="leg-dot" style="background:var(--yellow)"></div>±3 positions</div>
+        <div class="leg"><div class="leg-dot" style="background:var(--red)"></div>Underperforming</div>
+      </div>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-head"><h2>🥧 Sport Share — Today</h2></div>
+        <div class="chart-wrap">
+          <canvas id="sportChart"></canvas>
+          <div class="donut-center"><div class="donut-total" id="donutTotal">—</div><div class="donut-label">orders</div></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-head"><h2>Sport Rankings</h2><span class="card-sub">vs. yesterday</span></div>
+        <div id="sportTable"><div class="loading"><div class="loader"></div></div></div>
+      </div>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <div class="card-head"><h2>📊 Orders by Market Type</h2></div>
+        <div class="bar-wrap"><canvas id="marketChart"></canvas></div>
+      </div>
+      <div class="card">
+        <div class="card-head"><h2>📡 Data Sync Status</h2></div>
+        <div class="sync-info">
+          <div class="sync-row"><span class="sync-label">Last Sync</span><span class="sync-val" id="syncTime">—</span></div>
+          <div class="sync-row"><span class="sync-label">Data Age</span><span class="sync-val" id="syncAge">—</span></div>
+          <div class="sync-row"><span class="sync-label">Priority Source</span><span class="sync-val" id="syncPlanSrc">—</span></div>
+          <div class="sync-row"><span class="sync-label">Next Auto-Refresh</span><span class="sync-val" id="syncNext">—</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-head"><h2>🏆 Top 10 Events — Today</h2></div>
+      <div id="topEvents"><div class="loading"><div class="loader"></div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ── SCHEDULER PANEL ── -->
+<div id="tab-scheduler" class="tab-panel">
+
+  <!-- Top bar -->
+  <div class="sched-topbar">
+    <div class="sched-topbar-left">
+      <div class="sched-topbar-title">📋 Merchandising Scheduler</div>
+      <div class="sched-topbar-sub" id="schedWeekLabel">—</div>
+    </div>
+    <div class="sched-topbar-right">
+      <button class="sched-nav-btn" onclick="navigateWeek(-1)">◀ Prev</button>
+      <button class="sched-nav-btn" onclick="navigateWeek(0)">This Week</button>
+      <button class="sched-nav-btn" onclick="navigateWeek(1)">Next ▶</button>
+      <span class="sched-save-status" id="schedSaveStatus"></span>
+      <button class="sched-save-btn" id="schedSaveBtn" onclick="saveSchedule()">💾 Save to Hub</button>
+      <button class="sched-nav-btn" id="schedExportBtn" onclick="exportToExcel()" title="Export week as Excel" style="display:flex;align-items:center;gap:5px;">📊 Export Excel</button>
+    </div>
+  </div>
+
+  <!-- Sub-tabs: Market Priority | Pop Nav -->
+  <div class="sched-subtabs">
+    <button class="sched-subtab active" data-view="market" onclick="switchSchedView('market')">
+      📋 Market Priority
+    </button>
+    <button class="sched-subtab" data-view="popnav" onclick="switchSchedView('popnav')">
+      🗂️ Pop Nav
+    </button>
+  </div>
+
+  <!-- Day tabs (shared) -->
+  <div class="sched-day-tabs" id="schedDayTabs"></div>
+
+  <!-- MARKET PRIORITY SECTION -->
+  <div id="schedMarketSection" style="flex:1;display:grid;grid-template-columns:1fr 1fr;min-height:0;overflow:hidden;">
+    <!-- LEFT: Available Games from ESPN -->
+    <div class="sched-panel">
+      <div class="sched-panel-head" style="flex-direction:column;align-items:stretch;gap:8px">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:10px">
+          <span class="sched-panel-title">📡 Available Games</span>
+          <button class="espn-custom-btn" onclick="openAddModal(schedSelDay)">+ Custom Event</button>
+        </div>
+        <div class="sport-filters" id="sportFilters">
+          <button class="sport-filter active" data-sport="ALL" onclick="setSportFilter('ALL')">All</button>
+          <button class="sport-filter" data-sport="NBA"  onclick="setSportFilter('NBA')">NBA</button>
+          <button class="sport-filter" data-sport="MLB"  onclick="setSportFilter('MLB')">MLB</button>
+          <button class="sport-filter" data-sport="NHL"  onclick="setSportFilter('NHL')">NHL</button>
+          <button class="sport-filter" data-sport="NFL"  onclick="setSportFilter('NFL')">NFL</button>
+          <button class="sport-filter" data-sport="PGA"  onclick="setSportFilter('PGA')">PGA</button>
+          <button class="sport-filter" data-sport="ATP"  onclick="setSportFilter('ATP')">ATP</button>
+          <button class="sport-filter" data-sport="WTA"  onclick="setSportFilter('WTA')">WTA</button>
+          <button class="sport-filter" data-sport="WNBA" onclick="setSportFilter('WNBA')">WNBA</button>
+          <button class="sport-filter" data-sport="EPL"  onclick="setSportFilter('EPL')">EPL</button>
+          <button class="sport-filter" data-sport="UCL"  onclick="setSportFilter('UCL')">UCL</button>
+          <button class="sport-filter" data-sport="CFB"  onclick="setSportFilter('CFB')">CFB</button>
+          <button class="sport-filter" data-sport="CBB"  onclick="setSportFilter('CBB')">CBB</button>
+        </div>
+      </div>
+      <div class="sched-panel-body" id="schedGamesList">
+        <div class="espn-loading"><div class="loader"></div><div style="margin-top:8px">Select a day to load games</div></div>
+      </div>
+    </div>
+    <!-- RIGHT: Priority Schedule -->
+    <div class="sched-panel">
+      <div class="sched-panel-head">
+        <span class="sched-panel-title" id="schedPriorityTitle">📋 Display Priority</span>
+      </div>
+      <div class="sched-panel-body" id="schedPriorityList">
+        <div class="prio-empty">Select a day to view and edit the priority schedule</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- POP NAV SECTION (hidden by default) -->
+  <div id="schedPopnavSection" style="display:none;flex:1;display:none;grid-template-columns:1fr 1fr;min-height:0;overflow:hidden;" class="popnav-section">
+    <!-- LEFT: Available tiles -->
+    <div class="popnav-source-panel">
+      <div class="popnav-panel-head">
+        <span class="sched-panel-title">🗂️ Available Tiles</span>
+        <button class="espn-custom-btn" onclick="openPopNavModal(-1)">+ Custom Tile</button>
+      </div>
+      <div class="popnav-panel-body" id="popnavSourceList">
+        <div class="pn-no-day">Select a day to see available tiles</div>
+      </div>
+    </div>
+    <!-- RIGHT: Scheduled Pop Nav -->
+    <div class="popnav-schedule-panel">
+      <div class="popnav-panel-head">
+        <span class="sched-panel-title" id="popnavTitle">🗂️ Pop Nav</span>
+        <div style="display:flex;gap:6px;flex-shrink:0;">
+          <button class="sched-nav-btn" onclick="copyPopNavToNextDay()" title="Copy tiles to next day" style="font-size:11px;padding:4px 10px;">📋 Copy to Next Day</button>
+          <button class="sched-nav-btn" onclick="clearPopNavDay()" title="Clear all tiles for this day" style="font-size:11px;padding:4px 10px;color:var(--red);">🗑 Clear All</button>
+        </div>
+      </div>
+      <div class="popnav-panel-body" style="display:flex;flex-direction:column;">
+        <!-- Live preview strip -->
+        <div class="pn-preview" id="popnavPreview">
+          <div class="pn-preview-empty">Select a day to configure the Pop Nav</div>
+        </div>
+        <!-- Editable list -->
+        <div style="flex:1;overflow-y:auto;background:var(--bg);" id="popnavList">
+          <div class="pn-no-day">Select a day to view and edit the Pop Nav</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ── COMBO BUILDER PANEL ── -->
+<div id="tab-combo" class="tab-panel">
+  <iframe class="full-iframe" id="comboFrame" src="about:blank"
+    data-src="https://mendelowitzd.github.io/Predicts-Combo-Builder/"
+    title="Predicts Combo Builder"></iframe>
+</div>
+
+<!-- ── MARKET PRIORITY MODAL ── -->
+<div class="sched-modal-bg" id="schedModal" style="display:none" onclick="if(event.target===this)closeSchedModal()">
+  <div class="sched-modal">
+    <div class="sched-modal-header">
+      <div class="sched-modal-title" id="schedModalTitle">Add Custom Event</div>
+      <button class="sched-modal-close" onclick="closeSchedModal()">✕</button>
+    </div>
+    <div class="sched-field" id="schedModalDayField">
+      <label>Day</label>
+      <select id="schedModalDay">
+        <option value="MONDAY">Monday</option><option value="TUESDAY">Tuesday</option>
+        <option value="WEDNESDAY">Wednesday</option><option value="THURSDAY">Thursday</option>
+        <option value="FRIDAY">Friday</option><option value="SATURDAY">Saturday</option>
+        <option value="SUNDAY">Sunday</option>
+      </select>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+      <div class="sched-field">
+        <label>Sport</label>
+        <select id="schedModalSport">
+          <option value="NBA">NBA</option><option value="MLB">MLB</option>
+          <option value="NHL">NHL</option><option value="NFL">NFL</option>
+          <option value="CFB">CFB</option><option value="CBB">CBB</option>
+          <option value="WNBA">WNBA</option><option value="PGA">PGA</option>
+          <option value="ATP">ATP</option><option value="WTA">WTA</option>
+          <option value="EPL">EPL</option><option value="UCL">UCL</option>
+          <option value="Futures">Futures</option><option value="Combo">Combo</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="sched-field">
+        <label>Time <span style="font-weight:400;text-transform:none;letter-spacing:0">(optional)</span></label>
+        <input type="text" id="schedModalTime" placeholder="e.g. 7:30 PM ET">
+      </div>
+    </div>
+    <div class="sched-field">
+      <label>Event / Contest Name</label>
+      <input type="text" id="schedModalItem" placeholder="e.g. Celtics @ Knicks" autocomplete="off">
+    </div>
+    <div class="sched-modal-footer">
+      <button class="sched-modal-delete" id="schedModalDelete" onclick="deleteSchedItem()">🗑 Remove</button>
+      <button class="sched-modal-cancel" onclick="closeSchedModal()">Cancel</button>
+      <button class="sched-modal-save" onclick="saveSchedItem()">Save</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── POP NAV CUSTOM TILE MODAL ── -->
+<div class="pn-modal-bg" id="pnModal" style="display:none" onclick="if(event.target===this)closePopNavModal()">
+  <div class="pn-modal">
+    <div class="sched-modal-header">
+      <div class="sched-modal-title" id="pnModalTitle">Create Custom Tile</div>
+      <button class="sched-modal-close" onclick="closePopNavModal()">✕</button>
+    </div>
+    <!-- Icon preview -->
+    <div class="pn-icon-preview" id="pnIconPreview">🔹</div>
+    <div class="sched-field">
+      <label>Tile Label</label>
+      <input type="text" id="pnModalLabel" placeholder="e.g. MLB Combos" autocomplete="off"
+             oninput="updatePnIconPreview()">
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+      <div class="sched-field">
+        <label>Type</label>
+        <select id="pnModalType" onchange="updatePnIconPreview()">
+          <option value="category">Category</option>
+          <option value="subcategory">Subcategory</option>
+          <option value="event">Event</option>
+        </select>
+      </div>
+      <div class="sched-field">
+        <label>Icon (emoji)</label>
+        <input type="text" id="pnModalIcon" placeholder="🔹" maxlength="4"
+               oninput="updatePnIconPreview()">
+      </div>
+    </div>
+    <div class="sched-field" id="pnModalDayField">
+      <label>Day</label>
+      <select id="pnModalDay">
+        <option value="MONDAY">Monday</option><option value="TUESDAY">Tuesday</option>
+        <option value="WEDNESDAY">Wednesday</option><option value="THURSDAY">Thursday</option>
+        <option value="FRIDAY">Friday</option><option value="SATURDAY">Saturday</option>
+        <option value="SUNDAY">Sunday</option>
+      </select>
+    </div>
+    <div class="sched-modal-footer">
+      <button class="sched-modal-delete" id="pnModalDelete" onclick="deletePopNavTileModal()" style="display:none">🗑 Remove</button>
+      <button class="sched-modal-cancel" onclick="closePopNavModal()">Cancel</button>
+      <button class="sched-modal-save" onclick="savePopNavModal()">Save Tile</button>
+    </div>
+  </div>
+</div>
+<script>
+// ═══════════════════════════════════════════════════════════
+// CONFIG
+// ═══════════════════════════════════════════════════════════
+const GITHUB_TOKEN    = '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';
+const GITHUB_REPO     = 'mendelowitzd/Predicts-MerchOps-Hub';
+const GITHUB_WORKFLOW = 'sync-data.yml';
+const REFRESH_MS      = 25 * 60 * 1000;
+const POLL_INTERVAL   = 5000;
+const POLL_TIMEOUT    = 180000;
+
+const ESPN_LEAGUES = [
+  { sport:'NBA',  url: d => `https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates=${d}` },
+  { sport:'MLB',  url: d => `https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard?dates=${d}` },
+  { sport:'NHL',  url: d => `https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/scoreboard?dates=${d}` },
+  { sport:'NFL',  url: d => `https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard?dates=${d}` },
+  { sport:'CFB',  url: d => `https://site.api.espn.com/apis/site/v2/sports/football/college-football/scoreboard?dates=${d}` },
+  { sport:'CBB',  url: d => `https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/scoreboard?dates=${d}` },
+  { sport:'WNBA', url: d => `https://site.api.espn.com/apis/site/v2/sports/basketball/wnba/scoreboard?dates=${d}` },
+  { sport:'PGA',  url: d => `https://site.api.espn.com/apis/site/v2/sports/golf/pga/scoreboard?dates=${d}` },
+  { sport:'ATP',  url: d => `https://site.api.espn.com/apis/site/v2/sports/tennis/atp/scoreboard?dates=${d}` },
+  { sport:'WTA',  url: d => `https://site.api.espn.com/apis/site/v2/sports/tennis/wta/scoreboard?dates=${d}` },
+  { sport:'EPL',  url: d => `https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=${d}` },
+  { sport:'UCL',  url: d => `https://site.api.espn.com/apis/site/v2/sports/soccer/uefa.champions/scoreboard?dates=${d}` },
+];
+
+// ═══════════════════════════════════════════════════════════
+// GLOBAL STATE
+// ═══════════════════════════════════════════════════════════
+let refreshTimer  = null, nextRefreshAt = null, sportChart = null, marketChart = null;
+let lastKnownTs   = null, pollTimer = null;
+let scheduleData  = null, scheduleDirty = false;
+let schedViewWeek = null, schedSelDay = null, schedSportFilt = 'ALL';
+let espnCache     = {};
+let modalCtx      = null;
+let popnavView    = false;   // true = Pop Nav sub-tab active
+let pnModalCtx    = null;   // { dayName, idx }
+
+const WEEKDAYS  = ['MONDAY','TUESDAY','WEDNESDAY','THURSDAY','FRIDAY','SATURDAY','SUNDAY'];
+const DAY_SHORT = { MONDAY:'Mon', TUESDAY:'Tue', WEDNESDAY:'Wed', THURSDAY:'Thu', FRIDAY:'Fri', SATURDAY:'Sat', SUNDAY:'Sun' };
+const SPORT_ICON = { NBA:'🏀', MLB:'⚾', NHL:'🏒', NFL:'🏈', CFB:'🏈', CBB:'🏀', WNBA:'🏀', PGA:'⛳', ATP:'🎾', WTA:'🎾', EPL:'⚽', UCL:'⚽', Futures:'📈', Combo:'🎯', Other:'🔹' };
+
+// ── POP NAV TILE LIBRARY ──────────────────────────────────
+const PN_CATEGORIES = [
+  { type:'category', label:'Sports',      icon:'🏆' },
+  { type:'category', label:'Commodities', icon:'🛢️' },
+  { type:'category', label:'Financials',  icon:'📈' },
+  { type:'category', label:'Politics',    icon:'🏛️' },
+  { type:'category', label:'Crypto',      icon:'₿'  },
+];
+const PN_SUBCATEGORIES = [
+  { type:'subcategory', label:'NBA',              icon:'🏀' },
+  { type:'subcategory', label:'MLB',              icon:'⚾' },
+  { type:'subcategory', label:'NHL',              icon:'🏒' },
+  { type:'subcategory', label:'WNBA',             icon:'🏀' },
+  { type:'subcategory', label:'EPL',              icon:'⚽' },
+  { type:'subcategory', label:'UCL',              icon:'⚽' },
+  { type:'subcategory', label:'MLB Combos',       icon:'🎯' },
+  { type:'subcategory', label:'NBA Combos',       icon:'🎯' },
+  { type:'subcategory', label:'MLB Season Long',  icon:'📊' },
+  { type:'subcategory', label:'NBA Championship', icon:'🏆' },
+  { type:'subcategory', label:'Stanley Cup',      icon:'🏆' },
+  { type:'subcategory', label:'MLB Championship', icon:'🏆' },
+  { type:'subcategory', label:'NFL Championship', icon:'🏆' },
+  { type:'subcategory', label:'CFB Championship', icon:'🏆' },
+  { type:'subcategory', label:'FIFA World Cup',   icon:'⚽' },
+  { type:'subcategory', label:'La Liga',          icon:'⚽' },
+  { type:'subcategory', label:'Golf',             icon:'⛳' },
+  { type:'subcategory', label:'ATP',              icon:'🎾' },
+  { type:'subcategory', label:'WTA',              icon:'🎾' },
+];
+
+// ═══════════════════════════════════════════════════════════
+// DATE / WEEK HELPERS
+// ═══════════════════════════════════════════════════════════
+function getWeekKey(date) {
+  const d = new Date(date), dow = d.getDay();
+  d.setDate(d.getDate() + (dow === 0 ? -6 : 1 - dow));
+  return d.toISOString().slice(0, 10);
+}
+function weekDateRange(wk) {
+  const mon = new Date(wk+'T12:00:00'), sun = new Date(mon);
+  sun.setDate(sun.getDate() + 6);
+  const f = d => d.toLocaleDateString('en-US',{month:'short',day:'numeric'});
+  return `Week of ${f(mon)} – ${f(sun)}, ${sun.getFullYear()}`;
+}
+function dayDateForCol(wk, col) {
+  const d = new Date(wk+'T12:00:00'); d.setDate(d.getDate() + col);
+  return d.toLocaleDateString('en-US',{month:'numeric',day:'numeric'});
+}
+function dayIsoDate(wk, col) {
+  const d = new Date(wk+'T12:00:00'); d.setDate(d.getDate() + col);
+  return d.toISOString().slice(0,10);
+}
+function todayDayName() { const dow = new Date().getDay(); return dow === 0 ? 'SUNDAY' : WEEKDAYS[dow - 1]; }
+function yyyymmdd(isoDate) { return isoDate.replace(/-/g,''); }
+
+// ═══════════════════════════════════════════════════════════
+// SCHEDULE — LOAD
+// ═══════════════════════════════════════════════════════════
+async function loadSchedule() {
+  try {
+    const r = await fetch('./schedule.json?_='+Date.now());
+    scheduleData = r.ok ? await r.json() : { v:1, updated:new Date().toISOString(), weeks:{}, popnav_weeks:{} };
+  } catch(e) {
+    scheduleData = { v:1, updated:new Date().toISOString(), weeks:{}, popnav_weeks:{} };
+  }
+  if (!scheduleData.popnav_weeks) scheduleData.popnav_weeks = {};
+  if (!schedViewWeek) schedViewWeek = getWeekKey(new Date());
+}
+
+// ═══════════════════════════════════════════════════════════
+// ESPN GAME FETCH
+// ═══════════════════════════════════════════════════════════
+async function fetchEspnForDay(isoDate) {
+  if (espnCache[isoDate]) return espnCache[isoDate];
+  const date = yyyymmdd(isoDate);
+  const results = await Promise.allSettled(
+    ESPN_LEAGUES.map(async ({ sport, url }) => {
+      const r = await fetch(url(date));
+      if (!r.ok) return { sport, games:[] };
+      const data = await r.json();
+      return { sport, games: parseEspnEvents(data, sport) };
+    })
+  );
+  const grouped = {};
+  results.forEach(res => {
+    if (res.status === 'fulfilled' && res.value.games.length)
+      grouped[res.value.sport] = res.value.games;
+  });
+  espnCache[isoDate] = grouped;
+  return grouped;
+}
+
+const NATIONAL_NETS = {
+  'ESPN':{'label':'ESPN','cls':'net-ESPN'},'ESPN2':{'label':'ESPN2','cls':'net-ESPN2'},'ESPNU':{'label':'ESPNU','cls':'net-ESPN2'},
+  'ABC':{'label':'ABC','cls':'net-ABC'},'NBC':{'label':'NBC','cls':'net-NBC'},'NBCSN':{'label':'NBC','cls':'net-NBC'},
+  'FOX':{'label':'FOX','cls':'net-FOX'},'FS1':{'label':'FS1','cls':'net-FS1'},'FS2':{'label':'FS1','cls':'net-FS1'},
+  'CBS':{'label':'CBS','cls':'net-CBS'},'TNT':{'label':'TNT','cls':'net-TNT'},'TBS':{'label':'TBS','cls':'net-TBS'},
+  'USA':{'label':'USA','cls':'net-USA'},'Amazon':{'label':'Prime','cls':'net-Prime'},'Prime Video':{'label':'Prime','cls':'net-Prime'},
+  'Prime':{'label':'Prime','cls':'net-Prime'},'Peacock':{'label':'Peacock','cls':'net-Peacock'},'Netflix':{'label':'Netflix','cls':'net-Netflix'},
+  'Apple TV+':{'label':'Apple TV','cls':'net-AppleTV'},'Apple TV':{'label':'Apple TV','cls':'net-AppleTV'},
+  'MLS Season Pass':{'label':'Apple TV','cls':'net-AppleTV'},'MLB Network':{'label':'MLB Net','cls':'net-MLBNet'},
+  'MLB Net':{'label':'MLB Net','cls':'net-MLBNet'},'NBA TV':{'label':'NBA TV','cls':'net-NBATV'},
+  'NHL Network':{'label':'NHL Net','cls':'net-NHLNet'},'NHL Net':{'label':'NHL Net','cls':'net-NHLNet'},
+  'NFL Network':{'label':'NFL Net','cls':'net-NFLNet'},'NFL Net':{'label':'NFL Net','cls':'net-NFLNet'},
+};
+
+function extractNetworks(comp) {
+  const seen = new Set(), nets = [];
+  const tryAdd = name => {
+    if (!name) return;
+    const net = NATIONAL_NETS[name] || NATIONAL_NETS[name.trim()];
+    if (net && !seen.has(net.label)) { seen.add(net.label); nets.push(net); }
+  };
+  (comp?.broadcasts || []).forEach(b => (b.names || []).forEach(tryAdd));
+  (comp?.geoBroadcasts || []).forEach(b => tryAdd(b.media?.shortName || b.media?.name || ''));
+  return nets;
+}
+
+function parseEspnEvents(data, sport) {
+  return (data.events || []).map(evt => {
+    const comp = evt.competitions?.[0];
+    const home = comp?.competitors?.find(c => c.homeAway === 'home');
+    const away = comp?.competitors?.find(c => c.homeAway === 'away');
+    const statusName = comp?.status?.type?.name || '';
+    let shortName;
+    if (sport === 'PGA' || sport === 'Tennis') {
+      shortName = evt.shortName || evt.name || '—';
+    } else {
+      const awayT = away?.team?.shortDisplayName || away?.team?.abbreviation || '?';
+      const homeT = home?.team?.shortDisplayName || home?.team?.abbreviation || '?';
+      shortName = `${awayT} @ ${homeT}`;
+    }
+    const gameDate = new Date(evt.date);
+    const timeStr = gameDate.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit',timeZone:'America/New_York'}) + ' ET';
+    const networks = extractNetworks(comp);
+    return { id:evt.id, sport, item:shortName, time:statusName==='STATUS_SCHEDULED'?timeStr:(statusName==='STATUS_IN_PROGRESS'?'🔴 Live':'Final'), status:statusName, networks };
+  }).filter(g => g.item && g.item !== '—');
+}
+
+// ═══════════════════════════════════════════════════════════
+// SCHEDULER — RENDER & NAVIGATION
+// ═══════════════════════════════════════════════════════════
+function navigateWeek(dir) {
+  if (dir === 0) {
+    schedViewWeek = getWeekKey(new Date());
+  } else {
+    const d = new Date(schedViewWeek+'T12:00:00');
+    d.setDate(d.getDate() + dir * 7);
+    schedViewWeek = d.toISOString().slice(0,10);
+  }
+  schedSelDay = null;
+  renderScheduler();
+  renderGamesPanel('<div class="espn-loading"><div style="padding:32px;text-align:center;color:var(--text3)">Select a day to load games</div></div>');
+  renderPriorityPanel();
+  document.getElementById('popnavPreview').innerHTML = '<div class="pn-preview-empty">Select a day to configure the Pop Nav</div>';
+  document.getElementById('popnavList').innerHTML = '<div class="pn-no-day">Select a day to view and edit the Pop Nav</div>';
+  document.getElementById('popnavSourceList').innerHTML = '<div class="pn-no-day">Select a day to see available tiles</div>';
+}
+
+function renderScheduler() {
+  if (!scheduleData) return;
+  if (!schedViewWeek) schedViewWeek = getWeekKey(new Date());
+  document.getElementById('schedWeekLabel').textContent = weekDateRange(schedViewWeek);
+  const thisWeek = getWeekKey(new Date()), isThisWeek = schedViewWeek === thisWeek;
+  const todayName = todayDayName();
+  const weekData = scheduleData.weeks?.[schedViewWeek] || {};
+  const pnWeekData = scheduleData.popnav_weeks?.[schedViewWeek] || {};
+  const tabsEl = document.getElementById('schedDayTabs');
+  tabsEl.innerHTML = WEEKDAYS.map((day, i) => {
+    const mCount = (weekData[day] || []).length;
+    const pCount = (pnWeekData[day] || []).length;
+    const isToday = isThisWeek && day === todayName;
+    const isSel = day === schedSelDay;
+    const count = popnavView ? pCount : mCount;
+    return `<button class="sched-dtab ${isSel?'active':''} ${isToday?'today':''}" onclick="selectDay('${day}')">
+      <span class="sched-dtab-name">${DAY_SHORT[day]}</span>
+      <span class="sched-dtab-date">${dayDateForCol(schedViewWeek, i)}</span>
+      <span class="sched-dtab-count ${count===0?'zero':''}">${count}</span>
+    </button>`;
+  }).join('');
+  const btn = document.getElementById('schedSaveBtn');
+  btn.textContent = scheduleDirty ? '💾 Save Changes' : '💾 Save to Hub';
+  btn.classList.toggle('dirty', scheduleDirty);
+}
+
+async function selectDay(dayName) {
+  schedSelDay = dayName;
+  document.querySelectorAll('.sched-dtab').forEach((el, i) => {
+    el.classList.toggle('active', WEEKDAYS[i] === dayName);
+  });
+  const colIdx = WEEKDAYS.indexOf(dayName);
+  document.getElementById('schedPriorityTitle').textContent = `📋 Priority — ${DAY_SHORT[dayName]}`;
+  document.getElementById('popnavTitle').textContent = `🗂️ Pop Nav — ${DAY_SHORT[dayName]}`;
+
+  if (popnavView) {
+    renderPopNavPanel();
+    renderPopNavSourcePanel();
+  } else {
+    renderPriorityPanel();
+    document.getElementById('schedGamesList').innerHTML =
+      `<div class="espn-loading"><div class="loader"></div><div style="margin-top:8px">Loading games…</div></div>`;
+    try {
+      const isoDate = dayIsoDate(schedViewWeek, colIdx);
+      const games = await fetchEspnForDay(isoDate);
+      renderGamesPanel(null, games);
+    } catch(e) {
+      document.getElementById('schedGamesList').innerHTML =
+        `<div class="espn-no-games">⚠️ Couldn't load ESPN data.<br><small>${e.message}</small></div>`;
+    }
+  }
+}
+
+// ── Sub-tab switching ────────────────────────────────────
+function switchSchedView(view) {
+  popnavView = view === 'popnav';
+  document.querySelectorAll('.sched-subtab').forEach(el =>
+    el.classList.toggle('active', el.dataset.view === view));
+  const mkt = document.getElementById('schedMarketSection');
+  const pn  = document.getElementById('schedPopnavSection');
+  if (popnavView) {
+    mkt.style.display = 'none';
+    pn.style.display  = 'grid';
+    if (schedSelDay) { renderPopNavPanel(); renderPopNavSourcePanel(); }
+  } else {
+    mkt.style.display = 'grid';
+    pn.style.display  = 'none';
+    if (schedSelDay) {
+      renderPriorityPanel();
+      const colIdx = WEEKDAYS.indexOf(schedSelDay);
+      const isoDate = dayIsoDate(schedViewWeek, colIdx);
+      renderGamesPanel(null, espnCache[isoDate] || {});
+    }
+  }
+  renderScheduler(); // update counts in day tabs
+}
+
+// ── Games panel (left) ───────────────────────────────────
+function setSportFilter(sport) {
+  schedSportFilt = sport;
+  document.querySelectorAll('.sport-filter').forEach(el =>
+    el.classList.toggle('active', el.dataset.sport === sport));
+  if (schedSelDay) {
+    const colIdx = WEEKDAYS.indexOf(schedSelDay);
+    const isoDate = dayIsoDate(schedViewWeek, colIdx);
+    renderGamesPanel(null, espnCache[isoDate] || {});
+  }
+}
+
+function renderGamesPanel(rawHtml, grouped) {
+  const el = document.getElementById('schedGamesList');
+  if (rawHtml) { el.innerHTML = rawHtml; return; }
+  const scheduled = scheduleData?.weeks?.[schedViewWeek]?.[schedSelDay] || [];
+  const scheduledNames = new Set(scheduled.map(s => normalizeForMatch(s.item)));
+  const sports = schedSportFilt === 'ALL' ? Object.keys(grouped) : [schedSportFilt];
+  let html = '', anyGames = false;
+  for (const sport of sports) {
+    const games = grouped[sport] || [];
+    if (!games.length) continue;
+    anyGames = true;
+    const icon = SPORT_ICON[sport] || '🔹';
+    html += `<div class="espn-sport-group"><div class="espn-sport-header">${icon} ${sport}</div>`;
+    games.forEach(g => {
+      const norm = normalizeForMatch(g.item);
+      const isAdded = scheduledNames.has(norm) || [...scheduledNames].some(sn => sn.includes(norm) || norm.includes(sn));
+      const statusSuffix = g.status==='STATUS_IN_PROGRESS' ? ' <span class="espn-game-status live">LIVE</span>' :
+                           g.status==='STATUS_FINAL' ? ' <span class="espn-game-status final">FINAL</span>' : '';
+      html += `<div class="espn-game">
+        <div class="espn-game-info">
+          <div class="espn-game-name">${escHtml(g.item)}${statusSuffix}</div>
+          <div class="espn-game-meta">
+            <span class="espn-game-time">${escHtml(g.time)}</span>
+            ${(g.networks||[]).map(n=>`<span class="espn-net ${n.cls}">${n.label}</span>`).join('')}
+          </div>
+        </div>
+        <button class="espn-add-btn ${isAdded?'added':''}"
+          onclick="addGameToPriority(${JSON.stringify({sport:g.sport,item:g.item,time:g.time}).replace(/"/g,'&quot;')})"
+          ${isAdded?'disabled':''}>
+          ${isAdded ? '✓ Added' : '+ Add'}
+        </button>
+      </div>`;
+    });
+    html += `</div>`;
+  }
+  if (!anyGames) {
+    const label = schedSportFilt === 'ALL' ? 'today' : schedSportFilt;
+    html = `<div class="espn-no-games">No ${label} games scheduled for this day.</div>`;
+  }
+  el.innerHTML = html;
+}
+
+// ── Priority panel (right) ───────────────────────────────
+function renderPriorityPanel() {
+  const el = document.getElementById('schedPriorityList');
+  if (!schedSelDay) { el.innerHTML = '<div class="prio-empty">Select a day to view and edit the priority schedule</div>'; return; }
+  const items = scheduleData?.weeks?.[schedViewWeek]?.[schedSelDay] || [];
+  let html = '<div class="prio-list">';
+  if (items.length === 0) {
+    html += '<div class="prio-empty" style="padding:20px 0">No events scheduled yet.<br>Add games from the left panel or use the custom button below.</div>';
+  } else {
+    items.forEach((item, idx) => {
+      const sportCls = {NBA:'b-NBA',MLB:'b-MLB',NHL:'b-NHL',NFL:'b-NFL',CFB:'b-CFB',CBB:'b-CBB',WNBA:'b-WNBA',PGA:'b-PGA',ATP:'b-ATP',WTA:'b-WTA',EPL:'b-EPL',UCL:'b-UCL',Combo:'b-Combo',Futures:'b-Futures',Other:'b-Other'}[item.sport]||'b-Other';
+      html += `<div class="prio-item">
+        <span class="prio-rank">#${idx+1}</span>
+        <span class="prio-badge-wrap"><span class="badge ${sportCls}">${escHtml(item.sport)}</span></span>
+        <div class="prio-info">
+          <div class="prio-name" title="${escHtml(item.item)}">${escHtml(item.item)}</div>
+          ${item.time ? `<div class="prio-time">${escHtml(item.time)}</div>` : ''}
+        </div>
+        <div class="prio-actions">
+          ${idx > 0 ? `<button class="prio-btn" onclick="moveSchedItem('${schedSelDay}',${idx},-1)">↑</button>` : ''}
+          ${idx < items.length-1 ? `<button class="prio-btn" onclick="moveSchedItem('${schedSelDay}',${idx},1)">↓</button>` : ''}
+          <button class="prio-btn" onclick="openEditModal('${schedSelDay}',${idx})">✏️</button>
+          <button class="prio-btn del" onclick="removePrioItem('${schedSelDay}',${idx})">✕</button>
+        </div>
+      </div>`;
+    });
+  }
+  html += '</div>';
+  html += `<div class="prio-add-row"><button class="prio-add-btn" onclick="openAddModal('${schedSelDay}')">+ Add Custom Event</button></div>`;
+  el.innerHTML = html;
+}
+
+// ═══════════════════════════════════════════════════════════
+// POP NAV — RENDER
+// ═══════════════════════════════════════════════════════════
+function getPopNavItems(dayName) {
+  if (!dayName || !scheduleData) return [];
+  return scheduleData?.popnav_weeks?.[schedViewWeek]?.[dayName] || [];
+}
+
+function renderPopNavPanel() {
+  if (!schedSelDay) return;
+  const items = getPopNavItems(schedSelDay);
+
+  // Preview strip
+  const previewEl = document.getElementById('popnavPreview');
+  if (items.length === 0) {
+    previewEl.innerHTML = '<div class="pn-preview-empty">No Pop Nav tiles scheduled — add tiles from the left panel</div>';
+  } else {
+    previewEl.innerHTML =
+      `<div class="pn-preview-label">Pop Nav</div>` +
+      items.map((t, i) => `
+        <div class="pn-tile">
+          <span class="pn-tile-num">${i+1}</span>
+          <span class="pn-tile-icon">${t.icon}</span>
+          <span class="pn-tile-label">${escHtml(t.label)}</span>
+        </div>`).join('');
+  }
+
+  // Editable list
+  const listEl = document.getElementById('popnavList');
+  let html = '<div class="pn-list">';
+  if (items.length === 0) {
+    html += `<div class="pn-empty">No tiles scheduled yet.<br>Select categories, subcategories, or market events from the left, or create a custom tile.</div>`;
+  } else {
+    items.forEach((item, idx) => {
+      const typeLabel = item.type === 'category' ? 'Category' : item.type === 'subcategory' ? 'Subcategory' : 'Event';
+      html += `<div class="pn-item">
+        <span class="pn-item-pos">${idx+1}</span>
+        <span class="pn-item-icon">${item.icon}</span>
+        <div class="pn-item-info">
+          <div class="pn-item-label" title="${escHtml(item.label)}">${escHtml(item.label)}</div>
+          <div class="pn-item-type">${typeLabel}</div>
+        </div>
+        <div class="pn-item-actions">
+          ${idx > 0 ? `<button class="prio-btn" onclick="movePopNavTile('${schedSelDay}',${idx},-1)" title="Move up">↑</button>` : ''}
+          ${idx < items.length-1 ? `<button class="prio-btn" onclick="movePopNavTile('${schedSelDay}',${idx},1)" title="Move down">↓</button>` : ''}
+          <button class="prio-btn" onclick="openPopNavModal(${idx})" title="Edit">✏️</button>
+          <button class="prio-btn del" onclick="removePopNavTile('${schedSelDay}',${idx})" title="Remove">✕</button>
+        </div>
+      </div>`;
+    });
+  }
+  html += '</div>';
+  html += `<div class="pn-add-row"><button class="pn-add-btn" onclick="openPopNavModal(-1)">+ Create Custom Tile</button></div>`;
+  listEl.innerHTML = html;
+}
+
+function renderPopNavSourcePanel() {
+  if (!schedSelDay) return;
+  const el = document.getElementById('popnavSourceList');
+  const pnItems = getPopNavItems(schedSelDay);
+  const pnLabels = new Set(pnItems.map(t => t.label));
+
+  let html = '';
+
+  // Categories
+  html += `<div class="pntile-group-head">Categories</div><div class="pntile-grid">`;
+  PN_CATEGORIES.forEach(cat => {
+    const isAdded = pnLabels.has(cat.label);
+    const safeData = JSON.stringify(cat).replace(/"/g, '&quot;');
+    html += `<div class="pntile-option ${isAdded?'added':''}" onclick="${isAdded?'':` addPopNavTile(JSON.parse(this.dataset.tile))`}" data-tile="${safeData}">
+      <span class="pntile-icon">${cat.icon}</span>
+      <span class="pntile-label">${cat.label}</span>
+    </div>`;
+  });
+  html += `</div>`;
+
+  // Subcategories
+  html += `<div class="pntile-group-head">Subcategories</div><div class="pntile-grid">`;
+  PN_SUBCATEGORIES.forEach(sub => {
+    const isAdded = pnLabels.has(sub.label);
+    const safeData = JSON.stringify(sub).replace(/"/g, '&quot;');
+    html += `<div class="pntile-option ${isAdded?'added':''}" onclick="${isAdded?'':` addPopNavTile(JSON.parse(this.dataset.tile))`}" data-tile="${safeData}">
+      <span class="pntile-icon">${sub.icon}</span>
+      <span class="pntile-label">${sub.label}</span>
+    </div>`;
+  });
+  html += `</div>`;
+
+  // Events from market priority
+  const marketItems = scheduleData?.weeks?.[schedViewWeek]?.[schedSelDay] || [];
+  if (marketItems.length > 0) {
+    html += `<div class="pntile-group-head">Today's Market Priority Events</div><div class="pntile-grid">`;
+    marketItems.forEach(item => {
+      const tileObj = { type:'event', label:item.item, icon: SPORT_ICON[item.sport] || '🔹', sport: item.sport };
+      const isAdded = pnLabels.has(item.item);
+      const safeData = JSON.stringify(tileObj).replace(/"/g, '&quot;');
+      html += `<div class="pntile-option pntile-event ${isAdded?'added':''}" onclick="${isAdded?'':` addPopNavTile(JSON.parse(this.dataset.tile))`}" data-tile="${safeData}">
+        <span class="pntile-icon">${tileObj.icon}</span>
+        <span class="pntile-label">${escHtml(item.item)}</span>
+      </div>`;
+    });
+    html += `</div>`;
+  } else {
+    html += `<div class="pntile-group-head">Market Priority Events</div>
+      <div style="padding:12px 14px;font-size:11px;color:var(--text3)">
+        Add events to the Market Priority schedule first — they'll appear here as tile options.
+      </div>`;
+  }
+
+  el.innerHTML = html;
+}
+
+// ═══════════════════════════════════════════════════════════
+// POP NAV — MUTATIONS
+// ═══════════════════════════════════════════════════════════
+function ensurePopNavDayExists(dayName) {
+  if (!scheduleData.popnav_weeks) scheduleData.popnav_weeks = {};
+  if (!scheduleData.popnav_weeks[schedViewWeek]) scheduleData.popnav_weeks[schedViewWeek] = {};
+  if (!scheduleData.popnav_weeks[schedViewWeek][dayName]) scheduleData.popnav_weeks[schedViewWeek][dayName] = [];
+}
+
+function addPopNavTile(tile) {
+  if (!schedSelDay) return;
+  ensurePopNavDayExists(schedSelDay);
+  const existing = scheduleData.popnav_weeks[schedViewWeek][schedSelDay];
+  if (existing.some(t => t.label === tile.label)) return;
+  existing.push(tile);
+  scheduleDirty = true;
+  renderScheduler();
+  renderPopNavPanel();
+  renderPopNavSourcePanel();
+}
+
+function removePopNavTile(dayName, idx) {
+  const items = scheduleData?.popnav_weeks?.[schedViewWeek]?.[dayName];
+  if (!items) return;
+  items.splice(idx, 1);
+  scheduleDirty = true;
+  renderScheduler();
+  renderPopNavPanel();
+  renderPopNavSourcePanel();
+}
+
+function movePopNavTile(dayName, idx, dir) {
+  const items = scheduleData?.popnav_weeks?.[schedViewWeek]?.[dayName];
+  if (!items) return;
+  const ni = idx + dir;
+  if (ni < 0 || ni >= items.length) return;
+  [items[idx], items[ni]] = [items[ni], items[idx]];
+  scheduleDirty = true;
+  renderPopNavPanel();
+}
+
+function clearPopNavDay() {
+  if (!schedSelDay) return;
+  const items = scheduleData?.popnav_weeks?.[schedViewWeek]?.[schedSelDay];
+  if (!items || items.length === 0) return;
+  if (!confirm(`Clear all ${items.length} tile${items.length > 1 ? 's' : ''} from ${DAY_SHORT[schedSelDay]}?`)) return;
+  scheduleData.popnav_weeks[schedViewWeek][schedSelDay] = [];
+  scheduleDirty = true;
+  renderScheduler();
+  renderPopNavPanel();
+  renderPopNavSourcePanel();
+}
+
+function copyPopNavToNextDay() {
+  if (!schedSelDay) return;
+  const items = getPopNavItems(schedSelDay);
+  if (items.length === 0) { alert('No tiles to copy — add some tiles first.'); return; }
+  const curIdx  = WEEKDAYS.indexOf(schedSelDay);
+  const nextIdx = (curIdx + 1) % 7;
+  const nextDay = WEEKDAYS[nextIdx];
+  ensurePopNavDayExists(nextDay);
+  scheduleData.popnav_weeks[schedViewWeek][nextDay] = JSON.parse(JSON.stringify(items));
+  scheduleDirty = true;
+  renderScheduler();
+  // Switch to the next day so user can see the result
+  selectDay(nextDay);
+}
+
+// ═══════════════════════════════════════════════════════════
+// POP NAV MODAL
+// ═══════════════════════════════════════════════════════════
+function openPopNavModal(idx) {
+  const day = schedSelDay || todayDayName();
+  if (idx === -1 || idx === undefined) {
+    pnModalCtx = { dayName: day, idx: -1 };
+    document.getElementById('pnModalTitle').textContent = 'Create Custom Tile';
+    document.getElementById('pnModalType').value  = 'event';
+    document.getElementById('pnModalLabel').value = '';
+    document.getElementById('pnModalIcon').value  = '';
+    document.getElementById('pnModalDay').value   = day;
+    document.getElementById('pnModalDayField').style.display = '';
+    document.getElementById('pnModalDelete').style.display   = 'none';
+  } else {
+    const item = getPopNavItems(schedSelDay)[idx];
+    if (!item) return;
+    pnModalCtx = { dayName: day, idx };
+    document.getElementById('pnModalTitle').textContent = 'Edit Tile';
+    document.getElementById('pnModalType').value  = item.type  || 'event';
+    document.getElementById('pnModalLabel').value = item.label || '';
+    document.getElementById('pnModalIcon').value  = item.icon  || '';
+    document.getElementById('pnModalDay').value   = day;
+    document.getElementById('pnModalDayField').style.display = 'none';
+    document.getElementById('pnModalDelete').style.display   = '';
+  }
+  updatePnIconPreview();
+  document.getElementById('pnModal').style.display = 'flex';
+  setTimeout(() => document.getElementById('pnModalLabel').focus(), 60);
+}
+
+function updatePnIconPreview() {
+  const icon  = document.getElementById('pnModalIcon').value.trim();
+  const label = document.getElementById('pnModalLabel').value.trim();
+  const type  = document.getElementById('pnModalType').value;
+  const defaultIcons = { category:'📂', subcategory:'📋', event:'🔹' };
+  document.getElementById('pnIconPreview').textContent = icon || defaultIcons[type] || '🔹';
+}
+
+function closePopNavModal() {
+  document.getElementById('pnModal').style.display = 'none';
+  pnModalCtx = null;
+}
+
+function savePopNavModal() {
+  if (!pnModalCtx) return;
+  const label = document.getElementById('pnModalLabel').value.trim();
+  const type  = document.getElementById('pnModalType').value;
+  const iconVal = document.getElementById('pnModalIcon').value.trim();
+  const defaultIcons = { category:'📂', subcategory:'📋', event:'🔹' };
+  const icon = iconVal || defaultIcons[type] || '🔹';
+  if (!label) {
+    document.getElementById('pnModalLabel').style.borderColor = 'var(--red)';
+    document.getElementById('pnModalLabel').focus();
+    return;
+  }
+  document.getElementById('pnModalLabel').style.borderColor = '';
+  const { idx } = pnModalCtx;
+  const dayName = idx === -1
+    ? document.getElementById('pnModalDay').value
+    : pnModalCtx.dayName;
+  ensurePopNavDayExists(dayName);
+  const tile = { type, label, icon };
+  if (idx === -1) {
+    scheduleData.popnav_weeks[schedViewWeek][dayName].push(tile);
+  } else {
+    scheduleData.popnav_weeks[schedViewWeek][dayName][idx] = tile;
+  }
+  scheduleDirty = true;
+  closePopNavModal();
+  renderScheduler();
+  renderPopNavPanel();
+  renderPopNavSourcePanel();
+}
+
+function deletePopNavTileModal() {
+  if (!pnModalCtx || pnModalCtx.idx === -1) return;
+  removePopNavTile(pnModalCtx.dayName, pnModalCtx.idx);
+  closePopNavModal();
+}
+
+// ═══════════════════════════════════════════════════════════
+// MARKET PRIORITY — MUTATIONS
+// ═══════════════════════════════════════════════════════════
+function ensureDayExists(dayName) {
+  if (!scheduleData.weeks) scheduleData.weeks = {};
+  if (!scheduleData.weeks[schedViewWeek]) scheduleData.weeks[schedViewWeek] = {};
+  if (!scheduleData.weeks[schedViewWeek][dayName]) scheduleData.weeks[schedViewWeek][dayName] = [];
+}
+
+function addGameToPriority(game) {
+  if (!schedSelDay) return;
+  ensureDayExists(schedSelDay);
+  scheduleData.weeks[schedViewWeek][schedSelDay].push({ sport:game.sport, item:game.item, time:game.time });
+  scheduleDirty = true;
+  renderScheduler();
+  renderPriorityPanel();
+  const colIdx = WEEKDAYS.indexOf(schedSelDay);
+  renderGamesPanel(null, espnCache[dayIsoDate(schedViewWeek, colIdx)] || {});
+}
+
+function moveSchedItem(dayName, idx, dir) {
+  const items = scheduleData?.weeks?.[schedViewWeek]?.[dayName];
+  if (!items) return;
+  const ni = idx + dir;
+  if (ni < 0 || ni >= items.length) return;
+  [items[idx], items[ni]] = [items[ni], items[idx]];
+  scheduleDirty = true;
+  renderScheduler();
+  renderPriorityPanel();
+}
+
+function removePrioItem(dayName, idx) {
+  const items = scheduleData?.weeks?.[schedViewWeek]?.[dayName];
+  if (!items) return;
+  items.splice(idx, 1);
+  scheduleDirty = true;
+  renderScheduler();
+  renderPriorityPanel();
+  const colIdx = WEEKDAYS.indexOf(dayName);
+  renderGamesPanel(null, espnCache[dayIsoDate(schedViewWeek, colIdx)] || {});
+}
+
+// ── Market Priority Modal ────────────────────────────────
+function openAddModal(dayName) {
+  const day = dayName || schedSelDay || todayDayName();
+  modalCtx = { dayName: day, idx: -1 };
+  document.getElementById('schedModalTitle').textContent = 'Add Custom Event';
+  document.getElementById('schedModalSport').value  = 'Combo';
+  document.getElementById('schedModalItem').value   = '';
+  document.getElementById('schedModalTime').value   = '';
+  document.getElementById('schedModalDay').value    = day;
+  document.getElementById('schedModalDayField').style.display = '';
+  document.getElementById('schedModalDelete').style.display   = 'none';
+  document.getElementById('schedModal').style.display = 'flex';
+  setTimeout(() => document.getElementById('schedModalItem').focus(), 60);
+}
+
+function openEditModal(dayName, idx) {
+  const items = scheduleData?.weeks?.[schedViewWeek]?.[dayName];
+  if (!items?.[idx]) return;
+  const item = items[idx];
+  modalCtx = { dayName, idx };
+  document.getElementById('schedModalTitle').textContent = 'Edit Event';
+  document.getElementById('schedModalSport').value  = item.sport || 'NBA';
+  document.getElementById('schedModalItem').value   = item.item  || '';
+  document.getElementById('schedModalTime').value   = item.time  || '';
+  document.getElementById('schedModalDay').value    = dayName;
+  document.getElementById('schedModalDayField').style.display = 'none';
+  document.getElementById('schedModalDelete').style.display   = '';
+  document.getElementById('schedModal').style.display = 'flex';
+  setTimeout(() => document.getElementById('schedModalItem').focus(), 60);
+}
+
+function closeSchedModal() { document.getElementById('schedModal').style.display = 'none'; modalCtx = null; }
+
+function saveSchedItem() {
+  if (!modalCtx) return;
+  const { idx } = modalCtx;
+  const dayName = idx === -1 ? document.getElementById('schedModalDay').value : modalCtx.dayName;
+  const sport = document.getElementById('schedModalSport').value;
+  const item  = document.getElementById('schedModalItem').value.trim();
+  const time  = document.getElementById('schedModalTime').value.trim();
+  if (!item) {
+    document.getElementById('schedModalItem').style.borderColor = 'var(--red)';
+    document.getElementById('schedModalItem').focus();
+    return;
+  }
+  document.getElementById('schedModalItem').style.borderColor = '';
+  ensureDayExists(dayName);
+  const newObj = { sport, item, ...(time ? {time} : {}) };
+  if (idx === -1) { scheduleData.weeks[schedViewWeek][dayName].push(newObj); }
+  else { scheduleData.weeks[schedViewWeek][dayName][idx] = newObj; }
+  scheduleDirty = true;
+  closeSchedModal();
+  renderScheduler();
+  if (dayName === schedSelDay) {
+    renderPriorityPanel();
+    const colIdx = WEEKDAYS.indexOf(dayName);
+    renderGamesPanel(null, espnCache[dayIsoDate(schedViewWeek, colIdx)] || {});
+  } else { selectDay(dayName); }
+}
+
+function deleteSchedItem() {
+  if (!modalCtx || modalCtx.idx === -1) return;
+  removePrioItem(modalCtx.dayName, modalCtx.idx);
+  closeSchedModal();
+}
+
+// ═══════════════════════════════════════════════════════════
+// SAVE TO GITHUB
+// ═══════════════════════════════════════════════════════════
+async function saveSchedule() {
+  const btn = document.getElementById('schedSaveBtn');
+  const status = document.getElementById('schedSaveStatus');
+  btn.disabled = true; btn.textContent = '⏳ Saving…'; status.textContent = '';
+  scheduleData.updated = new Date().toISOString();
+  try {
+    let sha = null;
+    const getRes = await fetch(
+      `https://api.github.com/repos/${GITHUB_REPO}/contents/schedule.json`,
+      { headers:{'Authorization':`Bearer ${GITHUB_TOKEN}`,'Accept':'application/vnd.github+json'} }
+    );
+    if (getRes.ok) sha = (await getRes.json()).sha;
+    const content = btoa(unescape(encodeURIComponent(JSON.stringify(scheduleData, null, 2))));
+    const putRes  = await fetch(
+      `https://api.github.com/repos/${GITHUB_REPO}/contents/schedule.json`,
+      {
+        method:'PUT',
+        headers:{'Authorization':`Bearer ${GITHUB_TOKEN}`,'Accept':'application/vnd.github+json','Content-Type':'application/json'},
+        body: JSON.stringify({ message:'chore: update schedule (market priority + pop nav)', content, ...(sha?{sha}:{}) }),
+      }
+    );
+    if (putRes.ok) {
+      scheduleDirty = false;
+      status.textContent = '✓ Saved ' + new Date().toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'});
+      status.style.color = 'var(--green)';
+    } else {
+      const err = await putRes.json().catch(()=>({}));
+      throw new Error(err.message || `HTTP ${putRes.status}`);
+    }
+  } catch(e) {
+    console.error('[saveSchedule]', e);
+    status.textContent = '✗ ' + e.message;
+    status.style.color = 'var(--red)';
+  } finally {
+    btn.disabled = false;
+    renderScheduler();
+  }
+}
+
+// ═══════════════════════════════════════════════════════════
+// DASHBOARD — REFRESH / LOAD
+// ═══════════════════════════════════════════════════════════
+async function triggerRefresh() {
+  const btn = document.getElementById('refreshBtn');
+  if (btn.disabled) return;
+  btn.disabled = true; btn.textContent = '⏳ Syncing…';
+  if (pollTimer) { clearInterval(pollTimer); pollTimer = null; }
+  try {
+    const res = await fetch(
+      `https://api.github.com/repos/${GITHUB_REPO}/actions/workflows/${GITHUB_WORKFLOW}/dispatches`,
+      { method:'POST', headers:{'Authorization':`Bearer ${GITHUB_TOKEN}`,'Accept':'application/vnd.github+json','Content-Type':'application/json'}, body:JSON.stringify({ref:'main'}) }
+    );
+    if (!res.ok && res.status !== 204) { await loadData(); return; }
+    const deadline = Date.now() + POLL_TIMEOUT;
+    let elapsed = 0;
+    pollTimer = setInterval(async () => {
+      elapsed += POLL_INTERVAL; btn.textContent = `⏳ Syncing… ${Math.floor(elapsed/1000)}s`;
+      if (Date.now() > deadline) { clearInterval(pollTimer); pollTimer=null; await loadData(); return; }
+      try {
+        const r = await fetch('./data.json?_='+Date.now()); if (!r.ok) return;
+        const d = await r.json(); if (!d?.v) return;
+        if (d.ts !== lastKnownTs) { clearInterval(pollTimer); pollTimer=null; lastKnownTs=d.ts; renderDashboard(d); scheduleRefresh(); btn.disabled=false; btn.textContent='↻ Refresh'; }
+      } catch(e) {}
+    }, POLL_INTERVAL);
+  } catch(e) { await loadData(); }
+}
+
+async function loadData() {
+  const btn = document.getElementById('refreshBtn');
+  btn.disabled=true; btn.textContent='↻ Loading…';
+  try {
+    const r = await fetch('./data.json?_='+Date.now());
+    if (!r.ok) throw new Error('data.json not found — workflow may not have run yet');
+    const data = await r.json();
+    if (!data?.v) { showWaiting(); return; }
+    lastKnownTs = data.ts;
+    renderDashboard(data);
+    scheduleRefresh();
+  } catch(e) {
+    console.error('[loadData]', e);
+    showError(e.message);
+  } finally { btn.disabled=false; btn.textContent='↻ Refresh'; }
+}
+
+function scheduleRefresh() {
+  if (refreshTimer) clearTimeout(refreshTimer);
+  nextRefreshAt = Date.now() + REFRESH_MS;
+  refreshTimer  = setTimeout(loadData, REFRESH_MS);
+  tickNext();
+}
+function tickNext() {
+  const el = document.getElementById('syncNext');
+  if (!el || !nextRefreshAt) return;
+  const ms = nextRefreshAt - Date.now();
+  if (ms<=0) { el.textContent='refreshing…'; return; }
+  const min=Math.floor(ms/60000), sec=Math.floor((ms%60000)/1000);
+  el.textContent = min>0 ? `~${min}m` : `${sec}s`;
+  setTimeout(tickNext, 20000);
+}
+function showWaiting() {
+  document.getElementById('priorityGrid').innerHTML=`<div class="err"><div class="err-title">⏳ Waiting for First Sync</div><div class="err-msg">The scheduled task hasn't posted data yet — it runs every 25 minutes.<br>Trigger it manually from the Scheduled section in Cowork.</div><button class="err-btn" onclick="loadData()">↻ Check Again</button></div>`;
+}
+function showError(msg) {
+  document.getElementById('priorityGrid').innerHTML=`<div class="err"><div class="err-title">⚠️ Couldn't Load Data</div><div class="err-msg">${msg}</div><button class="err-btn" onclick="loadData()">↻ Retry</button></div>`;
+}
+
+// ═══════════════════════════════════════════════════════════
+// DASHBOARD — RENDER
+// ═══════════════════════════════════════════════════════════
+function getTodayScheduleItems() {
+  if (!scheduleData) return null;
+  const wk = getWeekKey(new Date()), day = todayDayName();
+  const items = scheduleData?.weeks?.[wk]?.[day];
+  return (items && items.length > 0) ? items : null;
+}
+function normalizeForMatch(s) { return (s||'').toLowerCase().replace(/[^a-z0-9]/g,''); }
+function mergePriorityWithLive(schedItems, liveEvents) {
+  const lookup = {};
+  (liveEvents||[]).forEach((e,i) => { lookup[normalizeForMatch(e.k)] = {orders:e.o,volume:e.v,act_rank:i+1}; });
+  return schedItems.map((si, i) => {
+    const norm = normalizeForMatch(si.item);
+    let match = lookup[norm];
+    if (!match) { for (const [key,val] of Object.entries(lookup)) { if (key.includes(norm) || norm.includes(key)) { match=val; break; } } }
+    let status = 'grey';
+    if (match) { const d = match.act_rank-(i+1); status = d<-2?'green':Math.abs(d)<=3?'yellow':'red'; }
+    return { rank:i+1, sport:si.sport, item:si.item, time:si.time||'', orders:match?.orders??null, volume:match?.volume??null, act_rank:match?.act_rank??null, status };
+  });
+}
+
+function renderDashboard(data) {
+  document.getElementById('sOrders').textContent   = fmtN(data.stats?.orders);
+  document.getElementById('sVolume').textContent   = fmtD(data.stats?.volume);
+  document.getElementById('sTopSport').textContent = data.stats?.top_sport || '—';
+  document.getElementById('sEvents').textContent   = fmtN(data.stats?.events ?? data.events?.length);
+  const syncTime = new Date(data.ts);
+  const ageMin   = Math.round((Date.now()-syncTime)/60000);
+  const ageStr   = ageMin<2?'just now':ageMin<60?`${ageMin}m ago`:`${Math.floor(ageMin/60)}h ${ageMin%60}m ago`;
+  document.getElementById('hubTs').textContent    = 'Synced '+syncTime.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'});
+  document.getElementById('syncTime').textContent = syncTime.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'});
+  document.getElementById('syncAge').textContent  = ageStr;
+  const todayItems = getTodayScheduleItems();
+  let priorityArr, prioritySource;
+  if (todayItems?.length) { priorityArr = mergePriorityWithLive(todayItems, data.events||[]); prioritySource = 'scheduler'; }
+  else { priorityArr = data.priority || []; prioritySource = data.plan_source; }
+  const srcHtml = prioritySource==='scheduler' ? '<span class="pill green">🟢 Hub Scheduler</span>'
+    : prioritySource==='live' ? '<span class="pill green">🟢 Live SharePoint</span>'
+    : '<span class="pill yellow">🟡 Cached plan</span>';
+  document.getElementById('syncPlanSrc').innerHTML = srcHtml;
+  renderPriority(priorityArr, prioritySource);
+  renderSport(data.sports||{}, data.sports_prev||{});
+  marketChart = renderBar('marketChart', data.markets||{}, marketChart, '#0052cc');
+  renderTopEvents(data.events||[]);
+}
+
+// ═══════════════════════════════════════════════════════════
+// UTILS
+// ═══════════════════════════════════════════════════════════
+const DAYS=['SUNDAY','MONDAY','TUESDAY','WEDNESDAY','THURSDAY','FRIDAY','SATURDAY'];
+function todayKey(){const d=new Date();return`${DAYS[d.getDay()]} ${d.getMonth()+1}/${d.getDate()}`;}
+function fmtN(n){return(n==null||isNaN(n))?'—':Number(n).toLocaleString();}
+function fmtD(n){if(!n||isNaN(n))return'—';if(n>=1e6)return`$${(n/1e6).toFixed(1)}M`;if(n>=1000)return`$${(n/1000).toFixed(1)}K`;return`$${Number(n).toFixed(0)}`;}
+function sportColor(s){return{NBA:'#b91c1c',MLB:'#1e40af',NHL:'#1d4ed8',PGA:'#166534',Tennis:'#3f6212',Combo:'#9a3412',Futures:'#6d28d9',Other:'#475569'}[s]||'#475569';}
+function snakeDisplay(k){return k.replace(/_at_/g,' @ ').split(' @ ').map(seg=>seg.split('_').map((x,j)=>j===0&&x.length<=4?x.toUpperCase():x.charAt(0).toUpperCase()+x.slice(1)).join(' ')).join(' @ ');}
+function escHtml(s){return(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+
+// ═══════════════════════════════════════════════════════════
+// RENDER: PRIORITY (dashboard)
+// ═══════════════════════════════════════════════════════════
+function renderPriority(arr, planSource) {
+  const el = document.getElementById('priorityGrid');
+  if (!arr.length) { el.innerHTML='<div class="loading">No priority data for today</div>'; return; }
+  document.getElementById('dateLabel').textContent = new Date().toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'});
+  const ps = document.getElementById('planSource');
+  if (planSource==='scheduler') { ps.textContent='🟢 Hub Scheduler'; ps.style.color='var(--green)'; }
+  else if (planSource==='live') { ps.textContent='🟢 live from SharePoint'; ps.style.color='var(--green)'; }
+  else { ps.textContent='🟡 cached plan'; ps.style.color='var(--yellow)'; }
+  const maxOrd = Math.max(...arr.map(r=>r.orders||0),1);
+  const rows = arr.map(({rank,item,sport:s,time,orders,act_rank,status,volume})=>{
+    const sc=status||'grey';
+    const sportCls={NBA:'b-NBA',MLB:'b-MLB',NHL:'b-NHL',NFL:'b-NFL',CFB:'b-CFB',CBB:'b-CBB',WNBA:'b-WNBA',PGA:'b-PGA',ATP:'b-ATP',WTA:'b-WTA',EPL:'b-EPL',UCL:'b-UCL',Combo:'b-Combo',Futures:'b-Futures'}[s]||'b-Other';
+    const clean=(item||'').replace(/\s*\([^)]*\)/g,'').replace(/\d+:\d+\s*(AM|PM)/i,'').trim();
+    const bw=orders&&maxOrd?Math.round(orders/maxOrd*100):0;
+    const bc={green:'var(--green)',yellow:'var(--yellow)',red:'var(--red)'}[sc]||'var(--text3)';
+    return `<div class="prow ${sc!=='grey'?sc:''}">
+      <div class="prank">${rank}</div>
+      <div><div class="pgame"><span class="badge ${sportCls}">${s||'?'}</span>${clean}</div>${time?`<div class="ptime">${time}</div>`:''}</div>
+      <div class="pactivity">
+        <div class="pact-orders">${orders!=null?fmtN(orders):'<span class="nodata">—</span>'}<div class="odot ${sc}"></div></div>
+        ${act_rank!=null?`<div class="pact-rank">Activity #${act_rank}</div>`:''}
+        ${volume?`<div class="pact-vol">${fmtD(volume)}</div>`:''}
+        ${orders!=null?`<div class="obar-wrap"><div class="obar" style="width:${bw}%;background:${bc}"></div></div>`:''}
+      </div>
+    </div>`;
+  }).join('');
+  el.innerHTML=`<div class="pcol-head"><span>PRIORITY — ${todayKey()}</span><span>LIVE ORDERS</span></div>${rows}`;
+}
+
+function renderSport(today, yest) {
+  const entries=Object.entries(today).sort((a,b)=>b[1]-a[1]);
+  const total=entries.reduce((s,[,v])=>s+v,0);
+  const totalY=Object.values(yest).reduce((s,v)=>s+v,0);
+  document.getElementById('donutTotal').textContent=fmtN(total);
+  if(entries[0]) document.getElementById('sTopSport').textContent=entries[0][0];
+  const ctx=document.getElementById('sportChart').getContext('2d');
+  if(sportChart) sportChart.destroy();
+  sportChart=new Chart(ctx,{type:'doughnut',data:{labels:entries.map(([k])=>k),datasets:[{data:entries.map(([,v])=>v),backgroundColor:entries.map(([k])=>sportColor(k)),borderColor:'#fff',borderWidth:2}]},options:{responsive:true,maintainAspectRatio:false,cutout:'62%',plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${c.label}: ${fmtN(c.raw)} (${((c.raw/total)*100).toFixed(1)}%)`}}}}});
+  const rows=entries.map(([s,cnt],i)=>{
+    const pct=total>0?(cnt/total*100):0,yc=yest[s]||0,yp=totalY>0?(yc/totalY*100):0;
+    let dc='delta-flat',dt='';
+    if(yp>0){const d=pct-yp;dc=d>1?'delta-up':d<-1?'delta-down':'delta-flat';dt=`${d>0?'+':''}${d.toFixed(1)}pp`;}
+    const dot=`<span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${sportColor(s)};margin-right:5px"></span>`;
+    return`<tr><td class="num">${i+1}</td><td>${dot}<span class="badge b-${s}">${s}</span></td><td>${fmtN(cnt)}</td><td class="pct">${pct.toFixed(1)}%</td><td class="${dc}">${dt||'—'}</td></tr>`;
+  }).join('');
+  document.getElementById('sportTable').innerHTML=`<table class="stable"><thead><tr><th>#</th><th>Sport</th><th>Orders</th><th>Share</th><th>vs Yday</th></tr></thead><tbody>${rows}</tbody></table>`;
+}
+
+function renderBar(id,obj,existing,color){
+  const entries=Object.entries(obj).sort((a,b)=>b[1]-a[1]).slice(0,7);
+  if(!entries.length) return existing;
+  const pal=[color,'#3b82f6','#0ea5e9','#06b6d4','#14b8a6','#10b981','#6366f1'];
+  const ctx=document.getElementById(id).getContext('2d');
+  if(existing) existing.destroy();
+  return new Chart(ctx,{type:'bar',data:{labels:entries.map(([k])=>k),datasets:[{data:entries.map(([,v])=>v),backgroundColor:pal.slice(0,entries.length),borderRadius:4,borderSkipped:false}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${fmtN(c.raw)} orders`}}},scales:{x:{grid:{color:'#f1f5f9'},ticks:{color:'#94a3b8',font:{size:10}}},y:{grid:{display:false},ticks:{color:'#0f172a',font:{size:11}}}}}});
+}
+
+function renderTopEvents(events){
+  document.getElementById('sEvents').textContent=fmtN(events.length||0);
+  const top=(events||[]).slice(0,10);
+  if(!top.length){document.getElementById('topEvents').innerHTML='<div class="loading">No data</div>';return;}
+  const SF={nuggets:'NBA',timberwolves:'NBA',celtics:'NBA','76_ers':'NBA',knicks:'NBA',hawks:'NBA',rockets:'NBA',lakers:'NBA',cavaliers:'NBA',raptors:'NBA',pistons:'NBA',magic:'NBA',thunder:'NBA',suns:'NBA',spurs:'NBA',blazers:'NBA',warriors:'NBA',bulls:'NBA',pacers:'NBA',nets:'NBA',wizards:'NBA',grizzlies:'NBA',mavericks:'NBA',clippers:'NBA',heat:'NBA',bucks:'NBA',hornets:'NBA',pelicans:'NBA',kings:'NBA',jazz:'NBA',tigers:'MLB',braves:'MLB',royals:'MLB',athletics:'MLB',blue_jays:'MLB',twins:'MLB',giants:'MLB',phillies:'MLB',astros:'MLB',orioles:'MLB',rockies:'MLB',reds:'MLB',cardinals:'MLB',pirates:'MLB',diamondbacks:'MLB',brewers:'MLB',nationals:'MLB',mets:'MLB',dodgers:'MLB',padres:'MLB',rangers:'MLB',yankees:'MLB',red_sox:'MLB',mariners:'MLB',rays:'MLB',guardians:'MLB',cubs:'MLB',white_sox:'MLB',angels:'MLB',marlins:'MLB',golden_knights:'NHL',stars:'NHL',wild:'NHL',oilers:'NHL',ducks:'NHL',lightning:'NHL',canadiens:'NHL',bruins:'NHL',sabres:'NHL',flyers:'NHL',penguins:'NHL',hurricanes:'NHL',madrid_open:'Tennis',ruud:'Tennis',zverev:'Tennis',sinner:'Tennis',cadillac:'PGA',bitcoin:'Futures',nasdaq:'Futures'};
+  function sportOf(k){const lo=k.toLowerCase();for(const[f,s]of Object.entries(SF))if(lo.includes(f))return s;return'Other';}
+  document.getElementById('topEvents').innerHTML=`<div class="evlist">${top.map(({k,o,v},i)=>{const rank=i+1,rc=rank===1?'gold':rank===2?'silver':rank===3?'bronze':'',s=sportOf(k);return`<div class="evrow"><div class="evrank ${rc}">${rank}</div><div><div class="evname">${snakeDisplay(k)}</div><div class="evmeta"><span class="badge b-${s}">${s}</span></div></div><div><div class="evcount">${fmtN(o)} orders</div>${v?`<div class="evvol">${fmtD(v)}</div>`:''}</div></div>`;}).join('')}</div>`;
+}
+
+// ═══════════════════════════════════════════════════════════
+// TAB SWITCHING
+// ═══════════════════════════════════════════════════════════
+function showTab(name, btn) {
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.hub-tab').forEach(b=>b.classList.remove('active'));
+  document.getElementById('tab-'+name).classList.add('active');
+  if (btn) btn.classList.add('active');
+  const isDb = name === 'dashboard';
+  document.getElementById('refreshBtn').style.display = isDb ? '' : 'none';
+  document.getElementById('hubTs').style.display      = isDb ? '' : 'none';
+  if (name === 'scheduler') {
+    if (!scheduleData) loadSchedule().then(() => { schedViewWeek = getWeekKey(new Date()); renderScheduler(); });
+    else renderScheduler();
+    if (schedViewWeek === getWeekKey(new Date()) && !schedSelDay) selectDay(todayDayName());
+  }
+  if (name === 'combo') {
+    const f = document.getElementById('comboFrame');
+    if (!f.src || f.src === 'about:blank') f.src = f.dataset.src;
+  }
+}
+
+// ═══════════════════════════════════════════════════════════
+// EXCEL EXPORT
+// ═══════════════════════════════════════════════════════════
+async function exportToExcel() {
+  const btn = document.getElementById('schedExportBtn');
+  btn.textContent = '⏳ Building…';
+  btn.disabled = true;
+
+  try {
+    // Lazy-load ExcelJS
+    if (!window.ExcelJS) {
+      await new Promise((resolve, reject) => {
+        const s = document.createElement('script');
+        s.src = 'https://cdn.jsdelivr.net/npm/exceljs@4.4.0/dist/exceljs.min.js';
+        s.onload = resolve; s.onerror = reject;
+        document.head.appendChild(s);
+      });
+    }
+
+    const wk = schedViewWeek || getWeekKey(new Date());
+    const wb = new ExcelJS.Workbook();
+    wb.creator = 'Predicts Merch Ops Hub';
+    wb.created = new Date();
+
+    // Day header labels e.g. "MONDAY 5/4"
+    const dayHeaders = WEEKDAYS.map((day, i) => {
+      const d = new Date(wk + 'T12:00:00');
+      d.setDate(d.getDate() + i);
+      return `${DAY_SHORT[day].toUpperCase()} ${d.getMonth()+1}/${d.getDate()}`;
+    });
+
+    // ── Color palette (matches original exactly) ──────────────
+    const COL = {
+      // Market Priority header
+      mpHeaderBg: '1A3A6C', mpHeaderFg: 'FFFFFF',
+      mpTitleBg:  'EFEFEF', mpTitleFg:  '000000',
+      // Pop Nav header
+      pnTitleBg:  '1B5E20', pnTitleFg:  'FFFFFF',
+      pnHeaderBg: '2E7D32', pnHeaderFg: 'FFFFFF',
+      // Priority # col
+      priorityFg: '1A3A6C',
+      // Data row alternating
+      rowOdd:  'F2F2F2', rowEven: 'FFFFFF',
+      // Market Priority text colors by sport
+      black:  '000000',
+      purple: '7030A0',  // PGA / Golf
+      // Pop Nav tile text colors by type
+      catFg:  '92400E',  // category  (amber)
+      subFg:  '166534',  // subcategory (dark green)
+      evtFg:  '1E40AF',  // event (dark blue)
+    };
+
+    // ── Helper: sport → text color for Market Priority ────────
+    function mpColor(sport) {
+      if (!sport) return COL.black;
+      const s = sport.toUpperCase();
+      if (s === 'PGA' || s === 'ATP' || s === 'WTA' || s === 'GOLF') return COL.purple;
+      return COL.black;
+    }
+
+    // ── Helper: pop nav tile type → text color ────────────────
+    function pnColor(type) {
+      if (type === 'category')    return COL.catFg;
+      if (type === 'subcategory') return COL.subFg;
+      return COL.evtFg;
+    }
+
+    // ── Helper: apply fill ────────────────────────────────────
+    function fill(hex) {
+      return { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FF' + hex } };
+    }
+
+    // ── Helper: thin border on all 4 sides ────────────────────
+    const thinBorder = {
+      top:    { style: 'thin', color: { argb: 'FFD0D0D0' } },
+      bottom: { style: 'thin', color: { argb: 'FFD0D0D0' } },
+      left:   { style: 'thin', color: { argb: 'FFD0D0D0' } },
+      right:  { style: 'thin', color: { argb: 'FFD0D0D0' } },
+    };
+
+    // ══════════════════════════════════════════════════════════
+    // SHEET 1: MARKET PRIORITY
+    // ══════════════════════════════════════════════════════════
+    const mp = wb.addWorksheet('Market Priority');
+
+    // Column widths
+    mp.getColumn(1).width = 8.5;
+    for (let c = 2; c <= 8; c++) mp.getColumn(c).width = 25;
+
+    // Row 1: Title (merged A1:H1)
+    mp.getRow(1).height = 22;
+    const mpTitle = mp.getCell('A1');
+    mpTitle.value = 'Market Priority Schedule';
+    mpTitle.font  = { name: 'Calibri', size: 14, bold: true, color: { argb: 'FF' + COL.mpTitleFg } };
+    mpTitle.fill  = fill(COL.mpTitleBg);
+    mpTitle.alignment = { horizontal: 'center', vertical: 'middle' };
+    mp.mergeCells('A1:H1');
+
+    // Row 2: Headers
+    mp.getRow(2).height = 18;
+    ['Priority', ...dayHeaders].forEach((h, ci) => {
+      const cell = mp.getCell(2, ci + 1);
+      cell.value = h;
+      cell.font  = { name: 'Calibri', size: ci === 0 ? 10 : 11, bold: true, color: { argb: 'FF' + COL.mpHeaderFg } };
+      cell.fill  = fill(COL.mpHeaderBg);
+      cell.alignment = { horizontal: 'center', vertical: 'middle' };
+      cell.border = thinBorder;
+    });
+
+    // Build columns: one per day
+    const weekMp = scheduleData?.weeks?.[wk] || {};
+    const mpCols = WEEKDAYS.map(d => weekMp[d] || []);
+    const mpRows = Math.max(...mpCols.map(c => c.length), 1);
+
+    for (let r = 0; r < mpRows; r++) {
+      const excelRow = r + 3;
+      const rowBg = r % 2 === 0 ? COL.rowOdd : COL.rowEven;
+      mp.getRow(excelRow).height = 17;
+
+      // Priority number
+      const rankCell = mp.getCell(excelRow, 1);
+      rankCell.value = r + 1;
+      rankCell.font  = { name: 'Calibri', size: 10, bold: true };
+      rankCell.fill  = fill(rowBg);
+      rankCell.alignment = { horizontal: 'center', vertical: 'middle' };
+      rankCell.border = thinBorder;
+
+      // Each day column
+      mpCols.forEach((dayItems, di) => {
+        const item = dayItems[r];
+        const cell = mp.getCell(excelRow, di + 2);
+        cell.value = item ? (item.sport ? item.sport + ' ' + item.item : item.item) + (item.time ? ' ' + item.time : '') : '';
+        cell.font  = { name: 'Calibri', size: 11, bold: true, color: { argb: 'FF' + mpColor(item?.sport) } };
+        cell.fill  = fill(rowBg);
+        cell.alignment = { vertical: 'middle', wrapText: false };
+        cell.border = thinBorder;
+      });
+    }
+
+    // ══════════════════════════════════════════════════════════
+    // SHEET 2: POP NAV  (AM cols A-H, gap I-K, PM cols L-S)
+    // ══════════════════════════════════════════════════════════
+    const pn = wb.addWorksheet('Pop Nav');
+
+    // Column widths: A=8.5, B-H=16, I-K=3 (gap), L=8.5, M-S=16
+    pn.getColumn(1).width  = 8.5;
+    for (let c = 2; c <= 8;  c++) pn.getColumn(c).width  = 16;
+    for (let c = 9; c <= 11; c++) pn.getColumn(c).width  = 3;    // gap
+    pn.getColumn(12).width = 8.5;
+    for (let c = 13; c <= 19; c++) pn.getColumn(c).width = 16;
+
+    const weekPn = scheduleData?.popnav_weeks?.[wk] || {};
+    const pnCols = WEEKDAYS.map(d => weekPn[d] || []);
+    const pnRows = Math.max(...pnCols.map(c => c.length), 1);
+
+    // Helper: write AM or PM section starting at column offset
+    function writePnSection(titleLabel, colOffset, merged) {
+      // Row 1: Title
+      pn.getRow(1).height = 22;
+      const titleCell = pn.getCell(1, colOffset);
+      titleCell.value = titleLabel;
+      titleCell.font  = { name: 'Calibri', size: 14, bold: true, color: { argb: 'FF' + COL.pnTitleFg } };
+      titleCell.fill  = fill(COL.pnTitleBg);
+      titleCell.alignment = { horizontal: 'center', vertical: 'middle' };
+      pn.mergeCells(1, colOffset, 1, colOffset + 7);
+
+      // Row 2: Headers
+      pn.getRow(2).height = 18;
+      ['Priority', ...dayHeaders].forEach((h, ci) => {
+        const cell = pn.getCell(2, colOffset + ci);
+        cell.value = h;
+        cell.font  = { name: 'Calibri', size: ci === 0 ? 11 : 11, bold: true, color: { argb: 'FF' + COL.pnHeaderFg } };
+        cell.fill  = fill(COL.pnHeaderBg);
+        cell.alignment = { horizontal: 'center', vertical: 'middle' };
+        cell.border = thinBorder;
+      });
+
+      // Data rows
+      for (let r = 0; r < pnRows; r++) {
+        const excelRow = r + 3;
+        const rowBg = r % 2 === 0 ? COL.rowOdd : COL.rowEven;
+        pn.getRow(excelRow).height = 17;
+
+        // Priority number
+        const rankCell = pn.getCell(excelRow, colOffset);
+        rankCell.value = r + 1;
+        rankCell.font  = { name: 'Calibri', size: 10, bold: true, color: { argb: 'FF' + COL.priorityFg } };
+        rankCell.fill  = fill(rowBg);
+        rankCell.alignment = { horizontal: 'center', vertical: 'middle' };
+        rankCell.border = thinBorder;
+
+        // Each day
+        pnCols.forEach((dayItems, di) => {
+          const tile = dayItems[r];
+          const cell = pn.getCell(excelRow, colOffset + 1 + di);
+          cell.value = tile ? tile.label : '';
+          cell.font  = { name: 'Calibri', size: 11, bold: false, color: { argb: 'FF' + (tile ? pnColor(tile.type) : COL.black) } };
+          cell.fill  = fill(rowBg);
+          cell.alignment = { vertical: 'middle' };
+          cell.border = thinBorder;
+        });
+      }
+    }
+
+    writePnSection('Pop Nav Schedule AM', 1);   // A-H
+    writePnSection('Pop Nav Schedule PM', 12);  // L-S
+
+    // ══════════════════════════════════════════════════════════
+    // DOWNLOAD
+    // ══════════════════════════════════════════════════════════
+    const buffer = await wb.xlsx.writeBuffer();
+    const blob   = new Blob([buffer], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+    const url    = URL.createObjectURL(blob);
+    const a      = document.createElement('a');
+    const mon    = new Date(wk + 'T12:00:00');
+    const label  = mon.toLocaleDateString('en-US', { month: 'long', day: 'numeric' });
+    a.href     = url;
+    a.download = `Predicts Merchandising Plan - Week of ${label}.xlsx`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+
+    const status = document.getElementById('schedSaveStatus');
+    status.textContent = '✓ Exported';
+    status.style.color = 'var(--green)';
+    setTimeout(() => { status.textContent = ''; }, 3000);
+
+  } catch(e) {
+    console.error('[exportToExcel]', e);
+    alert('Export failed: ' + e.message);
+  } finally {
+    btn.textContent = '📊 Export Excel';
+    btn.disabled = false;
+  }
+}
+
+// ═══════════════════════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════════════════════
+window.addEventListener('DOMContentLoaded', async () => {
+  await loadSchedule();
+  schedViewWeek = getWeekKey(new Date());
+  loadData();
+});
+</script>
+</body>
+</html>
