@@ -311,6 +311,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
   <div class="hub-right">
     <span class="hub-ts" id="hubTs">—</span>
     <button class="hub-btn" id="refreshBtn" onclick="triggerRefresh()">↻ Refresh</button>
+    <button class="hub-btn" id="patBtn" onclick="promptPat()" title="Set GitHub PAT for schedule saving &amp; manual refresh">🔑</button>
   </div>
 </nav>
 
@@ -584,9 +585,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
 // ═══════════════════════════════════════════════════════════
 // CONFIG
 // ═══════════════════════════════════════════════════════════
-const GITHUB_TOKEN    = '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';
 const GITHUB_REPO     = 'mendelowitzd/Predicts-MerchOps-Hub';
 const GITHUB_WORKFLOW = 'sync-data.yml';
+function getGithubPat() { return localStorage.getItem('predicts_hub_pat') || ''; }
+function setGithubPat(t) { if(t) localStorage.setItem('predicts_hub_pat', t); else localStorage.removeItem('predicts_hub_pat'); }
 const REFRESH_MS      = 5 * 60 * 1000;
 const POLL_INTERVAL   = 5000;
 const POLL_TIMEOUT    = 180000;
@@ -1319,13 +1321,18 @@ function deleteSchedItem() {
 async function saveSchedule() {
   const btn = document.getElementById('schedSaveBtn');
   const status = document.getElementById('schedSaveStatus');
+  const pat = getGithubPat();
+  if (!pat) {
+    promptPat();
+    if (!getGithubPat()) { status.textContent = '✗ No PAT set — click 🔑 to configure'; status.style.color='var(--red)'; return; }
+  }
   btn.disabled = true; btn.textContent = '⏳ Saving…'; status.textContent = '';
   scheduleData.updated = new Date().toISOString();
   try {
     let sha = null;
     const getRes = await fetch(
       `https://api.github.com/repos/${GITHUB_REPO}/contents/schedule.json`,
-      { headers:{'Authorization':`Bearer ${GITHUB_TOKEN}`,'Accept':'application/vnd.github+json'} }
+      { headers:{'Authorization':`Bearer ${getGithubPat()}`,'Accept':'application/vnd.github+json'} }
     );
     if (getRes.ok) sha = (await getRes.json()).sha;
     const content = btoa(unescape(encodeURIComponent(JSON.stringify(scheduleData, null, 2))));
@@ -1333,7 +1340,7 @@ async function saveSchedule() {
       `https://api.github.com/repos/${GITHUB_REPO}/contents/schedule.json`,
       {
         method:'PUT',
-        headers:{'Authorization':`Bearer ${GITHUB_TOKEN}`,'Accept':'application/vnd.github+json','Content-Type':'application/json'},
+        headers:{'Authorization':`Bearer ${getGithubPat()}`,'Accept':'application/vnd.github+json','Content-Type':'application/json'},
         body: JSON.stringify({ message:'chore: update schedule (market priority + pop nav)', content, ...(sha?{sha}:{}) }),
       }
     );
@@ -1356,17 +1363,46 @@ async function saveSchedule() {
 }
 
 // ═══════════════════════════════════════════════════════════
+// PAT MANAGEMENT
+// ═══════════════════════════════════════════════════════════
+function promptPat() {
+  const cur = getGithubPat();
+  const val = window.prompt(
+    'Enter a GitHub Fine-Grained PAT with Actions:write + Contents:write permissions\n(stored in localStorage, never sent to any server other than api.github.com)\n\nLeave blank to clear.',
+    cur
+  );
+  if (val === null) return; // cancelled
+  setGithubPat(val.trim());
+  const btn = document.getElementById('patBtn');
+  btn.textContent = val.trim() ? '🔑✓' : '🔑';
+  setTimeout(() => { btn.textContent = '🔑'; }, 2000);
+}
+
+function updatePatIndicator() {
+  const btn = document.getElementById('patBtn');
+  if (btn) btn.title = getGithubPat()
+    ? 'GitHub PAT configured — click to update'
+    : 'No GitHub PAT set — click to configure (needed for manual refresh & schedule save)';
+}
+
+// ═══════════════════════════════════════════════════════════
 // DASHBOARD — REFRESH / LOAD
 // ═══════════════════════════════════════════════════════════
 async function triggerRefresh() {
   const btn = document.getElementById('refreshBtn');
   if (btn.disabled) return;
+  const pat = getGithubPat();
+  if (!pat) {
+    // No PAT — just reload data.json (cron updates it every 5 min)
+    await loadData();
+    return;
+  }
   btn.disabled = true; btn.textContent = '⏳ Syncing…';
   if (pollTimer) { clearInterval(pollTimer); pollTimer = null; }
   try {
     const res = await fetch(
       `https://api.github.com/repos/${GITHUB_REPO}/actions/workflows/${GITHUB_WORKFLOW}/dispatches`,
-      { method:'POST', headers:{'Authorization':`Bearer ${GITHUB_TOKEN}`,'Accept':'application/vnd.github+json','Content-Type':'application/json'}, body:JSON.stringify({ref:'main'}) }
+      { method:'POST', headers:{'Authorization':`Bearer ${pat}`,'Accept':'application/vnd.github+json','Content-Type':'application/json'}, body:JSON.stringify({ref:'main'}) }
     );
     if (!res.ok && res.status !== 204) { await loadData(); return; }
     const deadline = Date.now() + POLL_TIMEOUT;
@@ -1813,6 +1849,7 @@ async function exportToExcel() {
 // INIT
 // ═══════════════════════════════════════════════════════════
 window.addEventListener('DOMContentLoaded', async () => {
+  updatePatIndicator();
   await loadSchedule();
   schedViewWeek = getWeekKey(new Date());
   loadData();
