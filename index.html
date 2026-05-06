@@ -587,7 +587,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
 const GITHUB_TOKEN    = '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';
 const GITHUB_REPO     = 'mendelowitzd/Predicts-MerchOps-Hub';
 const GITHUB_WORKFLOW = 'sync-data.yml';
-const REFRESH_MS      = 25 * 60 * 1000;
+const REFRESH_MS      = 5 * 60 * 1000;
 const POLL_INTERVAL   = 5000;
 const POLL_TIMEOUT    = 180000;
 
@@ -1416,7 +1416,7 @@ function tickNext() {
   setTimeout(tickNext, 20000);
 }
 function showWaiting() {
-  document.getElementById('priorityGrid').innerHTML=`<div class="err"><div class="err-title">⏳ Waiting for First Sync</div><div class="err-msg">The scheduled task hasn't posted data yet — it runs every 25 minutes.<br>Trigger it manually from the Scheduled section in Cowork.</div><button class="err-btn" onclick="loadData()">↻ Check Again</button></div>`;
+  document.getElementById('priorityGrid').innerHTML=`<div class="err"><div class="err-title">⏳ Waiting for First Sync</div><div class="err-msg">The GitHub Actions workflow hasn't run yet — it syncs every 5 minutes directly from Amplitude.<br>Click ↻ Refresh above to trigger it manually.</div><button class="err-btn" onclick="loadData()">↻ Check Again</button></div>`;
 }
 function showError(msg) {
   document.getElementById('priorityGrid').innerHTML=`<div class="err"><div class="err-title">⚠️ Couldn't Load Data</div><div class="err-msg">${msg}</div><button class="err-btn" onclick="loadData()">↻ Retry</button></div>`;
