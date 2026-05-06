@@ -1469,12 +1469,46 @@ function getTodayScheduleItems() {
 }
 function normalizeForMatch(s) { return (s||'').toLowerCase().replace(/[^a-z0-9]/g,''); }
 function mergePriorityWithLive(schedItems, liveEvents) {
-  const lookup = {};
-  (liveEvents||[]).forEach((e,i) => { lookup[normalizeForMatch(e.k)] = {orders:e.o,volume:e.v,act_rank:i+1}; });
+  // Build a lookup with multiple normalized keys per event so fuzzy matching works
+  // across different schedule naming conventions (@ vs at, city codes, etc.)
+  const entries = []; // [{norm, val}]
+  (liveEvents||[]).forEach((e,i) => {
+    const val = {orders:e.o, volume:e.v, act_rank:i+1};
+    const k = e.k;
+    const add = s => { const n=normalizeForMatch(s); if(n.length>2) entries.push({n,val}); };
+    add(k);                              // full key: phi_76_ers_at_nyk_knicks
+    add(k.replace(/_at_/g,'_'));         // without _at_: phi_76_ers_nyk_knicks
+    add(k.replace(/_at_/g,' '));         // with space
+    k.split('_at_').forEach(seg => add(seg)); // each team segment independently
+    // Also add individual meaningful tokens (len>3) from the key
+    k.split('_').filter(t=>t.length>3).forEach(t => add(t));
+  });
+
+  function findMatch(norm) {
+    if (!norm || norm.length < 3) return null;
+    // 1. Exact
+    let hit = entries.find(e => e.n === norm);
+    if (hit) return hit.val;
+    // 2. One fully contains the other
+    hit = entries.find(e => e.n.includes(norm) || norm.includes(e.n));
+    if (hit) return hit.val;
+    // 3. Token-level: split schedule item into words, try each token ≥5 chars
+    return null;
+  }
+
   return schedItems.map((si, i) => {
     const norm = normalizeForMatch(si.item);
-    let match = lookup[norm];
-    if (!match) { for (const [key,val] of Object.entries(lookup)) { if (key.includes(norm) || norm.includes(key)) { match=val; break; } } }
+    let match = findMatch(norm);
+    // 4. If still no match, try each meaningful word from the schedule item
+    if (!match) {
+      const tokens = (si.item||'').toLowerCase()
+        .replace(/[^a-z0-9\s]/g,' ').split(/\s+/)
+        .filter(t => t.length >= 5);
+      for (const tok of tokens) {
+        match = findMatch(tok);
+        if (match) break;
+      }
+    }
     let status = 'grey';
     if (match) { const d = match.act_rank-(i+1); status = d<-2?'green':Math.abs(d)<=3?'yellow':'red'; }
     return { rank:i+1, sport:si.sport, item:si.item, time:si.time||'', orders:match?.orders??null, volume:match?.volume??null, act_rank:match?.act_rank??null, status };
