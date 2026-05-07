@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-05-07T14:06:32.102Z",
+  "updated": "2026-05-07T14:06:53.899Z",
   "weeks": {
     "2026-05-04": {
       "MONDAY": [],
@@ -690,6 +690,16 @@
           "label": "Spurs @ Timberwolves",
           "icon": "🏀",
           "sport": "NBA"
+        },
+        {
+          "type": "subcategory",
+          "label": "NBA Combos",
+          "icon": "🎯"
+        },
+        {
+          "type": "subcategory",
+          "label": "MLB Combos",
+          "icon": "🎯"
         },
         {
           "type": "subcategory",
