@@ -660,7 +660,9 @@ const PN_SUBCATEGORIES = [
 function getWeekKey(date) {
   const d = new Date(date), dow = d.getDay();
   d.setDate(d.getDate() + (dow === 0 ? -6 : 1 - dow));
-  return d.toISOString().slice(0, 10);
+  // Use local date components — toISOString() is UTC and can be a day off in ET after 8pm
+  const y = d.getFullYear(), m = String(d.getMonth()+1).padStart(2,'0'), dd = String(d.getDate()).padStart(2,'0');
+  return `${y}-${m}-${dd}`;
 }
 function weekDateRange(wk) {
   const mon = new Date(wk+'T12:00:00'), sun = new Date(mon);
