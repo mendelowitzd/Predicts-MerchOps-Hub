@@ -589,7 +589,7 @@ const GITHUB_REPO     = 'mendelowitzd/Predicts-MerchOps-Hub';
 const GITHUB_WORKFLOW = 'sync-data.yml';
 function getGithubPat() { return localStorage.getItem('predicts_hub_pat') || ''; }
 function setGithubPat(t) { if(t) localStorage.setItem('predicts_hub_pat', t); else localStorage.removeItem('predicts_hub_pat'); }
-const REFRESH_MS      = 5 * 60 * 1000;
+const REFRESH_MS      = 10 * 60 * 1000;
 const POLL_INTERVAL   = 5000;
 const POLL_TIMEOUT    = 180000;
 
@@ -1452,7 +1452,7 @@ function tickNext() {
   setTimeout(tickNext, 20000);
 }
 function showWaiting() {
-  document.getElementById('priorityGrid').innerHTML=`<div class="err"><div class="err-title">⏳ Waiting for First Sync</div><div class="err-msg">The GitHub Actions workflow hasn't run yet — it syncs every 5 minutes directly from Amplitude.<br>Click ↻ Refresh above to trigger it manually.</div><button class="err-btn" onclick="loadData()">↻ Check Again</button></div>`;
+  document.getElementById('priorityGrid').innerHTML=`<div class="err"><div class="err-title">⏳ Waiting for First Sync</div><div class="err-msg">The GitHub Actions workflow hasn't run yet — it syncs every 10 minutes directly from Amplitude.<br>Click ↻ Refresh above to trigger it manually.</div><button class="err-btn" onclick="loadData()">↻ Check Again</button></div>`;
 }
 function showError(msg) {
   document.getElementById('priorityGrid').innerHTML=`<div class="err"><div class="err-title">⚠️ Couldn't Load Data</div><div class="err-msg">${msg}</div><button class="err-btn" onclick="loadData()">↻ Retry</button></div>`;
