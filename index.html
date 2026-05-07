@@ -589,7 +589,7 @@ const GITHUB_REPO     = 'mendelowitzd/Predicts-MerchOps-Hub';
 const GITHUB_WORKFLOW = 'sync-data.yml';
 function getGithubPat() { return localStorage.getItem('predicts_hub_pat') || ''; }
 function setGithubPat(t) { if(t) localStorage.setItem('predicts_hub_pat', t); else localStorage.removeItem('predicts_hub_pat'); }
-const REFRESH_MS      = 10 * 60 * 1000;
+const POLL_CHECK_MS   = 60 * 1000;  // check data.json every 60s; re-render only when ts changes
 const POLL_INTERVAL   = 5000;
 const POLL_TIMEOUT    = 180000;
 
@@ -1440,18 +1440,31 @@ async function loadData() {
 
 function scheduleRefresh() {
   if (refreshTimer) clearTimeout(refreshTimer);
-  nextRefreshAt = Date.now() + REFRESH_MS;
-  refreshTimer  = setTimeout(loadData, REFRESH_MS);
+  nextRefreshAt = Date.now() + POLL_CHECK_MS;
+  refreshTimer  = setTimeout(checkForUpdates, POLL_CHECK_MS);
   tickNext();
+}
+async function checkForUpdates() {
+  try {
+    const r = await fetch('./data.json?_='+Date.now());
+    if (!r.ok) return;
+    const data = await r.json();
+    if (!data?.v) return;
+    if (data.ts !== lastKnownTs) {
+      lastKnownTs = data.ts;
+      renderDashboard(data);
+    }
+  } catch(e) { console.error('[checkForUpdates]', e); }
+  finally { scheduleRefresh(); }
 }
 function tickNext() {
   const el = document.getElementById('syncNext');
   if (!el || !nextRefreshAt) return;
   const ms = nextRefreshAt - Date.now();
-  if (ms<=0) { el.textContent='refreshing…'; return; }
+  if (ms<=0) { el.textContent='checking…'; return; }
   const min=Math.floor(ms/60000), sec=Math.floor((ms%60000)/1000);
   el.textContent = min>0 ? `~${min}m` : `${sec}s`;
-  setTimeout(tickNext, 20000);
+  setTimeout(tickNext, 5000);
 }
 function showWaiting() {
   document.getElementById('priorityGrid').innerHTML=`<div class="err"><div class="err-title">⏳ Waiting for First Sync</div><div class="err-msg">The GitHub Actions workflow hasn't run yet — it syncs every 10 minutes directly from Amplitude.<br>Click ↻ Refresh above to trigger it manually.</div><button class="err-btn" onclick="loadData()">↻ Check Again</button></div>`;
