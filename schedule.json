@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-05-07T01:30:27.574Z",
+  "updated": "2026-05-07T13:35:16.054Z",
   "weeks": {
     "2026-05-04": {
       "MONDAY": [],
@@ -102,7 +102,98 @@
           "time": "9:40 PM ET"
         }
       ],
-      "THURSDAY": [],
+      "THURSDAY": [
+        {
+          "sport": "PGA",
+          "item": "Truist Championship",
+          "time": "7:00 AM"
+        },
+        {
+          "sport": "Combo",
+          "item": "The American Tour",
+          "time": "12:35 PM"
+        },
+        {
+          "sport": "Combo",
+          "item": "Snake Eyes",
+          "time": "7:00 PM"
+        },
+        {
+          "sport": "Combo",
+          "item": "Double Down",
+          "time": "7:00 PM"
+        },
+        {
+          "sport": "MLB",
+          "item": "Rangers @ Yankees",
+          "time": "12:35 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Twins @ Nationals",
+          "time": "1:05 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Guardians @ Royals",
+          "time": "2:10 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Reds @ Cubs",
+          "time": "2:20 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Mets @ Rockies",
+          "time": "3:10 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Pirates @ Diamondbacks",
+          "time": "3:40 PM ET"
+        },
+        {
+          "sport": "NBA",
+          "item": "Cavaliers @ Pistons",
+          "time": "7:00 PM ET"
+        },
+        {
+          "sport": "NBA",
+          "item": "Lakers @ Thunder",
+          "time": "9:30 PM ET"
+        },
+        {
+          "sport": "Combo",
+          "item": "The I-95 Triple",
+          "time": "6:40 PM"
+        },
+        {
+          "sport": "MLB",
+          "item": "Athletics @ Phillies",
+          "time": "6:40 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Orioles @ Marlins",
+          "time": "6:40 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Rays @ Red Sox",
+          "time": "7:00 PM ET"
+        },
+        {
+          "sport": "NHL",
+          "item": "Hurricanes @ Flyers",
+          "time": "8:00 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Cardinals @ Padres",
+          "time": "10:00 PM ET"
+        }
+      ],
       "FRIDAY": [],
       "SATURDAY": [],
       "SUNDAY": []
