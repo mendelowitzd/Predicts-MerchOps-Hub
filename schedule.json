@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-05-07T13:39:23.142Z",
+  "updated": "2026-05-07T13:43:31.296Z",
   "weeks": {
     "2026-05-04": {
       "MONDAY": [],
@@ -199,5 +199,62 @@
       "SUNDAY": []
     }
   },
-  "popnav_weeks": {}
+  "popnav_weeks": {
+    "2026-05-04": {
+      "THURSDAY": [
+        {
+          "type": "category",
+          "label": "Sports",
+          "icon": "🏆"
+        },
+        {
+          "type": "event",
+          "label": "Cavaliers @ Pistons",
+          "icon": "🏀",
+          "sport": "NBA"
+        },
+        {
+          "type": "event",
+          "label": "Lakers @ Thunder",
+          "icon": "🏀",
+          "sport": "NBA"
+        },
+        {
+          "type": "subcategory",
+          "label": "MLB",
+          "icon": "⚾"
+        },
+        {
+          "type": "subcategory",
+          "label": "Golf",
+          "icon": "⛳"
+        },
+        {
+          "type": "subcategory",
+          "label": "NBA",
+          "icon": "🏀"
+        },
+        {
+          "type": "category",
+          "label": "Crypto",
+          "icon": "₿"
+        },
+        {
+          "type": "category",
+          "label": "Commodities",
+          "icon": "🛢️"
+        },
+        {
+          "type": "category",
+          "label": "Financials",
+          "icon": "📈"
+        },
+        {
+          "type": "category",
+          "label": "Politics",
+          "icon": "🏛️"
+        }
+      ]
+    }
+  }
 }
