@@ -1,13 +1,8 @@
 name: Sync Predicts Data
 
-# Runs every 5 minutes and on manual trigger.
-# Requires one GitHub Secret:
-#   SLACK_TOKEN — bot/user token with channels:history scope for the data channel
-# Add it at: Settings → Secrets and variables → Actions → New repository secret
-
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '*/25 * * * *'
   workflow_dispatch:
 
 jobs:
@@ -29,10 +24,11 @@ jobs:
           token   = os.environ['SLACK_TOKEN']
           channel = 'C0B19MPAG9M'
           marker  = '◆PREDICTS_DATA◆'
+          MAX_AGE_MINUTES = 35  # reject messages older than this
 
-          # ── Fetch recent messages ────────────────────────────────
+          # ── Fetch recent messages ────────────────────────────────────────
           body = urllib.parse.urlencode({
-              'token': token, 'channel': channel, 'limit': '20'
+              'token': token, 'channel': channel, 'limit': '10'
           }).encode()
 
           req = urllib.request.Request(
@@ -48,35 +44,35 @@ jobs:
               print(f"Slack API error: {resp.get('error')}")
               sys.exit(1)
 
-          # ── Find the most recent JSON data message ───────────────
-          # Skip human-readable summary messages (no JSON object after marker)
-          data_msg = None
-          for m in resp.get('messages', []):
-              text = m.get('text', '')
-              if marker not in text:
-                  continue
-              idx = text.index(marker) + len(marker)
-              candidate = text[idx:].strip()
-              if candidate.startswith('{'):
-                  data_msg = m
-                  break
+          # ── Find the most recent data message ───────────────────────────
+          data_msg = next(
+              (m for m in resp.get('messages', []) if marker in m.get('text', '')),
+              None
+          )
 
           if not data_msg:
-              print('No JSON data message found in Slack channel — Cowork task may not have run yet today')
+              print('No data message found in Slack channel — task may not have run yet')
               sys.exit(0)
 
+          # ── Freshness check ─────────────────────────────────────────────
           msg_ts   = float(data_msg['ts'])
           msg_time = datetime.fromtimestamp(msg_ts, tz=timezone.utc)
           now      = datetime.now(tz=timezone.utc)
           age_min  = (now - msg_time).total_seconds() / 60
+
+          if age_min > MAX_AGE_MINUTES:
+              print(f'Slack message is {age_min:.0f} min old (limit: {MAX_AGE_MINUTES} min) — skipping update to avoid serving stale data')
+              sys.exit(0)
+
           print(f'Found data message, age: {age_min:.1f} min')
 
-          # ── Extract JSON ─────────────────────────────────────────
+          # ── Extract JSON ─────────────────────────────────────────────────
           text = data_msg['text']
           text = text.replace('&amp;', '&').replace('&lt;', '<').replace('&gt;', '>')
           idx  = text.index(marker) + len(marker)
           json_str = text[idx:].strip()
 
+          # Find the complete JSON object
           depth, end = 0, 0
           for i, ch in enumerate(json_str):
               if ch == '{': depth += 1
@@ -92,7 +88,7 @@ jobs:
 
           raw_json = json_str[:end]
 
-          # ── Validate ─────────────────────────────────────────────
+          # ── Validate the payload ─────────────────────────────────────────
           try:
               data = json.loads(raw_json)
           except json.JSONDecodeError as e:
@@ -103,23 +99,13 @@ jobs:
               print('Payload missing required fields — skipping')
               sys.exit(1)
 
-          # ── Skip if already up to date ───────────────────────────
-          try:
-              with open('data.json') as f:
-                  existing = json.load(f)
-              if existing.get('ts') == data.get('ts'):
-                  print(f'data.json already up to date (ts={data["ts"]}) — no change')
-                  sys.exit(0)
-          except Exception:
-              pass
-
-          # ── Write ────────────────────────────────────────────────
+          # ── Write to file ────────────────────────────────────────────────
           with open('data.json', 'w') as f:
               json.dump(data, f, separators=(',', ':'))
 
           orders = data.get('stats', {}).get('orders', '?')
           events = data.get('stats', {}).get('events', '?')
-          print(f'data.json written — {orders} orders, {events} events, ts={data.get("ts","?")}')
+          print(f'data.json written — {orders} orders, {events} events, source: {data.get("plan_source","?")}')
           EOF
 
       - name: Commit and push data.json
