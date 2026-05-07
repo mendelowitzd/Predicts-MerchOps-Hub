@@ -2011,7 +2011,10 @@ function renderSport(today, yest) {
 }
 
 function renderBar(id,obj,existing,color){
-  const entries=Object.entries(obj).sort((a,b)=>b[1]-a[1]).slice(0,7);
+  // Strip dated futures contracts ("Price On May 6…", "Futures Price…") and
+  // individual game matchups (" Vs ") — these aren't market types.
+  const MKTFILTER=/price on (jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)\b|futures price\b| vs /i;
+  const entries=Object.entries(obj).filter(([k])=>!MKTFILTER.test(k)).sort((a,b)=>b[1]-a[1]).slice(0,7);
   if(!entries.length) return existing;
   const pal=[color,'#3b82f6','#0ea5e9','#06b6d4','#14b8a6','#10b981','#6366f1'];
   const ctx=document.getElementById(id).getContext('2d');
