@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-05-07T14:02:58.091Z",
+  "updated": "2026-05-07T14:05:57.474Z",
   "weeks": {
     "2026-05-04": {
       "MONDAY": [],
@@ -742,6 +742,80 @@
         {
           "type": "event",
           "label": "Thunder @ Lakers",
+          "icon": "🏀",
+          "sport": "NBA"
+        },
+        {
+          "type": "subcategory",
+          "label": "NBA Combos",
+          "icon": "🎯"
+        },
+        {
+          "type": "subcategory",
+          "label": "MLB Combos",
+          "icon": "🎯"
+        },
+        {
+          "type": "subcategory",
+          "label": "MLB",
+          "icon": "⚾"
+        },
+        {
+          "type": "subcategory",
+          "label": "WNBA",
+          "icon": "🏀"
+        },
+        {
+          "type": "subcategory",
+          "label": "NBA",
+          "icon": "🏀"
+        },
+        {
+          "type": "subcategory",
+          "label": "NHL",
+          "icon": "🏒"
+        },
+        {
+          "type": "subcategory",
+          "label": "Golf",
+          "icon": "⛳"
+        },
+        {
+          "type": "category",
+          "label": "Crypto",
+          "icon": "₿"
+        },
+        {
+          "type": "category",
+          "label": "Commodities",
+          "icon": "🛢️"
+        },
+        {
+          "type": "category",
+          "label": "Financials",
+          "icon": "📈"
+        },
+        {
+          "type": "category",
+          "label": "Politics",
+          "icon": "🏛️"
+        }
+      ],
+      "SUNDAY": [
+        {
+          "type": "category",
+          "label": "Sports",
+          "icon": "🏆"
+        },
+        {
+          "type": "event",
+          "label": "Knicks @ 76ers",
+          "icon": "🏀",
+          "sport": "NBA"
+        },
+        {
+          "type": "event",
+          "label": "Spurs @ Timberwolves",
           "icon": "🏀",
           "sport": "NBA"
         },
