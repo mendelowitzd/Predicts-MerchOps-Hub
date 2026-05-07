@@ -24,7 +24,7 @@ jobs:
           token   = os.environ['SLACK_TOKEN']
           channel = 'C0B19MPAG9M'
           marker  = '◆PREDICTS_DATA◆'
-          MAX_AGE_MINUTES = 35  # reject messages older than this
+          MAX_AGE_MINUTES = 90  # reject messages older than this
 
           # ── Fetch recent messages ────────────────────────────────────────
           body = urllib.parse.urlencode({
