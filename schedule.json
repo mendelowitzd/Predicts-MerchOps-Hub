@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-05-07T14:05:57.474Z",
+  "updated": "2026-05-07T14:06:32.102Z",
   "weeks": {
     "2026-05-04": {
       "MONDAY": [],
@@ -626,6 +626,16 @@
           "label": "Lakers @ Thunder",
           "icon": "🏀",
           "sport": "NBA"
+        },
+        {
+          "type": "subcategory",
+          "label": "NBA Combos",
+          "icon": "🎯"
+        },
+        {
+          "type": "subcategory",
+          "label": "MLB Combos",
+          "icon": "🎯"
         },
         {
           "type": "subcategory",
