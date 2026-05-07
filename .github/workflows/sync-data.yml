@@ -1,14 +1,13 @@
 name: Sync Predicts Data
 
-# Runs every 10 minutes and on manual trigger.
-# Requires two GitHub Secrets (Futures FE Prod, appId 712023):
-#   AMPLITUDE_API_KEY    — API key
-#   AMPLITUDE_SECRET_KEY — Secret key
-# Add them at: Settings → Secrets and variables → Actions → New repository secret
+# Runs every 5 minutes and on manual trigger.
+# Requires one GitHub Secret:
+#   SLACK_TOKEN — bot/user token with channels:history scope for the data channel
+# Add it at: Settings → Secrets and variables → Actions → New repository secret
 
 on:
   schedule:
-    - cron: '*/10 * * * *'
+    - cron: '*/5 * * * *'
   workflow_dispatch:
 
 jobs:
@@ -19,240 +18,113 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Fetch Predicts data from Amplitude and write data.json
+      - name: Fetch data from Slack and write data.json
         env:
-          AMPLITUDE_API_KEY: ${{ secrets.AMPLITUDE_API_KEY }}
-          AMPLITUDE_SECRET_KEY: ${{ secrets.AMPLITUDE_SECRET_KEY }}
+          SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
         run: |
-          python3 << 'PYEOF'
-          import urllib.request, urllib.parse, json, os, base64, sys
-          from datetime import datetime, timezone, timedelta
+          python3 << 'EOF'
+          import urllib.request, urllib.parse, json, os, sys
+          from datetime import datetime, timezone
 
-          api_key    = os.environ.get('AMPLITUDE_API_KEY', '')
-          secret_key = os.environ.get('AMPLITUDE_SECRET_KEY', '')
-          if not api_key or not secret_key:
-              print('ERROR: AMPLITUDE_API_KEY and AMPLITUDE_SECRET_KEY must be set as GitHub Secrets.')
+          token   = os.environ['SLACK_TOKEN']
+          channel = 'C0B19MPAG9M'
+          marker  = '◆PREDICTS_DATA◆'
+
+          # ── Fetch recent messages ────────────────────────────────
+          body = urllib.parse.urlencode({
+              'token': token, 'channel': channel, 'limit': '20'
+          }).encode()
+
+          req = urllib.request.Request(
+              'https://slack.com/api/conversations.history',
+              data=body,
+              headers={'Content-Type': 'application/x-www-form-urlencoded'}
+          )
+
+          with urllib.request.urlopen(req) as r:
+              resp = json.loads(r.read())
+
+          if not resp.get('ok'):
+              print(f"Slack API error: {resp.get('error')}")
               sys.exit(1)
 
-          auth    = base64.b64encode(f'{api_key}:{secret_key}'.encode()).decode()
-          HEADERS = {'Authorization': f'Basic {auth}', 'Accept': 'application/json'}
-
-          # Eastern Time (EDT = UTC-4, active Mar–Nov; adjust to -5 in winter)
-          utc_now   = datetime.now(timezone.utc)
-          et_now    = utc_now + timedelta(hours=-4)
-          today     = et_now.strftime('%Y%m%d')
-          yesterday = (et_now - timedelta(days=1)).strftime('%Y%m%d')
-
-          # Confirmed event name in Futures FE Prod (appId 712023)
-          ORDER_EVENT = 'Order Placed Success'
-
-          # ── Amplitude query helpers ──────────────────────────────
-          def amp_query(event_type, group_prop, start, end, limit=500):
-              e_obj  = {'event_type': event_type, 'filters': []}
-              params = urllib.parse.urlencode({
-                  'e': json.dumps(e_obj), 'start': start, 'end': end,
-                  'i': '1', 'm': 'totals',
-                  'g': json.dumps({'type': 'event', 'value': group_prop}),
-                  'limit': str(limit),
-              })
-              url = f'https://amplitude.com/api/2/events/segmentation?{params}'
-              req = urllib.request.Request(url, headers=HEADERS)
-              try:
-                  with urllib.request.urlopen(req, timeout=30) as r:
-                      return json.loads(r.read()).get('data', {})
-              except Exception as exc:
-                  print(f'  Warning: query failed (group={group_prop}): {exc}')
-                  return {}
-
-          def amp_formula(event_type, formula, group_prop, start, end, limit=300):
-              e_obj  = {'event_type': event_type, 'filters': []}
-              params = urllib.parse.urlencode({
-                  'e': json.dumps(e_obj), 'start': start, 'end': end,
-                  'i': '1', 'm': 'formula', 'formula': formula,
-                  'g': json.dumps({'type': 'event', 'value': group_prop}),
-                  'limit': str(limit),
-              })
-              url = f'https://amplitude.com/api/2/events/segmentation?{params}'
-              req = urllib.request.Request(url, headers=HEADERS)
-              try:
-                  with urllib.request.urlopen(req, timeout=30) as r:
-                      return json.loads(r.read()).get('data', {})
-              except Exception as exc:
-                  print(f'  Warning: formula query failed: {exc}')
-                  return {}
-
-          def parse_series(data):
-              """Return {label: count} — omits null/none labels and zero counts."""
-              out = {}
-              for label, vals in zip(data.get('seriesLabels', []), data.get('series', [])):
-                  if not label or str(label).lower() in ('null', 'none', '(none)', ''):
-                      continue
-                  count = vals[0] if vals else 0
-                  if count > 0:
-                      out[str(label)] = count
-              return out
-
-          # ── Sport classifier ─────────────────────────────────────
-          NBA  = {'nuggets','timberwolves','celtics','76_ers','knicks','hawks','rockets','lakers',
-                  'cavaliers','raptors','pistons','magic','thunder','suns','spurs','blazers','warriors',
-                  'bulls','pacers','nets','wizards','grizzlies','mavericks','clippers','heat','bucks',
-                  'hornets','pelicans','kings','jazz'}
-          MLB  = {'tigers','braves','royals','athletics','blue_jays','twins','phillies','astros',
-                  'orioles','rockies','reds','cardinals','pirates','diamondbacks','brewers','nationals',
-                  'mets','dodgers','padres','rangers','yankees','red_sox','mariners','rays','guardians',
-                  'cubs','white_sox','angels','marlins','giants'}
-          NHL  = {'golden_knights','oilers','stars','wild','ducks','lightning','canadiens','bruins',
-                  'sabres','flyers','penguins','hurricanes','avalanche','flames','blues','islanders',
-                  'devils','predators','jets','senators','canucks','maple_leafs','red_wings','sharks',
-                  'capitals','coyotes','kraken','panthers'}
-          WNBA = {'lynx','sparks','sky','liberty','sun','wings','mystics','storm','mercury',
-                  'dream','fever','aces'}
-          SOCCER = {'munich','paris_st_g','real_madrid','barcelona','chelsea','arsenal',
-                    'liverpool','man_city','juventus','inter_milan','atletico'}
-
-          def classify_sport(key):
-              k = key.lower()
-              if any(x in k for x in ['bitcoin','ether','crypto']):
-                  return 'Futures'
-              if any(x in k for x in ['crude_oil','gold_futures','silver_futures','natural_gas',
-                                       'copper_futures','e_mini','nasdaq','s_p_500','dow_jones',
-                                       'russell_2000','eur_usd','futures_price','payroll',
-                                       'unemployment','cpi','inflation','interest_rate','gdp',
-                                       'june_gold','july_copper','july_silver','june_crude']):
-                  return 'Futures'
-              if any(x in k for x in ['senate','house_majority','election','presidential',
-                                       'midterm','congress','governor','winning_party']):
-                  return 'Futures'
-              if any(x in k for x in ['nba_champion','stanley_cup','world_series','super_bowl',
-                                       'world_cup','epl_champion','mlb_champion','nfl_champion',
-                                       'national_league','american_league','league_winner',
-                                       'cup_winner','mvp','heisman','cy_young','season_long']):
-                  return 'Futures'
-              if any(t in k for t in NBA):    return 'NBA'
-              if any(t in k for t in MLB):    return 'MLB'
-              if any(t in k for t in NHL):    return 'NHL'
-              if any(t in k for t in WNBA):   return 'WNBA'
-              if any(t in k for t in SOCCER): return 'Soccer'
-              if any(x in k for x in ['pga','masters','truist','wells_fargo','rbc_canadian',
-                                       'memorial','travelers','golf','tournament_winner']):
-                  return 'PGA'
-              if any(x in k for x in ['tennis','atp','wta','wimbledon']):
-                  return 'Tennis'
-              return 'Other'
-
-          STANDARD_MKTS = {'moneyline', 'spread', 'total_points'}
-          MKT_LABELS    = {'moneyline': 'Moneyline', 'spread': 'Spread',
-                           'total_points': 'Total Points'}
-
-          def mkt_display(key):
-              if key in MKT_LABELS:
-                  return MKT_LABELS[key]
-              words = key.replace('_at_', ' @ ').split('_')
-              return ' '.join(w.upper() if len(w) <= 3 else w.capitalize() for w in words)
-
-          # ── Fetch from Amplitude ─────────────────────────────────
-          print(f'Querying Amplitude for {et_now.strftime("%Y-%m-%d")} ET …')
-
-          # Q1: Orders by Market Name → market breakdown + total
-          mkt_today = parse_series(amp_query(ORDER_EVENT, 'Market Name', today, today))
-
-          # Q2: Orders by Event Name → game events + sport classification
-          evt_today = parse_series(amp_query(ORDER_EVENT, 'Event Name', today, today))
-
-          # Q3: Yesterday by Event Name → sport comparison
-          evt_yest  = parse_series(amp_query(ORDER_EVENT, 'Event Name', yesterday, yesterday))
-
-          # Q4: Volume — sum of Order Stake via PROPSUM formula
-          vol_raw    = amp_formula(ORDER_EVENT, 'PROPSUM(0,"Order Stake")', 'Market Name', today, today)
-          vol_by_mkt = parse_series(vol_raw) if vol_raw else {}
-
-          # ── Market display dict ──────────────────────────────────
-          markets = {}
-          for mkt_key, cnt in sorted(mkt_today.items(), key=lambda x: -x[1]):
-              disp = mkt_display(mkt_key)
-              markets[disp] = markets.get(disp, 0) + cnt
-
-          # ── Events list + sport totals ───────────────────────────
-          events = []
-          sports = {}
-          for evt_key, cnt in evt_today.items():
-              sport = classify_sport(evt_key)
-              sports[sport] = sports.get(sport, 0) + cnt
-              events.append({'k': evt_key, 'o': cnt, 'v': None})
-
-          # Non-standard Market Names (futures/custom with null Event Name)
-          evt_keys_lower = {k.lower() for k in evt_today}
-          for mkt_key, cnt in mkt_today.items():
-              if mkt_key.lower() in STANDARD_MKTS:
+          # ── Find the most recent JSON data message ───────────────
+          # Skip human-readable summary messages (no JSON object after marker)
+          data_msg = None
+          for m in resp.get('messages', []):
+              text = m.get('text', '')
+              if marker not in text:
                   continue
-              if mkt_key.lower() in evt_keys_lower:
-                  continue
-              sport = classify_sport(mkt_key)
-              sports[sport] = sports.get(sport, 0) + cnt
-              events.append({'k': mkt_key, 'o': cnt, 'v': None})
+              idx = text.index(marker) + len(marker)
+              candidate = text[idx:].strip()
+              if candidate.startswith('{'):
+                  data_msg = m
+                  break
 
-          events.sort(key=lambda x: x['o'], reverse=True)
+          if not data_msg:
+              print('No JSON data message found in Slack channel — Cowork task may not have run yet today')
+              sys.exit(0)
 
-          # Attach volume to events where available
-          vol_keys_lower = {k.lower(): v for k, v in vol_by_mkt.items()}
-          for e in events:
-              v = vol_keys_lower.get(e['k'].lower())
-              if v:
-                  e['v'] = round(v)
+          msg_ts   = float(data_msg['ts'])
+          msg_time = datetime.fromtimestamp(msg_ts, tz=timezone.utc)
+          now      = datetime.now(tz=timezone.utc)
+          age_min  = (now - msg_time).total_seconds() / 60
+          print(f'Found data message, age: {age_min:.1f} min')
 
-          # ── Yesterday sport breakdown ────────────────────────────
-          sports_prev = {}
-          for evt_key, cnt in evt_yest.items():
-              sport = classify_sport(evt_key)
-              sports_prev[sport] = sports_prev.get(sport, 0) + cnt
+          # ── Extract JSON ─────────────────────────────────────────
+          text = data_msg['text']
+          text = text.replace('&amp;', '&').replace('&lt;', '<').replace('&gt;', '>')
+          idx  = text.index(marker) + len(marker)
+          json_str = text[idx:].strip()
 
-          # ── Summary stats ────────────────────────────────────────
-          total_orders = sum(mkt_today.values())
-          total_vol    = sum(vol_by_mkt.values()) if vol_by_mkt else None
-          top_sport    = max(sports, key=sports.get) if sports else ''
-          active_evts  = len(events)
+          depth, end = 0, 0
+          for i, ch in enumerate(json_str):
+              if ch == '{': depth += 1
+              elif ch == '}':
+                  depth -= 1
+                  if depth == 0:
+                      end = i + 1
+                      break
 
-          payload = {
-              'v':   1,
-              'ts':  et_now.strftime('%Y-%m-%dT%H:%M:%S'),
-              'stats': {
-                  'orders':    total_orders,
-                  'volume':    round(total_vol) if total_vol else None,
-                  'top_sport': top_sport,
-                  'events':    active_evts,
-              },
-              'events':      events[:50],
-              'sports':      sports,
-              'sports_prev': sports_prev,
-              'markets':     markets,
-              'plan_source': None,
-          }
+          if end == 0:
+              print('Could not find complete JSON object in message — may be truncated')
+              sys.exit(1)
 
-          # Skip write if nothing changed
+          raw_json = json_str[:end]
+
+          # ── Validate ─────────────────────────────────────────────
+          try:
+              data = json.loads(raw_json)
+          except json.JSONDecodeError as e:
+              print(f'JSON parse error: {e}')
+              sys.exit(1)
+
+          if not data.get('v') or not data.get('ts'):
+              print('Payload missing required fields — skipping')
+              sys.exit(1)
+
+          # ── Skip if already up to date ───────────────────────────
           try:
               with open('data.json') as f:
                   existing = json.load(f)
-              if existing.get('stats') == payload['stats'] and existing.get('sports') == payload['sports']:
-                  print(f'No change in data — skipping write')
+              if existing.get('ts') == data.get('ts'):
+                  print(f'data.json already up to date (ts={data["ts"]}) — no change')
                   sys.exit(0)
           except Exception:
               pass
 
+          # ── Write ────────────────────────────────────────────────
           with open('data.json', 'w') as f:
-              json.dump(payload, f, separators=(',', ':'))
+              json.dump(data, f, separators=(',', ':'))
 
-          vol_str = f'${round(total_vol):,}' if total_vol else 'n/a'
-          print(f'✓ data.json written — {total_orders:,} orders | {active_evts} events | '
-                f'top: {top_sport} | vol: {vol_str}')
-          print(f'  Markets: {dict(list(markets.items())[:5])}')
-          print(f'  Sports:  {sports}')
-          PYEOF
+          orders = data.get('stats', {}).get('orders', '?')
+          events = data.get('stats', {}).get('events', '?')
+          print(f'data.json written — {orders} orders, {events} events, ts={data.get("ts","?")}')
+          EOF
 
       - name: Commit and push data.json
         run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
           git add data.json
-          git diff --staged --quiet \
-            && echo "No changes to commit." \
-            || (git commit -m "chore: sync predicts data [skip ci]" && git push)
+          git diff --staged --quiet && echo "No changes to commit" || (git commit -m "chore: update predicts data [skip ci]" && git push)
