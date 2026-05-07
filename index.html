@@ -597,8 +597,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
 // ═══════════════════════════════════════════════════════════
 // CONFIG
 // ═══════════════════════════════════════════════════════════
-const GITHUB_TOKEN    = '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';
 const GITHUB_REPO     = 'mendelowitzd/Predicts-MerchOps-Hub';
+const LS_TOKEN_KEY    = 'predicts_hub_gh_token';
+function getToken() { return localStorage.getItem(LS_TOKEN_KEY) || ''; }
+function setToken(t) { localStorage.setItem(LS_TOKEN_KEY, t.trim()); }
 const GITHUB_WORKFLOW = 'sync-data.yml';
 const REFRESH_MS      = 5 * 60 * 1000;
 const POLL_INTERVAL   = 5000;
@@ -1338,7 +1340,7 @@ async function saveSchedule() {
     let sha = null;
     const getRes = await fetch(
       `https://api.github.com/repos/${GITHUB_REPO}/contents/schedule.json`,
-      { headers:{'Authorization':`Bearer ${GITHUB_TOKEN}`,'Accept':'application/vnd.github+json'} }
+      { headers:{'Authorization':`Bearer ${getToken()}`,'Accept':'application/vnd.github+json'} }
     );
     if (getRes.ok) sha = (await getRes.json()).sha;
     const content = btoa(unescape(encodeURIComponent(JSON.stringify(scheduleData, null, 2))));
@@ -1346,7 +1348,7 @@ async function saveSchedule() {
       `https://api.github.com/repos/${GITHUB_REPO}/contents/schedule.json`,
       {
         method:'PUT',
-        headers:{'Authorization':`Bearer ${GITHUB_TOKEN}`,'Accept':'application/vnd.github+json','Content-Type':'application/json'},
+        headers:{'Authorization':`Bearer ${getToken()}`,'Accept':'application/vnd.github+json','Content-Type':'application/json'},
         body: JSON.stringify({ message:'chore: update schedule (market priority + pop nav)', content, ...(sha?{sha}:{}) }),
       }
     );
@@ -1376,7 +1378,7 @@ async function fetchDataJson() {
   try {
     const r = await fetch(
       `https://api.github.com/repos/${GITHUB_REPO}/contents/data.json`,
-      { headers: { 'Authorization': `Bearer ${GITHUB_TOKEN}`, 'Accept': 'application/vnd.github+json' } }
+      { headers: { 'Authorization': `Bearer ${getToken()}`, 'Accept': 'application/vnd.github+json' } }
     );
     if (r.ok) {
       const meta = await r.json();
@@ -1397,7 +1399,7 @@ async function triggerRefresh() {
   try {
     const res = await fetch(
       `https://api.github.com/repos/${GITHUB_REPO}/actions/workflows/${GITHUB_WORKFLOW}/dispatches`,
-      { method:'POST', headers:{'Authorization':`Bearer ${GITHUB_TOKEN}`,'Accept':'application/vnd.github+json','Content-Type':'application/json'}, body:JSON.stringify({ref:'main'}) }
+      { method:'POST', headers:{'Authorization':`Bearer ${getToken()}`,'Accept':'application/vnd.github+json','Content-Type':'application/json'}, body:JSON.stringify({ref:'main'}) }
     );
     if (!res.ok && res.status !== 204) { await loadData(); return; }
     const deadline = Date.now() + POLL_TIMEOUT;
@@ -1847,10 +1849,37 @@ async function exportToExcel() {
 // ═══════════════════════════════════════════════════════════
 // INIT
 // ═══════════════════════════════════════════════════════════
+function showTokenModal() {
+  const overlay = document.createElement('div');
+  overlay.id = 'token-modal';
+  overlay.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:9999;display:flex;align-items:center;justify-content:center';
+  overlay.innerHTML = `
+    <div style="background:#fff;border-radius:12px;padding:28px 32px;max-width:420px;width:90%;box-shadow:0 8px 32px rgba(0,0,0,.25)">
+      <div style="font-size:15px;font-weight:800;color:#0a2e6e;margin-bottom:6px">GitHub Token Required</div>
+      <div style="font-size:12px;color:#475569;margin-bottom:16px;line-height:1.6">
+        Enter a GitHub classic PAT with <strong>repo</strong> + <strong>workflow</strong> scopes to enable live sync and refresh.<br>
+        The token is stored only in your browser (localStorage) and never committed to the repo.
+      </div>
+      <input id="token-input" type="password" placeholder="ghp_…" autocomplete="off"
+        style="width:100%;border:1px solid #e2e8f0;border-radius:6px;padding:8px 10px;font-size:13px;font-family:monospace;margin-bottom:12px;outline:none">
+      <div style="display:flex;gap:8px;justify-content:flex-end">
+        <button onclick="document.getElementById('token-modal').remove()" style="background:#f1f5f9;border:1px solid #e2e8f0;border-radius:5px;padding:7px 16px;font-size:12px;font-weight:600;cursor:pointer;color:#475569">Skip</button>
+        <button onclick="saveToken()" style="background:#0a2e6e;color:#ffd700;border:none;border-radius:5px;padding:7px 16px;font-size:12px;font-weight:700;cursor:pointer">Save Token</button>
+      </div>
+    </div>`;
+  document.body.appendChild(overlay);
+  setTimeout(() => document.getElementById('token-input')?.focus(), 50);
+}
+
+function saveToken() {
+  const val = document.getElementById('token-input')?.value?.trim();
+  if (val) { setToken(val); document.getElementById('token-modal')?.remove(); loadData(); }
+}
+
 window.addEventListener('DOMContentLoaded', async () => {
   await loadSchedule();
   schedViewWeek = getWeekKey(new Date());
-  loadData();
+  if (!getToken()) { showTokenModal(); } else { loadData(); }
 });
 </script>
 </body>
