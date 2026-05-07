@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-05-07T13:43:31.296Z",
+  "updated": "2026-05-07T13:48:44.164Z",
   "weeks": {
     "2026-05-04": {
       "MONDAY": [],
@@ -194,7 +194,138 @@
           "time": "10:00 PM ET"
         }
       ],
-      "FRIDAY": [],
+      "FRIDAY": [
+        {
+          "sport": "Combo",
+          "item": "NBA Combo 1",
+          "time": "7:00 PM"
+        },
+        {
+          "sport": "Combo",
+          "item": "NBA Combo 2",
+          "time": "7:00 PM"
+        },
+        {
+          "sport": "Combo",
+          "item": "MLB Combo 1",
+          "time": "7:00 PM"
+        },
+        {
+          "sport": "Combo",
+          "item": "MLB Combo 2",
+          "time": "7:00 PM"
+        },
+        {
+          "sport": "NBA",
+          "item": "Knicks @ 76ers",
+          "time": "7:00 PM ET"
+        },
+        {
+          "sport": "NBA",
+          "item": "Spurs @ Timberwolves",
+          "time": "9:30 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Astros @ Reds",
+          "time": "6:10 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Rockies @ Phillies",
+          "time": "6:40 PM ET"
+        },
+        {
+          "sport": "NHL",
+          "item": "Canadiens @ Sabres",
+          "time": "7:00 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Twins @ Guardians",
+          "time": "7:15 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Athletics @ Orioles",
+          "time": "7:05 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Angels @ Blue Jays",
+          "time": "7:07 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Rays @ Red Sox",
+          "time": "7:10 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Nationals @ Marlins",
+          "time": "7:10 PM ET"
+        },
+        {
+          "sport": "WNBA",
+          "item": "Sun @ Liberty",
+          "time": "7:30 PM ET"
+        },
+        {
+          "sport": "WNBA",
+          "item": "Mystics @ Tempo",
+          "time": "7:30 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Yankees @ Brewers",
+          "time": "7:40 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Tigers @ Royals",
+          "time": "7:40 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Mariners @ White Sox",
+          "time": "7:40 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Cubs @ Rangers",
+          "time": "8:05 PM ET"
+        },
+        {
+          "sport": "NHL",
+          "item": "Golden Knights @ Ducks",
+          "time": "9:30 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Cardinals @ Padres",
+          "time": "9:45 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Mets @ Diamondbacks",
+          "time": "9:40 PM ET"
+        },
+        {
+          "sport": "WNBA",
+          "item": "Valkyries @ Storm",
+          "time": "10:00 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Braves @ Dodgers",
+          "time": "10:10 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Pirates @ Giants",
+          "time": "10:15 PM ET"
+        }
+      ],
       "SATURDAY": [],
       "SUNDAY": []
     }
@@ -253,6 +384,13 @@
           "type": "category",
           "label": "Politics",
           "icon": "🏛️"
+        }
+      ],
+      "FRIDAY": [
+        {
+          "type": "category",
+          "label": "Sports",
+          "icon": "🏆"
         }
       ]
     }
