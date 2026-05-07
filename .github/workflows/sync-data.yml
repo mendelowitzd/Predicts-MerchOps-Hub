@@ -2,7 +2,7 @@ name: Sync Predicts Data
 
 on:
   schedule:
-    - cron: '*/25 * * * *'
+    - cron: '*/5 * * * *'
   workflow_dispatch:
 
 jobs:
@@ -55,8 +55,11 @@ jobs:
               sys.exit(0)
 
           # ── Freshness check ─────────────────────────────────────────────
-          msg_ts   = float(data_msg['ts'])
-          msg_time = datetime.fromtimestamp(msg_ts, tz=timezone.utc)
+          # Use edited.ts if present — task edits the message in place, so
+          # the original ts is always old even when data is fresh.
+          edited = data_msg.get('edited', {})
+          effective_ts = float(edited['ts']) if edited.get('ts') else float(data_msg['ts'])
+          msg_time = datetime.fromtimestamp(effective_ts, tz=timezone.utc)
           now      = datetime.now(tz=timezone.utc)
           age_min  = (now - msg_time).total_seconds() / 60
 
@@ -64,7 +67,7 @@ jobs:
               print(f'Slack message is {age_min:.0f} min old (limit: {MAX_AGE_MINUTES} min) — skipping update to avoid serving stale data')
               sys.exit(0)
 
-          print(f'Found data message, age: {age_min:.1f} min')
+          print(f'Found data message, age: {age_min:.1f} min ({"edited" if edited.get("ts") else "original"})')
 
           # ── Extract JSON ─────────────────────────────────────────────────
           text = data_msg['text']
