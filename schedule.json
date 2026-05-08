@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-05-08T16:32:02.525Z",
+  "updated": "2026-05-08T17:17:06.854Z",
   "weeks": {
     "2026-05-04": {
       "MONDAY": [],
@@ -216,6 +216,11 @@
           "time": "7:00 PM"
         },
         {
+          "sport": "PGA",
+          "item": "Truist Championship",
+          "time": "🔴 Live"
+        },
+        {
           "sport": "NBA",
           "item": "Knicks @ 76ers",
           "time": "7:00 PM ET"
@@ -224,11 +229,6 @@
           "sport": "NBA",
           "item": "Spurs @ Timberwolves",
           "time": "9:30 PM ET"
-        },
-        {
-          "sport": "PGA",
-          "item": "Truist Championship",
-          "time": "🔴 Live"
         },
         {
           "sport": "MLB",
