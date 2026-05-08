@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-05-08T01:21:00.344Z",
+  "updated": "2026-05-08T16:31:13.461Z",
   "weeks": {
     "2026-05-04": {
       "MONDAY": [],
@@ -197,22 +197,22 @@
       "FRIDAY": [
         {
           "sport": "Combo",
-          "item": "NBA Combo 1",
+          "item": "City Lights & Northern Lights",
           "time": "7:00 PM"
         },
         {
           "sport": "Combo",
-          "item": "NBA Combo 2",
+          "item": "Liberty @ Lone Star",
           "time": "7:00 PM"
         },
         {
           "sport": "Combo",
-          "item": "MLB Combo 1",
+          "item": "The Ace Club",
           "time": "7:00 PM"
         },
         {
           "sport": "Combo",
-          "item": "MLB Combo 2",
+          "item": "No Rest for the NL West",
           "time": "7:00 PM"
         },
         {
@@ -224,6 +224,11 @@
           "sport": "NBA",
           "item": "Spurs @ Timberwolves",
           "time": "9:30 PM ET"
+        },
+        {
+          "sport": "PGA",
+          "item": "Truist Championship",
+          "time": "🔴 Live"
         },
         {
           "sport": "MLB",
@@ -324,6 +329,16 @@
           "sport": "MLB",
           "item": "Pirates @ Giants",
           "time": "10:15 PM ET"
+        },
+        {
+          "sport": "Combo",
+          "item": "The Road Show",
+          "time": "7:00 PM"
+        },
+        {
+          "sport": "Combo",
+          "item": "Home Court Holds",
+          "time": "7:00 PM"
         }
       ],
       "SATURDAY": [
