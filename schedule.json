@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-05-08T16:31:13.461Z",
+  "updated": "2026-05-08T16:32:02.525Z",
   "weeks": {
     "2026-05-04": {
       "MONDAY": [],
@@ -339,6 +339,16 @@
           "sport": "Combo",
           "item": "Home Court Holds",
           "time": "7:00 PM"
+        },
+        {
+          "sport": "Combo",
+          "item": "Four Deep Pockets",
+          "time": "7:05 PM"
+        },
+        {
+          "sport": "Combo",
+          "item": "Rain & Wind",
+          "time": "8:05 PM"
         }
       ],
       "SATURDAY": [
