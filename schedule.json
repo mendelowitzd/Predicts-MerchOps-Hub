@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-05-11T15:12:43.247Z",
+  "updated": "2026-05-11T15:20:49.449Z",
   "weeks": {
     "2026-05-04": {
       "MONDAY": [],
@@ -1322,6 +1322,118 @@
           "sport": "Combo",
           "item": "MLB Combo 4",
           "time": "9:38 PM"
+        }
+      ],
+      "SATURDAY": [
+        {
+          "sport": "PGA",
+          "item": "PGA Championship",
+          "time": "12:00 AM ET"
+        },
+        {
+          "sport": "Combo",
+          "item": "MLB Combo 1",
+          "time": "1:10 PM"
+        },
+        {
+          "sport": "Combo",
+          "item": "MLB Combo 2",
+          "time": "4:05 PM"
+        },
+        {
+          "sport": "MLB",
+          "item": "Blue Jays @ Tigers",
+          "time": "1:10 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Royals @ Cardinals",
+          "time": "2:15 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Diamondbacks @ Rockies",
+          "time": "3:10 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Orioles @ Nationals",
+          "time": "4:05 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Phillies @ Pirates",
+          "time": "4:05 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Marlins @ Rays",
+          "time": "4:10 PM ET"
+        },
+        {
+          "sport": "NHL",
+          "item": "Sabres @ Canadiens",
+          "time": "12:00 AM ET"
+        },
+        {
+          "sport": "NHL",
+          "item": "Ducks @ Golden Knights",
+          "time": "12:00 AM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Reds @ Guardians",
+          "time": "6:10 PM ET"
+        },
+        {
+          "sport": "Combo",
+          "item": "MLB Combo 3",
+          "time": "7:10 PM"
+        },
+        {
+          "sport": "MLB",
+          "item": "Yankees @ Mets",
+          "time": "7:15 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Padres @ Mariners",
+          "time": "7:15 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Cubs @ White Sox",
+          "time": "7:10 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Red Sox @ Braves",
+          "time": "7:15 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Brewers @ Twins",
+          "time": "7:10 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Rangers @ Astros",
+          "time": "7:10 PM ET"
+        },
+        {
+          "sport": "Combo",
+          "item": "MLB Combo 4",
+          "time": "9:38 PM"
+        },
+        {
+          "sport": "MLB",
+          "item": "Dodgers @ Angels",
+          "time": "9:38 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Giants @ Athletics",
+          "time": "9:40 PM ET"
         }
       ]
     }
