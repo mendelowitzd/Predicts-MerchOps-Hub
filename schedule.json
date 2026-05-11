@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-05-11T15:07:22.860Z",
+  "updated": "2026-05-11T15:07:46.943Z",
   "weeks": {
     "2026-05-04": {
       "MONDAY": [],
@@ -1059,6 +1059,10 @@
           "sport": "Combo",
           "item": "MLB Combo 4",
           "time": "9:40 PM"
+        },
+        {
+          "sport": "PGA",
+          "item": "PGA Championship"
         }
       ]
     }
