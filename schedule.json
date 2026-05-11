@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-05-11T15:12:12.102Z",
+  "updated": "2026-05-11T15:12:39.365Z",
   "weeks": {
     "2026-05-04": {
       "MONDAY": [],
@@ -1857,6 +1857,80 @@
           "type": "subcategory",
           "label": "Golf",
           "icon": "⛳"
+        },
+        {
+          "type": "category",
+          "label": "Crypto",
+          "icon": "₿"
+        },
+        {
+          "type": "category",
+          "label": "Commodities",
+          "icon": "🛢️"
+        },
+        {
+          "type": "category",
+          "label": "Financials",
+          "icon": "📈"
+        },
+        {
+          "type": "category",
+          "label": "Politics",
+          "icon": "🏛️"
+        }
+      ],
+      "FRIDAY": [
+        {
+          "type": "category",
+          "label": "Sports",
+          "icon": "🏆"
+        },
+        {
+          "type": "event",
+          "label": "Pistons @ Cavaliers",
+          "icon": "🏀",
+          "sport": "NBA"
+        },
+        {
+          "type": "event",
+          "label": "Spurs @ Timberwolves",
+          "icon": "🏀",
+          "sport": "NBA"
+        },
+        {
+          "type": "subcategory",
+          "label": "NBA Combos",
+          "icon": "🎯"
+        },
+        {
+          "type": "subcategory",
+          "label": "MLB Combos",
+          "icon": "🎯"
+        },
+        {
+          "type": "subcategory",
+          "label": "Golf",
+          "icon": "⛳"
+        },
+        {
+          "type": "subcategory",
+          "label": "NBA",
+          "icon": "🏀"
+        },
+        {
+          "type": "subcategory",
+          "label": "MLB",
+          "icon": "⚾"
+        },
+        {
+          "type": "subcategory",
+          "label": "NHL",
+          "icon": "🏒"
+        },
+        {
+          "type": "subcategory",
+          "label": "WNBA",
+          "icon": "🏀"
         },
         {
           "type": "category",
