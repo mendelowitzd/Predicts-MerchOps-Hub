@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-05-11T15:09:01.310Z",
+  "updated": "2026-05-11T15:09:21.880Z",
   "weeks": {
     "2026-05-04": {
       "MONDAY": [],
@@ -1638,6 +1638,68 @@
           "type": "subcategory",
           "label": "WNBA",
           "icon": "🏀"
+        },
+        {
+          "type": "category",
+          "label": "Crypto",
+          "icon": "₿"
+        },
+        {
+          "type": "category",
+          "label": "Commodities",
+          "icon": "🛢️"
+        },
+        {
+          "type": "category",
+          "label": "Financials",
+          "icon": "📈"
+        },
+        {
+          "type": "category",
+          "label": "Politics",
+          "icon": "🏛️"
+        }
+      ],
+      "THURSDAY": [
+        {
+          "type": "category",
+          "label": "Sports",
+          "icon": "🏆"
+        },
+        {
+          "type": "subcategory",
+          "label": "NBA Combos",
+          "icon": "🎯"
+        },
+        {
+          "type": "subcategory",
+          "label": "MLB Combos",
+          "icon": "🎯"
+        },
+        {
+          "type": "subcategory",
+          "label": "NBA",
+          "icon": "🏀"
+        },
+        {
+          "type": "subcategory",
+          "label": "MLB",
+          "icon": "⚾"
+        },
+        {
+          "type": "subcategory",
+          "label": "NHL",
+          "icon": "🏒"
+        },
+        {
+          "type": "subcategory",
+          "label": "WNBA",
+          "icon": "🏀"
+        },
+        {
+          "type": "subcategory",
+          "label": "Golf",
+          "icon": "⛳"
         },
         {
           "type": "category",
