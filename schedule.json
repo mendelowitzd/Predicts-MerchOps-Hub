@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-05-08T17:17:06.854Z",
+  "updated": "2026-05-11T15:00:05.463Z",
   "weeks": {
     "2026-05-04": {
       "MONDAY": [],
@@ -672,6 +672,94 @@
           "sport": "MLB",
           "item": "Twins @ Guardians",
           "time": "7:15 PM ET"
+        }
+      ]
+    },
+    "2026-05-11": {
+      "MONDAY": [
+        {
+          "sport": "Combo",
+          "item": "East & West Hold Court",
+          "time": "8:10 PM"
+        },
+        {
+          "sport": "Combo",
+          "item": "Visiting Hours",
+          "time": "8:10 PM"
+        },
+        {
+          "sport": "Combo",
+          "item": "Sidewalks & Snakes",
+          "time": "6:35 PM"
+        },
+        {
+          "sport": "Combo",
+          "item": "Orange You Glad",
+          "time": "6:35 PM"
+        },
+        {
+          "sport": "NBA",
+          "item": "Pistons @ Cavaliers",
+          "time": "8:00 PM ET"
+        },
+        {
+          "sport": "NBA",
+          "item": "Thunder @ Lakers",
+          "time": "10:30 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Angels @ Guardians",
+          "time": "6:10 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Yankees @ Orioles",
+          "time": "6:35 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Rays @ Blue Jays",
+          "time": "7:07 PM ET"
+        },
+        {
+          "sport": "NHL",
+          "item": "Avalanche @ Wild",
+          "time": "8:00 PM ET"
+        },
+        {
+          "sport": "Combo",
+          "item": "Desert, Rain & Sun",
+          "time": "8:05 PM"
+        },
+        {
+          "sport": "MLB",
+          "item": "Diamondbacks @ Rangers",
+          "time": "8:05 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Mariners @ Astros",
+          "time": "8:10 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Giants @ Dodgers",
+          "time": "10:10 PM ET"
+        },
+        {
+          "sport": "Combo",
+          "item": "Rock & Storm"
+        },
+        {
+          "sport": "Combo",
+          "item": "The Odd Couple",
+          "time": "8:10 PM"
+        },
+        {
+          "sport": "Combo",
+          "item": "Shoot for the Stars",
+          "time": "6:35 PM"
         }
       ]
     }
