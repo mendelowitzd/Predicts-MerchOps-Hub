@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-05-11T15:23:44.974Z",
+  "updated": "2026-05-12T14:52:13.384Z",
   "weeks": {
     "2026-05-04": {
       "MONDAY": [],
@@ -765,22 +765,22 @@
       "TUESDAY": [
         {
           "sport": "Combo",
-          "item": "NBA Combo 1",
+          "item": "Full Moon in San Antonio",
           "time": "8:00 PM"
         },
         {
           "sport": "Combo",
-          "item": "NBA Combo 2",
+          "item": "The Alamo Holds",
           "time": "8:00 PM"
         },
         {
           "sport": "Combo",
-          "item": "MLB Combo 1",
+          "item": "Pinstripes, Peach & The Pacific",
           "time": "6:35 PM"
         },
         {
           "sport": "Combo",
-          "item": "MLB Combo 2",
+          "item": "Icons on Tour",
           "time": "7:07 PM"
         },
         {
@@ -890,7 +890,7 @@
         },
         {
           "sport": "Combo",
-          "item": "NBA Combo 3",
+          "item": "Wolves Stay in the Hunt",
           "time": "8:00 PM"
         },
         {
@@ -900,12 +900,12 @@
         },
         {
           "sport": "Combo",
-          "item": "MLB Combo 3",
+          "item": "Pocket Aces",
           "time": "7:40 PM"
         },
         {
           "sport": "Combo",
-          "item": "MLB Combo 4",
+          "item": "The Sun Belt Three",
           "time": "9:40 PM"
         }
       ],
