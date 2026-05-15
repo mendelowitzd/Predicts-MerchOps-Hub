@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-05-14T17:03:25.997Z",
+  "updated": "2026-05-15T16:49:00.674Z",
   "weeks": {
     "2026-05-04": {
       "MONDAY": [],
@@ -2363,6 +2363,65 @@
               "sport": "WNBA",
               "item": "Sun @ Liberty",
               "time": "7:30 PM ET"
+            }
+          ]
+        }
+      ]
+    },
+    "2026-05-18": {
+      "MONDAY": [
+        {
+          "name": "Live MLB",
+          "items": [
+            {
+              "sport": "MLB",
+              "item": "Braves @ Marlins",
+              "time": "6:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Orioles @ Rays",
+              "time": "6:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Reds @ Phillies",
+              "time": "6:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Guardians @ Tigers",
+              "time": "6:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Mets @ Nationals",
+              "time": "6:45 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Blue Jays @ Yankees",
+              "time": "7:05 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Red Sox @ Royals",
+              "time": "7:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Astros @ Twins",
+              "time": "7:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Brewers @ Cubs",
+              "time": "7:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Rangers @ Rockies",
+              "time": "8:40 PM ET"
             }
           ]
         }
