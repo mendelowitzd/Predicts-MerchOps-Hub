@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-05-17T16:33:41.440Z",
+  "updated": "2026-05-18T13:48:11.678Z",
   "weeks": {
     "2026-05-04": {
       "MONDAY": [],
@@ -1572,14 +1572,14 @@
           "time": "8:30pm"
         },
         {
-          "sport": "Combo",
-          "item": "MLB Combo 1",
-          "time": "6:40pm"
-        },
-        {
           "sport": "NBA",
           "item": "Spurs @ Thunder",
           "time": "8:30 PM ET"
+        },
+        {
+          "sport": "Combo",
+          "item": "MLB Combo 1",
+          "time": "6:40pm"
         },
         {
           "sport": "MLB",
