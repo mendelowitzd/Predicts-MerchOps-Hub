@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-05-18T13:48:11.678Z",
+  "updated": "2026-05-18T13:50:40.327Z",
   "weeks": {
     "2026-05-04": {
       "MONDAY": [],
@@ -1563,12 +1563,12 @@
       "MONDAY": [
         {
           "sport": "Combo",
-          "item": "NBA Combo 1",
+          "item": "Thunder Reigns",
           "time": "8:30pm"
         },
         {
           "sport": "Combo",
-          "item": "NBA Combo 2",
+          "item": "Clear Skies",
           "time": "8:30pm"
         },
         {
@@ -1578,8 +1578,13 @@
         },
         {
           "sport": "Combo",
-          "item": "MLB Combo 1",
-          "time": "6:40pm"
+          "item": "The Oldest Grudge",
+          "time": "7:05pm"
+        },
+        {
+          "sport": "Combo",
+          "item": "Big Cities, Big Spenders",
+          "time": "6:45 PM"
         },
         {
           "sport": "MLB",
@@ -1665,6 +1670,26 @@
           "sport": "WNBA",
           "item": "Sun @ Fire",
           "time": "10:00 PM ET"
+        },
+        {
+          "sport": "Combo",
+          "item": "Storm Surge",
+          "time": "8:30pm"
+        },
+        {
+          "sport": "Combo",
+          "item": "The Silver Lining",
+          "time": "8:30pm"
+        },
+        {
+          "sport": "Combo",
+          "item": "Division Takeover",
+          "time": "6:45 PM"
+        },
+        {
+          "sport": "Combo",
+          "item": "The Night Shift",
+          "time": "9:40 PM"
         }
       ]
     }
