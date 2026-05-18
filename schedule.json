@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-05-18T16:38:58.242Z",
+  "updated": "2026-05-18T16:39:18.730Z",
   "weeks": {
     "2026-05-04": {
       "MONDAY": [],
@@ -3484,7 +3484,7 @@
         },
         {
           "type": "event",
-          "label": "Spurs @ Thunder",
+          "label": "Thunder @ Spurs",
           "icon": "🏀",
           "sport": "NBA"
         },
@@ -3497,6 +3497,11 @@
           "type": "subcategory",
           "label": "NBA Combos",
           "icon": "🎯"
+        },
+        {
+          "type": "subcategory",
+          "label": "Golf",
+          "icon": "⛳"
         },
         {
           "type": "subcategory",
