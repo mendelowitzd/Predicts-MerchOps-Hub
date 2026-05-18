@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-05-18T16:40:21.642Z",
+  "updated": "2026-05-18T16:40:40.363Z",
   "weeks": {
     "2026-05-04": {
       "MONDAY": [],
@@ -3740,7 +3740,7 @@
     "2026-05-18": {
       "MONDAY": [
         {
-          "name": "Live MLB",
+          "name": "Around MLB",
           "items": [
             {
               "sport": "MLB",
