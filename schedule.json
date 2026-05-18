@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-05-18T16:38:33.197Z",
+  "updated": "2026-05-18T16:38:58.242Z",
   "weeks": {
     "2026-05-04": {
       "MONDAY": [],
@@ -3416,7 +3416,7 @@
         },
         {
           "type": "event",
-          "label": "Spurs @ Thunder",
+          "label": "Cavaliers @ Knicks",
           "icon": "🏀",
           "sport": "NBA"
         },
@@ -3429,6 +3429,11 @@
           "type": "subcategory",
           "label": "NBA Combos",
           "icon": "🎯"
+        },
+        {
+          "type": "subcategory",
+          "label": "Golf",
+          "icon": "⛳"
         },
         {
           "type": "subcategory",
