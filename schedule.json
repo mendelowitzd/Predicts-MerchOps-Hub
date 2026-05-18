@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-05-18T16:32:36.122Z",
+  "updated": "2026-05-18T16:38:04.203Z",
   "weeks": {
     "2026-05-04": {
       "MONDAY": [],
@@ -3190,6 +3190,71 @@
           "type": "subcategory",
           "label": "Golf",
           "icon": "⛳"
+        },
+        {
+          "type": "subcategory",
+          "label": "NBA",
+          "icon": "🏀"
+        },
+        {
+          "type": "category",
+          "label": "Crypto",
+          "icon": "₿"
+        },
+        {
+          "type": "category",
+          "label": "Commodities",
+          "icon": "🛢️"
+        },
+        {
+          "type": "category",
+          "label": "Financials",
+          "icon": "📈"
+        },
+        {
+          "type": "category",
+          "label": "Politics",
+          "icon": "🏛️"
+        }
+      ]
+    },
+    "2026-05-18": {
+      "MONDAY": [
+        {
+          "type": "category",
+          "label": "Sports",
+          "icon": "🏆"
+        },
+        {
+          "type": "event",
+          "label": "Spurs @ Thunder",
+          "icon": "🏀",
+          "sport": "NBA"
+        },
+        {
+          "type": "subcategory",
+          "label": "MLB Combos",
+          "icon": "🎯"
+        },
+        {
+          "type": "subcategory",
+          "label": "NBA Combos",
+          "icon": "🎯"
+        },
+        {
+          "type": "subcategory",
+          "label": "MLB",
+          "icon": "⚾"
+        },
+        {
+          "type": "subcategory",
+          "label": "NHL",
+          "icon": "🏒"
+        },
+        {
+          "type": "subcategory",
+          "label": "WNBA",
+          "icon": "🏀"
         },
         {
           "type": "subcategory",
