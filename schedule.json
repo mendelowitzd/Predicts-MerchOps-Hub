@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-05-19T18:25:07.368Z",
+  "updated": "2026-05-19T18:25:56.900Z",
   "weeks": {
     "2026-05-04": {
       "MONDAY": [],
@@ -3977,6 +3977,93 @@
               "sport": "MLB",
               "item": "Athletics @ Padres",
               "time": "9:40 PM ET"
+            }
+          ]
+        }
+      ],
+      "SATURDAY": [
+        {
+          "name": "",
+          "items": [
+            {
+              "sport": "MLB",
+              "item": "Rays @ Yankees",
+              "time": "1:35 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Astros @ Cubs",
+              "time": "2:20 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Pirates @ Blue Jays",
+              "time": "3:07 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Guardians @ Phillies",
+              "time": "4:05 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Tigers @ Orioles",
+              "time": "4:05 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "White Sox @ Giants",
+              "time": "4:05 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Twins @ Red Sox",
+              "time": "4:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Mets @ Marlins",
+              "time": "4:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Nationals @ Braves",
+              "time": "4:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Mariners @ Royals",
+              "time": "4:10 PM ET"
+            }
+          ]
+        },
+        {
+          "name": "",
+          "items": [
+            {
+              "sport": "MLB",
+              "item": "Dodgers @ Brewers",
+              "time": "7:15 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Cardinals @ Reds",
+              "time": "7:15 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Athletics @ Padres",
+              "time": "9:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Rangers @ Angels",
+              "time": "10:05 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Rockies @ Diamondbacks",
+              "time": "10:10 PM ET"
             }
           ]
         }
