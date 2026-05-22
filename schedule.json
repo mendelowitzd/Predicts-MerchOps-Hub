@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-05-22T23:14:35.044Z",
+  "updated": "2026-05-22T23:15:00.305Z",
   "weeks": {
     "2026-05-04": {
       "MONDAY": [],
@@ -5394,6 +5394,63 @@
               "sport": "MLB",
               "item": "Rockies @ Dodgers",
               "time": "9:10 PM ET"
+            }
+          ]
+        }
+      ],
+      "TUESDAY": [
+        {
+          "name": "",
+          "items": [
+            {
+              "sport": "MLB",
+              "item": "Rays @ Orioles",
+              "time": "6:35 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Angels @ Tigers",
+              "time": "6:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Cubs @ Pirates",
+              "time": "6:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Braves @ Red Sox",
+              "time": "6:45 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Marlins @ Blue Jays",
+              "time": "7:07 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Reds @ Mets",
+              "time": "7:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Yankees @ Royals",
+              "time": "7:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Cardinals @ Brewers",
+              "time": "7:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Phillies @ Padres",
+              "time": "9:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Rockies @ Dodgers",
+              "time": "10:10 PM ET"
             }
           ]
         }
