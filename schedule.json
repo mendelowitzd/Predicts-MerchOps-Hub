@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-05-22T23:02:31.629Z",
+  "updated": "2026-05-22T23:03:23.944Z",
   "weeks": {
     "2026-05-04": {
       "MONDAY": [],
@@ -2795,6 +2795,78 @@
           "sport": "WNBA",
           "item": "Mystics @ Storm",
           "time": "10:00 PM ET"
+        }
+      ],
+      "THURSDAY": [
+        {
+          "sport": "Combo",
+          "item": "NBA Combo",
+          "time": "8:30 PM ET"
+        },
+        {
+          "sport": "Combo",
+          "item": "NBA Combo",
+          "time": "8:30 PM ET"
+        },
+        {
+          "sport": "Combo",
+          "item": "MLB Combo",
+          "time": "1:10 PM ET"
+        },
+        {
+          "sport": "Combo",
+          "item": "MLB Combo",
+          "time": "6:35 PM ET"
+        },
+        {
+          "sport": "NBA",
+          "item": "Thunder @ Spurs",
+          "time": "8:30 PM ET"
+        },
+        {
+          "sport": "NHL",
+          "item": "Golden Knights @ Avalanche",
+          "time": "8:00 PM ET"
+        },
+        {
+          "sport": "WNBA",
+          "item": "Aces @ Wings",
+          "time": "8:00 PM ET"
+        },
+        {
+          "sport": "WNBA",
+          "item": "Fever @ Valkyries",
+          "time": "10:00 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Angels @ Tigers",
+          "time": "1:10 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Twins @ White Sox",
+          "time": "2:10 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Braves @ Red Sox",
+          "time": "4:10 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Blue Jays @ Orioles",
+          "time": "6:35 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Cubs @ Pirates",
+          "time": "6:40 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Astros @ Rangers",
+          "time": "8:05 PM ET"
         }
       ]
     }
