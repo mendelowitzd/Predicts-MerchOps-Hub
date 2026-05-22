@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-05-22T23:11:14.835Z",
+  "updated": "2026-05-22T23:11:43.305Z",
   "weeks": {
     "2026-05-04": {
       "MONDAY": [],
@@ -4731,6 +4731,11 @@
           "type": "subcategory",
           "label": "NHL",
           "icon": "🏒"
+        },
+        {
+          "type": "subcategory",
+          "label": "UCL",
+          "icon": "⚽"
         },
         {
           "type": "subcategory",
