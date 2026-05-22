@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-05-22T23:17:19.378Z",
+  "updated": "2026-05-22T23:17:47.868Z",
   "weeks": {
     "2026-05-04": {
       "MONDAY": [],
@@ -5719,6 +5719,63 @@
               "sport": "MLB",
               "item": "Phillies @ Dodgers",
               "time": "10:10 PM ET"
+            }
+          ]
+        }
+      ],
+      "SUNDAY": [
+        {
+          "name": "",
+          "items": [
+            {
+              "sport": "MLB",
+              "item": "Twins @ Pirates",
+              "time": "1:35 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Padres @ Nationals",
+              "time": "1:35 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Braves @ Reds",
+              "time": "1:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Angels @ Rays",
+              "time": "1:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Marlins @ Mets",
+              "time": "1:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Brewers @ Astros",
+              "time": "2:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Royals @ Rangers",
+              "time": "2:35 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Giants @ Rockies",
+              "time": "3:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Yankees @ Athletics",
+              "time": "4:05 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Phillies @ Dodgers",
+              "time": "4:10 PM ET"
             }
           ]
         }
