@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-05-21T20:00:53.618Z",
+  "updated": "2026-05-22T22:57:39.671Z",
   "weeks": {
     "2026-05-04": {
       "MONDAY": [],
@@ -2054,11 +2054,6 @@
         }
       ],
       "FRIDAY": [
-        {
-          "sport": "PGA",
-          "item": "THE CJ CUP Byron Nelson",
-          "time": "7:00 AM ET"
-        },
         {
           "sport": "Combo",
           "item": "NBA Combo 1",
