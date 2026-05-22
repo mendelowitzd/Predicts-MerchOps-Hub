@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-05-22T23:10:06.982Z",
+  "updated": "2026-05-22T23:11:14.835Z",
   "weeks": {
     "2026-05-04": {
       "MONDAY": [],
@@ -4645,7 +4645,7 @@
         },
         {
           "type": "event",
-          "label": "Knicks @ Cavaliers",
+          "label": "Thunder @ Spurs",
           "icon": "🏀",
           "sport": "NBA"
         },
