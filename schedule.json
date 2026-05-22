@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-05-22T22:57:39.671Z",
+  "updated": "2026-05-22T22:57:42.148Z",
   "weeks": {
     "2026-05-04": {
       "MONDAY": [],
@@ -2186,11 +2186,6 @@
         }
       ],
       "SATURDAY": [
-        {
-          "sport": "PGA",
-          "item": "THE CJ CUP Byron Nelson",
-          "time": "7:00 AM ET"
-        },
         {
           "sport": "WNBA",
           "item": "Lynx @ Sky",
