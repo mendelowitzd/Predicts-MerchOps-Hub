@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-05-22T23:09:59.788Z",
+  "updated": "2026-05-22T23:10:06.982Z",
   "weeks": {
     "2026-05-04": {
       "MONDAY": [],
@@ -4551,11 +4551,6 @@
         {
           "type": "subcategory",
           "label": "NBA",
-          "icon": "🏀"
-        },
-        {
-          "type": "subcategory",
-          "label": "WNBA",
           "icon": "🏀"
         },
         {
