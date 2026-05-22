@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-05-22T23:06:46.685Z",
+  "updated": "2026-05-22T23:06:59.378Z",
   "weeks": {
     "2026-05-04": {
       "MONDAY": [],
@@ -2998,6 +2998,16 @@
       ],
       "SATURDAY": [
         {
+          "sport": "MLB",
+          "item": "Diamondbacks @ Mariners",
+          "time": "10:10 PM ET"
+        },
+        {
+          "sport": "UCL",
+          "item": "Arsenal @ PSG",
+          "time": "12:00 PM ET"
+        },
+        {
           "sport": "Combo",
           "item": "NBA Combo",
           "time": "8:00 PM ET"
@@ -3110,11 +3120,6 @@
         {
           "sport": "MLB",
           "item": "Phillies @ Dodgers",
-          "time": "10:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Diamondbacks @ Mariners",
           "time": "10:10 PM ET"
         }
       ]
