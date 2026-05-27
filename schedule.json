@@ -1,2450 +1,7 @@
 {
   "v": 1,
-  "updated": "2026-05-22T23:17:47.868Z",
+  "updated": "2026-05-27T18:50:23.316670",
   "weeks": {
-    "2026-05-04": {
-      "MONDAY": [],
-      "TUESDAY": [],
-      "WEDNESDAY": [
-        {
-          "sport": "Combo",
-          "item": "Broadway & the Alamo",
-          "time": "7:10 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "Gridlock & Growl",
-          "time": "7:10 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "Lonestar & Liberty",
-          "time": "7:10 PM"
-        },
-        {
-          "sport": "MLB",
-          "item": "Padres @ Giants",
-          "time": "🔴 Live"
-        },
-        {
-          "sport": "MLB",
-          "item": "Braves @ Mariners",
-          "time": "🔴 Live"
-        },
-        {
-          "sport": "MLB",
-          "item": "White Sox @ Angels",
-          "time": "🔴 Live"
-        },
-        {
-          "sport": "NBA",
-          "item": "76ers @ Knicks",
-          "time": "7:00 PM ET"
-        },
-        {
-          "sport": "NBA",
-          "item": "Timberwolves @ Spurs",
-          "time": "9:30 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Athletics @ Phillies",
-          "time": "6:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Orioles @ Marlins",
-          "time": "6:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Red Sox @ Tigers",
-          "time": "6:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Twins @ Nationals",
-          "time": "6:45 PM ET"
-        },
-        {
-          "sport": "NHL",
-          "item": "Canadiens @ Sabres",
-          "time": "7:00 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Rangers @ Yankees",
-          "time": "7:05 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Reds @ Cubs",
-          "time": "7:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Guardians @ Royals",
-          "time": "7:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Mets @ Rockies",
-          "time": "9:20 PM ET"
-        },
-        {
-          "sport": "NHL",
-          "item": "Ducks @ Golden Knights",
-          "time": "9:30 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Pirates @ Diamondbacks",
-          "time": "9:40 PM ET"
-        }
-      ],
-      "THURSDAY": [
-        {
-          "sport": "PGA",
-          "item": "Truist Championship",
-          "time": "11:00 AM"
-        },
-        {
-          "sport": "Combo",
-          "item": "The American Tour",
-          "time": "12:35 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "Snake Eyes",
-          "time": "7:00 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "Double Down",
-          "time": "7:00 PM"
-        },
-        {
-          "sport": "MLB",
-          "item": "Rangers @ Yankees",
-          "time": "12:35 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Twins @ Nationals",
-          "time": "1:05 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Guardians @ Royals",
-          "time": "2:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Reds @ Cubs",
-          "time": "2:20 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Mets @ Rockies",
-          "time": "3:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Pirates @ Diamondbacks",
-          "time": "3:40 PM ET"
-        },
-        {
-          "sport": "NBA",
-          "item": "Cavaliers @ Pistons",
-          "time": "7:00 PM ET"
-        },
-        {
-          "sport": "NBA",
-          "item": "Lakers @ Thunder",
-          "time": "9:30 PM ET"
-        },
-        {
-          "sport": "Combo",
-          "item": "The I-95 Triple",
-          "time": "6:40 PM"
-        },
-        {
-          "sport": "MLB",
-          "item": "Athletics @ Phillies",
-          "time": "6:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Orioles @ Marlins",
-          "time": "6:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Rays @ Red Sox",
-          "time": "7:00 PM ET"
-        },
-        {
-          "sport": "NHL",
-          "item": "Hurricanes @ Flyers",
-          "time": "8:00 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Cardinals @ Padres",
-          "time": "10:00 PM ET"
-        }
-      ],
-      "FRIDAY": [
-        {
-          "sport": "Combo",
-          "item": "City Lights & Northern Lights",
-          "time": "7:00 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "Liberty @ Lone Star",
-          "time": "7:00 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "The Ace Club",
-          "time": "7:00 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "No Rest for the NL West",
-          "time": "7:00 PM"
-        },
-        {
-          "sport": "PGA",
-          "item": "Truist Championship",
-          "time": "🔴 Live"
-        },
-        {
-          "sport": "NBA",
-          "item": "Knicks @ 76ers",
-          "time": "7:00 PM ET"
-        },
-        {
-          "sport": "NBA",
-          "item": "Spurs @ Timberwolves",
-          "time": "9:30 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Astros @ Reds",
-          "time": "6:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Rockies @ Phillies",
-          "time": "6:40 PM ET"
-        },
-        {
-          "sport": "NHL",
-          "item": "Canadiens @ Sabres",
-          "time": "7:00 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Twins @ Guardians",
-          "time": "7:15 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Athletics @ Orioles",
-          "time": "7:05 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Angels @ Blue Jays",
-          "time": "7:07 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Rays @ Red Sox",
-          "time": "7:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Nationals @ Marlins",
-          "time": "7:10 PM ET"
-        },
-        {
-          "sport": "WNBA",
-          "item": "Sun @ Liberty",
-          "time": "7:30 PM ET"
-        },
-        {
-          "sport": "WNBA",
-          "item": "Mystics @ Tempo",
-          "time": "7:30 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Yankees @ Brewers",
-          "time": "7:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Tigers @ Royals",
-          "time": "7:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Mariners @ White Sox",
-          "time": "7:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Cubs @ Rangers",
-          "time": "8:05 PM ET"
-        },
-        {
-          "sport": "NHL",
-          "item": "Golden Knights @ Ducks",
-          "time": "9:30 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Cardinals @ Padres",
-          "time": "9:45 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Mets @ Diamondbacks",
-          "time": "9:40 PM ET"
-        },
-        {
-          "sport": "WNBA",
-          "item": "Valkyries @ Storm",
-          "time": "10:00 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Braves @ Dodgers",
-          "time": "10:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Pirates @ Giants",
-          "time": "10:15 PM ET"
-        },
-        {
-          "sport": "Combo",
-          "item": "The Road Show",
-          "time": "7:00 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "Home Court Holds",
-          "time": "7:00 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "Four Deep Pockets",
-          "time": "7:05 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "Rain & Wind",
-          "time": "8:05 PM"
-        }
-      ],
-      "SATURDAY": [
-        {
-          "sport": "PGA",
-          "item": "Truist Championship",
-          "time": "7:00 AM"
-        },
-        {
-          "sport": "Combo",
-          "item": "NBA Combo 1",
-          "time": "3:00 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "NBA Combo 2",
-          "time": "3:00 PM"
-        },
-        {
-          "sport": "WNBA",
-          "item": "Wings @ Fever",
-          "time": "1:00 PM ET"
-        },
-        {
-          "sport": "NBA",
-          "item": "Pistons @ Cavaliers",
-          "time": "3:00 PM ET"
-        },
-        {
-          "sport": "WNBA",
-          "item": "Mercury @ Aces",
-          "time": "3:30 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Angels @ Blue Jays",
-          "time": "3:07 PM ET"
-        },
-        {
-          "sport": "Combo",
-          "item": "MLB Combo 1",
-          "time": "4:10 PM"
-        },
-        {
-          "sport": "MLB",
-          "item": "Athletics @ Orioles",
-          "time": "4:05 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Astros @ Reds",
-          "time": "4:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Rays @ Red Sox",
-          "time": "4:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Nationals @ Marlins",
-          "time": "4:10 PM ET"
-        },
-        {
-          "sport": "NBA",
-          "item": "Thunder @ Lakers",
-          "time": "8:30 PM ET"
-        },
-        {
-          "sport": "NHL",
-          "item": "Hurricanes @ Flyers",
-          "time": "6:00 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Rockies @ Phillies",
-          "time": "6:05 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Twins @ Guardians",
-          "time": "6:10 PM ET"
-        },
-        {
-          "sport": "Combo",
-          "item": "MLB Combo 2",
-          "time": "7:05 PM"
-        },
-        {
-          "sport": "MLB",
-          "item": "Mets @ Diamondbacks",
-          "time": "7:15 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Cardinals @ Padres",
-          "time": "7:15 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Cubs @ Rangers",
-          "time": "7:05 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Yankees @ Brewers",
-          "time": "7:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Tigers @ Royals",
-          "time": "7:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Mariners @ White Sox",
-          "time": "7:10 PM ET"
-        },
-        {
-          "sport": "WNBA",
-          "item": "Dream @ Lynx",
-          "time": "8:00 PM ET"
-        },
-        {
-          "sport": "NHL",
-          "item": "Avalanche @ Wild",
-          "time": "9:00 PM ET"
-        },
-        {
-          "sport": "WNBA",
-          "item": "Sky @ Fire",
-          "time": "9:00 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Pirates @ Giants",
-          "time": "9:05 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Braves @ Dodgers",
-          "time": "9:10 PM ET"
-        }
-      ],
-      "SUNDAY": [
-        {
-          "sport": "PGA",
-          "item": "Truist Championship",
-          "time": "7:00 AM"
-        },
-        {
-          "sport": "Combo",
-          "item": "NBA Combo 1",
-          "time": "3:30 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "NBA Combo 2",
-          "time": "3:30 PM"
-        },
-        {
-          "sport": "NBA",
-          "item": "Knicks @ 76ers",
-          "time": "3:30 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Nationals @ Marlins",
-          "time": "12:10 PM ET"
-        },
-        {
-          "sport": "WNBA",
-          "item": "Storm @ Sun",
-          "time": "1:00 PM ET"
-        },
-        {
-          "sport": "Combo",
-          "item": "MLB Combo 1",
-          "time": "1:35 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "MLB Combo 2",
-          "time": "1:35 PM"
-        },
-        {
-          "sport": "MLB",
-          "item": "Rays @ Red Sox",
-          "time": "1:35 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Athletics @ Orioles",
-          "time": "1:35 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Rockies @ Phillies",
-          "time": "1:35 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Angels @ Blue Jays",
-          "time": "1:37 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Astros @ Reds",
-          "time": "1:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Twins @ Guardians",
-          "time": "1:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Yankees @ Brewers",
-          "time": "2:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Mariners @ White Sox",
-          "time": "2:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Cubs @ Rangers",
-          "time": "2:35 PM ET"
-        },
-        {
-          "sport": "WNBA",
-          "item": "Liberty @ Mystics",
-          "time": "3:00 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Braves @ Dodgers",
-          "time": "4:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Pirates @ Giants",
-          "time": "4:05 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Mets @ Diamondbacks",
-          "time": "4:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Cardinals @ Padres",
-          "time": "4:10 PM ET"
-        },
-        {
-          "sport": "NBA",
-          "item": "Spurs @ Timberwolves",
-          "time": "7:30 PM ET"
-        },
-        {
-          "sport": "WNBA",
-          "item": "Aces @ Sparks",
-          "time": "6:00 PM ET"
-        },
-        {
-          "sport": "NHL",
-          "item": "Sabres @ Canadiens",
-          "time": "7:00 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Tigers @ Royals",
-          "time": "7:20 PM ET"
-        },
-        {
-          "sport": "NHL",
-          "item": "Golden Knights @ Ducks",
-          "time": "9:30 PM ET"
-        }
-      ]
-    },
-    "2026-05-05": {
-      "THURSDAY": [
-        {
-          "sport": "NBA",
-          "item": "Knicks @ 76ers",
-          "time": "7:00 PM ET"
-        },
-        {
-          "sport": "NBA",
-          "item": "Spurs @ Timberwolves",
-          "time": "9:30 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Astros @ Reds",
-          "time": "6:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Rockies @ Phillies",
-          "time": "6:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Athletics @ Orioles",
-          "time": "7:05 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Angels @ Blue Jays",
-          "time": "7:07 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Nationals @ Marlins",
-          "time": "7:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Twins @ Guardians",
-          "time": "7:15 PM ET"
-        }
-      ]
-    },
-    "2026-05-11": {
-      "MONDAY": [
-        {
-          "sport": "Combo",
-          "item": "East & West Hold Court",
-          "time": "8:10 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "Visiting Hours",
-          "time": "8:10 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "Sidewalks & Snakes",
-          "time": "6:35 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "Orange You Glad",
-          "time": "6:35 PM"
-        },
-        {
-          "sport": "NBA",
-          "item": "Pistons @ Cavaliers",
-          "time": "8:00 PM ET"
-        },
-        {
-          "sport": "NBA",
-          "item": "Thunder @ Lakers",
-          "time": "10:30 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Angels @ Guardians",
-          "time": "6:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Yankees @ Orioles",
-          "time": "6:35 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Rays @ Blue Jays",
-          "time": "7:07 PM ET"
-        },
-        {
-          "sport": "NHL",
-          "item": "Avalanche @ Wild",
-          "time": "8:00 PM ET"
-        },
-        {
-          "sport": "Combo",
-          "item": "Desert, Rain & Sun",
-          "time": "8:05 PM"
-        },
-        {
-          "sport": "MLB",
-          "item": "Diamondbacks @ Rangers",
-          "time": "8:05 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Mariners @ Astros",
-          "time": "8:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Giants @ Dodgers",
-          "time": "10:10 PM ET"
-        },
-        {
-          "sport": "Combo",
-          "item": "Rock & Storm"
-        },
-        {
-          "sport": "Combo",
-          "item": "The Odd Couple",
-          "time": "8:10 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "Shoot for the Stars",
-          "time": "6:35 PM"
-        }
-      ],
-      "TUESDAY": [
-        {
-          "sport": "Combo",
-          "item": "Full Moon in San Antonio",
-          "time": "8:00 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "The Alamo Holds",
-          "time": "8:00 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "Pinstripes, Peach & The Pacific",
-          "time": "6:35 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "Icons on Tour",
-          "time": "7:07 PM"
-        },
-        {
-          "sport": "NBA",
-          "item": "Timberwolves @ Spurs",
-          "time": "8:00 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Angels @ Guardians",
-          "time": "6:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Yankees @ Orioles",
-          "time": "6:35 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Rockies @ Pirates",
-          "time": "6:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Nationals @ Reds",
-          "time": "6:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Phillies @ Red Sox",
-          "time": "6:45 PM ET"
-        },
-        {
-          "sport": "NHL",
-          "item": "Sabres @ Canadiens",
-          "time": "7:00 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Rays @ Blue Jays",
-          "time": "7:07 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Tigers @ Mets",
-          "time": "7:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Cubs @ Braves",
-          "time": "7:15 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Royals @ White Sox",
-          "time": "7:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Marlins @ Twins",
-          "time": "7:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Padres @ Brewers",
-          "time": "7:40 PM ET"
-        },
-        {
-          "sport": "WNBA",
-          "item": "Dream @ Wings",
-          "time": "8:00 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Diamondbacks @ Rangers",
-          "time": "8:05 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Mariners @ Astros",
-          "time": "8:10 PM ET"
-        },
-        {
-          "sport": "NHL",
-          "item": "Ducks @ Golden Knights",
-          "time": "9:30 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Cardinals @ Athletics",
-          "time": "9:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Giants @ Dodgers",
-          "time": "10:10 PM ET"
-        },
-        {
-          "sport": "WNBA",
-          "item": "Liberty @ Fire",
-          "time": "10:00 PM ET"
-        },
-        {
-          "sport": "WNBA",
-          "item": "Lynx @ Mercury",
-          "time": "10:00 PM ET"
-        },
-        {
-          "sport": "Combo",
-          "item": "Wolves Stay in the Hunt",
-          "time": "8:00 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "NBA Combo 4",
-          "time": "8:00 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "Pocket Aces",
-          "time": "7:40 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "The Sun Belt Three",
-          "time": "9:40 PM"
-        }
-      ],
-      "WEDNESDAY": [
-        {
-          "sport": "Combo",
-          "item": "NBA Combo 1",
-          "time": "7:00 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "NBA Combo 2",
-          "time": "7:00 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "MLB Combo 1",
-          "time": "6:35 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "MLB Combo 2",
-          "time": "7:07 PM"
-        },
-        {
-          "sport": "MLB",
-          "item": "Angels @ Guardians",
-          "time": "1:10 PM ET"
-        },
-        {
-          "sport": "NBA",
-          "item": "Cavaliers @ Pistons",
-          "time": "12:00 AM ET"
-        },
-        {
-          "sport": "NBA",
-          "item": "Lakers @ Thunder",
-          "time": "12:00 AM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Yankees @ Orioles",
-          "time": "6:35 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Rockies @ Pirates",
-          "time": "6:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Nationals @ Reds",
-          "time": "6:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Phillies @ Red Sox",
-          "time": "6:45 PM ET"
-        },
-        {
-          "sport": "WNBA",
-          "item": "Storm @ Tempo",
-          "time": "7:00 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Rays @ Blue Jays",
-          "time": "7:07 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Tigers @ Mets",
-          "time": "7:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Cubs @ Braves",
-          "time": "7:15 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Royals @ White Sox",
-          "time": "7:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Marlins @ Twins",
-          "time": "7:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Padres @ Brewers",
-          "time": "7:40 PM ET"
-        },
-        {
-          "sport": "NHL",
-          "item": "Wild @ Avalanche",
-          "time": "8:00 PM ET"
-        },
-        {
-          "sport": "WNBA",
-          "item": "Aces @ Sun",
-          "time": "8:00 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Diamondbacks @ Rangers",
-          "time": "8:05 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Mariners @ Astros",
-          "time": "8:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Cardinals @ Athletics",
-          "time": "9:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Giants @ Dodgers",
-          "time": "10:10 PM ET"
-        },
-        {
-          "sport": "WNBA",
-          "item": "Fever @ Sparks",
-          "time": "10:30 PM ET"
-        },
-        {
-          "sport": "WNBA",
-          "item": "Sky @ Valkyries",
-          "time": "10:00 PM ET"
-        },
-        {
-          "sport": "Combo",
-          "item": "NBA Combo 3",
-          "time": "7:00 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "NBA Combo 4",
-          "time": "7:00 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "MLB Combo 3",
-          "time": "7:40 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "MLB Combo 4",
-          "time": "9:40 PM"
-        },
-        {
-          "sport": "PGA",
-          "item": "PGA Championship"
-        }
-      ],
-      "THURSDAY": [
-        {
-          "sport": "PGA",
-          "item": "PGA Championship",
-          "time": "12:00 AM ET"
-        },
-        {
-          "sport": "Combo",
-          "item": "Queens, The Sound & The Pacific",
-          "time": "12:35 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "Two Missions",
-          "time": "1:10 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "The Wandering West",
-          "time": "6:45 PM"
-        },
-        {
-          "sport": "MLB",
-          "item": "Rockies @ Pirates",
-          "time": "12:35 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Nationals @ Reds",
-          "time": "12:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Tigers @ Mets",
-          "time": "1:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Marlins @ Twins",
-          "time": "1:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Padres @ Brewers",
-          "time": "1:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Mariners @ Astros",
-          "time": "2:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Cardinals @ Athletics",
-          "time": "3:05 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Phillies @ Red Sox",
-          "time": "6:45 PM ET"
-        },
-        {
-          "sport": "NHL",
-          "item": "Canadiens @ Sabres",
-          "time": "7:00 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Cubs @ Braves",
-          "time": "7:15 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Royals @ White Sox",
-          "time": "7:40 PM ET"
-        },
-        {
-          "sport": "WNBA",
-          "item": "Lynx @ Wings",
-          "time": "8:00 PM ET"
-        },
-        {
-          "sport": "WNBA",
-          "item": "Liberty @ Fire",
-          "time": "10:00 PM ET"
-        },
-        {
-          "sport": "NHL",
-          "item": "Golden Knights @ Ducks",
-          "time": "9:30 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Giants @ Dodgers",
-          "time": "10:10 PM ET"
-        }
-      ],
-      "FRIDAY": [
-        {
-          "sport": "PGA",
-          "item": "PGA Championship",
-          "time": "7:00 AM ET"
-        },
-        {
-          "sport": "Combo",
-          "item": "NBA Combo 1",
-          "time": "7:00 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "NBA Combo 2",
-          "time": "7:00 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "MLB Combo 1",
-          "time": "6:40 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "MLB Combo 2",
-          "time": "7:10 PM"
-        },
-        {
-          "sport": "NBA",
-          "item": "Pistons @ Cavaliers",
-          "time": "12:00 AM ET"
-        },
-        {
-          "sport": "NBA",
-          "item": "Spurs @ Timberwolves",
-          "time": "12:00 AM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Blue Jays @ Tigers",
-          "time": "6:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Phillies @ Pirates",
-          "time": "6:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Orioles @ Nationals",
-          "time": "6:45 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Yankees @ Mets",
-          "time": "7:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Reds @ Guardians",
-          "time": "7:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Marlins @ Rays",
-          "time": "7:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Red Sox @ Braves",
-          "time": "7:15 PM ET"
-        },
-        {
-          "sport": "WNBA",
-          "item": "Aces @ Sun",
-          "time": "7:30 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Cubs @ White Sox",
-          "time": "7:40 PM ET"
-        },
-        {
-          "sport": "WNBA",
-          "item": "Mystics @ Fever",
-          "time": "7:30 PM ET"
-        },
-        {
-          "sport": "NHL",
-          "item": "Avalanche @ Wild",
-          "time": "8:00 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Brewers @ Twins",
-          "time": "8:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Rangers @ Astros",
-          "time": "8:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Royals @ Cardinals",
-          "time": "8:15 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Diamondbacks @ Rockies",
-          "time": "8:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Dodgers @ Angels",
-          "time": "9:38 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Padres @ Mariners",
-          "time": "9:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Giants @ Athletics",
-          "time": "9:40 PM ET"
-        },
-        {
-          "sport": "WNBA",
-          "item": "Sky @ Mercury",
-          "time": "10:00 PM ET"
-        },
-        {
-          "sport": "WNBA",
-          "item": "Tempo @ Sparks",
-          "time": "10:00 PM ET"
-        },
-        {
-          "sport": "Combo",
-          "item": "NBA Combo 3",
-          "time": "7:00 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "NBA Combo 4",
-          "time": "7:00 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "MLB Combo 3",
-          "time": "8:10 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "MLB Combo 4",
-          "time": "9:38 PM"
-        }
-      ],
-      "SATURDAY": [
-        {
-          "sport": "PGA",
-          "item": "PGA Championship",
-          "time": "12:00 AM ET"
-        },
-        {
-          "sport": "Combo",
-          "item": "MLB Combo 1",
-          "time": "1:10 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "MLB Combo 2",
-          "time": "4:05 PM"
-        },
-        {
-          "sport": "MLB",
-          "item": "Blue Jays @ Tigers",
-          "time": "1:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Royals @ Cardinals",
-          "time": "2:15 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Diamondbacks @ Rockies",
-          "time": "3:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Orioles @ Nationals",
-          "time": "4:05 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Phillies @ Pirates",
-          "time": "4:05 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Marlins @ Rays",
-          "time": "4:10 PM ET"
-        },
-        {
-          "sport": "NHL",
-          "item": "Sabres @ Canadiens",
-          "time": "12:00 AM ET"
-        },
-        {
-          "sport": "NHL",
-          "item": "Ducks @ Golden Knights",
-          "time": "12:00 AM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Reds @ Guardians",
-          "time": "6:10 PM ET"
-        },
-        {
-          "sport": "Combo",
-          "item": "MLB Combo 3",
-          "time": "7:10 PM"
-        },
-        {
-          "sport": "MLB",
-          "item": "Yankees @ Mets",
-          "time": "7:15 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Padres @ Mariners",
-          "time": "7:15 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Cubs @ White Sox",
-          "time": "7:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Red Sox @ Braves",
-          "time": "7:15 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Brewers @ Twins",
-          "time": "7:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Rangers @ Astros",
-          "time": "7:10 PM ET"
-        },
-        {
-          "sport": "Combo",
-          "item": "MLB Combo 4",
-          "time": "9:38 PM"
-        },
-        {
-          "sport": "MLB",
-          "item": "Dodgers @ Angels",
-          "time": "9:38 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Giants @ Athletics",
-          "time": "9:40 PM ET"
-        }
-      ],
-      "SUNDAY": [
-        {
-          "sport": "PGA",
-          "item": "PGA Championship",
-          "time": "7:00 AM ET"
-        },
-        {
-          "sport": "Combo",
-          "item": "MLB Combo 1",
-          "time": "1:35 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "MLB Combo 2",
-          "time": "1:35 PM"
-        },
-        {
-          "sport": "MLB",
-          "item": "Marlins @ Rays",
-          "time": "12:15 PM ET"
-        },
-        {
-          "sport": "WNBA",
-          "item": "Aces @ Dream",
-          "time": "1:30 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Yankees @ Mets",
-          "time": "1:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Red Sox @ Braves",
-          "time": "1:35 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Orioles @ Nationals",
-          "time": "1:35 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Phillies @ Pirates",
-          "time": "1:35 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Reds @ Guardians",
-          "time": "1:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Blue Jays @ Tigers",
-          "time": "1:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Cubs @ White Sox",
-          "time": "2:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Brewers @ Twins",
-          "time": "2:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Rangers @ Astros",
-          "time": "2:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Royals @ Cardinals",
-          "time": "2:15 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Diamondbacks @ Rockies",
-          "time": "3:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Giants @ Athletics",
-          "time": "4:05 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Dodgers @ Angels",
-          "time": "4:07 PM ET"
-        },
-        {
-          "sport": "WNBA",
-          "item": "Storm @ Fever",
-          "time": "6:00 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Padres @ Mariners",
-          "time": "7:20 PM ET"
-        },
-        {
-          "sport": "WNBA",
-          "item": "Sky @ Lynx",
-          "time": "7:00 PM ET"
-        },
-        {
-          "sport": "WNBA",
-          "item": "Tempo @ Sparks",
-          "time": "7:00 PM ET"
-        },
-        {
-          "sport": "NHL",
-          "item": "Wild @ Avalanche",
-          "time": "12:00 AM ET"
-        },
-        {
-          "sport": "Combo",
-          "item": "MLB Combo 3",
-          "time": "2:10 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "MLB Combo 4",
-          "time": "4:05 PM"
-        }
-      ]
-    },
-    "2026-05-18": {
-      "MONDAY": [
-        {
-          "sport": "Combo",
-          "item": "Thunder Reigns",
-          "time": "8:30pm"
-        },
-        {
-          "sport": "Combo",
-          "item": "Clear Skies",
-          "time": "8:30pm"
-        },
-        {
-          "sport": "NBA",
-          "item": "Spurs @ Thunder",
-          "time": "8:30 PM ET"
-        },
-        {
-          "sport": "Combo",
-          "item": "The Oldest Grudge",
-          "time": "7:05pm"
-        },
-        {
-          "sport": "Combo",
-          "item": "Big Cities, Big Spenders",
-          "time": "6:45 PM"
-        },
-        {
-          "sport": "MLB",
-          "item": "Guardians @ Tigers",
-          "time": "6:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Orioles @ Rays",
-          "time": "6:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Reds @ Phillies",
-          "time": "6:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Braves @ Marlins",
-          "time": "6:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Mets @ Nationals",
-          "time": "6:45 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Blue Jays @ Yankees",
-          "time": "7:05 PM ET"
-        },
-        {
-          "sport": "NHL",
-          "item": "Canadiens @ Sabres",
-          "time": "7:30 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Red Sox @ Royals",
-          "time": "7:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Brewers @ Cubs",
-          "time": "7:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Astros @ Twins",
-          "time": "7:40 PM ET"
-        },
-        {
-          "sport": "WNBA",
-          "item": "Mystics @ Wings",
-          "time": "8:00 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Rangers @ Rockies",
-          "time": "8:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Athletics @ Angels",
-          "time": "9:38 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "White Sox @ Mariners",
-          "time": "9:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Dodgers @ Padres",
-          "time": "9:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Giants @ Diamondbacks",
-          "time": "9:40 PM ET"
-        },
-        {
-          "sport": "WNBA",
-          "item": "Sun @ Fire",
-          "time": "10:00 PM ET"
-        },
-        {
-          "sport": "Combo",
-          "item": "Storm Surge",
-          "time": "8:30pm"
-        },
-        {
-          "sport": "Combo",
-          "item": "The Silver Lining",
-          "time": "8:30pm"
-        },
-        {
-          "sport": "Combo",
-          "item": "Division Takeover",
-          "time": "6:45 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "The Night Shift",
-          "time": "9:40 PM"
-        }
-      ],
-      "TUESDAY": [
-        {
-          "sport": "Combo",
-          "item": "NBA Combo 1",
-          "time": "8:00 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "NBA Combo 2",
-          "time": "8:00 PM"
-        },
-        {
-          "sport": "MLB",
-          "item": "Braves @ Marlins",
-          "time": "4:10 PM ET"
-        },
-        {
-          "sport": "NBA",
-          "item": "Cavaliers @ Knicks",
-          "time": "8:00 PM ET"
-        },
-        {
-          "sport": "Combo",
-          "item": "MLB Combo 1",
-          "time": "6:40 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "MLB Combo 2",
-          "time": "7:05 PM"
-        },
-        {
-          "sport": "MLB",
-          "item": "Orioles @ Rays",
-          "time": "6:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Reds @ Phillies",
-          "time": "6:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Guardians @ Tigers",
-          "time": "6:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Mets @ Nationals",
-          "time": "6:45 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Blue Jays @ Yankees",
-          "time": "7:05 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Red Sox @ Royals",
-          "time": "7:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Astros @ Twins",
-          "time": "7:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Brewers @ Cubs",
-          "time": "7:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Pirates @ Cardinals",
-          "time": "7:45 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Rangers @ Rockies",
-          "time": "8:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Athletics @ Angels",
-          "time": "9:38 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Dodgers @ Padres",
-          "time": "9:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "White Sox @ Mariners",
-          "time": "9:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Giants @ Diamondbacks",
-          "time": "9:40 PM ET"
-        },
-        {
-          "sport": "WNBA",
-          "item": "Tempo @ Mercury",
-          "time": "10:00 PM ET"
-        },
-        {
-          "sport": "Combo",
-          "item": "NBA Combo 3",
-          "time": "8:00 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "NBA Combo 4",
-          "time": "8:00 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "MLB Combo 3",
-          "time": "7:40 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "MLB Combo 4",
-          "time": "9:40 PM"
-        }
-      ],
-      "WEDNESDAY": [
-        {
-          "sport": "Combo",
-          "item": "NBA Combo 1",
-          "time": "8:30 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "NBA Combo 2",
-          "time": "8:30 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "MLB Combo 1",
-          "time": "1:05 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "MLB Combo 2",
-          "time": "3:10 PM"
-        },
-        {
-          "sport": "NBA",
-          "item": "Spurs @ Thunder",
-          "time": "8:30 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Reds @ Phillies",
-          "time": "1:05 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Orioles @ Rays",
-          "time": "1:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Astros @ Twins",
-          "time": "1:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Rangers @ Rockies",
-          "time": "3:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Giants @ Diamondbacks",
-          "time": "3:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "White Sox @ Mariners",
-          "time": "4:10 PM ET"
-        },
-        {
-          "sport": "Combo",
-          "item": "MLB Combo 3",
-          "time": "6:40 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "MLB Combo 4",
-          "time": "7:05 PM"
-        },
-        {
-          "sport": "MLB",
-          "item": "Braves @ Marlins",
-          "time": "6:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Guardians @ Tigers",
-          "time": "6:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Mets @ Nationals",
-          "time": "6:45 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Blue Jays @ Yankees",
-          "time": "7:05 PM ET"
-        },
-        {
-          "sport": "WNBA",
-          "item": "Fire @ Fever",
-          "time": "7:00 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Brewers @ Cubs",
-          "time": "7:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Red Sox @ Royals",
-          "time": "7:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Pirates @ Cardinals",
-          "time": "7:45 PM ET"
-        },
-        {
-          "sport": "NHL",
-          "item": "Golden Knights @ Avalanche",
-          "time": "8:00 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Dodgers @ Padres",
-          "time": "8:40 PM ET"
-        },
-        {
-          "sport": "WNBA",
-          "item": "Wings @ Sky",
-          "time": "9:00 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Athletics @ Angels",
-          "time": "9:38 PM ET"
-        },
-        {
-          "sport": "WNBA",
-          "item": "Sun @ Storm",
-          "time": "10:00 PM ET"
-        },
-        {
-          "sport": "Combo",
-          "item": "NBA Combo 3",
-          "time": "8:30 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "NBA Combo 4",
-          "time": "8:30 PM"
-        }
-      ],
-      "THURSDAY": [
-        {
-          "sport": "Combo",
-          "item": "NBA Combo 1",
-          "time": "8:00 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "NBA Combo 2",
-          "time": "8:00 PM"
-        },
-        {
-          "sport": "NBA",
-          "item": "Cavaliers @ Knicks",
-          "time": "8:00 PM ET"
-        },
-        {
-          "sport": "Combo",
-          "item": "MLB Combo 2",
-          "time": "1:10 PM"
-        },
-        {
-          "sport": "MLB",
-          "item": "Guardians @ Tigers",
-          "time": "1:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Pirates @ Cardinals",
-          "time": "1:15 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Mets @ Nationals",
-          "time": "4:05 PM ET"
-        },
-        {
-          "sport": "Combo",
-          "item": "MLB Combo 3",
-          "time": "6:40 PM"
-        },
-        {
-          "sport": "MLB",
-          "item": "Braves @ Marlins",
-          "time": "6:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Blue Jays @ Yankees",
-          "time": "7:05 PM ET"
-        },
-        {
-          "sport": "NHL",
-          "item": "Sabres/Canadiens @ Hurricanes",
-          "time": "12:00 AM ET"
-        },
-        {
-          "sport": "WNBA",
-          "item": "Valkyries @ Liberty",
-          "time": "8:00 PM ET"
-        },
-        {
-          "sport": "WNBA",
-          "item": "Tempo @ Lynx",
-          "time": "8:00 PM ET"
-        },
-        {
-          "sport": "Combo",
-          "item": "MLB Combo 4",
-          "time": "9:38 PM"
-        },
-        {
-          "sport": "MLB",
-          "item": "Athletics @ Angels",
-          "time": "9:38 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Rockies @ Diamondbacks",
-          "time": "9:40 PM ET"
-        },
-        {
-          "sport": "WNBA",
-          "item": "Sparks @ Mercury",
-          "time": "10:00 PM ET"
-        },
-        {
-          "sport": "Combo",
-          "item": "MLB Combo 1",
-          "time": "1:10 PM"
-        }
-      ],
-      "FRIDAY": [
-        {
-          "sport": "Combo",
-          "item": "NBA Combo 1",
-          "time": "8:30 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "NBA Combo 2",
-          "time": "8:30 PM"
-        },
-        {
-          "sport": "MLB",
-          "item": "Astros @ Cubs",
-          "time": "2:20 PM ET"
-        },
-        {
-          "sport": "NBA",
-          "item": "Thunder @ Spurs",
-          "time": "8:30 PM ET"
-        },
-        {
-          "sport": "Combo",
-          "item": "MLB Combo 1",
-          "time": "6:40 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "MLB Combo 2",
-          "time": "7:05 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "MLB Combo 3",
-          "time": "7:05 PM"
-        },
-        {
-          "sport": "MLB",
-          "item": "Cardinals @ Reds",
-          "time": "6:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Guardians @ Phillies",
-          "time": "6:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Tigers @ Orioles",
-          "time": "7:05 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Rays @ Yankees",
-          "time": "7:05 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Pirates @ Blue Jays",
-          "time": "7:07 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Twins @ Red Sox",
-          "time": "7:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Mets @ Marlins",
-          "time": "7:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Nationals @ Braves",
-          "time": "7:15 PM ET"
-        },
-        {
-          "sport": "WNBA",
-          "item": "Valkyries @ Fever",
-          "time": "7:30 PM ET"
-        },
-        {
-          "sport": "WNBA",
-          "item": "Wings @ Dream",
-          "time": "7:30 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Dodgers @ Brewers",
-          "time": "7:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Mariners @ Royals",
-          "time": "7:40 PM ET"
-        },
-        {
-          "sport": "NHL",
-          "item": "Golden Knights @ Avalanche",
-          "time": "8:00 PM ET"
-        },
-        {
-          "sport": "Combo",
-          "item": "MLB Combo 4",
-          "time": "9:40 PM"
-        },
-        {
-          "sport": "MLB",
-          "item": "Rangers @ Angels",
-          "time": "9:38 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Athletics @ Padres",
-          "time": "9:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Rockies @ Diamondbacks",
-          "time": "9:40 PM ET"
-        },
-        {
-          "sport": "WNBA",
-          "item": "Sun @ Storm",
-          "time": "10:00 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "White Sox @ Giants",
-          "time": "10:15 PM ET"
-        }
-      ],
-      "SATURDAY": [
-        {
-          "sport": "WNBA",
-          "item": "Lynx @ Sky",
-          "time": "1:00 PM ET"
-        },
-        {
-          "sport": "Combo",
-          "item": "MLB Combo 1",
-          "time": "1:35 PM"
-        },
-        {
-          "sport": "MLB",
-          "item": "Rays @ Yankees",
-          "time": "1:35 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Astros @ Cubs",
-          "time": "2:20 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Pirates @ Blue Jays",
-          "time": "3:07 PM ET"
-        },
-        {
-          "sport": "Combo",
-          "item": "MLB Combo 2",
-          "time": "4:05 PM"
-        },
-        {
-          "sport": "MLB",
-          "item": "Guardians @ Phillies",
-          "time": "4:05 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Tigers @ Orioles",
-          "time": "4:05 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "White Sox @ Giants",
-          "time": "4:05 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Twins @ Red Sox",
-          "time": "4:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Mets @ Marlins",
-          "time": "4:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Nationals @ Braves",
-          "time": "4:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Mariners @ Royals",
-          "time": "4:10 PM ET"
-        },
-        {
-          "sport": "NBA",
-          "item": "Knicks @ Cavaliers",
-          "time": "8:00 PM ET"
-        },
-        {
-          "sport": "WNBA",
-          "item": "Fire @ Tempo",
-          "time": "6:00 PM ET"
-        },
-        {
-          "sport": "Combo",
-          "item": "MLB Cpmbo 3",
-          "time": "7:15 PM"
-        },
-        {
-          "sport": "MLB",
-          "item": "Dodgers @ Brewers",
-          "time": "7:15 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Cardinals @ Reds",
-          "time": "7:15 PM ET"
-        },
-        {
-          "sport": "NHL",
-          "item": "Sabres/Canadiens @ Hurricanes",
-          "time": "12:00 AM ET"
-        },
-        {
-          "sport": "WNBA",
-          "item": "Sparks @ Aces",
-          "time": "8:00 PM ET"
-        },
-        {
-          "sport": "Combo",
-          "item": "MLB Combo 4",
-          "time": "10:05 PM"
-        },
-        {
-          "sport": "MLB",
-          "item": "Athletics @ Padres",
-          "time": "9:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Rangers @ Angels",
-          "time": "10:05 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Rockies @ Diamondbacks",
-          "time": "10:10 PM ET"
-        }
-      ],
-      "SUNDAY": [
-        {
-          "sport": "Combo",
-          "item": "MLB Combo 1",
-          "time": "1:35 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "MLB Combo 2",
-          "time": "1:35 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "MLB Combo 4",
-          "time": "4:10 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "NBA Combo 1",
-          "time": "8:00 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "NBA Combo 2",
-          "time": "8:00 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "MLB Combo 3",
-          "time": "4:05 PM"
-        },
-        {
-          "sport": "Combo",
-          "item": "MLB Combo 4",
-          "time": "4:10 PM"
-        },
-        {
-          "sport": "MLB",
-          "item": "Pirates @ Blue Jays",
-          "time": "12:15 PM ET"
-        },
-        {
-          "sport": "NBA",
-          "item": "Thunder @ Spurs",
-          "time": "8:00 PM ET"
-        },
-        {
-          "sport": "WNBA",
-          "item": "Wings @ Liberty",
-          "time": "3:30 PM ET"
-        },
-        {
-          "sport": "WNBA",
-          "item": "Mercury @ Dream",
-          "time": "3:00 PM ET"
-        },
-        {
-          "sport": "WNBA",
-          "item": "Mystics @ Storm",
-          "time": "6:00 PM ET"
-        },
-        {
-          "sport": "NHL",
-          "item": "Avalanche @ Golden Knights",
-          "time": "8:00 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Rays @ Yankees",
-          "time": "1:35 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Guardians @ Phillies",
-          "time": "1:35 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Tigers @ Orioles",
-          "time": "1:35 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Twins @ Red Sox",
-          "time": "1:35 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Mets @ Marlins",
-          "time": "1:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Cardinals @ Reds",
-          "time": "1:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Dodgers @ Brewers",
-          "time": "2:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Mariners @ Royals",
-          "time": "2:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Astros @ Cubs",
-          "time": "2:20 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "White Sox @ Giants",
-          "time": "4:05 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Nationals @ Braves",
-          "time": "4:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Athletics @ Padres",
-          "time": "4:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Rockies @ Diamondbacks",
-          "time": "4:10 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Rangers @ Angels",
-          "time": "7:20 PM ET"
-        }
-      ]
-    },
     "2026-05-25": {
       "MONDAY": [
         {
@@ -2471,16 +28,6 @@
           "sport": "Combo",
           "item": "Beasts from the East",
           "time": "6:40 PM ET"
-        },
-        {
-          "sport": "MLB",
-          "item": "Astros @ Rangers",
-          "time": "7:05 PM ET"
-        },
-        {
-          "sport": "NBA",
-          "item": "Knicks @ Cavaliers",
-          "time": "8:00 PM ET"
         },
         {
           "sport": "MLB",
@@ -2526,6 +73,11 @@
           "sport": "MLB",
           "item": "Phillies @ Padres",
           "time": "6:40 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Astros @ Rangers",
+          "time": "7:05 PM ET"
         },
         {
           "sport": "MLB",
@@ -2585,11 +137,6 @@
           "time": "8:30 PM ET"
         },
         {
-          "sport": "MLB",
-          "item": "Astros @ Rangers",
-          "time": "8:05 PM ET"
-        },
-        {
           "sport": "NHL",
           "item": "Avalanche @ Golden Knights",
           "time": "9:00 PM ET"
@@ -2618,6 +165,11 @@
           "sport": "MLB",
           "item": "Braves @ Red Sox",
           "time": "6:45 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Astros @ Rangers",
+          "time": "7:05 PM ET"
         },
         {
           "sport": "MLB",
@@ -2668,16 +220,6 @@
       "WEDNESDAY": [
         {
           "sport": "Combo",
-          "item": "NBA Combo",
-          "time": "8:00 PM ET"
-        },
-        {
-          "sport": "Combo",
-          "item": "NBA Combo",
-          "time": "8:00 PM ET"
-        },
-        {
-          "sport": "Combo",
           "item": "MLB Combo",
           "time": "1:07 PM ET"
         },
@@ -2685,11 +227,6 @@
           "sport": "Combo",
           "item": "MLB Combo",
           "time": "3:05 PM ET"
-        },
-        {
-          "sport": "NBA",
-          "item": "Cavaliers @ Knicks",
-          "time": "8:00 PM ET"
         },
         {
           "sport": "NHL",
@@ -2889,11 +426,6 @@
           "sport": "Combo",
           "item": "MLB Combo",
           "time": "7:05 PM ET"
-        },
-        {
-          "sport": "NBA",
-          "item": "Knicks @ Cavaliers",
-          "time": "8:00 PM ET"
         },
         {
           "sport": "NHL",
@@ -3145,11 +677,6 @@
           "time": "1:35 PM ET"
         },
         {
-          "sport": "NBA",
-          "item": "Cavaliers @ Knicks",
-          "time": "8:00 PM ET"
-        },
-        {
           "sport": "MLB",
           "item": "Blue Jays @ Orioles",
           "time": "12:15 PM ET"
@@ -3162,7 +689,7 @@
         {
           "sport": "NHL",
           "item": "Hurricanes @ Canadiens",
-          "time": "12:00 AM ET"
+          "time": "12:00 PM ET"
         },
         {
           "sport": "MLB",
@@ -3238,2112 +765,393 @@
     }
   },
   "popnav_weeks": {
-    "2026-05-04": {
-      "THURSDAY": [
-        {
-          "type": "category",
-          "label": "Sports",
-          "icon": "🏆"
-        },
-        {
-          "type": "event",
-          "label": "Cavaliers @ Pistons",
-          "icon": "🏀",
-          "sport": "NBA"
-        },
-        {
-          "type": "event",
-          "label": "Lakers @ Thunder",
-          "icon": "🏀",
-          "sport": "NBA"
-        },
-        {
-          "type": "subcategory",
-          "label": "NBA Combos",
-          "icon": "🎯"
-        },
-        {
-          "type": "subcategory",
-          "label": "MLB Combos",
-          "icon": "🎯"
-        },
-        {
-          "type": "subcategory",
-          "label": "MLB",
-          "icon": "⚾"
-        },
-        {
-          "type": "subcategory",
-          "label": "Golf",
-          "icon": "⛳"
-        },
-        {
-          "type": "subcategory",
-          "label": "NBA",
-          "icon": "🏀"
-        },
-        {
-          "type": "category",
-          "label": "Crypto",
-          "icon": "₿"
-        },
-        {
-          "type": "category",
-          "label": "Commodities",
-          "icon": "🛢️"
-        },
-        {
-          "type": "category",
-          "label": "Financials",
-          "icon": "📈"
-        },
-        {
-          "type": "category",
-          "label": "Politics",
-          "icon": "🏛️"
-        }
-      ],
-      "FRIDAY": [
-        {
-          "type": "category",
-          "label": "Sports",
-          "icon": "🏆"
-        },
-        {
-          "type": "event",
-          "label": "Knicks @ 76ers",
-          "icon": "🏀",
-          "sport": "NBA"
-        },
-        {
-          "type": "event",
-          "label": "Spurs @ Timberwolves",
-          "icon": "🏀",
-          "sport": "NBA"
-        },
-        {
-          "type": "subcategory",
-          "label": "NBA Combos",
-          "icon": "🎯"
-        },
-        {
-          "type": "subcategory",
-          "label": "MLB Combos",
-          "icon": "🎯"
-        },
-        {
-          "type": "subcategory",
-          "label": "WNBA",
-          "icon": "🏀"
-        },
-        {
-          "type": "subcategory",
-          "label": "MLB",
-          "icon": "⚾"
-        },
-        {
-          "type": "subcategory",
-          "label": "Golf",
-          "icon": "⛳"
-        },
-        {
-          "type": "subcategory",
-          "label": "NBA",
-          "icon": "🏀"
-        },
-        {
-          "type": "subcategory",
-          "label": "NHL",
-          "icon": "🏒"
-        },
-        {
-          "type": "category",
-          "label": "Crypto",
-          "icon": "₿"
-        },
-        {
-          "type": "category",
-          "label": "Commodities",
-          "icon": "🛢️"
-        },
-        {
-          "type": "category",
-          "label": "Financials",
-          "icon": "📈"
-        },
-        {
-          "type": "category",
-          "label": "Politics",
-          "icon": "🏛️"
-        }
-      ],
-      "SATURDAY": [
-        {
-          "type": "category",
-          "label": "Sports",
-          "icon": "🏆"
-        },
-        {
-          "type": "event",
-          "label": "Pistons @ Cavaliers",
-          "icon": "🏀",
-          "sport": "NBA"
-        },
-        {
-          "type": "event",
-          "label": "Thunder @ Lakers",
-          "icon": "🏀",
-          "sport": "NBA"
-        },
-        {
-          "type": "subcategory",
-          "label": "NBA Combos",
-          "icon": "🎯"
-        },
-        {
-          "type": "subcategory",
-          "label": "MLB Combos",
-          "icon": "🎯"
-        },
-        {
-          "type": "subcategory",
-          "label": "MLB",
-          "icon": "⚾"
-        },
-        {
-          "type": "subcategory",
-          "label": "WNBA",
-          "icon": "🏀"
-        },
-        {
-          "type": "subcategory",
-          "label": "NBA",
-          "icon": "🏀"
-        },
-        {
-          "type": "subcategory",
-          "label": "NHL",
-          "icon": "🏒"
-        },
-        {
-          "type": "subcategory",
-          "label": "Golf",
-          "icon": "⛳"
-        },
-        {
-          "type": "category",
-          "label": "Crypto",
-          "icon": "₿"
-        },
-        {
-          "type": "category",
-          "label": "Commodities",
-          "icon": "🛢️"
-        },
-        {
-          "type": "category",
-          "label": "Financials",
-          "icon": "📈"
-        },
-        {
-          "type": "category",
-          "label": "Politics",
-          "icon": "🏛️"
-        }
-      ],
-      "SUNDAY": [
-        {
-          "type": "category",
-          "label": "Sports",
-          "icon": "🏆"
-        },
-        {
-          "type": "event",
-          "label": "Knicks @ 76ers",
-          "icon": "🏀",
-          "sport": "NBA"
-        },
-        {
-          "type": "event",
-          "label": "Spurs @ Timberwolves",
-          "icon": "🏀",
-          "sport": "NBA"
-        },
-        {
-          "type": "subcategory",
-          "label": "NBA Combos",
-          "icon": "🎯"
-        },
-        {
-          "type": "subcategory",
-          "label": "MLB Combos",
-          "icon": "🎯"
-        },
-        {
-          "type": "subcategory",
-          "label": "MLB",
-          "icon": "⚾"
-        },
-        {
-          "type": "subcategory",
-          "label": "WNBA",
-          "icon": "🏀"
-        },
-        {
-          "type": "subcategory",
-          "label": "NBA",
-          "icon": "🏀"
-        },
-        {
-          "type": "subcategory",
-          "label": "NHL",
-          "icon": "🏒"
-        },
-        {
-          "type": "subcategory",
-          "label": "Golf",
-          "icon": "⛳"
-        },
-        {
-          "type": "category",
-          "label": "Crypto",
-          "icon": "₿"
-        },
-        {
-          "type": "category",
-          "label": "Commodities",
-          "icon": "🛢️"
-        },
-        {
-          "type": "category",
-          "label": "Financials",
-          "icon": "📈"
-        },
-        {
-          "type": "category",
-          "label": "Politics",
-          "icon": "🏛️"
-        }
-      ]
-    },
-    "2026-05-11": {
-      "MONDAY": [
-        {
-          "type": "category",
-          "label": "Sports",
-          "icon": "🏆"
-        },
-        {
-          "type": "event",
-          "label": "Pistons @ Cavaliers",
-          "icon": "🏀",
-          "sport": "NBA"
-        },
-        {
-          "type": "event",
-          "label": "Thunder @ Lakers",
-          "icon": "🏀",
-          "sport": "NBA"
-        },
-        {
-          "type": "subcategory",
-          "label": "NBA Combos",
-          "icon": "🎯"
-        },
-        {
-          "type": "subcategory",
-          "label": "MLB Combos",
-          "icon": "🎯"
-        },
-        {
-          "type": "subcategory",
-          "label": "NBA",
-          "icon": "🏀"
-        },
-        {
-          "type": "subcategory",
-          "label": "MLB",
-          "icon": "⚾"
-        },
-        {
-          "type": "subcategory",
-          "label": "NHL",
-          "icon": "🏒"
-        },
-        {
-          "type": "category",
-          "label": "Crypto",
-          "icon": "₿"
-        },
-        {
-          "type": "category",
-          "label": "Commodities",
-          "icon": "🛢️"
-        },
-        {
-          "type": "category",
-          "label": "Financials",
-          "icon": "📈"
-        },
-        {
-          "type": "category",
-          "label": "Politics",
-          "icon": "🏛️"
-        }
-      ],
-      "TUESDAY": [
-        {
-          "type": "category",
-          "label": "Sports",
-          "icon": "🏆"
-        },
-        {
-          "type": "event",
-          "label": "Timberwolves @ Spurs",
-          "icon": "🏀",
-          "sport": "NBA"
-        },
-        {
-          "type": "subcategory",
-          "label": "NBA Combos",
-          "icon": "🎯"
-        },
-        {
-          "type": "subcategory",
-          "label": "MLB Combos",
-          "icon": "🎯"
-        },
-        {
-          "type": "subcategory",
-          "label": "MLB",
-          "icon": "⚾"
-        },
-        {
-          "type": "subcategory",
-          "label": "NHL",
-          "icon": "🏒"
-        },
-        {
-          "type": "subcategory",
-          "label": "WNBA",
-          "icon": "🏀"
-        },
-        {
-          "type": "subcategory",
-          "label": "NBA",
-          "icon": "🏀"
-        },
-        {
-          "type": "category",
-          "label": "Crypto",
-          "icon": "₿"
-        },
-        {
-          "type": "category",
-          "label": "Commodities",
-          "icon": "🛢️"
-        },
-        {
-          "type": "category",
-          "label": "Financials",
-          "icon": "📈"
-        },
-        {
-          "type": "category",
-          "label": "Politics",
-          "icon": "🏛️"
-        }
-      ],
-      "WEDNESDAY": [
-        {
-          "type": "category",
-          "label": "Sports",
-          "icon": "🏆"
-        },
-        {
-          "type": "event",
-          "label": "Cavaliers @ Pistons",
-          "icon": "🏀",
-          "sport": "NBA"
-        },
-        {
-          "type": "event",
-          "label": "Lakers @ Thunder",
-          "icon": "🏀",
-          "sport": "NBA"
-        },
-        {
-          "type": "subcategory",
-          "label": "NBA Combos",
-          "icon": "🎯"
-        },
-        {
-          "type": "subcategory",
-          "label": "MLB Combos",
-          "icon": "🎯"
-        },
-        {
-          "type": "subcategory",
-          "label": "NBA",
-          "icon": "🏀"
-        },
-        {
-          "type": "subcategory",
-          "label": "MLB",
-          "icon": "⚾"
-        },
-        {
-          "type": "subcategory",
-          "label": "Golf",
-          "icon": "⛳"
-        },
-        {
-          "type": "subcategory",
-          "label": "NHL",
-          "icon": "🏒"
-        },
-        {
-          "type": "subcategory",
-          "label": "WNBA",
-          "icon": "🏀"
-        },
-        {
-          "type": "category",
-          "label": "Crypto",
-          "icon": "₿"
-        },
-        {
-          "type": "category",
-          "label": "Commodities",
-          "icon": "🛢️"
-        },
-        {
-          "type": "category",
-          "label": "Financials",
-          "icon": "📈"
-        },
-        {
-          "type": "category",
-          "label": "Politics",
-          "icon": "🏛️"
-        }
-      ],
-      "THURSDAY": [
-        {
-          "type": "category",
-          "label": "Sports",
-          "icon": "🏆"
-        },
-        {
-          "type": "subcategory",
-          "label": "NBA Combos",
-          "icon": "🎯"
-        },
-        {
-          "type": "subcategory",
-          "label": "MLB Combos",
-          "icon": "🎯"
-        },
-        {
-          "type": "subcategory",
-          "label": "NBA",
-          "icon": "🏀"
-        },
-        {
-          "type": "subcategory",
-          "label": "MLB",
-          "icon": "⚾"
-        },
-        {
-          "type": "subcategory",
-          "label": "NHL",
-          "icon": "🏒"
-        },
-        {
-          "type": "subcategory",
-          "label": "WNBA",
-          "icon": "🏀"
-        },
-        {
-          "type": "subcategory",
-          "label": "Golf",
-          "icon": "⛳"
-        },
-        {
-          "type": "category",
-          "label": "Crypto",
-          "icon": "₿"
-        },
-        {
-          "type": "category",
-          "label": "Commodities",
-          "icon": "🛢️"
-        },
-        {
-          "type": "category",
-          "label": "Financials",
-          "icon": "📈"
-        },
-        {
-          "type": "category",
-          "label": "Politics",
-          "icon": "🏛️"
-        }
-      ],
-      "FRIDAY": [
-        {
-          "type": "category",
-          "label": "Sports",
-          "icon": "🏆"
-        },
-        {
-          "type": "event",
-          "label": "Pistons @ Cavaliers",
-          "icon": "🏀",
-          "sport": "NBA"
-        },
-        {
-          "type": "event",
-          "label": "Spurs @ Timberwolves",
-          "icon": "🏀",
-          "sport": "NBA"
-        },
-        {
-          "type": "subcategory",
-          "label": "NBA Combos",
-          "icon": "🎯"
-        },
-        {
-          "type": "subcategory",
-          "label": "MLB Combos",
-          "icon": "🎯"
-        },
-        {
-          "type": "subcategory",
-          "label": "Golf",
-          "icon": "⛳"
-        },
-        {
-          "type": "subcategory",
-          "label": "NBA",
-          "icon": "🏀"
-        },
-        {
-          "type": "subcategory",
-          "label": "MLB",
-          "icon": "⚾"
-        },
-        {
-          "type": "subcategory",
-          "label": "NHL",
-          "icon": "🏒"
-        },
-        {
-          "type": "subcategory",
-          "label": "WNBA",
-          "icon": "🏀"
-        },
-        {
-          "type": "category",
-          "label": "Crypto",
-          "icon": "₿"
-        },
-        {
-          "type": "category",
-          "label": "Commodities",
-          "icon": "🛢️"
-        },
-        {
-          "type": "category",
-          "label": "Financials",
-          "icon": "📈"
-        },
-        {
-          "type": "category",
-          "label": "Politics",
-          "icon": "🏛️"
-        }
-      ],
-      "SATURDAY": [
-        {
-          "type": "category",
-          "label": "Sports",
-          "icon": "🏆"
-        },
-        {
-          "type": "subcategory",
-          "label": "NBA Combos",
-          "icon": "🎯"
-        },
-        {
-          "type": "subcategory",
-          "label": "MLB Combos",
-          "icon": "🎯"
-        },
-        {
-          "type": "subcategory",
-          "label": "MLB",
-          "icon": "⚾"
-        },
-        {
-          "type": "subcategory",
-          "label": "Golf",
-          "icon": "⛳"
-        },
-        {
-          "type": "subcategory",
-          "label": "NHL",
-          "icon": "🏒"
-        },
-        {
-          "type": "subcategory",
-          "label": "WNBA",
-          "icon": "🏀"
-        },
-        {
-          "type": "subcategory",
-          "label": "NBA",
-          "icon": "🏀"
-        },
-        {
-          "type": "category",
-          "label": "Crypto",
-          "icon": "₿"
-        },
-        {
-          "type": "category",
-          "label": "Commodities",
-          "icon": "🛢️"
-        },
-        {
-          "type": "category",
-          "label": "Financials",
-          "icon": "📈"
-        },
-        {
-          "type": "category",
-          "label": "Politics",
-          "icon": "🏛️"
-        }
-      ],
-      "SUNDAY": [
-        {
-          "type": "category",
-          "label": "Sports",
-          "icon": "🏆"
-        },
-        {
-          "type": "subcategory",
-          "label": "NBA Combos",
-          "icon": "🎯"
-        },
-        {
-          "type": "subcategory",
-          "label": "MLB Combos",
-          "icon": "🎯"
-        },
-        {
-          "type": "subcategory",
-          "label": "MLB",
-          "icon": "⚾"
-        },
-        {
-          "type": "subcategory",
-          "label": "NHL",
-          "icon": "🏒"
-        },
-        {
-          "type": "subcategory",
-          "label": "WNBA",
-          "icon": "🏀"
-        },
-        {
-          "type": "subcategory",
-          "label": "Golf",
-          "icon": "⛳"
-        },
-        {
-          "type": "subcategory",
-          "label": "NBA",
-          "icon": "🏀"
-        },
-        {
-          "type": "category",
-          "label": "Crypto",
-          "icon": "₿"
-        },
-        {
-          "type": "category",
-          "label": "Commodities",
-          "icon": "🛢️"
-        },
-        {
-          "type": "category",
-          "label": "Financials",
-          "icon": "📈"
-        },
-        {
-          "type": "category",
-          "label": "Politics",
-          "icon": "🏛️"
-        }
-      ]
-    },
-    "2026-05-18": {
-      "MONDAY": [
-        {
-          "type": "category",
-          "label": "Sports",
-          "icon": "🏆"
-        },
-        {
-          "type": "event",
-          "label": "Spurs @ Thunder",
-          "icon": "🏀",
-          "sport": "NBA"
-        },
-        {
-          "type": "subcategory",
-          "label": "MLB Combos",
-          "icon": "🎯"
-        },
-        {
-          "type": "subcategory",
-          "label": "NBA Combos",
-          "icon": "🎯"
-        },
-        {
-          "type": "subcategory",
-          "label": "MLB",
-          "icon": "⚾"
-        },
-        {
-          "type": "subcategory",
-          "label": "NHL",
-          "icon": "🏒"
-        },
-        {
-          "type": "subcategory",
-          "label": "WNBA",
-          "icon": "🏀"
-        },
-        {
-          "type": "subcategory",
-          "label": "NBA",
-          "icon": "🏀"
-        },
-        {
-          "type": "category",
-          "label": "Crypto",
-          "icon": "₿"
-        },
-        {
-          "type": "category",
-          "label": "Commodities",
-          "icon": "🛢️"
-        },
-        {
-          "type": "category",
-          "label": "Financials",
-          "icon": "📈"
-        },
-        {
-          "type": "category",
-          "label": "Politics",
-          "icon": "🏛️"
-        }
-      ],
-      "TUESDAY": [
-        {
-          "type": "category",
-          "label": "Sports",
-          "icon": "🏆"
-        },
-        {
-          "type": "event",
-          "label": "Cavaliers @ Knicks",
-          "icon": "🏀",
-          "sport": "NBA"
-        },
-        {
-          "type": "subcategory",
-          "label": "MLB Combos",
-          "icon": "🎯"
-        },
-        {
-          "type": "subcategory",
-          "label": "NBA Combos",
-          "icon": "🎯"
-        },
-        {
-          "type": "subcategory",
-          "label": "MLB",
-          "icon": "⚾"
-        },
-        {
-          "type": "subcategory",
-          "label": "NHL",
-          "icon": "🏒"
-        },
-        {
-          "type": "subcategory",
-          "label": "WNBA",
-          "icon": "🏀"
-        },
-        {
-          "type": "subcategory",
-          "label": "NBA",
-          "icon": "🏀"
-        },
-        {
-          "type": "category",
-          "label": "Crypto",
-          "icon": "₿"
-        },
-        {
-          "type": "category",
-          "label": "Commodities",
-          "icon": "🛢️"
-        },
-        {
-          "type": "category",
-          "label": "Financials",
-          "icon": "📈"
-        },
-        {
-          "type": "category",
-          "label": "Politics",
-          "icon": "🏛️"
-        }
-      ],
-      "WEDNESDAY": [
-        {
-          "type": "category",
-          "label": "Sports",
-          "icon": "🏆"
-        },
-        {
-          "type": "event",
-          "label": "Spurs @ Thunder",
-          "icon": "🏀",
-          "sport": "NBA"
-        },
-        {
-          "type": "subcategory",
-          "label": "MLB Combos",
-          "icon": "🎯"
-        },
-        {
-          "type": "subcategory",
-          "label": "NBA Combos",
-          "icon": "🎯"
-        },
-        {
-          "type": "subcategory",
-          "label": "MLB",
-          "icon": "⚾"
-        },
-        {
-          "type": "subcategory",
-          "label": "NHL",
-          "icon": "🏒"
-        },
-        {
-          "type": "subcategory",
-          "label": "WNBA",
-          "icon": "🏀"
-        },
-        {
-          "type": "subcategory",
-          "label": "NBA",
-          "icon": "🏀"
-        },
-        {
-          "type": "category",
-          "label": "Crypto",
-          "icon": "₿"
-        },
-        {
-          "type": "category",
-          "label": "Commodities",
-          "icon": "🛢️"
-        },
-        {
-          "type": "category",
-          "label": "Financials",
-          "icon": "📈"
-        },
-        {
-          "type": "category",
-          "label": "Politics",
-          "icon": "🏛️"
-        }
-      ],
-      "THURSDAY": [
-        {
-          "type": "category",
-          "label": "Sports",
-          "icon": "🏆"
-        },
-        {
-          "type": "event",
-          "label": "Cavaliers @ Knicks",
-          "icon": "🏀",
-          "sport": "NBA"
-        },
-        {
-          "type": "subcategory",
-          "label": "MLB Combos",
-          "icon": "🎯"
-        },
-        {
-          "type": "subcategory",
-          "label": "NBA Combos",
-          "icon": "🎯"
-        },
-        {
-          "type": "subcategory",
-          "label": "Golf",
-          "icon": "⛳"
-        },
-        {
-          "type": "subcategory",
-          "label": "MLB",
-          "icon": "⚾"
-        },
-        {
-          "type": "subcategory",
-          "label": "NHL",
-          "icon": "🏒"
-        },
-        {
-          "type": "subcategory",
-          "label": "WNBA",
-          "icon": "🏀"
-        },
-        {
-          "type": "subcategory",
-          "label": "NBA",
-          "icon": "🏀"
-        },
-        {
-          "type": "category",
-          "label": "Crypto",
-          "icon": "₿"
-        },
-        {
-          "type": "category",
-          "label": "Commodities",
-          "icon": "🛢️"
-        },
-        {
-          "type": "category",
-          "label": "Financials",
-          "icon": "📈"
-        },
-        {
-          "type": "category",
-          "label": "Politics",
-          "icon": "🏛️"
-        }
-      ],
-      "FRIDAY": [
-        {
-          "type": "category",
-          "label": "Sports",
-          "icon": "🏆"
-        },
-        {
-          "type": "event",
-          "label": "Thunder @ Spurs",
-          "icon": "🏀",
-          "sport": "NBA"
-        },
-        {
-          "type": "subcategory",
-          "label": "MLB Combos",
-          "icon": "🎯"
-        },
-        {
-          "type": "subcategory",
-          "label": "NBA Combos",
-          "icon": "🎯"
-        },
-        {
-          "type": "subcategory",
-          "label": "Golf",
-          "icon": "⛳"
-        },
-        {
-          "type": "subcategory",
-          "label": "MLB",
-          "icon": "⚾"
-        },
-        {
-          "type": "subcategory",
-          "label": "NHL",
-          "icon": "🏒"
-        },
-        {
-          "type": "subcategory",
-          "label": "WNBA",
-          "icon": "🏀"
-        },
-        {
-          "type": "subcategory",
-          "label": "NBA",
-          "icon": "🏀"
-        },
-        {
-          "type": "category",
-          "label": "Crypto",
-          "icon": "₿"
-        },
-        {
-          "type": "category",
-          "label": "Commodities",
-          "icon": "🛢️"
-        },
-        {
-          "type": "category",
-          "label": "Financials",
-          "icon": "📈"
-        },
-        {
-          "type": "category",
-          "label": "Politics",
-          "icon": "🏛️"
-        }
-      ],
-      "SATURDAY": [
-        {
-          "type": "category",
-          "label": "Sports",
-          "icon": "🏆"
-        },
-        {
-          "type": "event",
-          "label": "Knicks @ Cavaliers",
-          "icon": "🏀",
-          "sport": "NBA"
-        },
-        {
-          "type": "subcategory",
-          "label": "MLB Combos",
-          "icon": "🎯"
-        },
-        {
-          "type": "subcategory",
-          "label": "NBA Combos",
-          "icon": "🎯"
-        },
-        {
-          "type": "subcategory",
-          "label": "Golf",
-          "icon": "⛳"
-        },
-        {
-          "type": "subcategory",
-          "label": "MLB",
-          "icon": "⚾"
-        },
-        {
-          "type": "subcategory",
-          "label": "NHL",
-          "icon": "🏒"
-        },
-        {
-          "type": "subcategory",
-          "label": "WNBA",
-          "icon": "🏀"
-        },
-        {
-          "type": "subcategory",
-          "label": "NBA",
-          "icon": "🏀"
-        },
-        {
-          "type": "category",
-          "label": "Crypto",
-          "icon": "₿"
-        },
-        {
-          "type": "category",
-          "label": "Commodities",
-          "icon": "🛢️"
-        },
-        {
-          "type": "category",
-          "label": "Financials",
-          "icon": "📈"
-        },
-        {
-          "type": "category",
-          "label": "Politics",
-          "icon": "🏛️"
-        }
-      ],
-      "SUNDAY": [
-        {
-          "type": "category",
-          "label": "Sports",
-          "icon": "🏆"
-        },
-        {
-          "type": "event",
-          "label": "Spurs @ Thunder",
-          "icon": "🏀",
-          "sport": "NBA"
-        },
-        {
-          "type": "subcategory",
-          "label": "MLB Combos",
-          "icon": "🎯"
-        },
-        {
-          "type": "subcategory",
-          "label": "NBA Combos",
-          "icon": "🎯"
-        },
-        {
-          "type": "subcategory",
-          "label": "Golf",
-          "icon": "⛳"
-        },
-        {
-          "type": "subcategory",
-          "label": "MLB",
-          "icon": "⚾"
-        },
-        {
-          "type": "subcategory",
-          "label": "NHL",
-          "icon": "🏒"
-        },
-        {
-          "type": "subcategory",
-          "label": "WNBA",
-          "icon": "🏀"
-        },
-        {
-          "type": "subcategory",
-          "label": "NBA",
-          "icon": "🏀"
-        },
-        {
-          "type": "category",
-          "label": "Crypto",
-          "icon": "₿"
-        },
-        {
-          "type": "category",
-          "label": "Commodities",
-          "icon": "🛢️"
-        },
-        {
-          "type": "category",
-          "label": "Financials",
-          "icon": "📈"
-        },
-        {
-          "type": "category",
-          "label": "Politics",
-          "icon": "🏛️"
-        }
-      ]
-    },
     "2026-05-25": {
       "MONDAY": [
         {
           "type": "category",
           "label": "Sports",
-          "icon": "🏆"
-        },
-        {
-          "type": "event",
-          "label": "Knicks @ Cavaliers",
-          "icon": "🏀",
-          "sport": "NBA"
-        },
-        {
-          "type": "subcategory",
-          "label": "NBA Combos",
-          "icon": "🎯"
+          "icon": "\ud83c\udfc6"
         },
         {
           "type": "subcategory",
           "label": "MLB Combos",
-          "icon": "🎯"
+          "icon": "\ud83c\udfaf"
         },
         {
           "type": "subcategory",
           "label": "MLB",
-          "icon": "⚾"
+          "icon": "\u26be"
         },
         {
           "type": "subcategory",
           "label": "NHL",
-          "icon": "🏒"
-        },
-        {
-          "type": "subcategory",
-          "label": "NBA",
-          "icon": "🏀"
+          "icon": "\ud83c\udfd2"
         },
         {
           "type": "subcategory",
           "label": "WNBA",
-          "icon": "🏀"
+          "icon": "\ud83c\udfc0"
         },
         {
           "type": "category",
           "label": "Crypto",
-          "icon": "₿"
+          "icon": "\u20bf"
         },
         {
           "type": "category",
           "label": "Commodities",
-          "icon": "🛢️"
+          "icon": "\ud83d\udee2\ufe0f"
         },
         {
           "type": "category",
           "label": "Financials",
-          "icon": "📈"
+          "icon": "\ud83d\udcc8"
         },
         {
           "type": "category",
           "label": "Politics",
-          "icon": "🏛️"
+          "icon": "\ud83c\udfdb\ufe0f"
         }
       ],
       "TUESDAY": [
         {
           "type": "category",
           "label": "Sports",
-          "icon": "🏆"
+          "icon": "\ud83c\udfc6"
         },
         {
           "type": "event",
           "label": "Spurs @ Thunder",
-          "icon": "🏀",
-          "sport": "NBA"
+          "icon": "\ud83c\udfc0"
         },
         {
           "type": "subcategory",
           "label": "NBA Combos",
-          "icon": "🎯"
+          "icon": "\ud83c\udfaf"
         },
         {
           "type": "subcategory",
           "label": "MLB Combos",
-          "icon": "🎯"
+          "icon": "\ud83c\udfaf"
         },
         {
           "type": "subcategory",
           "label": "MLB",
-          "icon": "⚾"
+          "icon": "\u26be"
         },
         {
           "type": "subcategory",
           "label": "NHL",
-          "icon": "🏒"
+          "icon": "\ud83c\udfd2"
         },
         {
           "type": "subcategory",
           "label": "NBA",
-          "icon": "🏀"
+          "icon": "\ud83c\udfc0"
         },
         {
           "type": "category",
           "label": "Crypto",
-          "icon": "₿"
+          "icon": "\u20bf"
         },
         {
           "type": "category",
           "label": "Commodities",
-          "icon": "🛢️"
+          "icon": "\ud83d\udee2\ufe0f"
         },
         {
           "type": "category",
           "label": "Financials",
-          "icon": "📈"
+          "icon": "\ud83d\udcc8"
         },
         {
           "type": "category",
           "label": "Politics",
-          "icon": "🏛️"
+          "icon": "\ud83c\udfdb\ufe0f"
         }
       ],
       "WEDNESDAY": [
         {
           "type": "category",
           "label": "Sports",
-          "icon": "🏆"
-        },
-        {
-          "type": "event",
-          "label": "Knicks @ Cavaliers",
-          "icon": "🏀",
-          "sport": "NBA"
-        },
-        {
-          "type": "subcategory",
-          "label": "NBA Combos",
-          "icon": "🎯"
+          "icon": "\ud83c\udfc6"
         },
         {
           "type": "subcategory",
           "label": "MLB Combos",
-          "icon": "🎯"
+          "icon": "\ud83c\udfaf"
         },
         {
           "type": "subcategory",
           "label": "MLB",
-          "icon": "⚾"
+          "icon": "\u26be"
         },
         {
           "type": "subcategory",
           "label": "NHL",
-          "icon": "🏒"
-        },
-        {
-          "type": "subcategory",
-          "label": "NBA",
-          "icon": "🏀"
+          "icon": "\ud83c\udfd2"
         },
         {
           "type": "subcategory",
           "label": "WNBA",
-          "icon": "🏀"
+          "icon": "\ud83c\udfc0"
         },
         {
           "type": "category",
           "label": "Crypto",
-          "icon": "₿"
+          "icon": "\u20bf"
         },
         {
           "type": "category",
           "label": "Commodities",
-          "icon": "🛢️"
+          "icon": "\ud83d\udee2\ufe0f"
         },
         {
           "type": "category",
           "label": "Financials",
-          "icon": "📈"
+          "icon": "\ud83d\udcc8"
         },
         {
           "type": "category",
           "label": "Politics",
-          "icon": "🏛️"
+          "icon": "\ud83c\udfdb\ufe0f"
         }
       ],
       "THURSDAY": [
         {
           "type": "category",
           "label": "Sports",
-          "icon": "🏆"
+          "icon": "\ud83c\udfc6"
         },
         {
           "type": "event",
           "label": "Thunder @ Spurs",
-          "icon": "🏀",
-          "sport": "NBA"
+          "icon": "\ud83c\udfc0"
         },
         {
           "type": "subcategory",
           "label": "NBA Combos",
-          "icon": "🎯"
+          "icon": "\ud83c\udfaf"
         },
         {
           "type": "subcategory",
           "label": "MLB Combos",
-          "icon": "🎯"
+          "icon": "\ud83c\udfaf"
         },
         {
           "type": "subcategory",
           "label": "MLB",
-          "icon": "⚾"
+          "icon": "\u26be"
         },
         {
           "type": "subcategory",
           "label": "NHL",
-          "icon": "🏒"
-        },
-        {
-          "type": "subcategory",
-          "label": "NBA",
-          "icon": "🏀"
+          "icon": "\ud83c\udfd2"
         },
         {
           "type": "subcategory",
           "label": "WNBA",
-          "icon": "🏀"
+          "icon": "\ud83c\udfc0"
         },
         {
           "type": "category",
           "label": "Crypto",
-          "icon": "₿"
+          "icon": "\u20bf"
         },
         {
           "type": "category",
           "label": "Commodities",
-          "icon": "🛢️"
+          "icon": "\ud83d\udee2\ufe0f"
         },
         {
           "type": "category",
           "label": "Financials",
-          "icon": "📈"
+          "icon": "\ud83d\udcc8"
         },
         {
           "type": "category",
           "label": "Politics",
-          "icon": "🏛️"
+          "icon": "\ud83c\udfdb\ufe0f"
         }
       ],
       "FRIDAY": [
         {
           "type": "category",
           "label": "Sports",
-          "icon": "🏆"
-        },
-        {
-          "type": "event",
-          "label": "Knicks @ Cavaliers",
-          "icon": "🏀",
-          "sport": "NBA"
+          "icon": "\ud83c\udfc6"
         },
         {
           "type": "subcategory",
           "label": "NBA Combos",
-          "icon": "🎯"
+          "icon": "\ud83c\udfaf"
         },
         {
           "type": "subcategory",
           "label": "MLB Combos",
-          "icon": "🎯"
+          "icon": "\ud83c\udfaf"
         },
         {
           "type": "subcategory",
           "label": "MLB",
-          "icon": "⚾"
+          "icon": "\u26be"
         },
         {
           "type": "subcategory",
           "label": "NHL",
-          "icon": "🏒"
+          "icon": "\ud83c\udfd2"
         },
         {
           "type": "subcategory",
           "label": "UCL",
-          "icon": "⚽"
-        },
-        {
-          "type": "subcategory",
-          "label": "NBA",
-          "icon": "🏀"
+          "icon": "\u26bd"
         },
         {
           "type": "subcategory",
           "label": "WNBA",
-          "icon": "🏀"
+          "icon": "\ud83c\udfc0"
         },
         {
           "type": "category",
           "label": "Crypto",
-          "icon": "₿"
+          "icon": "\u20bf"
         },
         {
           "type": "category",
           "label": "Commodities",
-          "icon": "🛢️"
+          "icon": "\ud83d\udee2\ufe0f"
         },
         {
           "type": "category",
           "label": "Financials",
-          "icon": "📈"
+          "icon": "\ud83d\udcc8"
         },
         {
           "type": "category",
           "label": "Politics",
-          "icon": "🏛️"
+          "icon": "\ud83c\udfdb\ufe0f"
         }
       ],
       "SATURDAY": [
         {
           "type": "category",
           "label": "Sports",
-          "icon": "🏆"
+          "icon": "\ud83c\udfc6"
         },
         {
           "type": "event",
           "label": "Spurs @ Thunder",
-          "icon": "🏀",
-          "sport": "NBA"
+          "icon": "\ud83c\udfc0"
         },
         {
           "type": "subcategory",
           "label": "NBA Combos",
-          "icon": "🎯"
+          "icon": "\ud83c\udfaf"
         },
         {
           "type": "subcategory",
           "label": "MLB Combos",
-          "icon": "🎯"
+          "icon": "\ud83c\udfaf"
         },
         {
           "type": "subcategory",
           "label": "MLB",
-          "icon": "⚾"
+          "icon": "\u26be"
         },
         {
           "type": "subcategory",
           "label": "NHL",
-          "icon": "🏒"
-        },
-        {
-          "type": "subcategory",
-          "label": "NBA",
-          "icon": "🏀"
+          "icon": "\ud83c\udfd2"
         },
         {
           "type": "subcategory",
           "label": "WNBA",
-          "icon": "🏀"
+          "icon": "\ud83c\udfc0"
         },
         {
           "type": "category",
           "label": "Crypto",
-          "icon": "₿"
+          "icon": "\u20bf"
         },
         {
           "type": "category",
           "label": "Commodities",
-          "icon": "🛢️"
+          "icon": "\ud83d\udee2\ufe0f"
         },
         {
           "type": "category",
           "label": "Financials",
-          "icon": "📈"
+          "icon": "\ud83d\udcc8"
         },
         {
           "type": "category",
           "label": "Politics",
-          "icon": "🏛️"
+          "icon": "\ud83c\udfdb\ufe0f"
         }
       ],
       "SUNDAY": [
         {
           "type": "category",
           "label": "Sports",
-          "icon": "🏆"
-        },
-        {
-          "type": "event",
-          "label": "Knicks @ Cavaliers",
-          "icon": "🏀",
-          "sport": "NBA"
+          "icon": "\ud83c\udfc6"
         },
         {
           "type": "subcategory",
           "label": "NBA Combos",
-          "icon": "🎯"
+          "icon": "\ud83c\udfaf"
         },
         {
           "type": "subcategory",
           "label": "MLB Combos",
-          "icon": "🎯"
+          "icon": "\ud83c\udfaf"
         },
         {
           "type": "subcategory",
           "label": "MLB",
-          "icon": "⚾"
+          "icon": "\u26be"
         },
         {
           "type": "subcategory",
           "label": "NHL",
-          "icon": "🏒"
+          "icon": "\ud83c\udfd2"
         },
         {
           "type": "subcategory",
           "label": "NBA",
-          "icon": "🏀"
+          "icon": "\ud83c\udfc0"
         },
         {
           "type": "subcategory",
           "label": "WNBA",
-          "icon": "🏀"
+          "icon": "\ud83c\udfc0"
         },
         {
           "type": "category",
           "label": "Crypto",
-          "icon": "₿"
+          "icon": "\u20bf"
         },
         {
           "type": "category",
           "label": "Commodities",
-          "icon": "🛢️"
+          "icon": "\ud83d\udee2\ufe0f"
         },
         {
           "type": "category",
           "label": "Financials",
-          "icon": "📈"
+          "icon": "\ud83d\udcc8"
         },
         {
           "type": "category",
           "label": "Politics",
-          "icon": "🏛️"
+          "icon": "\ud83c\udfdb\ufe0f"
         }
       ]
     }
   },
   "carousel_weeks": {
-    "2026-05-04": {
-      "FRIDAY": [
-        {
-          "name": "",
-          "items": [
-            {
-              "sport": "MLB",
-              "item": "Astros @ Reds",
-              "time": "6:10 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Rockies @ Phillies",
-              "time": "6:40 PM ET"
-            },
-            {
-              "sport": "NHL",
-              "item": "Canadiens @ Sabres",
-              "time": "7:00 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Twins @ Guardians",
-              "time": "7:15 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Athletics @ Orioles",
-              "time": "7:05 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Angels @ Blue Jays",
-              "time": "7:07 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Rays @ Red Sox",
-              "time": "7:10 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Nationals @ Marlins",
-              "time": "7:10 PM ET"
-            },
-            {
-              "sport": "WNBA",
-              "item": "Sun @ Liberty",
-              "time": "7:30 PM ET"
-            }
-          ]
-        }
-      ]
-    },
-    "2026-05-18": {
-      "MONDAY": [
-        {
-          "name": "Around MLB",
-          "items": [
-            {
-              "sport": "MLB",
-              "item": "Braves @ Marlins",
-              "time": "6:40 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Orioles @ Rays",
-              "time": "6:40 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Reds @ Phillies",
-              "time": "6:40 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Guardians @ Tigers",
-              "time": "6:40 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Mets @ Nationals",
-              "time": "6:45 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Blue Jays @ Yankees",
-              "time": "7:05 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Red Sox @ Royals",
-              "time": "7:40 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Astros @ Twins",
-              "time": "7:40 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Brewers @ Cubs",
-              "time": "7:40 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Rangers @ Rockies",
-              "time": "8:40 PM ET"
-            }
-          ]
-        }
-      ],
-      "WEDNESDAY": [
-        {
-          "name": "",
-          "items": [
-            {
-              "sport": "MLB",
-              "item": "Reds @ Phillies",
-              "time": "1:05 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Orioles @ Rays",
-              "time": "1:10 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Astros @ Twins",
-              "time": "1:40 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Rangers @ Rockies",
-              "time": "3:10 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Giants @ Diamondbacks",
-              "time": "3:40 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "White Sox @ Mariners",
-              "time": "4:10 PM ET"
-            }
-          ]
-        },
-        {
-          "name": "",
-          "items": [
-            {
-              "sport": "MLB",
-              "item": "Braves @ Marlins",
-              "time": "6:40 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Guardians @ Tigers",
-              "time": "6:40 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Mets @ Nationals",
-              "time": "6:45 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Blue Jays @ Yankees",
-              "time": "7:05 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Brewers @ Cubs",
-              "time": "7:40 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Red Sox @ Royals",
-              "time": "7:40 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Pirates @ Cardinals",
-              "time": "7:45 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Dodgers @ Padres",
-              "time": "8:40 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Athletics @ Angels",
-              "time": "9:38 PM ET"
-            }
-          ]
-        }
-      ],
-      "THURSDAY": [
-        {
-          "name": "",
-          "items": [
-            {
-              "sport": "MLB",
-              "item": "Guardians @ Tigers",
-              "time": "1:10 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Pirates @ Cardinals",
-              "time": "1:15 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Mets @ Nationals",
-              "time": "4:05 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Braves @ Marlins",
-              "time": "6:40 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Blue Jays @ Yankees",
-              "time": "7:05 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Athletics @ Angels",
-              "time": "9:38 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Rockies @ Diamondbacks",
-              "time": "9:40 PM ET"
-            }
-          ]
-        }
-      ],
-      "FRIDAY": [
-        {
-          "name": "",
-          "items": [
-            {
-              "sport": "MLB",
-              "item": "Cardinals @ Reds",
-              "time": "6:40 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Guardians @ Phillies",
-              "time": "6:40 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Tigers @ Orioles",
-              "time": "7:05 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Rays @ Yankees",
-              "time": "7:05 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Twins @ Red Sox",
-              "time": "7:10 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Mets @ Marlins",
-              "time": "7:10 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Nationals @ Braves",
-              "time": "7:15 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Dodgers @ Brewers",
-              "time": "7:40 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Rangers @ Angels",
-              "time": "9:38 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Athletics @ Padres",
-              "time": "9:40 PM ET"
-            }
-          ]
-        }
-      ],
-      "SATURDAY": [
-        {
-          "name": "",
-          "items": [
-            {
-              "sport": "MLB",
-              "item": "Rays @ Yankees",
-              "time": "1:35 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Astros @ Cubs",
-              "time": "2:20 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Pirates @ Blue Jays",
-              "time": "3:07 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Guardians @ Phillies",
-              "time": "4:05 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Tigers @ Orioles",
-              "time": "4:05 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "White Sox @ Giants",
-              "time": "4:05 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Twins @ Red Sox",
-              "time": "4:10 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Mets @ Marlins",
-              "time": "4:10 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Nationals @ Braves",
-              "time": "4:10 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Mariners @ Royals",
-              "time": "4:10 PM ET"
-            }
-          ]
-        },
-        {
-          "name": "",
-          "items": [
-            {
-              "sport": "MLB",
-              "item": "Dodgers @ Brewers",
-              "time": "7:15 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Cardinals @ Reds",
-              "time": "7:15 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Athletics @ Padres",
-              "time": "9:40 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Rangers @ Angels",
-              "time": "10:05 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Rockies @ Diamondbacks",
-              "time": "10:10 PM ET"
-            }
-          ]
-        }
-      ],
-      "SUNDAY": [
-        {
-          "name": "",
-          "items": [
-            {
-              "sport": "MLB",
-              "item": "Rays @ Yankees",
-              "time": "1:35 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Guardians @ Phillies",
-              "time": "1:35 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Twins @ Red Sox",
-              "time": "1:35 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Mets @ Marlins",
-              "time": "1:40 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Dodgers @ Brewers",
-              "time": "2:10 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Mariners @ Royals",
-              "time": "2:10 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Astros @ Cubs",
-              "time": "2:20 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "White Sox @ Giants",
-              "time": "4:05 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Nationals @ Braves",
-              "time": "4:10 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Athletics @ Padres",
-              "time": "4:10 PM ET"
-            }
-          ]
-        }
-      ]
-    },
     "2026-05-25": {
       "MONDAY": [
         {
-          "name": "",
+          "name": "Around MLB",
           "items": [
             {
               "sport": "MLB",
@@ -5400,7 +1208,7 @@
       ],
       "TUESDAY": [
         {
-          "name": "",
+          "name": "Around MLB",
           "items": [
             {
               "sport": "MLB",
@@ -5434,6 +1242,11 @@
             },
             {
               "sport": "MLB",
+              "item": "Twins @ White Sox",
+              "time": "7:40 PM ET"
+            },
+            {
+              "sport": "MLB",
               "item": "Yankees @ Royals",
               "time": "7:40 PM ET"
             },
@@ -5457,7 +1270,7 @@
       ],
       "WEDNESDAY": [
         {
-          "name": "",
+          "name": "Early MLB",
           "items": [
             {
               "sport": "MLB",
@@ -5492,7 +1305,7 @@
           ]
         },
         {
-          "name": "",
+          "name": "Around MLB",
           "items": [
             {
               "sport": "MLB",
@@ -5544,7 +1357,7 @@
       ],
       "THURSDAY": [
         {
-          "name": "",
+          "name": "Around MLB",
           "items": [
             {
               "sport": "MLB",
@@ -5581,7 +1394,7 @@
       ],
       "FRIDAY": [
         {
-          "name": "",
+          "name": "Around MLB",
           "items": [
             {
               "sport": "MLB",
@@ -5595,8 +1408,8 @@
             },
             {
               "sport": "MLB",
-              "item": "Angels @ Rays",
-              "time": "7:10 PM ET"
+              "item": "Twins @ Pirates",
+              "time": "6:40 PM ET"
             },
             {
               "sport": "MLB",
@@ -5630,6 +1443,11 @@
             },
             {
               "sport": "MLB",
+              "item": "Diamondbacks @ Mariners",
+              "time": "10:10 PM ET"
+            },
+            {
+              "sport": "MLB",
               "item": "Phillies @ Dodgers",
               "time": "10:10 PM ET"
             }
@@ -5638,7 +1456,7 @@
       ],
       "SATURDAY": [
         {
-          "name": "",
+          "name": "Daytime Baseball",
           "items": [
             {
               "sport": "MLB",
@@ -5688,7 +1506,7 @@
           ]
         },
         {
-          "name": "",
+          "name": "Around MLB",
           "items": [
             {
               "sport": "MLB",
@@ -5707,11 +1525,6 @@
             },
             {
               "sport": "MLB",
-              "item": "Diamondbacks @ Mariners",
-              "time": "10:10 PM ET"
-            },
-            {
-              "sport": "MLB",
               "item": "Yankees @ Athletics",
               "time": "10:05 PM ET"
             },
@@ -5725,7 +1538,7 @@
       ],
       "SUNDAY": [
         {
-          "name": "",
+          "name": "Around MLB",
           "items": [
             {
               "sport": "MLB",
@@ -5750,6 +1563,11 @@
             {
               "sport": "MLB",
               "item": "Marlins @ Mets",
+              "time": "1:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Red Sox @ Guardians",
               "time": "1:40 PM ET"
             },
             {

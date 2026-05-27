@@ -8,10 +8,15 @@
 <style>
 :root {
   color-scheme: light;
-  --bg: #f1f5f9; --card: #ffffff; --border: #e2e8f0;
-  --accent: #0052cc; --text: #0f172a; --text2: #475569; --text3: #94a3b8;
-  --green: #16a34a; --yellow: #d97706; --red: #dc2626;
-  --green-b: #f0fdf4; --yellow-b: #fffbeb; --red-b: #fef2f2;
+  --bg: #f4f7fb; --card: #ffffff; --border: #e4e9f2;
+  --accent: #0052cc; --accent-2: #1e62e8; --accent-glow: rgba(0,82,204,.20);
+  --text: #0b1220; --text2: #475569; --text3: #94a3b8;
+  --green: #15a364; --yellow: #d97706; --red: #dc2626;
+  --green-b: #ecfdf5; --yellow-b: #fffbeb; --red-b: #fef2f2;
+  --shadow-sm: 0 1px 2px rgba(15,23,42,.04), 0 1px 3px rgba(15,23,42,.06);
+  --shadow-md: 0 4px 12px rgba(15,23,42,.06), 0 1px 3px rgba(15,23,42,.05);
+  --shadow-lg: 0 10px 30px rgba(15,23,42,.08), 0 4px 8px rgba(15,23,42,.04);
+  --gold: #ffd700; --navy: #0a2e6e; --navy-2: #061f51;
   --hub-h: 46px;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -48,22 +53,23 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
 .stat-val { font-size: 20px; font-weight: 800; line-height: 1; }
 .stat-val.accent { color: var(--accent); }
 .dash-body { padding: 12px; display: flex; flex-direction: column; gap: 12px; }
-.card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
-.card-head { padding: 12px 14px 10px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
-.card-head h2 { font-size: 12px; font-weight: 700; }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); transition: box-shadow .2s ease; }
+.card:hover { box-shadow: var(--shadow-md); }
+.card-head { padding: 13px 16px 11px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; background: linear-gradient(180deg, #fcfdff 0%, #ffffff 100%); }
+.card-head h2 { font-size: 12px; font-weight: 800; letter-spacing: -.1px; }
 .card-sub { font-size: 11px; color: var(--text3); }
 .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .pcol-head { padding: 8px 14px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .8px; color: var(--text3); background: #f8fafc; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; }
-.prow { display: grid; grid-template-columns: 24px 1fr auto; gap: 10px; align-items: center; padding: 9px 14px; border-bottom: 1px solid #f1f5f9; border-left: 3px solid transparent; }
+.prow { display: grid; grid-template-columns: 22px 1fr auto; gap: 9px; align-items: center; padding: 6px 14px; border-bottom: 1px solid #f1f5f9; border-left: 3px solid transparent; font-size: 12px; }
 .prow:last-child { border-bottom: none; }
 .prow.green  { background: var(--green-b);  border-left-color: var(--green); }
 .prow.yellow { background: var(--yellow-b); border-left-color: var(--yellow); }
 .prow.red    { background: var(--red-b);    border-left-color: var(--red); }
 .prank { font-size: 11px; font-weight: 800; color: var(--text3); }
-.pgame { font-size: 12px; font-weight: 600; display: flex; align-items: center; gap: 5px; flex-wrap: wrap; }
-.ptime { font-size: 10px; color: var(--text3); margin-top: 2px; }
-.pactivity { text-align: right; min-width: 80px; }
-.pact-orders { font-size: 13px; font-weight: 700; display: flex; align-items: center; gap: 5px; justify-content: flex-end; }
+.pgame { font-size: 11.5px; font-weight: 600; display: flex; align-items: center; gap: 5px; flex-wrap: wrap; line-height: 1.2; }
+.ptime { font-size: 9.5px; color: var(--text3); margin-top: 1px; }
+.pactivity { text-align: right; min-width: 76px; }
+.pact-orders { font-size: 12px; font-weight: 700; display: flex; align-items: center; gap: 5px; justify-content: flex-end; }
 .pact-rank { font-size: 10px; color: var(--text3); margin-top: 1px; }
 .pact-vol  { font-size: 10px; color: var(--text2); margin-top: 1px; }
 .odot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
@@ -401,7 +407,188 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
 .cal-form-field input:focus, .cal-form-field select:focus, .cal-form-field textarea:focus { border-color:var(--accent); background:#fff; }
 .cal-form-footer { display:flex; gap:8px; justify-content:flex-end; margin-top:2px; }
 .cal-empty-state { font-size:12px; color:var(--text3); font-style:italic; padding:20px 0; text-align:center; }
-.cal-cat-badge { display:inline-block; font-size:9px; font-weight:800; padding:1px 7px; border-radius:10px; background:#f1f5f9; color:var(--text2); border:1px solid var(--border); white-space:nowrap; text-transform:uppercase; letter-spacing:.4px; }
+.cal-cat-badge { display:inline-block; font-size:9px; font-weight:800; padding:2px 8px; border-radius:10px; background:#f1f5f9; color:var(--text2); border:1px solid var(--border); white-space:nowrap; text-transform:uppercase; letter-spacing:.4px; }
+.cal-cat-badge.cal-cat-sports    { background:#ecfdf5; color:#065f46; border-color:#86efac; }
+.cal-cat-badge.cal-cat-financial { background:#fff7ed; color:#9a3412; border-color:#fed7aa; }
+.cal-cat-badge.cal-cat-other     { background:#f5f3ff; color:#6d28d9; border-color:#c4b5fd; }
+
+/* ── POLISHED CALENDAR ── */
+.cal-summary-bar { display:flex; align-items:center; gap:14px; padding:10px 14px; background:linear-gradient(180deg,#fcfdff 0%,#f8fafc 100%); border:1px solid var(--border); border-radius:10px; box-shadow:var(--shadow-sm); flex-wrap:wrap; margin-bottom:14px; }
+.cal-summary-left { display:flex; flex-direction:column; gap:1px; }
+.cal-summary-count { font-size:18px; font-weight:900; color:var(--text); line-height:1; }
+.cal-summary-range { font-size:11px; color:var(--text3); font-weight:600; }
+.cal-summary-chips { display:flex; gap:6px; flex-wrap:wrap; flex:1; }
+.cal-cat-summary-chip { display:inline-flex; align-items:center; gap:6px; font-size:10px; font-weight:700; padding:4px 10px; border-radius:14px; background:#f1f5f9; color:var(--text2); border:1px solid var(--border); }
+.cal-cat-summary-chip b { font-size:11px; font-weight:900; }
+.cal-cat-summary-chip.cal-cat-sports    { background:#ecfdf5; color:#065f46; border-color:#86efac; }
+.cal-cat-summary-chip.cal-cat-financial { background:#fff7ed; color:#9a3412; border-color:#fed7aa; }
+.cal-cat-summary-chip.cal-cat-other     { background:#f5f3ff; color:#6d28d9; border-color:#c4b5fd; }
+.cal-summary-hidden { font-size:10px; color:var(--text3); font-style:italic; }
+
+.cal-months { display:flex; flex-direction:column; gap:18px; }
+.cal-month-group { background:var(--card); border:1px solid var(--border); border-radius:12px; overflow:hidden; box-shadow:var(--shadow-sm); }
+.cal-month-header { display:flex; justify-content:space-between; align-items:center; padding:11px 16px; background:linear-gradient(135deg,#0a2e6e 0%,#1e3a8a 100%); color:#fff; border-bottom:2px solid #ffd700; }
+.cal-month-name  { font-size:14px; font-weight:800; letter-spacing:-.2px; }
+.cal-month-count { font-size:10px; font-weight:700; color:rgba(255,215,0,.92); text-transform:uppercase; letter-spacing:.6px; }
+.cal-month-events { display:flex; flex-direction:column; }
+
+.cal-event-row { display:grid; grid-template-columns:54px 1fr auto auto; gap:14px; align-items:center; padding:10px 16px; border-bottom:1px solid #f1f5f9; border-left:3px solid transparent; transition:background .1s ease; }
+.cal-event-row:last-child { border-bottom:none; }
+.cal-event-row:hover { background:#f8fafc; }
+.cal-event-row.cal-cat-sports    { border-left-color:#16a34a; }
+.cal-event-row.cal-cat-financial { border-left-color:#d97706; }
+.cal-event-row.cal-cat-other     { border-left-color:#7c3aed; }
+
+.cal-date-badge { background:#f1f5f9; border:1px solid var(--border); border-radius:8px; padding:5px 0; text-align:center; min-width:50px; flex-shrink:0; }
+.cal-date-badge.cal-date-today { background:#0a2e6e; border-color:#0a2e6e; color:#fff; box-shadow:0 2px 6px rgba(10,46,110,.3); }
+.cal-date-badge.cal-date-today .cal-date-dow { color:rgba(255,215,0,.9); }
+.cal-date-badge.cal-date-soon  { background:#fef3c7; border-color:#fcd34d; }
+.cal-date-dow { font-size:9px; font-weight:800; color:var(--text3); text-transform:uppercase; letter-spacing:.5px; line-height:1; }
+.cal-date-num { font-size:18px; font-weight:900; color:var(--text); line-height:1; margin-top:3px; font-variant-numeric:tabular-nums; }
+.cal-date-badge.cal-date-today .cal-date-num { color:#fff; }
+
+.cal-event-body  { min-width:0; }
+.cal-event-title { font-size:13px; font-weight:700; color:var(--text); display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+.cal-today-pill  { font-size:8px; font-weight:900; padding:1px 6px; border-radius:8px; background:#dc2626; color:#fff; letter-spacing:.5px; }
+.cal-soon-pill   { font-size:8px; font-weight:900; padding:1px 6px; border-radius:8px; background:#fcd34d; color:#78350f; letter-spacing:.5px; }
+.cal-event-notes { font-size:11px; color:var(--text3); margin-top:3px; line-height:1.4; }
+.cal-event-cat   { flex-shrink:0; }
+.cal-event-actions { display:flex; gap:4px; flex-shrink:0; }
+
+@media (max-width: 700px) {
+  .cal-event-row { grid-template-columns:50px 1fr auto; gap:10px; }
+  .cal-event-cat { grid-column:2; padding-top:4px; }
+  .cal-event-actions { grid-column:3; grid-row:1; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   EXTERNAL DATA DASHBOARD PROMO BANNER
+   ══════════════════════════════════════════════════════════════ */
+.dd-promo { position:relative; margin:12px 12px 0; border-radius:14px; overflow:hidden;
+  background: linear-gradient(135deg, #0a2e6e 0%, #1e3a8a 35%, #1d4ed8 70%, #2563eb 100%);
+  box-shadow: 0 8px 24px rgba(10,46,110,.28), 0 2px 6px rgba(10,46,110,.18);
+  border: 1px solid rgba(255,215,0,.35); }
+.dd-promo::before { content:""; position:absolute; inset:-2px; border-radius:14px; padding:2px;
+  background: linear-gradient(120deg, #ffd700 0%, transparent 30%, transparent 70%, #ffd700 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude; pointer-events:none; opacity:.7;
+  animation: dd-shimmer 5s ease-in-out infinite; }
+@keyframes dd-shimmer { 0%,100%{opacity:.4} 50%{opacity:.95} }
+.dd-promo-inner { position:relative; padding:14px 22px; display:flex; align-items:center; gap:18px; flex-wrap:wrap; }
+.dd-promo-spark { width:42px; height:42px; border-radius:11px; flex-shrink:0;
+  background: linear-gradient(135deg, #ffd700 0%, #f59e0b 100%);
+  display:flex; align-items:center; justify-content:center; font-size:22px;
+  box-shadow: 0 4px 14px rgba(255,215,0,.4), inset 0 1px 0 rgba(255,255,255,.5); }
+.dd-promo-text { flex:1; min-width:200px; color:#fff; }
+.dd-promo-eyebrow { font-size:9px; font-weight:900; letter-spacing:1.5px; color:#ffd700;
+  text-transform:uppercase; opacity:.95; margin-bottom:3px; }
+.dd-promo-title { font-size:15px; font-weight:800; letter-spacing:-.2px; color:#fff; }
+.dd-promo-title b { color:#ffd700; }
+.dd-promo-sub { font-size:11px; color:rgba(255,255,255,.78); margin-top:2px; line-height:1.4; }
+.dd-promo-link { display:inline-flex; align-items:center; gap:8px; flex-shrink:0;
+  background: linear-gradient(135deg, #ffd700 0%, #f59e0b 100%); color:#0a2e6e;
+  padding:10px 18px; border-radius:10px; font-size:12px; font-weight:900;
+  text-decoration:none; letter-spacing:.3px; text-transform:uppercase;
+  box-shadow: 0 4px 14px rgba(255,215,0,.45), inset 0 1px 0 rgba(255,255,255,.45);
+  transition: transform .15s ease, box-shadow .2s ease; white-space:nowrap; }
+.dd-promo-link:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(255,215,0,.55), inset 0 1px 0 rgba(255,255,255,.5); }
+.dd-promo-link:active { transform: translateY(0); }
+.dd-promo-link-wrap { display:flex; flex-direction:column; align-items:flex-end; gap:4px; }
+.dd-promo-pw { font-size:9px; font-weight:600; color:rgba(255,255,255,.62); font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+  letter-spacing:.2px; user-select:all; cursor:text; padding:0 4px; }
+.dd-promo-pw b { color:rgba(255,215,0,.85); font-weight:700; }
+@media (max-width: 700px) {
+  .dd-promo-inner { padding:12px 14px; gap:12px; }
+  .dd-promo-link-wrap { width:100%; align-items:stretch; }
+  .dd-promo-link { justify-content:center; }
+}
+
+/* ══════════════════════════════════════════════════════════════
+   TODAY'S SCHEDULE — MACRO-LENS CHRONOLOGICAL VIEW
+   ══════════════════════════════════════════════════════════════ */
+.sched-card { /* nothing extra — uses .card */ }
+.sched-card .card-head { gap: 10px; }
+.sched-toolbar { display:flex; gap:6px; flex-wrap:wrap; align-items:center; }
+.sched-chip { padding: 3px 10px; border-radius: 999px; font-size: 10.5px; font-weight: 700; cursor: pointer;
+  background: #f1f5f9; color: var(--text2); border: 1px solid var(--border); transition: all .12s ease; line-height: 1; }
+.sched-chip:hover { background: #e2e8f0; color: var(--text); }
+.sched-chip.active { background: var(--navy); color:#fff; border-color: var(--navy); box-shadow: 0 1px 4px rgba(10,46,110,.25); }
+.sched-chip .chip-count { font-size: 9px; opacity: .75; margin-left: 4px; font-weight: 800; }
+.todo-list { max-height: 340px; overflow-y: auto; }
+.todo-list::-webkit-scrollbar { width: 6px; }
+.todo-list::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+.todo-row { display: grid; grid-template-columns: 56px 28px 1fr auto; gap: 10px; align-items: center;
+  padding: 7px 14px; border-bottom: 1px solid #f1f5f9; transition: background .12s ease; }
+.todo-row:last-child { border-bottom: none; }
+.todo-row:hover { background: #f8fafc; }
+.todo-row.live { background: linear-gradient(90deg, rgba(220,38,38,.06), transparent 60%); }
+.todo-row.final { opacity: .55; }
+.todo-time { font-size: 10.5px; font-weight: 700; color: var(--text2); font-variant-numeric: tabular-nums; line-height: 1; }
+.todo-time .todo-sub { font-size: 9px; font-weight: 500; color: var(--text3); display:block; margin-top:2px; letter-spacing: .2px; }
+.todo-sport-icon { font-size: 15px; text-align: center; }
+.todo-event { display:flex; flex-direction:column; min-width: 0; }
+.todo-event-name { font-size: 12px; font-weight: 600; color: var(--text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.todo-event-meta { font-size: 9.5px; color: var(--text3); margin-top: 2px; display:flex; gap:5px; align-items:center; flex-wrap:wrap; }
+.todo-status { padding: 2px 8px; border-radius: 4px; font-size: 9px; font-weight: 800; text-transform: uppercase; letter-spacing: .4px; }
+.todo-status.live { background: #fee2e2; color: var(--red); animation: live-pulse 2s ease-in-out infinite; }
+.todo-status.final { background: #f1f5f9; color: var(--text3); }
+.todo-status.scheduled { background: #eff6ff; color: var(--accent); }
+@keyframes live-pulse { 0%,100%{opacity:1} 50%{opacity:.55} }
+.todo-empty { padding: 28px 16px; text-align: center; color: var(--text3); font-size: 12px; font-style: italic; }
+.todo-loading { padding: 28px 16px; text-align: center; color: var(--text3); font-size: 12px; }
+
+/* Slightly tighter overall dash spacing */
+.dash-body { padding: 12px; gap: 10px; }
+
+/* Top Events side panel — scrollable, same height as priority */
+#topEventsSide { max-height: 480px; overflow-y: auto; }
+#topEventsSide::-webkit-scrollbar { width: 6px; }
+#topEventsSide::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+
+/* Dual-column Top Events (by orders | by volume) */
+.top-events-split { display: grid; grid-template-columns: 1fr 1fr; max-height: 480px; }
+.top-events-col { border-right: 1px solid var(--border); display: flex; flex-direction: column; min-height: 0; }
+.top-events-col:last-child { border-right: none; }
+.top-events-col-head { padding: 8px 12px; font-size: 9px; font-weight: 800; text-transform: uppercase; letter-spacing: .8px; color: var(--text3); background: #f8fafc; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 1; }
+.top-events-col > div:last-child { overflow-y: auto; flex: 1; }
+.top-events-col > div:last-child::-webkit-scrollbar { width: 5px; }
+.top-events-col > div:last-child::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+.evlist-compact .evrow-compact { padding: 7px 12px; gap: 7px; }
+.evlist-compact .evname { font-size: 11.5px; line-height: 1.25; }
+.evlist-compact .evcount { font-size: 11.5px; }
+.evlist-compact .evvol { font-size: 9.5px; }
+.evlist-compact .badge { font-size: 8px; padding: 1px 4px; }
+@media (max-width: 700px) {
+  .top-events-split { grid-template-columns: 1fr; }
+  .top-events-col { border-right: none; border-bottom: 1px solid var(--border); }
+}
+
+/* ══ COMBO BUILDER MOCK ══ */
+.combo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; }
+.combo-card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 14px; display: flex; flex-direction: column; gap: 10px;
+  box-shadow: var(--shadow-sm); transition: transform .15s ease, box-shadow .2s ease; }
+.combo-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.combo-card-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.combo-card-odds { font-size: 14px; font-weight: 900; color: var(--accent); font-variant-numeric: tabular-nums; background: var(--accent-glow); padding: 2px 10px; border-radius: 8px; }
+.combo-card-name { font-size: 13px; font-weight: 700; color: var(--text); line-height: 1.3; min-height: 36px; }
+.combo-card-bar { height: 4px; background: #f1f5f9; border-radius: 2px; overflow: hidden; }
+.combo-card-fill { height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent-2)); border-radius: 2px; }
+.combo-card-stats { display: flex; justify-content: space-between; font-size: 11px; color: var(--text2); font-weight: 600; }
+.combo-card-stats strong { color: var(--text); font-weight: 800; }
+.combo-card-vol { color: var(--text3); }
+.combo-card-btn { background: linear-gradient(135deg, var(--navy) 0%, #1e3a8a 100%); color: var(--gold); border: none; padding: 9px 14px; border-radius: 8px; font-size: 12px; font-weight: 800; cursor: pointer; letter-spacing: .3px;
+  box-shadow: 0 2px 6px rgba(10,46,110,.25); transition: transform .12s ease; }
+.combo-card-btn:hover { transform: translateY(-1px); }
+
+/* ══ HEAT MAP (Dashboard core sports + Merch Plan non-sports strip) ══ */
+.heat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; padding: 14px; }
+.heat-cell { border: 1.5px solid; border-radius: 10px; padding: 14px 14px 12px; display: flex; flex-direction: column;
+  gap: 4px; transition: transform .15s ease, box-shadow .2s ease; cursor: default; }
+.heat-cell:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.heat-cell-label { font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: .6px; color: var(--text); opacity: .85; }
+.heat-cell-orders { font-size: 24px; font-weight: 900; line-height: 1; color: var(--text); font-variant-numeric: tabular-nums; }
+.heat-cell-meta { font-size: 10px; color: var(--text2); font-weight: 600; }
+
 </style>
 </head>
 <body>
@@ -460,6 +647,23 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
 
 <!-- ── DASHBOARD PANEL ── -->
 <div id="tab-dashboard" class="tab-panel active">
+  <!-- 🔗 EXTERNAL DATA DASHBOARD PROMO -->
+  <div class="dd-promo" role="region" aria-label="Predicts Data Dashboard link">
+    <div class="dd-promo-inner">
+      <div class="dd-promo-spark">📊</div>
+      <div class="dd-promo-text">
+        <div class="dd-promo-eyebrow">DEEPER DATA · NON-SPORTS · COHORTS · TRENDS</div>
+        <div class="dd-promo-title">Predicts <b>Data Dive</b> Dashboard</div>
+        <div class="dd-promo-sub">Full breakdown of non-sports markets, geo / cohort splits, and trend over time</div>
+      </div>
+      <div class="dd-promo-link-wrap">
+        <a class="dd-promo-link" href="https://chadrowleyatfd.github.io/merchops-predicts-datadive/" target="_blank" rel="noopener">
+          Open Data Dive <span style="font-size:14px;line-height:1">↗</span>
+        </a>
+        <div class="dd-promo-pw">password: <b>MOpredictsdata</b></div>
+      </div>
+    </div>
+  </div>
   <div id="ampDataBadge" class="amp-data-badge">
     <span class="amp-banner-icon">📊</span>
     <span class="amp-badge-text" id="ampBadgeText">Amplitude data loaded</span>
@@ -477,20 +681,63 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
     <a class="amp-banner-link" href="https://app.amplitude.com/analytics/fanduel/chart/fqn8hikj/edit/chmtdhsd?source=copy+url" target="_blank" rel="noopener">Amplitude Dashboard ↗</a>
   </div>
   <div class="dash-body">
-    <div class="card">
-      <div class="card-head">
-        <h2>📋 Display Priority vs. Live Activity</h2>
-        <div style="display:flex;gap:10px;align-items:center">
-          <span class="card-sub" id="dateLabel">—</span>
-          <span id="planSource" style="font-size:10px;color:var(--text3)">—</span>
+    <!-- ── Display Priority (LEFT) + Top Events (RIGHT) side-by-side ── -->
+    <div class="two-col">
+      <div class="card">
+        <div class="card-head">
+          <h2>📋 Display Priority vs. Live Activity</h2>
+          <div style="display:flex;gap:10px;align-items:center">
+            <span class="card-sub" id="dateLabel">—</span>
+            <span id="planSource" style="font-size:10px;color:var(--text3)">—</span>
+          </div>
+        </div>
+        <div id="priorityGrid"><div class="loading"><div class="loader"></div><div>Loading live data…</div></div></div>
+        <div class="legend">
+          <div class="leg"><div class="leg-dot" style="background:var(--green)"></div>Outperforming</div>
+          <div class="leg"><div class="leg-dot" style="background:var(--yellow)"></div>±3</div>
+          <div class="leg"><div class="leg-dot" style="background:var(--red)"></div>Under</div>
         </div>
       </div>
-      <div id="priorityGrid"><div class="loading"><div class="loader"></div><div>Loading live data…</div></div></div>
-      <div class="legend">
-        <div class="leg"><div class="leg-dot" style="background:var(--green)"></div>Outperforming rank</div>
-        <div class="leg"><div class="leg-dot" style="background:var(--yellow)"></div>±3 positions</div>
-        <div class="leg"><div class="leg-dot" style="background:var(--red)"></div>Underperforming</div>
+      <div class="card">
+        <div class="card-head"><h2>🏆 Top Events — Today</h2><span class="card-sub">by orders · by volume</span></div>
+        <div class="top-events-split">
+          <div class="top-events-col">
+            <div class="top-events-col-head">By Orders</div>
+            <div id="topEventsOrders"><div class="loading"><div class="loader"></div></div></div>
+          </div>
+          <div class="top-events-col">
+            <div class="top-events-col-head">By Volume</div>
+            <div id="topEventsVolume"><div class="loading"><div class="loader"></div></div></div>
+          </div>
+        </div>
       </div>
+    </div>
+
+    <!-- ── TODAY'S SCHEDULE (chronological, sortable by sport) ── -->
+    <div class="card sched-card">
+      <div class="card-head">
+        <h2>🗓️ Today's Schedule <span class="card-sub" id="todoCountLabel">—</span></h2>
+        <div class="sched-toolbar" id="todoFilters">
+          <button class="sched-chip active" data-todo="ALL"  onclick="setTodoFilter('ALL')">All</button>
+          <button class="sched-chip" data-todo="MLB"  onclick="setTodoFilter('MLB')">MLB</button>
+          <button class="sched-chip" data-todo="NBA"  onclick="setTodoFilter('NBA')">NBA</button>
+          <button class="sched-chip" data-todo="NHL"  onclick="setTodoFilter('NHL')">NHL</button>
+          <button class="sched-chip" data-todo="WNBA" onclick="setTodoFilter('WNBA')">WNBA</button>
+          <button class="sched-chip" data-todo="NFL"  onclick="setTodoFilter('NFL')">NFL</button>
+          <button class="sched-chip" data-todo="ATP"  onclick="setTodoFilter('ATP')">Tennis</button>
+          <button class="sched-chip" data-todo="EPL"  onclick="setTodoFilter('SOCCER')">Soccer</button>
+          <button class="sched-chip" data-todo="LIVE" onclick="setTodoFilter('LIVE')" style="color:var(--red)">● Live Now</button>
+        </div>
+      </div>
+      <div class="todo-list" id="todoList">
+        <div class="todo-loading"><div class="loader"></div><div style="margin-top:8px">Loading today's events…</div></div>
+      </div>
+    </div>
+
+    <!-- ── CORE SPORTS HEAT MAP ── -->
+    <div class="card">
+      <div class="card-head"><h2>🔥 Core Sports — Heat Map</h2><span class="card-sub">orders intensity by sport · today</span></div>
+      <div id="coreSportsHeat"><div class="loading"><div class="loader"></div></div></div>
     </div>
     <div class="two-col">
       <div class="card">
@@ -687,7 +934,14 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
       <div style="font-size:13px;font-weight:800;">📅 Calendar</div>
       <div style="font-size:11px;color:var(--text3);">Key dates and custom events — stored locally in this browser</div>
     </div>
-    <div style="display:flex;gap:8px;align-items:center;">
+    <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+      <div class="cal-range-row" style="display:flex;gap:6px;align-items:center;background:#f8fafc;padding:4px 8px;border-radius:6px;border:1px solid var(--border);">
+        <label style="font-size:10px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.5px">From</label>
+        <input type="date" id="calRangeFrom" onchange="onCalRangeChange()" style="font-size:11px;border:1px solid var(--border);border-radius:4px;padding:3px 6px;background:#fff;">
+        <label style="font-size:10px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.5px">To</label>
+        <input type="date" id="calRangeTo" onchange="onCalRangeChange()" style="font-size:11px;border:1px solid var(--border);border-radius:4px;padding:3px 6px;background:#fff;">
+        <button onclick="resetCalRange()" title="Reset to today → Dec 31 2026" style="font-size:10px;background:none;border:none;cursor:pointer;color:var(--accent);font-weight:700;padding:2px 4px">↻</button>
+      </div>
       <div class="cal-filter-row" id="calFilterRow">
         <button class="cal-filter-btn active" onclick="setCalFilter('ALL')" data-calfilter="ALL">All</button>
         <button class="cal-filter-btn" onclick="setCalFilter('Financial')" data-calfilter="Financial">Financial</button>
@@ -695,7 +949,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
         <button class="cal-filter-btn" onclick="setCalFilter('Other')" data-calfilter="Other">Other</button>
       </div>
       <input type="file" id="calCsvInput" accept=".csv" style="display:none" onchange="handleCalCsvUpload(this)">
-      <button class="sched-nav-btn" onclick="document.getElementById('calCsvInput').click()">⬆ Upload Key Dates CSV</button>
+      <button class="sched-nav-btn" onclick="document.getElementById('calCsvInput').click()">⬆ Upload CSV</button>
       <button class="sched-nav-btn" onclick="openCalEventForm(-1)" style="background:var(--accent);color:#fff;border-color:var(--accent);">+ Add Event</button>
     </div>
   </div>
@@ -739,10 +993,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
   </div>
 </div>
 
-<!-- ── COMBO BUILDER PANEL ── -->
+<!-- ── COMBO BUILDER PANEL (Dylan's original iframe, defaulted to MLB) ── -->
 <div id="tab-combo" class="tab-panel">
   <iframe class="full-iframe" id="comboFrame" src="about:blank"
-    data-src="https://mendelowitzd.github.io/Predicts-Combo-Builder/"
+    data-src="https://mendelowitzd.github.io/Predicts-Combo-Builder/?sport=MLB#MLB"
     title="Predicts Combo Builder"></iframe>
 </div>
 
@@ -1021,7 +1275,7 @@ function parseEspnEvents(data, sport) {
     const gameDate = new Date(evt.date);
     const timeStr = gameDate.toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit',timeZone:'America/New_York'}) + ' ET';
     const networks = extractNetworks(comp);
-    return { id:evt.id, sport, item:shortName, time:statusName==='STATUS_SCHEDULED'?timeStr:(statusName==='STATUS_IN_PROGRESS'?'🔴 Live':'Final'), status:statusName, networks };
+    return { id:evt.id, sport, item:shortName, time:statusName==='STATUS_SCHEDULED'?timeStr:(statusName==='STATUS_IN_PROGRESS'?'🔴 Live':'Final'), status:statusName, networks, gameDate:evt.date, timeStr };
   }).filter(g => g.item && g.item !== '—');
 }
 
@@ -2124,7 +2378,24 @@ function renderDashboard(data) {
   document.getElementById('sOrders').textContent   = fmtN(data.stats?.orders);
   const totalVolume = (data.events||[]).reduce((s,e) => s + (e.v||0), 0);
   document.getElementById('sVolume').textContent   = totalVolume > 0 ? fmtD(totalVolume) : fmtD(data.stats?.volume);
-  document.getElementById('sTopSport').textContent = data.stats?.top_sport || '—';
+
+  // ── Derive client-side aggregations when the payload doesn't include them ──
+  // (Chad's sync script ships only stats+events; this fills in sports/markets so
+  // the donut, rankings, and bar chart render without changing the sync.)
+  let sports = data.sports;
+  if (!sports || !Object.keys(sports).length) {
+    sports = {};
+    (data.events||[]).forEach(e => {
+      const s = sportOf(e.k);
+      sports[s] = (sports[s] || 0) + (e.o || 0);
+    });
+  }
+  let markets = data.markets;
+  if (!markets || !Object.keys(markets).length) {
+    markets = deriveMarketCategories(data.events||[]);
+  }
+  const topSport = data.stats?.top_sport || Object.entries(sports).sort((a,b)=>b[1]-a[1])[0]?.[0] || '—';
+  document.getElementById('sTopSport').textContent = topSport;
   document.getElementById('sEvents').textContent   = fmtN(data.stats?.events ?? data.events?.length);
   const syncTime = new Date(data.ts);
   const ageMin   = Math.round((Date.now()-syncTime)/60000);
@@ -2135,16 +2406,136 @@ function renderDashboard(data) {
   const todayItems = getTodayScheduleItems();
   let priorityArr, prioritySource;
   if (todayItems?.length) { priorityArr = mergePriorityWithLive(todayItems, data.events||[]); prioritySource = 'scheduler'; }
-  else { priorityArr = data.priority || []; prioritySource = data.plan_source; }
+  else if ((data.priority||[]).length) { priorityArr = data.priority; prioritySource = data.plan_source; }
+  else {
+    // ── Fallback: derive priority from top live events so the panel is never empty ──
+    priorityArr = (data.events||[]).slice(0, 12).map((e,i) => ({
+      rank: i+1, sport: sportOf(e.k), item: snakeDisplay(e.k), time: '',
+      orders: e.o, volume: e.v, act_rank: i+1, status: 'green'
+    }));
+    prioritySource = 'live-fallback';
+  }
   const srcHtml = prioritySource==='scheduler' ? '<span class="pill green">🟢 Hub Scheduler</span>'
     : prioritySource==='live' ? '<span class="pill green">🟢 Live SharePoint</span>'
+    : prioritySource==='live-fallback' ? '<span class="pill green">🟢 Live Activity</span>'
     : '<span class="pill yellow">🟡 Cached plan</span>';
   document.getElementById('syncPlanSrc').innerHTML = srcHtml;
   renderPriority(priorityArr, prioritySource);
-  renderSport(data.sports||{}, data.sports_prev||{});
-  marketChart = renderBar('marketChart', data.markets||{}, marketChart, '#0052cc');
+  renderSport(sports, data.sports_prev||{});
+  marketChart = renderBar('marketChart', markets, marketChart, '#0052cc');
   renderTopEvents(data.events||[]);
   renderTopCombos(data.events||[]);
+  renderCoreSportsHeat(sports, data.events||[]);
+}
+
+// ── Bucket events into market categories for the bar chart ──
+function deriveMarketCategories(events) {
+  const buckets = {};
+  const add = (cat, n) => { if (cat && n) buckets[cat] = (buckets[cat] || 0) + n; };
+  (events||[]).forEach(e => {
+    const k = (e.k||'').toLowerCase();
+    const o = e.o || 0;
+    // Sport game lines are dominant — bucket them together by sport
+    const s = sportOf(e.k);
+    if (s !== 'Other' && s !== 'Combo' && s !== 'Futures') {
+      add(s + ' Game Lines', o);
+      return;
+    }
+    if (k.includes('combo') || s === 'Combo') { add('Combos', o); return; }
+    if (k.includes('bitcoin') || k.includes('ether') || k.includes('crypto')) { add('Crypto', o); return; }
+    if (k.includes('crude_oil') || k.includes('copper') || k.includes('silver') || k.includes('gold') || k.includes('natural_gas')) { add('Commodities', o); return; }
+    if (k.includes('s_p_500') || k.includes('nasdaq') || k.includes('dow_jones') || k.includes('djia') || k.includes('russell') || k.includes('eur_usd')) { add('Index Futures', o); return; }
+    if (k.includes('election') || k.includes('midterm') || k.includes('democrat') || k.includes('republican') || k.includes('majority') || k.includes('nominee') || k.includes('winning_party')) { add('Politics', o); return; }
+    if (k.includes('super_bowl') || k.includes('world_series') || k.includes('stanley_cup') || k.includes('nba_champion') || k.includes('wnba_champion') || k.includes('league_winner') || k.includes('cup_winner') || k.includes('open_winner')) { add('Sports Futures', o); return; }
+    if (k.includes('cpi') || k.includes('unemployment') || k.includes('gdp') || k.includes('federal_funds') || k.includes('non_farm') || k.includes('consumer_price')) { add('Macro / Econ', o); return; }
+    add('Other', o);
+  });
+  return buckets;
+}
+
+// ── Core sports heat map: orders intensity by core sport (Dashboard) ──
+const CORE_SPORTS = [
+  { label: 'MLB',  color: '#1e40af' },
+  { label: 'NBA',  color: '#b91c1c' },
+  { label: 'NHL',  color: '#1d4ed8' },
+  { label: 'NFL',  color: '#9a3412' },
+  { label: 'WNBA', color: '#be185d' },
+  { label: 'PGA',  color: '#166534' },
+  { label: 'ATP',  color: '#3f6212' },
+  { label: 'WTA',  color: '#7e22ce' },
+  { label: 'EPL',  color: '#065f46' },
+  { label: 'UCL',  color: '#1e3a8a' },
+  { label: 'CFB',  color: '#854d0e' },
+  { label: 'CBB',  color: '#9b1c2b' },
+  { label: 'Tennis', color: '#3f6212' },
+  { label: 'Combo',  color: '#9a3412' },
+];
+function renderCoreSportsHeat(sports, events) {
+  const el = document.getElementById('coreSportsHeat');
+  if (!el) return;
+  // Build per-sport volume from events
+  const vols = {};
+  const counts = {};
+  (events||[]).forEach(e => {
+    const s = sportOf(e.k);
+    vols[s] = (vols[s] || 0) + (e.v || 0);
+    counts[s] = (counts[s] || 0) + 1;
+  });
+  // Combine into buckets keyed by core sport label
+  const buckets = CORE_SPORTS.map(c => ({
+    ...c,
+    o: sports[c.label] || 0,
+    v: vols[c.label] || 0,
+    n: counts[c.label] || 0,
+  })).filter(b => b.o > 0 || b.n > 0);
+  if (!buckets.length) { el.innerHTML = '<div class="nodata" style="padding:24px;text-align:center">No core-sports activity yet today</div>'; return; }
+  const totalO = buckets.reduce((s,b) => s + b.o, 0);
+  buckets.sort((a,b) => b.o - a.o);
+  const maxO = buckets[0].o || 1;
+  el.innerHTML = `<div class="heat-grid">${buckets.map(b => {
+    const intensity = b.o ? Math.max(0.18, b.o / maxO) : 0.06;
+    const pct = totalO ? (b.o/totalO*100).toFixed(1) : '0';
+    return `<div class="heat-cell" style="background:linear-gradient(135deg, ${b.color}${Math.round(intensity*255).toString(16).padStart(2,'0')} 0%, ${b.color}22 100%); border-color:${b.color}40">
+      <div class="heat-cell-label">${b.label}</div>
+      <div class="heat-cell-orders">${fmtN(b.o)}</div>
+      <div class="heat-cell-meta">${b.n} market${b.n!==1?'s':''} · ${fmtD(b.v)} · ${pct}%</div>
+    </div>`;
+  }).join('')}</div>`;
+}
+
+// ── Non-sports heat map: orders × volume across themed/futures/macro markets ──
+const NON_SPORTS_CATS = [
+  { label: 'Crypto',      match: k => /\b(bitcoin|ether|crypto)\b/.test(k),                                            color: '#f59e0b' },
+  { label: 'Commodities', match: k => /\b(crude_oil|gold|silver|copper|natural_gas)\b/.test(k),                        color: '#d97706' },
+  { label: 'Index Futs',  match: k => /\b(s_p_500|nasdaq|dow_jones|djia|russell|eur_usd)\b/.test(k),                   color: '#0ea5e9' },
+  { label: 'Politics',    match: k => /\b(election|midterm|democrat|republican|majority|nominee|winning_party)\b/.test(k), color: '#7c3aed' },
+  { label: 'Macro/Econ',  match: k => /\b(cpi|unemployment|gdp|federal_funds|non_farm|consumer_price)\b/.test(k),      color: '#0891b2' },
+  { label: 'Themed Combos', match: k => /\b(combo|money_talks|peach_apple|friends_for_a_night|afternoon_faithful|big_cities|the_silver_lining|thunder_reigns|two_missions|recent_royalty|riding_the_wave|rock_blues|peaches_pinstripes|the_alamo|broadway|gridlock|lonestar|so_cal|long_overdue|home_faithful|road_storm|lights_out|new_york_new_york|blue_bloods|division_takeover|night_shift|storm_surge|west_coast_nights|still_breathing|the_a_list|the_wandering)\b/.test(k), color: '#16a34a' },
+];
+function renderNonSportsHeat(events) {
+  const el = document.getElementById('nonSportsHeat');
+  if (!el) return;
+  const buckets = NON_SPORTS_CATS.map(c => ({...c, o: 0, v: 0, n: 0}));
+  (events||[]).forEach(e => {
+    const k = (e.k||'').toLowerCase();
+    for (const b of buckets) {
+      if (b.match(k)) { b.o += e.o||0; b.v += e.v||0; b.n += 1; break; }
+    }
+  });
+  const totalO = buckets.reduce((s,b) => s + b.o, 0);
+  if (!totalO) { el.innerHTML = '<div class="nodata" style="padding:24px;text-align:center">No non-sports activity yet today</div>'; return; }
+  // Sort by orders desc, then render as gradient cells
+  buckets.sort((a,b) => b.o - a.o);
+  const maxO = buckets[0].o || 1;
+  el.innerHTML = `<div class="heat-grid">${buckets.map(b => {
+    const intensity = b.o ? Math.max(0.15, b.o / maxO) : 0.06;
+    const pct = totalO ? (b.o/totalO*100).toFixed(1) : '0';
+    return `<div class="heat-cell" style="background:linear-gradient(135deg, ${b.color}${Math.round(intensity*255).toString(16).padStart(2,'0')} 0%, ${b.color}22 100%); border-color:${b.color}40">
+      <div class="heat-cell-label">${b.label}</div>
+      <div class="heat-cell-orders">${fmtN(b.o)}</div>
+      <div class="heat-cell-meta">${b.n} markets · ${fmtD(b.v)} · ${pct}%</div>
+    </div>`;
+  }).join('')}</div>`;
 }
 
 // ═══════════════════════════════════════════════════════════
@@ -2222,18 +2613,65 @@ function renderBar(id,obj,existing,color){
 }
 
 const SPORT_FINGERPRINTS={nuggets:'NBA',timberwolves:'NBA',celtics:'NBA','76_ers':'NBA',knicks:'NBA',hawks:'NBA',rockets:'NBA',lakers:'NBA',cavaliers:'NBA',raptors:'NBA',pistons:'NBA',magic:'NBA',thunder:'NBA',suns:'NBA',spurs:'NBA',blazers:'NBA',warriors:'NBA',bulls:'NBA',pacers:'NBA',nets:'NBA',wizards:'NBA',grizzlies:'NBA',mavericks:'NBA',clippers:'NBA',heat:'NBA',bucks:'NBA',hornets:'NBA',pelicans:'NBA',kings:'NBA',jazz:'NBA',tigers:'MLB',braves:'MLB',royals:'MLB',athletics:'MLB',blue_jays:'MLB',twins:'MLB',giants:'MLB',phillies:'MLB',astros:'MLB',orioles:'MLB',rockies:'MLB',reds:'MLB',cardinals:'MLB',pirates:'MLB',diamondbacks:'MLB',brewers:'MLB',nationals:'MLB',mets:'MLB',dodgers:'MLB',padres:'MLB',rangers:'MLB',yankees:'MLB',red_sox:'MLB',mariners:'MLB',rays:'MLB',guardians:'MLB',cubs:'MLB',white_sox:'MLB',angels:'MLB',marlins:'MLB',golden_knights:'NHL',stars:'NHL',wild:'NHL',oilers:'NHL',ducks:'NHL',lightning:'NHL',canadiens:'NHL',bruins:'NHL',sabres:'NHL',flyers:'NHL',penguins:'NHL',hurricanes:'NHL',madrid_open:'Tennis',ruud:'Tennis',zverev:'Tennis',sinner:'Tennis',cadillac:'PGA',bitcoin:'Futures',nasdaq:'Futures'};
+
+// ── Themed sports combos — these don't have "combo" in the key but ARE combos ──
+const THEMED_COMBOS = [
+  'money_talks','peach_apple','peaches_pinstripes','friends_for_a_night','afternoon_faithful',
+  'blue_bloods','home_faithful','road_storm','riding_the_wave','rock_blues',
+  'major_league_cities','gotham_double','beasts_from_the_east','the_silver_lining','big_cities',
+  'so_cal_takeover','the_alamo','broadway','lonestar','new_york_new_york',
+  'division_takeover','long_overdue','night_shift','storm_surge','west_coast_nights',
+  'still_breathing','two_missions','the_a_list','the_wandering','both_sides_of_chicago',
+  'lights_out_west','concrete_cactus','recent_royalty','the_oldest_grudge','queens_the_sound',
+  'thunder_reigns','lightning_never_strikes','not_in_our_house','the_night_shift',
+  'queens_the_sound_the_pacific','the_wandering_west'
+];
+
 function sportOf(k){
   const lo=(k||'').toLowerCase();
   if(lo.includes('combo'))return'Combo';
+  // Themed combos (Peach Apple, Money Talks, etc.) — classify as Combo too
+  for(const t of THEMED_COMBOS) if(lo.includes(t)) return 'Combo';
   for(const[f,s]of Object.entries(SPORT_FINGERPRINTS))if(lo.includes(f))return s;
   return'Other';
 }
 
 function renderTopEvents(events){
   document.getElementById('sEvents').textContent=fmtN(events.length||0);
-  const top=(events||[]).slice(0,20);
-  if(!top.length){document.getElementById('topEvents').innerHTML='<div class="loading">No data</div>';return;}
-  document.getElementById('topEvents').innerHTML=`<div class="evlist">${top.map(({k,o,v},i)=>{const rank=i+1,rc=rank===1?'gold':rank===2?'silver':rank===3?'bronze':'',s=sportOf(k);return`<div class="evrow"><div class="evrank ${rc}">${rank}</div><div><div class="evname">${snakeDisplay(k)}</div><div class="evmeta"><span class="badge b-${s}">${s}</span></div></div><div><div class="evcount">${fmtN(o)} orders</div>${v?`<div class="evvol">${fmtD(v)}</div>`:''}</div></div>`;}).join('')}</div>`;
+  const all = events || [];
+  // Build a compact event row HTML — primary metric on the right, secondary muted below
+  function buildList(sortedEvents, primaryKey) {
+    const top = sortedEvents.slice(0, 20);
+    if (!top.length) return '<div class="loading">No data</div>';
+    return `<div class="evlist evlist-compact">${top.map(({k,o,v},i)=>{
+      const rank=i+1, rc=rank===1?'gold':rank===2?'silver':rank===3?'bronze':'', s=sportOf(k);
+      const primary = primaryKey === 'v' ? fmtD(v) : `${fmtN(o)} orders`;
+      const secondary = primaryKey === 'v' ? `${fmtN(o)} orders` : (v ? fmtD(v) : '');
+      return `<div class="evrow evrow-compact">
+        <div class="evrank ${rc}">${rank}</div>
+        <div>
+          <div class="evname">${snakeDisplay(k)}</div>
+          <div class="evmeta"><span class="badge b-${s}">${s}</span></div>
+        </div>
+        <div>
+          <div class="evcount">${primary}</div>
+          ${secondary ? `<div class="evvol">${secondary}</div>` : ''}
+        </div>
+      </div>`;
+    }).join('')}</div>`;
+  }
+  const byOrders = [...all].sort((a,b) => (b.o||0) - (a.o||0));
+  const byVolume = [...all].sort((a,b) => (b.v||0) - (a.v||0));
+  // Render into the legacy bottom card (single list, by orders) + the new dual-column side panel
+  const legacy = document.getElementById('topEvents');
+  if (legacy) legacy.innerHTML = buildList(byOrders, 'o');
+  const colO = document.getElementById('topEventsOrders');
+  const colV = document.getElementById('topEventsVolume');
+  if (colO) colO.innerHTML = buildList(byOrders, 'o');
+  if (colV) colV.innerHTML = buildList(byVolume, 'v');
+  // Backward-compat: if the old single-list container still exists, populate it too
+  const side = document.getElementById('topEventsSide');
+  if (side) side.innerHTML = buildList(byOrders, 'o');
 }
 
 function renderTopCombos(events){
@@ -2413,8 +2851,123 @@ function initAmpBadge() {
 // ═══════════════════════════════════════════════════════════
 const CAL_CSV_KEY    = 'predicts_calendar_dates';
 const CAL_CUSTOM_KEY = 'predicts_calendar_custom';
+const CAL_RANGE_KEY  = 'predicts_calendar_range';
+const CAL_SEEDED_KEY = 'predicts_calendar_seeded_v2';
+
+// ── Default Annual Event Calendar (seed on first visit) ──
+// Key prediction-markets dates from May 28 → Dec 31, 2026
+const CAL_DEFAULT_EVENTS = [
+  // ── JUNE 2026 ──
+  { date:'2026-06-04', event:'NBA Finals — Game 1 (approx)',           category:'Sports',    notes:'Western champ vs Eastern champ' },
+  { date:'2026-06-05', event:'May Non-Farm Payrolls (Jobs Report)',    category:'Financial', notes:'BLS Employment Situation release · 8:30 AM ET' },
+  { date:'2026-06-07', event:'French Open Final',                       category:'Sports',    notes:'Roland-Garros men\'s singles championship' },
+  { date:'2026-06-09', event:'Stanley Cup Final — Game 1 (approx)',     category:'Sports',    notes:'Conference champs face off' },
+  { date:'2026-06-11', event:'May CPI Release',                         category:'Financial', notes:'Consumer Price Index · 8:30 AM ET' },
+  { date:'2026-06-11', event:'FIFA World Cup 2026 — Opening Match',    category:'Sports',    notes:'US/Mexico/Canada hosts · Mexico City' },
+  { date:'2026-06-17', event:'FOMC Decision + SEP',                     category:'Financial', notes:'Fed rate decision + Summary of Economic Projections · 2:00 PM ET' },
+  { date:'2026-06-18', event:'US Open Golf — Round 1',                  category:'Sports',    notes:'Shinnecock Hills (approx · 4-day major)' },
+  { date:'2026-06-25', event:'NBA Draft 2026',                          category:'Sports',    notes:'Brooklyn · prediction market: lottery, #1 pick' },
+  { date:'2026-06-26', event:'NHL Draft 2026',                          category:'Sports',    notes:'Round 1 · prediction market: #1 pick' },
+  { date:'2026-06-29', event:'Wimbledon — Day 1',                       category:'Sports',    notes:'Championships at the All England Club · 14 days' },
+
+  // ── JULY 2026 ──
+  { date:'2026-07-03', event:'June Non-Farm Payrolls',                  category:'Financial', notes:'BLS Employment Situation release' },
+  { date:'2026-07-12', event:'Wimbledon — Men\'s Final',                category:'Sports',    notes:'Centre Court' },
+  { date:'2026-07-14', event:'June CPI Release',                        category:'Financial', notes:'Consumer Price Index · 8:30 AM ET' },
+  { date:'2026-07-14', event:'MLB All-Star Game',                       category:'Sports',    notes:'Citizens Bank Park, Philadelphia · prediction market: MVP' },
+  { date:'2026-07-16', event:'The Open Championship — Round 1',         category:'Sports',    notes:'Royal Birkdale (approx) · 4-day major' },
+  { date:'2026-07-19', event:'FIFA World Cup 2026 — Final',             category:'Sports',    notes:'MetLife Stadium · New Jersey' },
+  { date:'2026-07-29', event:'FOMC Decision',                           category:'Financial', notes:'Fed rate decision (no SEP) · 2:00 PM ET' },
+  { date:'2026-07-30', event:'Q2 GDP Advance Release',                  category:'Financial', notes:'BEA · 8:30 AM ET' },
+  { date:'2026-07-31', event:'MLB Trade Deadline',                      category:'Sports',    notes:'6:00 PM ET cutoff · player movement props' },
+
+  // ── AUGUST 2026 ──
+  { date:'2026-08-06', event:'NFL Hall of Fame Game',                   category:'Sports',    notes:'NFL preseason opener · Canton, OH' },
+  { date:'2026-08-07', event:'July Non-Farm Payrolls',                  category:'Financial', notes:'BLS Employment Situation release' },
+  { date:'2026-08-12', event:'July CPI Release',                        category:'Financial', notes:'Consumer Price Index · 8:30 AM ET' },
+  { date:'2026-08-15', event:'EPL 2026-27 Season Begins',               category:'Sports',    notes:'Premier League kickoff' },
+  { date:'2026-08-21', event:'Jackson Hole Economic Symposium',         category:'Financial', notes:'Fed annual conference begins · Powell speech' },
+  { date:'2026-08-24', event:'US Open Tennis — Day 1',                  category:'Sports',    notes:'Flushing Meadows · 14 days' },
+  { date:'2026-08-27', event:'CFB Week 0 Kickoff',                      category:'Sports',    notes:'College football season begins' },
+  { date:'2026-08-27', event:'Q2 GDP Second Estimate',                  category:'Financial', notes:'BEA · 8:30 AM ET' },
+
+  // ── SEPTEMBER 2026 ──
+  { date:'2026-09-04', event:'August Non-Farm Payrolls',                category:'Financial', notes:'BLS Employment Situation release' },
+  { date:'2026-09-07', event:'US Open Tennis — Men\'s Final',           category:'Sports',    notes:'Arthur Ashe Stadium' },
+  { date:'2026-09-10', event:'NFL Season Kickoff',                      category:'Sports',    notes:'Thursday Night opener · TBD home team' },
+  { date:'2026-09-10', event:'August CPI Release',                      category:'Financial', notes:'Consumer Price Index · 8:30 AM ET' },
+  { date:'2026-09-11', event:'Ryder Cup — Day 1',                       category:'Sports',    notes:'Adare Manor, Ireland · USA vs Europe' },
+  { date:'2026-09-16', event:'FOMC Decision + SEP',                     category:'Financial', notes:'Fed rate decision + Summary of Economic Projections · 2:00 PM ET' },
+  { date:'2026-09-30', event:'MLB Playoffs Begin (Wild Card)',          category:'Sports',    notes:'Best-of-3 Wild Card Series' },
+
+  // ── OCTOBER 2026 ──
+  { date:'2026-10-02', event:'September Non-Farm Payrolls',             category:'Financial', notes:'BLS Employment Situation release' },
+  { date:'2026-10-07', event:'NHL 2026-27 Season Opener',               category:'Sports',    notes:'Opening Night · Stanley Cup banner raisings' },
+  { date:'2026-10-14', event:'September CPI Release',                   category:'Financial', notes:'Consumer Price Index · 8:30 AM ET' },
+  { date:'2026-10-20', event:'NBA 2026-27 Season Opener',               category:'Sports',    notes:'Opening Night · championship banner raising' },
+  { date:'2026-10-23', event:'World Series — Game 1 (approx)',          category:'Sports',    notes:'AL champ vs NL champ' },
+  { date:'2026-10-28', event:'FOMC Decision',                           category:'Financial', notes:'Fed rate decision (no SEP) · 2:00 PM ET' },
+  { date:'2026-10-29', event:'Q3 GDP Advance Release',                  category:'Financial', notes:'BEA · 8:30 AM ET' },
+
+  // ── NOVEMBER 2026 ──
+  { date:'2026-11-03', event:'2026 US Midterm Elections',               category:'Other',     notes:'House majority, Senate majority, gubernatorial races' },
+  { date:'2026-11-04', event:'World Series — Game 7 (if needed)',       category:'Sports',    notes:'Latest possible WS Game 7' },
+  { date:'2026-11-06', event:'October Non-Farm Payrolls',               category:'Financial', notes:'BLS Employment Situation release' },
+  { date:'2026-11-12', event:'October CPI Release',                     category:'Financial', notes:'Consumer Price Index · 8:30 AM ET' },
+  { date:'2026-11-26', event:'NFL Thanksgiving Triple-Header',          category:'Sports',    notes:'3 marquee games · large betting volume' },
+
+  // ── DECEMBER 2026 ──
+  { date:'2026-12-04', event:'November Non-Farm Payrolls',              category:'Financial', notes:'BLS Employment Situation release' },
+  { date:'2026-12-10', event:'November CPI Release',                    category:'Financial', notes:'Consumer Price Index · 8:30 AM ET' },
+  { date:'2026-12-12', event:'Heisman Trophy Ceremony',                 category:'Sports',    notes:'College football MVP · NYC' },
+  { date:'2026-12-16', event:'FOMC Decision + SEP',                     category:'Financial', notes:'Fed rate decision + Summary of Economic Projections · 2:00 PM ET (final meeting of year)' },
+  { date:'2026-12-25', event:'NBA Christmas Day Slate',                 category:'Sports',    notes:'5-game marquee schedule' },
+  { date:'2026-12-25', event:'NFL Christmas Games',                     category:'Sports',    notes:'Streaming exclusive games' },
+  { date:'2026-12-31', event:'College Football Playoff — Quarterfinals', category:'Sports',    notes:'CFP quarterfinal games' },
+];
+
+function seedCalendarOnce() {
+  try {
+    if (localStorage.getItem(CAL_SEEDED_KEY)) return;
+    // Only seed if there are no CSV-imported dates already (don't clobber Chad's CSV)
+    const existing = JSON.parse(localStorage.getItem(CAL_CSV_KEY) || '[]');
+    if (existing.length) { localStorage.setItem(CAL_SEEDED_KEY, '1'); return; }
+    const seeded = CAL_DEFAULT_EVENTS.map(e => ({ ...e, _src: 'csv' }));
+    localStorage.setItem(CAL_CSV_KEY, JSON.stringify(seeded));
+    localStorage.setItem(CAL_SEEDED_KEY, '1');
+  } catch(e) {}
+}
 let calFilter        = 'ALL';
 let calEditingIdx    = null; // null = new, number = editing custom entry index
+
+// Default range: today → Dec 31 of current year (or next year if it's December)
+function defaultCalRange() {
+  const today = new Date().toISOString().slice(0,10);
+  const y = new Date().getFullYear();
+  return { from: today, to: `${y}-12-31` };
+}
+function getCalRange() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(CAL_RANGE_KEY) || 'null');
+    if (saved?.from && saved?.to) return saved;
+  } catch(e) {}
+  return defaultCalRange();
+}
+function setCalRange(from, to) {
+  localStorage.setItem(CAL_RANGE_KEY, JSON.stringify({ from, to }));
+}
+function onCalRangeChange() {
+  const from = document.getElementById('calRangeFrom').value;
+  const to   = document.getElementById('calRangeTo').value;
+  if (from && to) { setCalRange(from, to); renderCalendar(); }
+}
+function resetCalRange() {
+  const r = defaultCalRange();
+  setCalRange(r.from, r.to);
+  document.getElementById('calRangeFrom').value = r.from;
+  document.getElementById('calRangeTo').value   = r.to;
+  renderCalendar();
+}
 
 function getCalCsvDates()    { try { return JSON.parse(localStorage.getItem(CAL_CSV_KEY)    || '[]'); } catch(e) { return []; } }
 function getCalCustomDates() { try { return JSON.parse(localStorage.getItem(CAL_CUSTOM_KEY) || '[]'); } catch(e) { return []; } }
@@ -2528,36 +3081,109 @@ function deleteCalEntry(src, idx) {
 function renderCalendar() {
   const el = document.getElementById('calBody');
   if (!el) return;
+  // Sync the range inputs in case they haven't been initialized yet
+  const range = getCalRange();
+  const fromEl = document.getElementById('calRangeFrom');
+  const toEl   = document.getElementById('calRangeTo');
+  if (fromEl && !fromEl.value) fromEl.value = range.from;
+  if (toEl   && !toEl.value)   toEl.value   = range.to;
+
   const csv     = getCalCsvDates().map((e,i)   => ({...e, _listSrc:'csv',    _listIdx:i}));
   const customs = getCalCustomDates().map((e,i) => ({...e, _listSrc:'custom', _listIdx:i}));
   let all = [...csv, ...customs];
   if (calFilter !== 'ALL') all = all.filter(e => e.category === calFilter);
+  // Hide past + outside-range events so users never see stale data
+  const totalBefore = all.length;
+  all = all.filter(e => (e.date||'') >= range.from && (e.date||'') <= range.to);
   all.sort((a,b) => (a.date||'').localeCompare(b.date||''));
-  const today = new Date().toISOString().slice(0,10);
+  const filtered = totalBefore - all.length;
+
+  // Range label friendly format
+  const rangeLabel = (() => {
+    try {
+      const f = new Date(range.from+'T12:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+      const t = new Date(range.to+'T12:00:00').toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+      return `${f} → ${t}`;
+    } catch(e) { return `${range.from} → ${range.to}`; }
+  })();
 
   if (!all.length) {
-    el.innerHTML = `<div class="cal-empty-state">No events found${calFilter!=='ALL'?' for "'+calFilter+'"':''}. Upload a CSV or add an event manually.</div>`;
+    el.innerHTML = `<div class="cal-empty-state">
+      No upcoming events between <strong>${rangeLabel}</strong>${calFilter!=='ALL'?' for "'+calFilter+'"':''}.
+      ${filtered ? `<div style="font-size:11px;margin-top:6px;opacity:.7">${filtered} event${filtered!==1?'s':''} hidden (outside date range).</div>` : ''}
+      <div style="margin-top:12px">Upload a CSV or add an event manually to populate the calendar.</div>
+    </div>`;
     return;
   }
 
-  const rows = all.map(e => {
-    const isPast = e.date < today;
-    const d = new Date(e.date + 'T12:00:00');
-    const dateStr = d.toLocaleDateString('en-US',{weekday:'short',month:'short',day:'numeric',year:'numeric'});
-    const editBtn = e._listSrc === 'custom'
-      ? `<button class="cal-icon-btn edit" onclick="openCalEventForm(${e._listIdx})" title="Edit">✏️</button>` : '';
-    return `<tr class="${isPast?'past':''}">
-      <td style="white-space:nowrap">${dateStr}</td>
-      <td><strong>${escHtml(e.event)}</strong>${e.notes?`<div style="font-size:11px;color:var(--text3);margin-top:2px">${escHtml(e.notes)}</div>`:''}</td>
-      <td><span class="cal-cat-badge">${escHtml(e.category)}</span></td>
-      <td style="white-space:nowrap">${editBtn}<button class="cal-icon-btn del" onclick="deleteCalEntry('${e._listSrc}',${e._listIdx})" title="Delete">✕</button></td>
-    </tr>`;
+  // Group events by month for visual separators
+  const groups = {}; // 'YYYY-MM' → [events]
+  all.forEach(e => {
+    const ym = (e.date||'').slice(0,7);
+    if (!groups[ym]) groups[ym] = [];
+    groups[ym].push(e);
+  });
+
+  const today = new Date().toISOString().slice(0,10);
+  const monthName = ym => {
+    const [y,m] = ym.split('-');
+    return new Date(+y, +m-1, 1).toLocaleDateString('en-US',{month:'long',year:'numeric'});
+  };
+  const dayOfWeek = iso => new Date(iso+'T12:00:00').toLocaleDateString('en-US',{weekday:'short'});
+  const dayNum = iso => new Date(iso+'T12:00:00').getDate();
+
+  // Category badge classes
+  const catCls = c => ({Sports:'cal-cat-sports',Financial:'cal-cat-financial',Other:'cal-cat-other'})[c] || 'cal-cat-other';
+  const catIcon = c => ({Sports:'🏆',Financial:'💵',Other:'📌'})[c] || '📌';
+
+  const monthHtml = Object.keys(groups).sort().map(ym => {
+    const items = groups[ym];
+    const monthTotal = items.length;
+    const monthEvents = items.map(e => {
+      const isToday = e.date === today;
+      const isSoon = !isToday && e.date <= new Date(Date.now()+7*86400000).toISOString().slice(0,10);
+      const editBtn = e._listSrc === 'custom'
+        ? `<button class="cal-icon-btn edit" onclick="openCalEventForm(${e._listIdx})" title="Edit">✏️</button>` : '';
+      const dateBadgeCls = isToday ? 'cal-date-today' : (isSoon ? 'cal-date-soon' : '');
+      return `<div class="cal-event-row ${catCls(e.category)}">
+        <div class="cal-date-badge ${dateBadgeCls}">
+          <div class="cal-date-dow">${dayOfWeek(e.date)}</div>
+          <div class="cal-date-num">${dayNum(e.date)}</div>
+        </div>
+        <div class="cal-event-body">
+          <div class="cal-event-title">${escHtml(e.event)}${isToday ? '<span class="cal-today-pill">TODAY</span>' : isSoon ? '<span class="cal-soon-pill">SOON</span>' : ''}</div>
+          ${e.notes ? `<div class="cal-event-notes">${escHtml(e.notes)}</div>` : ''}
+        </div>
+        <div class="cal-event-cat"><span class="cal-cat-badge ${catCls(e.category)}">${catIcon(e.category)} ${escHtml(e.category)}</span></div>
+        <div class="cal-event-actions">${editBtn}<button class="cal-icon-btn del" onclick="deleteCalEntry('${e._listSrc}',${e._listIdx})" title="Delete">✕</button></div>
+      </div>`;
+    }).join('');
+    return `<div class="cal-month-group">
+      <div class="cal-month-header">
+        <div class="cal-month-name">${monthName(ym)}</div>
+        <div class="cal-month-count">${monthTotal} event${monthTotal!==1?'s':''}</div>
+      </div>
+      <div class="cal-month-events">${monthEvents}</div>
+    </div>`;
   }).join('');
 
-  el.innerHTML = `<table class="cal-table">
-    <thead><tr><th>Date</th><th>Event</th><th>Category</th><th></th></tr></thead>
-    <tbody>${rows}</tbody>
-  </table>`;
+  // Category counts for the header strip
+  const catCounts = all.reduce((a,e) => { a[e.category] = (a[e.category]||0) + 1; return a; }, {});
+  const catChips = Object.entries(catCounts).sort((a,b)=>b[1]-a[1]).map(([c,n]) =>
+    `<span class="cal-cat-summary-chip ${catCls(c)}">${catIcon(c)} ${escHtml(c)} <b>${n}</b></span>`
+  ).join('');
+
+  el.innerHTML = `
+    <div class="cal-summary-bar">
+      <div class="cal-summary-left">
+        <div class="cal-summary-count">${all.length} event${all.length!==1?'s':''}</div>
+        <div class="cal-summary-range">${rangeLabel}</div>
+      </div>
+      <div class="cal-summary-chips">${catChips}</div>
+      ${filtered ? `<div class="cal-summary-hidden">${filtered} hidden (outside range)</div>` : ''}
+    </div>
+    <div class="cal-months">${monthHtml}</div>
+  `;
 }
 
 // ═══════════════════════════════════════════════════════════
@@ -2964,12 +3590,143 @@ function saveToken() {
   if (val) { setToken(val); document.getElementById('token-modal')?.remove(); loadData(); }
 }
 
+// ═══════════════════════════════════════════════════════════
+// TODAY'S SCHEDULE — chronological view across all core sports
+// ═══════════════════════════════════════════════════════════
+let todoFilter = 'ALL';
+let todoCache  = null;     // full list of games fetched once per page-load
+let todoTodayIso = null;
+
+function setTodoFilter(f) {
+  todoFilter = f;
+  document.querySelectorAll('#todoFilters .sched-chip').forEach(b => {
+    b.classList.toggle('active', b.getAttribute('data-todo') === f);
+  });
+  renderTodaySchedule();
+}
+
+async function loadTodaySchedule() {
+  const el = document.getElementById('todoList');
+  if (!el) return;
+  todoTodayIso = new Date().toISOString().slice(0,10);
+  try {
+    const grouped = await fetchEspnForDay(todoTodayIso); // { NBA:[...], MLB:[...], ... }
+    // Flatten to a single array, decorate with sortable timestamp
+    const all = [];
+    Object.keys(grouped).forEach(sport => {
+      (grouped[sport] || []).forEach(g => {
+        const ts = g.gameDate ? new Date(g.gameDate).getTime() : 0;
+        all.push({ ...g, _ts: ts });
+      });
+    });
+    // Sort chronologically (live first within their time bucket via status nudge)
+    all.sort((a, b) => {
+      // Live games surface at top among same-bucket, then scheduled, then final
+      const rank = s => s === 'STATUS_IN_PROGRESS' ? 0 : (s === 'STATUS_SCHEDULED' ? 1 : 2);
+      const ra = rank(a.status), rb = rank(b.status);
+      if (ra !== rb) return ra - rb;
+      return a._ts - b._ts;
+    });
+    todoCache = all;
+    renderTodaySchedule();
+  } catch (e) {
+    console.error('[loadTodaySchedule]', e);
+    el.innerHTML = '<div class="todo-empty">Couldn\'t load today\'s schedule. ESPN APIs may be temporarily unavailable.</div>';
+  }
+}
+
+function renderTodaySchedule() {
+  const el = document.getElementById('todoList');
+  if (!el || !todoCache) return;
+
+  // Apply filter
+  let rows = todoCache;
+  if (todoFilter === 'LIVE') {
+    rows = rows.filter(g => g.status === 'STATUS_IN_PROGRESS');
+  } else if (todoFilter === 'SOCCER') {
+    rows = rows.filter(g => g.sport === 'EPL' || g.sport === 'UCL');
+  } else if (todoFilter === 'ATP') {
+    rows = rows.filter(g => g.sport === 'ATP' || g.sport === 'WTA');
+  } else if (todoFilter !== 'ALL') {
+    rows = rows.filter(g => g.sport === todoFilter);
+  }
+
+  // Update header count
+  const total = todoCache.length;
+  const live  = todoCache.filter(g => g.status === 'STATUS_IN_PROGRESS').length;
+  document.getElementById('todoCountLabel').textContent =
+    `${rows.length} events${live ? ` · ${live} live` : ''}${rows.length !== total ? ` of ${total}` : ''}`;
+
+  // Update chip counts
+  const countBySport = todoCache.reduce((a, g) => { a[g.sport] = (a[g.sport]||0) + 1; return a; }, {});
+  document.querySelectorAll('#todoFilters .sched-chip').forEach(b => {
+    const k = b.getAttribute('data-todo');
+    const existing = b.querySelector('.chip-count');
+    let count = 0;
+    if (k === 'ALL') count = total;
+    else if (k === 'LIVE') count = live;
+    else if (k === 'SOCCER') count = (countBySport.EPL||0) + (countBySport.UCL||0);
+    else if (k === 'ATP') count = (countBySport.ATP||0) + (countBySport.WTA||0);
+    else count = countBySport[k] || 0;
+    if (existing) existing.remove();
+    if (count > 0) {
+      const span = document.createElement('span');
+      span.className = 'chip-count';
+      span.textContent = count;
+      b.appendChild(span);
+    }
+  });
+
+  if (!rows.length) {
+    el.innerHTML = '<div class="todo-empty">No events match this filter.</div>';
+    return;
+  }
+
+  el.innerHTML = rows.map(g => {
+    const cls = g.status === 'STATUS_IN_PROGRESS' ? 'live' : (g.status === 'STATUS_FINAL' ? 'final' : '');
+    const statusBadge = g.status === 'STATUS_IN_PROGRESS'
+      ? '<span class="todo-status live">● Live</span>'
+      : g.status === 'STATUS_FINAL'
+      ? '<span class="todo-status final">Final</span>'
+      : '<span class="todo-status scheduled">Sched</span>';
+    const sportIcon = SPORT_ICON[g.sport] || '🔹';
+    const timeMain = g.status === 'STATUS_IN_PROGRESS' ? 'NOW' : (g.timeStr || g.time || '—');
+    const sportLabel = g.sport;
+    const nets = (g.networks || []).slice(0, 2).map(n =>
+      `<span class="espn-net ${n.cls}" style="padding:1px 4px;font-size:8px">${n.label}</span>`).join('');
+    return `<div class="todo-row ${cls}">
+      <div class="todo-time">${timeMain}<span class="todo-sub">${sportLabel}</span></div>
+      <div class="todo-sport-icon">${sportIcon}</div>
+      <div class="todo-event">
+        <div class="todo-event-name">${g.item}</div>
+        <div class="todo-event-meta">${nets}</div>
+      </div>
+      ${statusBadge}
+    </div>`;
+  }).join('');
+}
+
+// Refresh today's schedule every 5 minutes so live/final statuses stay fresh
+let todoTimer = null;
+function scheduleTodoRefresh() {
+  if (todoTimer) clearInterval(todoTimer);
+  todoTimer = setInterval(() => {
+    // Invalidate cache for today so we pick up live updates
+    if (todoTodayIso && espnCache[todoTodayIso]) delete espnCache[todoTodayIso];
+    loadTodaySchedule();
+  }, 5 * 60 * 1000);
+}
+
 window.addEventListener('DOMContentLoaded', async () => {
   await loadSchedule();
   schedViewWeek = getWeekKey(new Date());
   initAmpBadge();
   startBgPoller();
+  seedCalendarOnce();           // ← seed Annual Event Calendar on first visit
   if (!getToken()) { showTokenModal(); } else { loadData(); }
+  // Kick off the chronological schedule independently of token state
+  loadTodaySchedule();
+  scheduleTodoRefresh();
 });
 </script>
 </body>
