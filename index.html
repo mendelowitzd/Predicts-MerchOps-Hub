@@ -2558,30 +2558,45 @@ function getTodayScheduleItems() {
   return (items && items.length > 0) ? items : null;
 }
 function normalizeForMatch(s) { return (s||'').toLowerCase().replace(/[^a-z0-9]/g,''); }
+// ── Explicit combo slot → live themed combo mapping ─────────────────
+// Chad's daily mapping: the Nth generic combo slot for a sport maps to a
+// specific themed combo in the live data. Update this when planning new
+// combos for the day.
+const COMBO_SLOT_MAP = {
+  'NBA-1': 'san_antonio_forces_seven',
+  'NBA-2': 'ok_close_out',
+  'MLB-1': 'al_west_road_show',
+  'MLB-2': 'divisional_disruptors',
+};
+
 function mergePriorityWithLive(schedItems, liveEvents) {
   const lookup = {};
   (liveEvents||[]).forEach((e,i) => { lookup[normalizeForMatch(e.k)] = {orders:e.o,volume:e.v,act_rank:i+1,k:e.k}; });
 
-  // ── Pool of live themed combos for generic schedule slots ──
-  // The schedule often lists "MLB Combo", "NBA Combo", etc. as generic
-  // placeholders. Live data has specific themed combos (money_talks,
-  // peach_apple, etc.). We assign the top-N live combos (sorted by orders)
-  // sequentially to those generic slots so the Live Activity column shows
-  // meaningful numbers instead of "—".
+  // ── Fallback pool of live themed combos for any generic slot not in COMBO_SLOT_MAP ──
   const liveCombosSorted = (liveEvents||[])
     .filter(e => sportOf(e.k) === 'Combo')
-    .map((e,i) => ({ k:e.k, orders:e.o, volume:e.v, act_rank:i+1 /* will recompute */ }))
+    .map(e => ({ k:e.k, orders:e.o, volume:e.v }))
     .sort((a,b) => (b.orders||0) - (a.orders||0));
-  // Recompute act_rank by activity (orders desc)
   liveCombosSorted.forEach((c,i) => { c.act_rank = i+1; });
-  // Map by normalized key so direct lookups still work
   const liveCombosUsed = new Set();
+
+  // Per-sport-prefix counter — increments each time we hit a "NBA Combo",
+  // "MLB Combo", etc., so we can look up the right slot in COMBO_SLOT_MAP.
+  const comboCounters = {};
 
   function isGenericCombo(item, sport) {
     if (sport !== 'Combo') return false;
     const lo = (item||'').toLowerCase().trim();
-    // Generic combo placeholders that don't map 1:1 to a live themed combo
     return /^(mlb|nba|nhl|wnba)?\s*combo(\s*\d+)?$/i.test(lo);
+  }
+
+  // Returns the live event matching a key, with its rank in the orders list
+  function lookupLiveByKey(k) {
+    const idx = (liveEvents||[]).findIndex(e => e.k === k);
+    if (idx < 0) return null;
+    const e = liveEvents[idx];
+    return { orders: e.o, volume: e.v, act_rank: idx + 1, k: e.k };
   }
 
   return schedItems.map((si, i) => {
@@ -2598,14 +2613,33 @@ function mergePriorityWithLive(schedItems, liveEvents) {
       }
     }
 
-    // ── Generic combo slot: borrow the top unused live themed combo ──
+    // ── Generic combo slot: use COMBO_SLOT_MAP first, fall back to top-pool ──
     if (!match && isGenericCombo(si.item, si.sport)) {
-      const next = liveCombosSorted.find(c => !liveCombosUsed.has(c.k));
-      if (next) {
-        liveCombosUsed.add(next.k);
-        match = { orders: next.orders, volume: next.volume, act_rank: next.act_rank };
-        // Surface the themed combo name so users see what's actually firing
-        displayItem = `${si.item} → ${snakeDisplay(next.k)}`;
+      // Parse the sport prefix from the item name (NBA/MLB/NHL/WNBA)
+      const mPrefix = (si.item||'').match(/^(NBA|MLB|NHL|WNBA)/i);
+      const prefix = mPrefix ? mPrefix[1].toUpperCase() : 'GENERIC';
+      comboCounters[prefix] = (comboCounters[prefix] || 0) + 1;
+      const mapKey = `${prefix}-${comboCounters[prefix]}`;
+
+      // 1) Try the explicit slot mapping
+      const targetKey = COMBO_SLOT_MAP[mapKey];
+      if (targetKey) {
+        const liveMatch = lookupLiveByKey(targetKey);
+        if (liveMatch) {
+          match = liveMatch;
+          liveCombosUsed.add(targetKey);
+          displayItem = `${si.item} → ${snakeDisplay(targetKey)}`;
+        }
+      }
+
+      // 2) Fall back: top remaining themed combo by orders
+      if (!match) {
+        const next = liveCombosSorted.find(c => !liveCombosUsed.has(c.k));
+        if (next) {
+          liveCombosUsed.add(next.k);
+          match = { orders: next.orders, volume: next.volume, act_rank: next.act_rank };
+          displayItem = `${si.item} → ${snakeDisplay(next.k)}`;
+        }
       }
     }
 
