@@ -1454,7 +1454,8 @@ function parseEspnEvents(data, sport) {
     const away = comp?.competitors?.find(c => c.homeAway === 'away');
     const statusName = comp?.status?.type?.name || '';
     let shortName;
-    if (sport === 'PGA' || sport === 'Tennis') {
+    if (sport === 'PGA' || sport === 'Tennis' || sport === 'ATP' || sport === 'WTA') {
+      // ESPN tennis events use shortName like "J. Sinner vs S. Wawrinka"
       shortName = evt.shortName || evt.name || '—';
     } else {
       const awayT = away?.team?.shortDisplayName || away?.team?.abbreviation || '?';
