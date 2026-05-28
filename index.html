@@ -100,6 +100,8 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
 .b-UCL    { background: #eff6ff; color: #1e3a8a; border: 1px solid #93c5fd; }
 .b-ATP    { background: #f7fee7; color: #3f6212; border: 1px solid #bef264; }
 .b-WTA    { background: #fdf4ff; color: #7e22ce; border: 1px solid #e9d5ff; }
+.b-Politics { background: #f5f3ff; color: #6d28d9; border: 1px solid #c4b5fd; }
+.b-Macro    { background: #ecfeff; color: #0891b2; border: 1px solid #67e8f9; }
 .chart-wrap { position: relative; height: 220px; padding: 14px; }
 .donut-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); text-align: center; pointer-events: none; }
 .donut-total { font-size: 20px; font-weight: 800; }
@@ -996,7 +998,8 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
 <!-- ── COMBO BUILDER PANEL (Dylan's original iframe, defaulted to MLB) ── -->
 <div id="tab-combo" class="tab-panel">
   <iframe class="full-iframe" id="comboFrame" src="about:blank"
-    data-src="https://mendelowitzd.github.io/Predicts-Combo-Builder/?sport=MLB#MLB"
+    data-src="https://mendelowitzd.github.io/Predicts-Combo-Builder/"
+    onload="defaultComboBuilderToMLB(this)"
     title="Predicts Combo Builder"></iframe>
 </div>
 
@@ -1212,6 +1215,152 @@ async function loadSchedule() {
 // ═══════════════════════════════════════════════════════════
 // ESPN GAME FETCH
 // ═══════════════════════════════════════════════════════════
+// ── French Open placeholder matches (manual, for demo only) ──
+// 2026 Roland-Garros matches injected into Available Games so the
+// scheduler shows tennis even when ESPN's scoreboard hasn't published
+// brackets yet. NOT part of the data sync automation — purely decorative.
+const FRENCH_OPEN_PLACEHOLDERS = {
+  '2026-05-28': {
+    ATP: [
+      { item: 'J. Sinner vs S. Wawrinka',                  time: '5:00 AM ET' },
+      { item: 'A. Zverev vs L. Carballés Baena',           time: '8:00 AM ET' },
+      { item: 'N. Djokovic vs J. Lehecka',                 time: '9:00 AM ET' },
+      { item: 'D. Medvedev vs A. Bublik',                  time: '11:00 AM ET' },
+      { item: 'F. Tiafoe vs T. Etcheverry',                time: '12:30 PM ET' },
+    ],
+    WTA: [
+      { item: 'A. Sabalenka vs M. Frech',                  time: '5:00 AM ET' },
+      { item: 'C. Gauff vs C. Garcia',                     time: '7:30 AM ET' },
+      { item: 'B. Krejcikova vs D. Vekic',                 time: '10:00 AM ET' },
+      { item: 'Q. Zheng vs C. Burel',                      time: '11:30 AM ET' },
+    ],
+  },
+  '2026-05-29': {
+    ATP: [
+      { item: 'C. Alcaraz vs F. Cobolli',                  time: '5:00 AM ET' },
+      { item: 'T. Fritz vs M. Cilic',                      time: '8:00 AM ET' },
+      { item: 'H. Hurkacz vs M. Berrettini',               time: '10:00 AM ET' },
+      { item: 'A. de Minaur vs L. Sonego',                 time: '12:00 PM ET' },
+    ],
+    WTA: [
+      { item: 'I. Swiatek vs A. Bondar',                   time: '5:30 AM ET' },
+      { item: 'E. Rybakina vs P. Kudermetova',             time: '8:00 AM ET' },
+      { item: 'J. Pegula vs S. Stephens',                  time: '10:30 AM ET' },
+      { item: 'M. Andreeva vs E. Alexandrova',             time: '12:00 PM ET' },
+    ],
+  },
+  '2026-05-30': {
+    ATP: [
+      { item: '3rd Round — Sinner vs Paul',                time: '5:00 AM ET' },
+      { item: '3rd Round — Zverev vs Ruud',                time: '9:00 AM ET' },
+      { item: '3rd Round — Djokovic vs Auger-Aliassime',   time: '11:00 AM ET' },
+    ],
+    WTA: [
+      { item: '3rd Round — Sabalenka vs Andreeva',         time: '5:30 AM ET' },
+      { item: '3rd Round — Gauff vs Krejcikova',           time: '8:30 AM ET' },
+    ],
+  },
+  '2026-05-31': {
+    ATP: [
+      { item: '3rd Round — Alcaraz vs Tsitsipas',          time: '5:00 AM ET' },
+      { item: '3rd Round — Medvedev vs Rublev',            time: '8:00 AM ET' },
+      { item: '3rd Round — Fritz vs de Minaur',            time: '10:00 AM ET' },
+    ],
+    WTA: [
+      { item: '3rd Round — Swiatek vs Paolini',            time: '5:30 AM ET' },
+      { item: '3rd Round — Rybakina vs Pegula',            time: '9:00 AM ET' },
+    ],
+  },
+  '2026-06-01': {
+    ATP: [
+      { item: 'Round of 16 — Sinner vs Djokovic',          time: '8:00 AM ET' },
+      { item: 'Round of 16 — Alcaraz vs Zverev',           time: '11:00 AM ET' },
+    ],
+    WTA: [
+      { item: 'Round of 16 — Sabalenka vs Gauff',          time: '5:30 AM ET' },
+      { item: 'Round of 16 — Swiatek vs Rybakina',         time: '8:30 AM ET' },
+    ],
+  },
+  '2026-06-02': {
+    ATP: [
+      { item: 'Round of 16 — Medvedev vs Fritz',           time: '8:00 AM ET' },
+      { item: 'Round of 16 — Ruud vs Paul',                time: '11:00 AM ET' },
+    ],
+    WTA: [
+      { item: 'Round of 16 — Andreeva vs Krejcikova',      time: '5:30 AM ET' },
+      { item: 'Round of 16 — Pegula vs Vondrousova',       time: '9:00 AM ET' },
+    ],
+  },
+  '2026-06-03': {
+    ATP: [
+      { item: 'Quarterfinal — Sinner vs Medvedev',         time: '8:00 AM ET' },
+      { item: 'Quarterfinal — Alcaraz vs Ruud',            time: '11:00 AM ET' },
+    ],
+    WTA: [
+      { item: 'Quarterfinal — Sabalenka vs Andreeva',      time: '5:30 AM ET' },
+      { item: 'Quarterfinal — Swiatek vs Pegula',          time: '9:00 AM ET' },
+    ],
+  },
+  '2026-06-04': {
+    ATP: [
+      { item: 'Quarterfinal — Djokovic vs Fritz',          time: '9:00 AM ET' },
+    ],
+    WTA: [
+      { item: 'Quarterfinal — Gauff vs Rybakina',          time: '5:30 AM ET' },
+    ],
+  },
+  '2026-06-05': {
+    ATP: [
+      { item: 'Men\'s Semifinal #1',                       time: '9:00 AM ET' },
+      { item: 'Men\'s Semifinal #2',                       time: '12:30 PM ET' },
+    ],
+  },
+  '2026-06-06': {
+    WTA: [
+      { item: 'Women\'s Semifinal #1',                     time: '9:00 AM ET' },
+      { item: 'Women\'s Semifinal #2',                     time: '12:30 PM ET' },
+    ],
+  },
+  '2026-06-07': {
+    WTA: [
+      { item: 'Women\'s Final',                            time: '9:00 AM ET' },
+    ],
+  },
+  '2026-06-08': {
+    ATP: [
+      { item: 'Men\'s Final',                              time: '9:00 AM ET' },
+    ],
+  },
+};
+
+function buildPlaceholderEvents(sport, isoDate, placeholders) {
+  if (!placeholders) return [];
+  return placeholders.map((p, i) => {
+    // Convert "5:00 AM ET" → approximate UTC hour for the gameDate timestamp
+    const m = p.time.match(/(\d+):(\d+)\s*(AM|PM)/i);
+    let hh = 12;
+    if (m) {
+      hh = parseInt(m[1], 10);
+      if (m[3].toUpperCase() === 'PM' && hh < 12) hh += 12;
+      if (m[3].toUpperCase() === 'AM' && hh === 12) hh = 0;
+      hh = (hh + 4) % 24; // ET → UTC approx
+    }
+    const hhStr = String(hh).padStart(2, '0');
+    const mmStr = m ? m[2] : '00';
+    return {
+      id: `placeholder-${sport}-${isoDate}-${i}`,
+      sport,
+      item: p.item,
+      time: p.time,
+      status: 'STATUS_SCHEDULED',
+      networks: [{ label: 'TNT', cls: 'net-TNT' }],
+      gameDate: `${isoDate}T${hhStr}:${mmStr}:00Z`,
+      timeStr: p.time,
+      _placeholder: true,
+    };
+  });
+}
+
 async function fetchEspnForDay(isoDate) {
   if (espnCache[isoDate]) return espnCache[isoDate];
   const date = yyyymmdd(isoDate);
@@ -1228,6 +1377,12 @@ async function fetchEspnForDay(isoDate) {
     if (res.status === 'fulfilled' && res.value.games.length)
       grouped[res.value.sport] = res.value.games;
   });
+  // ── Merge French Open placeholders ──
+  const ph = FRENCH_OPEN_PLACEHOLDERS[isoDate];
+  if (ph) {
+    if (ph.ATP) grouped.ATP = [...(grouped.ATP||[]), ...buildPlaceholderEvents('ATP', isoDate, ph.ATP)];
+    if (ph.WTA) grouped.WTA = [...(grouped.WTA||[]), ...buildPlaceholderEvents('WTA', isoDate, ph.WTA)];
+  }
   espnCache[isoDate] = grouped;
   return grouped;
 }
@@ -2428,6 +2583,32 @@ function renderDashboard(data) {
   renderCoreSportsHeat(sports, data.events||[]);
 }
 
+// ── Default the Combo Builder iframe to MLB on load ──
+// Dylan's app exposes window.App.switchSport(sport). Both apps live on
+// mendelowitzd.github.io so same-origin script access works. We retry a
+// few times in case App initializes after the load event.
+function defaultComboBuilderToMLB(iframe) {
+  if (!iframe || iframe.dataset._mlbDefaulted === '1') return;
+  let tries = 0;
+  const attempt = () => {
+    tries++;
+    try {
+      const w = iframe.contentWindow;
+      if (w && w.App && typeof w.App.switchSport === 'function') {
+        w.App.switchSport('mlb');
+        iframe.dataset._mlbDefaulted = '1';
+        return;
+      }
+      // Fallback: click the MLB tab button directly if App isn't ready
+      const doc = iframe.contentDocument;
+      const btn = doc && doc.getElementById('tab-mlb');
+      if (btn) { btn.click(); iframe.dataset._mlbDefaulted = '1'; return; }
+    } catch(e) { /* cross-origin or other — ignore */ }
+    if (tries < 25) setTimeout(attempt, 120);
+  };
+  attempt();
+}
+
 // ── Bucket events into market categories for the bar chart ──
 function deriveMarketCategories(events) {
   const buckets = {};
@@ -2545,7 +2726,7 @@ const DAYS=['SUNDAY','MONDAY','TUESDAY','WEDNESDAY','THURSDAY','FRIDAY','SATURDA
 function todayKey(){const d=new Date();return`${DAYS[d.getDay()]} ${d.getMonth()+1}/${d.getDate()}`;}
 function fmtN(n){return(n==null||isNaN(n))?'—':Number(n).toLocaleString();}
 function fmtD(n){if(!n||isNaN(n))return'—';if(n>=1e6)return`$${(n/1e6).toFixed(1)}M`;if(n>=1000)return`$${(n/1000).toFixed(1)}K`;return`$${Number(n).toFixed(0)}`;}
-function sportColor(s){return{NBA:'#b91c1c',MLB:'#1e40af',NHL:'#1d4ed8',PGA:'#166534',Tennis:'#3f6212',Combo:'#9a3412',Futures:'#6d28d9',Other:'#475569'}[s]||'#475569';}
+function sportColor(s){return{NBA:'#b91c1c',MLB:'#1e40af',NHL:'#1d4ed8',NFL:'#9a3412',WNBA:'#be185d',PGA:'#166534',Tennis:'#3f6212',ATP:'#3f6212',WTA:'#7e22ce',EPL:'#065f46',UCL:'#1e3a8a',CFB:'#854d0e',CBB:'#9b1c2b',Combo:'#9a3412',Futures:'#6d28d9',Politics:'#7c3aed',Macro:'#0891b2',Other:'#475569'}[s]||'#475569';}
 function snakeDisplay(k){return k.replace(/_at_/g,' @ ').split(' @ ').map(seg=>seg.split('_').map((x,j)=>j===0&&x.length<=4?x.toUpperCase():x.charAt(0).toUpperCase()+x.slice(1)).join(' ')).join(' @ ');}
 function escHtml(s){return(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
 
@@ -2612,7 +2793,20 @@ function renderBar(id,obj,existing,color){
   return new Chart(ctx,{type:'bar',data:{labels:entries.map(([k])=>k),datasets:[{data:entries.map(([,v])=>v),backgroundColor:pal.slice(0,entries.length),borderRadius:4,borderSkipped:false}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>` ${fmtN(c.raw)} orders`}}},scales:{x:{grid:{color:'#f1f5f9'},ticks:{color:'#94a3b8',font:{size:10}}},y:{grid:{display:false},ticks:{color:'#0f172a',font:{size:11}}}}}});
 }
 
-const SPORT_FINGERPRINTS={nuggets:'NBA',timberwolves:'NBA',celtics:'NBA','76_ers':'NBA',knicks:'NBA',hawks:'NBA',rockets:'NBA',lakers:'NBA',cavaliers:'NBA',raptors:'NBA',pistons:'NBA',magic:'NBA',thunder:'NBA',suns:'NBA',spurs:'NBA',blazers:'NBA',warriors:'NBA',bulls:'NBA',pacers:'NBA',nets:'NBA',wizards:'NBA',grizzlies:'NBA',mavericks:'NBA',clippers:'NBA',heat:'NBA',bucks:'NBA',hornets:'NBA',pelicans:'NBA',kings:'NBA',jazz:'NBA',tigers:'MLB',braves:'MLB',royals:'MLB',athletics:'MLB',blue_jays:'MLB',twins:'MLB',giants:'MLB',phillies:'MLB',astros:'MLB',orioles:'MLB',rockies:'MLB',reds:'MLB',cardinals:'MLB',pirates:'MLB',diamondbacks:'MLB',brewers:'MLB',nationals:'MLB',mets:'MLB',dodgers:'MLB',padres:'MLB',rangers:'MLB',yankees:'MLB',red_sox:'MLB',mariners:'MLB',rays:'MLB',guardians:'MLB',cubs:'MLB',white_sox:'MLB',angels:'MLB',marlins:'MLB',golden_knights:'NHL',stars:'NHL',wild:'NHL',oilers:'NHL',ducks:'NHL',lightning:'NHL',canadiens:'NHL',bruins:'NHL',sabres:'NHL',flyers:'NHL',penguins:'NHL',hurricanes:'NHL',madrid_open:'Tennis',ruud:'Tennis',zverev:'Tennis',sinner:'Tennis',cadillac:'PGA',bitcoin:'Futures',nasdaq:'Futures'};
+const SPORT_FINGERPRINTS={nuggets:'NBA',timberwolves:'NBA',celtics:'NBA','76_ers':'NBA',knicks:'NBA',hawks:'NBA',rockets:'NBA',lakers:'NBA',cavaliers:'NBA',raptors:'NBA',pistons:'NBA',magic:'NBA',thunder:'NBA',suns:'NBA',spurs:'NBA',blazers:'NBA',warriors:'NBA',bulls:'NBA',pacers:'NBA',nets:'NBA',wizards:'NBA',grizzlies:'NBA',mavericks:'NBA',clippers:'NBA',heat:'NBA',bucks:'NBA',hornets:'NBA',pelicans:'NBA',kings:'NBA',jazz:'NBA',tigers:'MLB',braves:'MLB',royals:'MLB',athletics:'MLB',blue_jays:'MLB',twins:'MLB',giants:'MLB',phillies:'MLB',astros:'MLB',orioles:'MLB',rockies:'MLB',reds:'MLB',cardinals:'MLB',pirates:'MLB',diamondbacks:'MLB',brewers:'MLB',nationals:'MLB',mets:'MLB',dodgers:'MLB',padres:'MLB',rangers:'MLB',yankees:'MLB',red_sox:'MLB',mariners:'MLB',rays:'MLB',guardians:'MLB',cubs:'MLB',white_sox:'MLB',angels:'MLB',marlins:'MLB',golden_knights:'NHL',stars:'NHL',wild:'NHL',oilers:'NHL',ducks:'NHL',lightning:'NHL',canadiens:'NHL',bruins:'NHL',sabres:'NHL',flyers:'NHL',penguins:'NHL',hurricanes:'NHL',
+// Tennis tournament + player fingerprints (futures + select stars)
+madrid_open:'Tennis',french_open:'Tennis',roland_garros:'Tennis',wimbledon:'Tennis',us_open_tennis:'Tennis',australian_open:'Tennis',atp:'Tennis',wta:'Tennis',
+ruud:'Tennis',zverev:'Tennis',sinner:'Tennis',alcaraz:'Tennis',djokovic:'Tennis',medvedev:'Tennis',swiatek:'Tennis',sabalenka:'Tennis',gauff:'Tennis',rybakina:'Tennis',
+// WNBA teams (was being missed — Mercury/Liberty, Dream/Lynx etc. went to Other)
+liberty:'WNBA',mercury:'WNBA',dream:'WNBA',lynx:'WNBA',tempo:'WNBA',sky:'WNBA',sun:'WNBA',fire:'WNBA',mystics:'WNBA',storm:'WNBA',valkyries:'WNBA',sparks:'WNBA',wings:'WNBA',aces:'WNBA',fever:'WNBA',wnba_champion:'WNBA',
+// Soccer / UCL fingerprints
+psg:'UCL',paris_st:'UCL',arsenal:'EPL',man_city:'EPL',man_united:'EPL',liverpool:'EPL',chelsea:'EPL',tottenham:'EPL',real_madrid:'UCL',barcelona:'UCL',bayern:'UCL',inter:'UCL',world_cup_winner:'UCL',uefa_champions:'UCL',
+// Golf
+cadillac:'PGA',pga:'PGA',
+// Futures — crypto, commodities, stock indices, sports championship outright winners
+bitcoin:'Futures',ether:'Futures',crude_oil:'Futures',gold_futures:'Futures',silver_futures:'Futures',copper_futures:'Futures',natural_gas:'Futures',eur_usd:'Futures',
+s_p_500:'Futures',nasdaq:'Futures',dow_jones:'Futures',djia:'Futures',russell_2000:'Futures',
+stanley_cup:'Futures',super_bowl:'Futures',world_series:'Futures',nba_champion:'Futures',american_league:'Futures',national_league:'Futures',college_football_champion:'Futures',to_make_playoffs:'Futures'};
 
 // ── Themed sports combos — these don't have "combo" in the key but ARE combos ──
 const THEMED_COMBOS = [
@@ -2633,6 +2827,15 @@ function sportOf(k){
   // Themed combos (Peach Apple, Money Talks, etc.) — classify as Combo too
   for(const t of THEMED_COMBOS) if(lo.includes(t)) return 'Combo';
   for(const[f,s]of Object.entries(SPORT_FINGERPRINTS))if(lo.includes(f))return s;
+  // Politics: elections, midterms, nominees, party / majority outcomes
+  if(/election|midterm|democrat_nominee|republican_nominee|winning_party|house_majority|senate_majority/.test(lo)) return 'Politics';
+  // Macro / Econ: CPI, unemployment, payrolls, GDP, Fed funds rate
+  if(/consumer_price|unemployment_rate|non_farm_payroll|gross_domestic_product|gdp_increase|federal_funds_rate/.test(lo)) return 'Macro';
+  // Pattern fallback: tennis matches use "_vs_" (player_vs_player).
+  // Team-sport games use "_at_". So any "_vs_" event that didn't match a
+  // known soccer/team fingerprint above is almost certainly a tennis match
+  // (Fonseca vs Prizmic, Navone vs Mensik, Carabelli vs Rublev, etc.)
+  if(lo.includes('_vs_')) return 'Tennis';
   return'Other';
 }
 

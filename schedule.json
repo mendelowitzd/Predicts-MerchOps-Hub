@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-05-27T18:50:23.316670",
+  "updated": "2026-05-27T20:31:38.886822",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -234,6 +234,36 @@
           "time": "8:00 PM ET"
         },
         {
+          "sport": "ATP",
+          "item": "Navone vs Mensik (R2)",
+          "time": "5:00 AM ET"
+        },
+        {
+          "sport": "ATP",
+          "item": "Fonseca vs Prizmic (R2)",
+          "time": "7:00 AM ET"
+        },
+        {
+          "sport": "WTA",
+          "item": "Starodubtseva vs Rybakina (R2)",
+          "time": "8:00 AM ET"
+        },
+        {
+          "sport": "ATP",
+          "item": "Basavareddy vs Michelsen (R2)",
+          "time": "9:00 AM ET"
+        },
+        {
+          "sport": "ATP",
+          "item": "Carabelli vs Rublev (R2)",
+          "time": "10:00 AM ET"
+        },
+        {
+          "sport": "WTA",
+          "item": "Paolini vs Sierra (R2)",
+          "time": "11:00 AM ET"
+        },
+        {
           "sport": "MLB",
           "item": "Marlins @ Blue Jays",
           "time": "1:07 PM ET"
@@ -366,7 +396,42 @@
           "time": "8:00 PM ET"
         },
         {
-          "sport": "WNBA",
+          "sport": "ATP",
+          "item": "Sinner vs Wawrinka (R2)",
+          "time": "5:00 AM ET"
+        },
+        {
+          "sport": "WTA",
+          "item": "Sabalenka vs Frech (R2)",
+          "time": "5:30 AM ET"
+        },
+        {
+          "sport": "WTA",
+          "item": "Gauff vs Garcia (R2)",
+          "time": "7:30 AM ET"
+        },
+        {
+          "sport": "ATP",
+          "item": "Zverev vs Carball\u00e9s Baena (R2)",
+          "time": "8:00 AM ET"
+        },
+        {
+          "sport": "ATP",
+          "item": "Djokovic vs Lehecka (R2)",
+          "time": "9:00 AM ET"
+        },
+        {
+          "sport": "WTA",
+          "item": "Krejcikova vs Vekic (R2)",
+          "time": "10:00 AM ET"
+        },
+        {
+          "sport": "ATP",
+          "item": "Medvedev vs Bublik (R2)",
+          "time": "11:00 AM ET"
+        },
+        {
+          "sport": "WTA",
           "item": "Aces @ Wings",
           "time": "8:00 PM ET"
         },
@@ -431,6 +496,46 @@
           "sport": "NHL",
           "item": "Canadiens @ Hurricanes",
           "time": "8:00 PM ET"
+        },
+        {
+          "sport": "ATP",
+          "item": "Alcaraz vs Cobolli (R2)",
+          "time": "5:00 AM ET"
+        },
+        {
+          "sport": "WTA",
+          "item": "Swiatek vs Bondar (R2)",
+          "time": "5:30 AM ET"
+        },
+        {
+          "sport": "ATP",
+          "item": "Fritz vs Cilic (R2)",
+          "time": "8:00 AM ET"
+        },
+        {
+          "sport": "WTA",
+          "item": "Rybakina vs Kudermetova (R2)",
+          "time": "8:00 AM ET"
+        },
+        {
+          "sport": "ATP",
+          "item": "Hurkacz vs Berrettini (R2)",
+          "time": "10:00 AM ET"
+        },
+        {
+          "sport": "WTA",
+          "item": "Pegula vs Stephens (R2)",
+          "time": "10:30 AM ET"
+        },
+        {
+          "sport": "ATP",
+          "item": "de Minaur vs Sonego (R2)",
+          "time": "12:00 PM ET"
+        },
+        {
+          "sport": "WTA",
+          "item": "Andreeva vs Alexandrova (R2)",
+          "time": "12:00 PM ET"
         },
         {
           "sport": "WNBA",
@@ -585,6 +690,31 @@
           "time": "8:00 PM ET"
         },
         {
+          "sport": "ATP",
+          "item": "R3 \u2014 Sinner vs Paul",
+          "time": "5:00 AM ET"
+        },
+        {
+          "sport": "WTA",
+          "item": "R3 \u2014 Sabalenka vs Andreeva",
+          "time": "5:30 AM ET"
+        },
+        {
+          "sport": "WTA",
+          "item": "R3 \u2014 Gauff vs Krejcikova",
+          "time": "8:30 AM ET"
+        },
+        {
+          "sport": "ATP",
+          "item": "R3 \u2014 Zverev vs Ruud",
+          "time": "9:00 AM ET"
+        },
+        {
+          "sport": "ATP",
+          "item": "R3 \u2014 Djokovic vs Auger-Aliassime",
+          "time": "11:00 AM ET"
+        },
+        {
           "sport": "MLB",
           "item": "Tigers @ White Sox",
           "time": "2:10 PM ET"
@@ -692,6 +822,31 @@
           "time": "12:00 PM ET"
         },
         {
+          "sport": "ATP",
+          "item": "R3 \u2014 Alcaraz vs Tsitsipas",
+          "time": "5:00 AM ET"
+        },
+        {
+          "sport": "WTA",
+          "item": "R3 \u2014 Swiatek vs Paolini",
+          "time": "5:30 AM ET"
+        },
+        {
+          "sport": "ATP",
+          "item": "R3 \u2014 Medvedev vs Rublev",
+          "time": "8:00 AM ET"
+        },
+        {
+          "sport": "WTA",
+          "item": "R3 \u2014 Rybakina vs Pegula",
+          "time": "9:00 AM ET"
+        },
+        {
+          "sport": "ATP",
+          "item": "R3 \u2014 Fritz vs de Minaur",
+          "time": "10:00 AM ET"
+        },
+        {
           "sport": "MLB",
           "item": "Twins @ Pirates",
           "time": "1:35 PM ET"
@@ -760,6 +915,237 @@
           "sport": "MLB",
           "item": "Cubs @ Cardinals",
           "time": "7:20 PM ET"
+        }
+      ]
+    },
+    "2026-06-01": {
+      "MONDAY": [
+        {
+          "sport": "Combo",
+          "item": "MLB Combo",
+          "time": "1:05 PM ET"
+        },
+        {
+          "sport": "Combo",
+          "item": "MLB Combo",
+          "time": "7:05 PM ET"
+        },
+        {
+          "sport": "ATP",
+          "item": "R16 \u2014 Sinner vs Djokovic",
+          "time": "8:00 AM ET"
+        },
+        {
+          "sport": "ATP",
+          "item": "R16 \u2014 Alcaraz vs Zverev",
+          "time": "11:00 AM ET"
+        },
+        {
+          "sport": "WTA",
+          "item": "R16 \u2014 Sabalenka vs Gauff",
+          "time": "5:30 AM ET"
+        },
+        {
+          "sport": "WTA",
+          "item": "R16 \u2014 Swiatek vs Rybakina",
+          "time": "8:30 AM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Cardinals @ Cubs",
+          "time": "7:05 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Phillies @ Brewers",
+          "time": "8:10 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Padres @ Giants",
+          "time": "9:45 PM ET"
+        },
+        {
+          "sport": "NHL",
+          "item": "Stanley Cup Final \u2014 Game 1",
+          "time": "8:00 PM ET"
+        }
+      ],
+      "TUESDAY": [
+        {
+          "sport": "Combo",
+          "item": "MLB Combo",
+          "time": "7:05 PM ET"
+        },
+        {
+          "sport": "ATP",
+          "item": "R16 \u2014 Medvedev vs Fritz",
+          "time": "8:00 AM ET"
+        },
+        {
+          "sport": "ATP",
+          "item": "R16 \u2014 Ruud vs Paul",
+          "time": "11:00 AM ET"
+        },
+        {
+          "sport": "WTA",
+          "item": "R16 \u2014 Andreeva vs Krejcikova",
+          "time": "5:30 AM ET"
+        },
+        {
+          "sport": "WTA",
+          "item": "R16 \u2014 Pegula vs Vondrousova",
+          "time": "9:00 AM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Cardinals @ Cubs",
+          "time": "7:40 PM ET"
+        },
+        {
+          "sport": "NBA",
+          "item": "NBA Finals \u2014 Game 1",
+          "time": "8:30 PM ET"
+        }
+      ],
+      "WEDNESDAY": [
+        {
+          "sport": "Combo",
+          "item": "Tennis QF Combo",
+          "time": "9:00 AM ET"
+        },
+        {
+          "sport": "ATP",
+          "item": "QF \u2014 Sinner vs Medvedev",
+          "time": "8:00 AM ET"
+        },
+        {
+          "sport": "ATP",
+          "item": "QF \u2014 Alcaraz vs Ruud",
+          "time": "11:00 AM ET"
+        },
+        {
+          "sport": "WTA",
+          "item": "QF \u2014 Sabalenka vs Andreeva",
+          "time": "5:30 AM ET"
+        },
+        {
+          "sport": "WTA",
+          "item": "QF \u2014 Swiatek vs Pegula",
+          "time": "9:00 AM ET"
+        },
+        {
+          "sport": "NHL",
+          "item": "Stanley Cup Final \u2014 Game 2",
+          "time": "8:00 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Cardinals @ Cubs",
+          "time": "1:20 PM ET"
+        }
+      ],
+      "THURSDAY": [
+        {
+          "sport": "Combo",
+          "item": "Tennis QF Combo",
+          "time": "9:00 AM ET"
+        },
+        {
+          "sport": "ATP",
+          "item": "QF \u2014 Djokovic vs Fritz",
+          "time": "9:00 AM ET"
+        },
+        {
+          "sport": "WTA",
+          "item": "QF \u2014 Gauff vs Rybakina",
+          "time": "5:30 AM ET"
+        },
+        {
+          "sport": "NBA",
+          "item": "NBA Finals \u2014 Game 2",
+          "time": "8:30 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Reds @ Brewers",
+          "time": "7:40 PM ET"
+        }
+      ],
+      "FRIDAY": [
+        {
+          "sport": "Combo",
+          "item": "Tennis SF Combo",
+          "time": "9:00 AM ET"
+        },
+        {
+          "sport": "ATP",
+          "item": "Men's Semifinal #1",
+          "time": "9:00 AM ET"
+        },
+        {
+          "sport": "ATP",
+          "item": "Men's Semifinal #2",
+          "time": "12:30 PM ET"
+        },
+        {
+          "sport": "NHL",
+          "item": "Stanley Cup Final \u2014 Game 3",
+          "time": "8:00 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Multiple MLB games",
+          "time": "Various"
+        }
+      ],
+      "SATURDAY": [
+        {
+          "sport": "Combo",
+          "item": "Tennis SF Combo",
+          "time": "9:00 AM ET"
+        },
+        {
+          "sport": "WTA",
+          "item": "Women's Semifinal #1",
+          "time": "9:00 AM ET"
+        },
+        {
+          "sport": "WTA",
+          "item": "Women's Semifinal #2",
+          "time": "12:30 PM ET"
+        },
+        {
+          "sport": "NBA",
+          "item": "NBA Finals \u2014 Game 3",
+          "time": "8:30 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Daytime Baseball Slate",
+          "time": "Various"
+        }
+      ],
+      "SUNDAY": [
+        {
+          "sport": "Combo",
+          "item": "French Open Final Combo",
+          "time": "9:00 AM ET"
+        },
+        {
+          "sport": "WTA",
+          "item": "Women's Final \u2014 Roland-Garros",
+          "time": "9:00 AM ET"
+        },
+        {
+          "sport": "NHL",
+          "item": "Stanley Cup Final \u2014 Game 4",
+          "time": "8:00 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Sunday Baseball Slate",
+          "time": "Various"
         }
       ]
     }
@@ -1138,6 +1524,277 @@
           "type": "category",
           "label": "Financials",
           "icon": "\ud83d\udcc8"
+        },
+        {
+          "type": "category",
+          "label": "Politics",
+          "icon": "\ud83c\udfdb\ufe0f"
+        }
+      ]
+    },
+    "2026-06-01": {
+      "MONDAY": [
+        {
+          "type": "category",
+          "label": "Sports",
+          "icon": "\ud83c\udfc6"
+        },
+        {
+          "type": "event",
+          "label": "Sinner vs Djokovic",
+          "icon": "\ud83c\udfbe"
+        },
+        {
+          "type": "subcategory",
+          "label": "Tennis",
+          "icon": "\ud83c\udfbe"
+        },
+        {
+          "type": "subcategory",
+          "label": "MLB",
+          "icon": "\u26be"
+        },
+        {
+          "type": "subcategory",
+          "label": "NHL",
+          "icon": "\ud83c\udfd2"
+        },
+        {
+          "type": "subcategory",
+          "label": "MLB Combos",
+          "icon": "\ud83c\udfaf"
+        },
+        {
+          "type": "category",
+          "label": "Crypto",
+          "icon": "\u20bf"
+        },
+        {
+          "type": "category",
+          "label": "Politics",
+          "icon": "\ud83c\udfdb\ufe0f"
+        }
+      ],
+      "TUESDAY": [
+        {
+          "type": "category",
+          "label": "Sports",
+          "icon": "\ud83c\udfc6"
+        },
+        {
+          "type": "event",
+          "label": "NBA Finals G1",
+          "icon": "\ud83c\udfc0"
+        },
+        {
+          "type": "subcategory",
+          "label": "Tennis",
+          "icon": "\ud83c\udfbe"
+        },
+        {
+          "type": "subcategory",
+          "label": "NBA",
+          "icon": "\ud83c\udfc0"
+        },
+        {
+          "type": "subcategory",
+          "label": "MLB",
+          "icon": "\u26be"
+        },
+        {
+          "type": "subcategory",
+          "label": "MLB Combos",
+          "icon": "\ud83c\udfaf"
+        },
+        {
+          "type": "category",
+          "label": "Crypto",
+          "icon": "\u20bf"
+        },
+        {
+          "type": "category",
+          "label": "Politics",
+          "icon": "\ud83c\udfdb\ufe0f"
+        }
+      ],
+      "WEDNESDAY": [
+        {
+          "type": "category",
+          "label": "Sports",
+          "icon": "\ud83c\udfc6"
+        },
+        {
+          "type": "subcategory",
+          "label": "Tennis",
+          "icon": "\ud83c\udfbe"
+        },
+        {
+          "type": "subcategory",
+          "label": "NHL",
+          "icon": "\ud83c\udfd2"
+        },
+        {
+          "type": "subcategory",
+          "label": "MLB",
+          "icon": "\u26be"
+        },
+        {
+          "type": "subcategory",
+          "label": "MLB Combos",
+          "icon": "\ud83c\udfaf"
+        },
+        {
+          "type": "category",
+          "label": "Crypto",
+          "icon": "\u20bf"
+        },
+        {
+          "type": "category",
+          "label": "Politics",
+          "icon": "\ud83c\udfdb\ufe0f"
+        }
+      ],
+      "THURSDAY": [
+        {
+          "type": "category",
+          "label": "Sports",
+          "icon": "\ud83c\udfc6"
+        },
+        {
+          "type": "event",
+          "label": "NBA Finals G2",
+          "icon": "\ud83c\udfc0"
+        },
+        {
+          "type": "subcategory",
+          "label": "Tennis",
+          "icon": "\ud83c\udfbe"
+        },
+        {
+          "type": "subcategory",
+          "label": "NBA",
+          "icon": "\ud83c\udfc0"
+        },
+        {
+          "type": "subcategory",
+          "label": "MLB",
+          "icon": "\u26be"
+        },
+        {
+          "type": "category",
+          "label": "Crypto",
+          "icon": "\u20bf"
+        },
+        {
+          "type": "category",
+          "label": "Politics",
+          "icon": "\ud83c\udfdb\ufe0f"
+        }
+      ],
+      "FRIDAY": [
+        {
+          "type": "category",
+          "label": "Sports",
+          "icon": "\ud83c\udfc6"
+        },
+        {
+          "type": "event",
+          "label": "Men's Tennis SF",
+          "icon": "\ud83c\udfbe"
+        },
+        {
+          "type": "subcategory",
+          "label": "Tennis",
+          "icon": "\ud83c\udfbe"
+        },
+        {
+          "type": "subcategory",
+          "label": "NHL",
+          "icon": "\ud83c\udfd2"
+        },
+        {
+          "type": "subcategory",
+          "label": "MLB",
+          "icon": "\u26be"
+        },
+        {
+          "type": "category",
+          "label": "Crypto",
+          "icon": "\u20bf"
+        },
+        {
+          "type": "category",
+          "label": "Politics",
+          "icon": "\ud83c\udfdb\ufe0f"
+        }
+      ],
+      "SATURDAY": [
+        {
+          "type": "category",
+          "label": "Sports",
+          "icon": "\ud83c\udfc6"
+        },
+        {
+          "type": "event",
+          "label": "Women's Tennis SF",
+          "icon": "\ud83c\udfbe"
+        },
+        {
+          "type": "subcategory",
+          "label": "Tennis",
+          "icon": "\ud83c\udfbe"
+        },
+        {
+          "type": "subcategory",
+          "label": "NBA",
+          "icon": "\ud83c\udfc0"
+        },
+        {
+          "type": "subcategory",
+          "label": "MLB",
+          "icon": "\u26be"
+        },
+        {
+          "type": "category",
+          "label": "Crypto",
+          "icon": "\u20bf"
+        },
+        {
+          "type": "category",
+          "label": "Politics",
+          "icon": "\ud83c\udfdb\ufe0f"
+        }
+      ],
+      "SUNDAY": [
+        {
+          "type": "category",
+          "label": "Sports",
+          "icon": "\ud83c\udfc6"
+        },
+        {
+          "type": "event",
+          "label": "Women's French Open Final",
+          "icon": "\ud83c\udfbe"
+        },
+        {
+          "type": "subcategory",
+          "label": "Tennis",
+          "icon": "\ud83c\udfbe"
+        },
+        {
+          "type": "subcategory",
+          "label": "NHL",
+          "icon": "\ud83c\udfd2"
+        },
+        {
+          "type": "subcategory",
+          "label": "MLB",
+          "icon": "\u26be"
+        },
+        {
+          "type": "category",
+          "label": "Crypto",
+          "icon": "\u20bf"
         },
         {
           "type": "category",
@@ -1594,6 +2251,52 @@
               "sport": "MLB",
               "item": "Phillies @ Dodgers",
               "time": "4:10 PM ET"
+            }
+          ]
+        }
+      ]
+    },
+    "2026-06-01": {
+      "WEDNESDAY": [
+        {
+          "name": "French Open QF",
+          "items": [
+            {
+              "sport": "ATP",
+              "item": "Sinner vs Medvedev",
+              "time": "8:00 AM ET"
+            },
+            {
+              "sport": "ATP",
+              "item": "Alcaraz vs Ruud",
+              "time": "11:00 AM ET"
+            },
+            {
+              "sport": "WTA",
+              "item": "Sabalenka vs Andreeva",
+              "time": "5:30 AM ET"
+            },
+            {
+              "sport": "WTA",
+              "item": "Swiatek vs Pegula",
+              "time": "9:00 AM ET"
+            }
+          ]
+        }
+      ],
+      "FRIDAY": [
+        {
+          "name": "Men's Tennis SF",
+          "items": [
+            {
+              "sport": "ATP",
+              "item": "Men's Semifinal #1",
+              "time": "9:00 AM ET"
+            },
+            {
+              "sport": "ATP",
+              "item": "Men's Semifinal #2",
+              "time": "12:30 PM ET"
             }
           ]
         }
