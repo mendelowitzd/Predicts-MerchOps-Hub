@@ -1175,10 +1175,21 @@ const PN_SUBCATEGORIES = [
 // ═══════════════════════════════════════════════════════════
 // DATE / WEEK HELPERS
 // ═══════════════════════════════════════════════════════════
+// ── LOCAL ISO date helper ────────────────────────────────────────────
+// new Date().toISOString() returns UTC, which after ~8pm ET is already
+// "tomorrow". Use the browser's LOCAL calendar date instead so week keys
+// and "today" stay aligned with the user's wall clock.
+function localIsoDate(d) {
+  const yyyy = d.getFullYear();
+  const mm = String(d.getMonth() + 1).padStart(2, '0');
+  const dd = String(d.getDate()).padStart(2, '0');
+  return `${yyyy}-${mm}-${dd}`;
+}
+
 function getWeekKey(date) {
   const d = new Date(date), dow = d.getDay();
   d.setDate(d.getDate() + (dow === 0 ? -6 : 1 - dow));
-  return d.toISOString().slice(0, 10);
+  return localIsoDate(d);
 }
 function weekDateRange(wk) {
   const mon = new Date(wk+'T12:00:00'), sun = new Date(mon);
@@ -1192,7 +1203,7 @@ function dayDateForCol(wk, col) {
 }
 function dayIsoDate(wk, col) {
   const d = new Date(wk+'T12:00:00'); d.setDate(d.getDate() + col);
-  return d.toISOString().slice(0,10);
+  return localIsoDate(d);
 }
 function todayDayName() { const dow = new Date().getDay(); return dow === 0 ? 'SUNDAY' : WEEKDAYS[dow - 1]; }
 function yyyymmdd(isoDate) { return isoDate.replace(/-/g,''); }
@@ -1478,7 +1489,7 @@ function navigateWeek(dir) {
   } else {
     const d = new Date(schedViewWeek+'T12:00:00');
     d.setDate(d.getDate() + dir * 7);
-    schedViewWeek = d.toISOString().slice(0,10);
+    schedViewWeek = localIsoDate(d);
   }
   schedSelDay = null;
   renderScheduler();
@@ -3183,7 +3194,7 @@ let calEditingIdx    = null; // null = new, number = editing custom entry index
 
 // Default range: today → Dec 31 of current year (or next year if it's December)
 function defaultCalRange() {
-  const today = new Date().toISOString().slice(0,10);
+  const today = localIsoDate(new Date());
   const y = new Date().getFullYear();
   return { from: today, to: `${y}-12-31` };
 }
@@ -3265,7 +3276,7 @@ function openCalEventForm(idx) {
   form.style.display = '';
   if (idx === -1) {
     title.textContent = 'Add Event';
-    document.getElementById('calFormDate').value  = new Date().toISOString().slice(0,10);
+    document.getElementById('calFormDate').value  = localIsoDate(new Date());
     document.getElementById('calFormName').value  = '';
     document.getElementById('calFormCat').value   = 'Financial';
     document.getElementById('calFormNotes').value = '';
@@ -3365,7 +3376,7 @@ function renderCalendar() {
     groups[ym].push(e);
   });
 
-  const today = new Date().toISOString().slice(0,10);
+  const today = localIsoDate(new Date());
   const monthName = ym => {
     const [y,m] = ym.split('-');
     return new Date(+y, +m-1, 1).toLocaleDateString('en-US',{month:'long',year:'numeric'});
@@ -3382,7 +3393,7 @@ function renderCalendar() {
     const monthTotal = items.length;
     const monthEvents = items.map(e => {
       const isToday = e.date === today;
-      const isSoon = !isToday && e.date <= new Date(Date.now()+7*86400000).toISOString().slice(0,10);
+      const isSoon = !isToday && e.date <= localIsoDate(new Date(Date.now()+7*86400000));
       const editBtn = e._listSrc === 'custom'
         ? `<button class="cal-icon-btn edit" onclick="openCalEventForm(${e._listIdx})" title="Edit">✏️</button>` : '';
       const dateBadgeCls = isToday ? 'cal-date-today' : (isSoon ? 'cal-date-soon' : '');
@@ -3856,7 +3867,7 @@ function setTodoFilter(f) {
 async function loadTodaySchedule() {
   const el = document.getElementById('todoList');
   if (!el) return;
-  todoTodayIso = new Date().toISOString().slice(0,10);
+  todoTodayIso = localIsoDate(new Date());
   try {
     const grouped = await fetchEspnForDay(todoTodayIso); // { NBA:[...], MLB:[...], ... }
     // Flatten to a single array, decorate with sortable timestamp
