@@ -1201,15 +1201,49 @@ function yyyymmdd(isoDate) { return isoDate.replace(/-/g,''); }
 // SCHEDULE — LOAD
 // ═══════════════════════════════════════════════════════════
 async function loadSchedule() {
-  try {
-    const r = await fetch('./schedule.json?_='+Date.now());
-    scheduleData = r.ok ? await r.json() : { v:1, updated:new Date().toISOString(), weeks:{}, popnav_weeks:{}, carousel_weeks:{} };
-  } catch(e) {
-    scheduleData = { v:1, updated:new Date().toISOString(), weeks:{}, popnav_weeks:{}, carousel_weeks:{} };
+  const EMPTY = { v:1, updated:new Date().toISOString(), weeks:{}, popnav_weeks:{}, carousel_weeks:{} };
+
+  // Strategy 1: GitHub Contents API (bypasses GitHub Pages CDN cache entirely).
+  // Requires a PAT — only attempted if one is configured.
+  async function tryGitHubApi() {
+    const token = getToken();
+    if (!token) return null;
+    try {
+      const r = await fetch(
+        `https://api.github.com/repos/${GITHUB_REPO}/contents/schedule.json`,
+        { headers: { 'Authorization': `Bearer ${token}`, 'Accept': 'application/vnd.github+json' } }
+      );
+      if (!r.ok) return null;
+      const meta = await r.json();
+      return JSON.parse(atob(meta.content.replace(/[\r\n]/g, '')));
+    } catch(e) { console.warn('[loadSchedule] GitHub API fetch failed', e); return null; }
   }
+
+  // Strategy 2: direct fetch with cache-bust
+  async function tryDirectFetch(attempt) {
+    try {
+      const r = await fetch('./schedule.json?_='+Date.now()+'-'+attempt+'-'+Math.random());
+      if (!r.ok) return null;
+      return await r.json();
+    } catch(e) { console.warn(`[loadSchedule] direct fetch attempt ${attempt} failed`, e); return null; }
+  }
+
+  let data = await tryGitHubApi();
+  if (!data) data = await tryDirectFetch(1);
+  // Retry once if weeks is empty — could be a transient CDN miss
+  if (!data || !data.weeks || !Object.keys(data.weeks).length) {
+    console.warn('[loadSchedule] first attempt returned empty weeks; retrying');
+    await new Promise(r => setTimeout(r, 800));
+    const retry = await tryDirectFetch(2);
+    if (retry && retry.weeks && Object.keys(retry.weeks).length) data = retry;
+  }
+
+  scheduleData = data || EMPTY;
   if (!scheduleData.popnav_weeks)   scheduleData.popnav_weeks   = {};
   if (!scheduleData.carousel_weeks) scheduleData.carousel_weeks = {};
   if (!schedViewWeek) schedViewWeek = getWeekKey(new Date());
+  console.info('[loadSchedule] weeks loaded:', Object.keys(scheduleData.weeks||{}),
+               'updated:', scheduleData.updated || 'unknown');
 }
 
 // ═══════════════════════════════════════════════════════════
@@ -2414,6 +2448,8 @@ async function triggerRefresh() {
   if (btn.disabled) return;
   btn.disabled = true; btn.textContent = '⏳ Syncing…';
   if (pollTimer) { clearInterval(pollTimer); pollTimer = null; }
+  // Also reload the schedule — clears any stale empty state from initial load
+  try { await loadSchedule(); } catch(e) {}
   try {
     const res = await fetch(
       `https://api.github.com/repos/${GITHUB_REPO}/actions/workflows/${GITHUB_WORKFLOW}/dispatches`,
@@ -2740,6 +2776,7 @@ function renderPriority(arr, planSource) {
   const ps = document.getElementById('planSource');
   if (planSource==='scheduler') { ps.textContent='🟢 Hub Scheduler'; ps.style.color='var(--green)'; }
   else if (planSource==='live') { ps.textContent='🟢 live from SharePoint'; ps.style.color='var(--green)'; }
+  else if (planSource==='live-fallback') { ps.textContent='🟢 live activity (schedule unavailable)'; ps.style.color='var(--green)'; }
   else { ps.textContent='🟡 cached plan'; ps.style.color='var(--yellow)'; }
   const maxOrd = Math.max(...arr.map(r=>r.orders||0),1);
   const rows = arr.map(({rank,item,sport:s,time,orders,act_rank,status,volume})=>{
@@ -3404,9 +3441,16 @@ function showTab(name, btn) {
   document.getElementById('ampUploadBtn').style.display = isDb ? '' : 'none';
   document.getElementById('syncPulseWrap').style.display = (isDb && lastBgRefreshAt && Date.now()-lastBgRefreshAt < 60000) ? 'inline-flex' : 'none';
   if (name === 'scheduler') {
-    if (!scheduleData) loadSchedule().then(() => { schedViewWeek = getWeekKey(new Date()); renderScheduler(); });
-    else renderScheduler();
-    if (schedViewWeek === getWeekKey(new Date()) && !schedSelDay) selectDay(todayDayName());
+    // If scheduleData is missing OR has no weeks (initial load failed), re-fetch
+    const needsLoad = !scheduleData || !scheduleData.weeks || !Object.keys(scheduleData.weeks).length;
+    if (needsLoad) {
+      loadSchedule().then(() => { schedViewWeek = getWeekKey(new Date()); renderScheduler();
+        if (schedViewWeek === getWeekKey(new Date()) && !schedSelDay) selectDay(todayDayName());
+      });
+    } else {
+      renderScheduler();
+      if (schedViewWeek === getWeekKey(new Date()) && !schedSelDay) selectDay(todayDayName());
+    }
   }
   if (name === 'calendar') {
     renderCalendar();
