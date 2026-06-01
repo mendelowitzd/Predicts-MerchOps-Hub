@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-06-01T17:53:29.952Z",
+  "updated": "2026-06-01T17:53:34.772Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -3322,6 +3322,94 @@
         }
       ],
       "FRIDAY": [
+        {
+          "type": "category",
+          "label": "Sports",
+          "icon": "🏆"
+        },
+        {
+          "type": "event",
+          "label": "Knicks @ Spurs",
+          "icon": "🏀",
+          "sport": "NBA"
+        },
+        {
+          "type": "subcategory",
+          "label": "NBA Combos",
+          "icon": "🎯"
+        },
+        {
+          "type": "subcategory",
+          "label": "MLB Combos",
+          "icon": "🎯"
+        },
+        {
+          "type": "subcategory",
+          "label": "MLB",
+          "icon": "⚾"
+        },
+        {
+          "type": "subcategory",
+          "label": "NBA Finals",
+          "icon": "🏆"
+        },
+        {
+          "type": "subcategory",
+          "label": "Golf",
+          "icon": "⛳"
+        },
+        {
+          "type": "subcategory",
+          "label": "ATP",
+          "icon": "🎾"
+        },
+        {
+          "type": "subcategory",
+          "label": "WTA",
+          "icon": "🎾"
+        },
+        {
+          "type": "subcategory",
+          "label": "WNBA",
+          "icon": "🏀"
+        },
+        {
+          "type": "subcategory",
+          "label": "Stanley Cup",
+          "icon": "🏆"
+        },
+        {
+          "type": "subcategory",
+          "label": "FIFA World Cup",
+          "icon": "⚽"
+        },
+        {
+          "type": "subcategory",
+          "label": "WC Combos",
+          "icon": "📋"
+        },
+        {
+          "type": "category",
+          "label": "Crypto",
+          "icon": "₿"
+        },
+        {
+          "type": "category",
+          "label": "Commodities",
+          "icon": "🛢️"
+        },
+        {
+          "type": "category",
+          "label": "Financials",
+          "icon": "📈"
+        },
+        {
+          "type": "category",
+          "label": "Politics",
+          "icon": "🏛️"
+        }
+      ],
+      "SATURDAY": [
         {
           "type": "category",
           "label": "Sports",
