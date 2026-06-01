@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-06-01T15:22:25.369Z",
+  "updated": "2026-06-01T15:24:54.318Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -1744,6 +1744,73 @@
           "sport": "WNBA",
           "item": "Mercury @ Storm",
           "time": "10:00 PM ET"
+        }
+      ],
+      "THURSDAY": [
+        {
+          "sport": "NHL",
+          "item": "Golden Knights @ Hurricanes",
+          "time": "8:00 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Padres @ Phillies",
+          "time": "1:05 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Orioles @ Red Sox",
+          "time": "1:35 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Guardians @ Yankees",
+          "time": "1:35 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Giants @ Brewers",
+          "time": "2:10 PM ET"
+        },
+        {
+          "sport": "WNBA",
+          "item": "Dream @ Fever",
+          "time": "7:00 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Blue Jays @ Braves",
+          "time": "7:15 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Royals @ Twins",
+          "time": "7:40 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Athletics @ Cubs",
+          "time": "8:05 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Pirates @ Astros",
+          "time": "8:10 PM ET"
+        },
+        {
+          "sport": "WNBA",
+          "item": "Valkyries @ Lynx",
+          "time": "9:00 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Dodgers @ Diamondbacks",
+          "time": "9:40 PM ET"
+        },
+        {
+          "sport": "PGA",
+          "item": "the Memorial Tournament pres. by Workday",
+          "time": "12:00 AM ET"
         }
       ]
     }
