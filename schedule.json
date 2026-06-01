@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-05-27T21:38:50.619991",
+  "updated": "2026-06-01T13:33:33.829Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -1493,6 +1493,65 @@
           "time": "7:20 PM ET"
         }
       ]
+    },
+    "2026-06-01": {
+      "MONDAY": [
+        {
+          "sport": "MLB",
+          "item": "Tigers @ Rays",
+          "time": "6:40 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Marlins @ Nationals",
+          "time": "6:45 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Royals @ Reds",
+          "time": "7:10 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Giants @ Brewers",
+          "time": "7:40 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "White Sox @ Twins",
+          "time": "7:40 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Rangers @ Cardinals",
+          "time": "7:45 PM ET"
+        },
+        {
+          "sport": "WNBA",
+          "item": "Storm @ Wings",
+          "time": "8:00 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Rockies @ Angels",
+          "time": "9:38 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Dodgers @ Diamondbacks",
+          "time": "9:40 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Mets @ Mariners",
+          "time": "9:40 PM ET"
+        },
+        {
+          "sport": "WNBA",
+          "item": "Lynx @ Mercury",
+          "time": "10:00 PM ET"
+        }
+      ]
     }
   },
   "popnav_weeks": {
@@ -1501,434 +1560,434 @@
         {
           "type": "category",
           "label": "Sports",
-          "icon": "\ud83c\udfc6"
+          "icon": "🏆"
         },
         {
           "type": "event",
           "label": "Knicks @ Cavaliers",
-          "icon": "\ud83c\udfc0"
+          "icon": "🏀"
         },
         {
           "type": "subcategory",
           "label": "NBA Combos",
-          "icon": "\ud83c\udfaf"
+          "icon": "🎯"
         },
         {
           "type": "subcategory",
           "label": "MLB Combos",
-          "icon": "\ud83c\udfaf"
+          "icon": "🎯"
         },
         {
           "type": "subcategory",
           "label": "MLB",
-          "icon": "\u26be"
+          "icon": "⚾"
         },
         {
           "type": "subcategory",
           "label": "NHL",
-          "icon": "\ud83c\udfd2"
+          "icon": "🏒"
         },
         {
           "type": "subcategory",
           "label": "NBA",
-          "icon": "\ud83c\udfc0"
+          "icon": "🏀"
         },
         {
           "type": "subcategory",
           "label": "WNBA",
-          "icon": "\ud83c\udfc0"
+          "icon": "🏀"
         },
         {
           "type": "category",
           "label": "Crypto",
-          "icon": "\u20bf"
+          "icon": "₿"
         },
         {
           "type": "category",
           "label": "Commodities",
-          "icon": "\ud83d\udee2\ufe0f"
+          "icon": "🛢️"
         },
         {
           "type": "category",
           "label": "Financials",
-          "icon": "\ud83d\udcc8"
+          "icon": "📈"
         },
         {
           "type": "category",
           "label": "Politics",
-          "icon": "\ud83c\udfdb\ufe0f"
+          "icon": "🏛️"
         }
       ],
       "TUESDAY": [
         {
           "type": "category",
           "label": "Sports",
-          "icon": "\ud83c\udfc6"
+          "icon": "🏆"
         },
         {
           "type": "event",
           "label": "Spurs @ Thunder",
-          "icon": "\ud83c\udfc0"
+          "icon": "🏀"
         },
         {
           "type": "subcategory",
           "label": "NBA Combos",
-          "icon": "\ud83c\udfaf"
+          "icon": "🎯"
         },
         {
           "type": "subcategory",
           "label": "MLB Combos",
-          "icon": "\ud83c\udfaf"
+          "icon": "🎯"
         },
         {
           "type": "subcategory",
           "label": "MLB",
-          "icon": "\u26be"
+          "icon": "⚾"
         },
         {
           "type": "subcategory",
           "label": "NHL",
-          "icon": "\ud83c\udfd2"
+          "icon": "🏒"
         },
         {
           "type": "subcategory",
           "label": "NBA",
-          "icon": "\ud83c\udfc0"
+          "icon": "🏀"
         },
         {
           "type": "category",
           "label": "Crypto",
-          "icon": "\u20bf"
+          "icon": "₿"
         },
         {
           "type": "category",
           "label": "Commodities",
-          "icon": "\ud83d\udee2\ufe0f"
+          "icon": "🛢️"
         },
         {
           "type": "category",
           "label": "Financials",
-          "icon": "\ud83d\udcc8"
+          "icon": "📈"
         },
         {
           "type": "category",
           "label": "Politics",
-          "icon": "\ud83c\udfdb\ufe0f"
+          "icon": "🏛️"
         }
       ],
       "WEDNESDAY": [
         {
           "type": "category",
           "label": "Sports",
-          "icon": "\ud83c\udfc6"
+          "icon": "🏆"
         },
         {
           "type": "event",
           "label": "Knicks @ Cavaliers",
-          "icon": "\ud83c\udfc0"
+          "icon": "🏀"
         },
         {
           "type": "subcategory",
           "label": "NBA Combos",
-          "icon": "\ud83c\udfaf"
+          "icon": "🎯"
         },
         {
           "type": "subcategory",
           "label": "MLB Combos",
-          "icon": "\ud83c\udfaf"
+          "icon": "🎯"
         },
         {
           "type": "subcategory",
           "label": "MLB",
-          "icon": "\u26be"
+          "icon": "⚾"
         },
         {
           "type": "subcategory",
           "label": "NHL",
-          "icon": "\ud83c\udfd2"
+          "icon": "🏒"
         },
         {
           "type": "subcategory",
           "label": "NBA",
-          "icon": "\ud83c\udfc0"
+          "icon": "🏀"
         },
         {
           "type": "subcategory",
           "label": "WNBA",
-          "icon": "\ud83c\udfc0"
+          "icon": "🏀"
         },
         {
           "type": "category",
           "label": "Crypto",
-          "icon": "\u20bf"
+          "icon": "₿"
         },
         {
           "type": "category",
           "label": "Commodities",
-          "icon": "\ud83d\udee2\ufe0f"
+          "icon": "🛢️"
         },
         {
           "type": "category",
           "label": "Financials",
-          "icon": "\ud83d\udcc8"
+          "icon": "📈"
         },
         {
           "type": "category",
           "label": "Politics",
-          "icon": "\ud83c\udfdb\ufe0f"
+          "icon": "🏛️"
         }
       ],
       "THURSDAY": [
         {
           "type": "category",
           "label": "Sports",
-          "icon": "\ud83c\udfc6"
+          "icon": "🏆"
         },
         {
           "type": "event",
           "label": "Thunder @ Spurs",
-          "icon": "\ud83c\udfc0"
+          "icon": "🏀"
         },
         {
           "type": "subcategory",
           "label": "NBA Combos",
-          "icon": "\ud83c\udfaf"
+          "icon": "🎯"
         },
         {
           "type": "subcategory",
           "label": "MLB Combos",
-          "icon": "\ud83c\udfaf"
+          "icon": "🎯"
         },
         {
           "type": "subcategory",
           "label": "MLB",
-          "icon": "\u26be"
+          "icon": "⚾"
         },
         {
           "type": "subcategory",
           "label": "NHL",
-          "icon": "\ud83c\udfd2"
+          "icon": "🏒"
         },
         {
           "type": "subcategory",
           "label": "NBA",
-          "icon": "\ud83c\udfc0"
+          "icon": "🏀"
         },
         {
           "type": "subcategory",
           "label": "WNBA",
-          "icon": "\ud83c\udfc0"
+          "icon": "🏀"
         },
         {
           "type": "category",
           "label": "Crypto",
-          "icon": "\u20bf"
+          "icon": "₿"
         },
         {
           "type": "category",
           "label": "Commodities",
-          "icon": "\ud83d\udee2\ufe0f"
+          "icon": "🛢️"
         },
         {
           "type": "category",
           "label": "Financials",
-          "icon": "\ud83d\udcc8"
+          "icon": "📈"
         },
         {
           "type": "category",
           "label": "Politics",
-          "icon": "\ud83c\udfdb\ufe0f"
+          "icon": "🏛️"
         }
       ],
       "FRIDAY": [
         {
           "type": "category",
           "label": "Sports",
-          "icon": "\ud83c\udfc6"
+          "icon": "🏆"
         },
         {
           "type": "event",
           "label": "Knicks @ Cavaliers",
-          "icon": "\ud83c\udfc0"
+          "icon": "🏀"
         },
         {
           "type": "subcategory",
           "label": "NBA Combos",
-          "icon": "\ud83c\udfaf"
+          "icon": "🎯"
         },
         {
           "type": "subcategory",
           "label": "MLB Combos",
-          "icon": "\ud83c\udfaf"
+          "icon": "🎯"
         },
         {
           "type": "subcategory",
           "label": "MLB",
-          "icon": "\u26be"
+          "icon": "⚾"
         },
         {
           "type": "subcategory",
           "label": "NHL",
-          "icon": "\ud83c\udfd2"
+          "icon": "🏒"
         },
         {
           "type": "subcategory",
           "label": "UCL",
-          "icon": "\u26bd"
+          "icon": "⚽"
         },
         {
           "type": "subcategory",
           "label": "NBA",
-          "icon": "\ud83c\udfc0"
+          "icon": "🏀"
         },
         {
           "type": "subcategory",
           "label": "WNBA",
-          "icon": "\ud83c\udfc0"
+          "icon": "🏀"
         },
         {
           "type": "category",
           "label": "Crypto",
-          "icon": "\u20bf"
+          "icon": "₿"
         },
         {
           "type": "category",
           "label": "Commodities",
-          "icon": "\ud83d\udee2\ufe0f"
+          "icon": "🛢️"
         },
         {
           "type": "category",
           "label": "Financials",
-          "icon": "\ud83d\udcc8"
+          "icon": "📈"
         },
         {
           "type": "category",
           "label": "Politics",
-          "icon": "\ud83c\udfdb\ufe0f"
+          "icon": "🏛️"
         }
       ],
       "SATURDAY": [
         {
           "type": "category",
           "label": "Sports",
-          "icon": "\ud83c\udfc6"
+          "icon": "🏆"
         },
         {
           "type": "event",
           "label": "Spurs @ Thunder",
-          "icon": "\ud83c\udfc0"
+          "icon": "🏀"
         },
         {
           "type": "subcategory",
           "label": "NBA Combos",
-          "icon": "\ud83c\udfaf"
+          "icon": "🎯"
         },
         {
           "type": "subcategory",
           "label": "MLB Combos",
-          "icon": "\ud83c\udfaf"
+          "icon": "🎯"
         },
         {
           "type": "subcategory",
           "label": "MLB",
-          "icon": "\u26be"
+          "icon": "⚾"
         },
         {
           "type": "subcategory",
           "label": "NHL",
-          "icon": "\ud83c\udfd2"
+          "icon": "🏒"
         },
         {
           "type": "subcategory",
           "label": "NBA",
-          "icon": "\ud83c\udfc0"
+          "icon": "🏀"
         },
         {
           "type": "subcategory",
           "label": "WNBA",
-          "icon": "\ud83c\udfc0"
+          "icon": "🏀"
         },
         {
           "type": "category",
           "label": "Crypto",
-          "icon": "\u20bf"
+          "icon": "₿"
         },
         {
           "type": "category",
           "label": "Commodities",
-          "icon": "\ud83d\udee2\ufe0f"
+          "icon": "🛢️"
         },
         {
           "type": "category",
           "label": "Financials",
-          "icon": "\ud83d\udcc8"
+          "icon": "📈"
         },
         {
           "type": "category",
           "label": "Politics",
-          "icon": "\ud83c\udfdb\ufe0f"
+          "icon": "🏛️"
         }
       ],
       "SUNDAY": [
         {
           "type": "category",
           "label": "Sports",
-          "icon": "\ud83c\udfc6"
+          "icon": "🏆"
         },
         {
           "type": "event",
           "label": "Knicks @ Cavaliers",
-          "icon": "\ud83c\udfc0"
+          "icon": "🏀"
         },
         {
           "type": "subcategory",
           "label": "NBA Combos",
-          "icon": "\ud83c\udfaf"
+          "icon": "🎯"
         },
         {
           "type": "subcategory",
           "label": "MLB Combos",
-          "icon": "\ud83c\udfaf"
+          "icon": "🎯"
         },
         {
           "type": "subcategory",
           "label": "MLB",
-          "icon": "\u26be"
+          "icon": "⚾"
         },
         {
           "type": "subcategory",
           "label": "NHL",
-          "icon": "\ud83c\udfd2"
+          "icon": "🏒"
         },
         {
           "type": "subcategory",
           "label": "NBA",
-          "icon": "\ud83c\udfc0"
+          "icon": "🏀"
         },
         {
           "type": "subcategory",
           "label": "WNBA",
-          "icon": "\ud83c\udfc0"
+          "icon": "🏀"
         },
         {
           "type": "category",
           "label": "Crypto",
-          "icon": "\u20bf"
+          "icon": "₿"
         },
         {
           "type": "category",
           "label": "Commodities",
-          "icon": "\ud83d\udee2\ufe0f"
+          "icon": "🛢️"
         },
         {
           "type": "category",
           "label": "Financials",
-          "icon": "\ud83d\udcc8"
+          "icon": "📈"
         },
         {
           "type": "category",
           "label": "Politics",
-          "icon": "\ud83c\udfdb\ufe0f"
+          "icon": "🏛️"
         }
       ]
     },
@@ -1937,434 +1996,434 @@
         {
           "type": "category",
           "label": "Sports",
-          "icon": "\ud83c\udfc6"
+          "icon": "🏆"
         },
         {
           "type": "event",
           "label": "Knicks @ Cavaliers",
-          "icon": "\ud83c\udfc0"
+          "icon": "🏀"
         },
         {
           "type": "subcategory",
           "label": "NBA Combos",
-          "icon": "\ud83c\udfaf"
+          "icon": "🎯"
         },
         {
           "type": "subcategory",
           "label": "MLB Combos",
-          "icon": "\ud83c\udfaf"
+          "icon": "🎯"
         },
         {
           "type": "subcategory",
           "label": "MLB",
-          "icon": "\u26be"
+          "icon": "⚾"
         },
         {
           "type": "subcategory",
           "label": "NHL",
-          "icon": "\ud83c\udfd2"
+          "icon": "🏒"
         },
         {
           "type": "subcategory",
           "label": "NBA",
-          "icon": "\ud83c\udfc0"
+          "icon": "🏀"
         },
         {
           "type": "subcategory",
           "label": "WNBA",
-          "icon": "\ud83c\udfc0"
+          "icon": "🏀"
         },
         {
           "type": "category",
           "label": "Crypto",
-          "icon": "\u20bf"
+          "icon": "₿"
         },
         {
           "type": "category",
           "label": "Commodities",
-          "icon": "\ud83d\udee2\ufe0f"
+          "icon": "🛢️"
         },
         {
           "type": "category",
           "label": "Financials",
-          "icon": "\ud83d\udcc8"
+          "icon": "📈"
         },
         {
           "type": "category",
           "label": "Politics",
-          "icon": "\ud83c\udfdb\ufe0f"
+          "icon": "🏛️"
         }
       ],
       "TUESDAY": [
         {
           "type": "category",
           "label": "Sports",
-          "icon": "\ud83c\udfc6"
+          "icon": "🏆"
         },
         {
           "type": "event",
           "label": "Spurs @ Thunder",
-          "icon": "\ud83c\udfc0"
+          "icon": "🏀"
         },
         {
           "type": "subcategory",
           "label": "NBA Combos",
-          "icon": "\ud83c\udfaf"
+          "icon": "🎯"
         },
         {
           "type": "subcategory",
           "label": "MLB Combos",
-          "icon": "\ud83c\udfaf"
+          "icon": "🎯"
         },
         {
           "type": "subcategory",
           "label": "MLB",
-          "icon": "\u26be"
+          "icon": "⚾"
         },
         {
           "type": "subcategory",
           "label": "NHL",
-          "icon": "\ud83c\udfd2"
+          "icon": "🏒"
         },
         {
           "type": "subcategory",
           "label": "NBA",
-          "icon": "\ud83c\udfc0"
+          "icon": "🏀"
         },
         {
           "type": "category",
           "label": "Crypto",
-          "icon": "\u20bf"
+          "icon": "₿"
         },
         {
           "type": "category",
           "label": "Commodities",
-          "icon": "\ud83d\udee2\ufe0f"
+          "icon": "🛢️"
         },
         {
           "type": "category",
           "label": "Financials",
-          "icon": "\ud83d\udcc8"
+          "icon": "📈"
         },
         {
           "type": "category",
           "label": "Politics",
-          "icon": "\ud83c\udfdb\ufe0f"
+          "icon": "🏛️"
         }
       ],
       "WEDNESDAY": [
         {
           "type": "category",
           "label": "Sports",
-          "icon": "\ud83c\udfc6"
+          "icon": "🏆"
         },
         {
           "type": "event",
           "label": "Knicks @ Cavaliers",
-          "icon": "\ud83c\udfc0"
+          "icon": "🏀"
         },
         {
           "type": "subcategory",
           "label": "NBA Combos",
-          "icon": "\ud83c\udfaf"
+          "icon": "🎯"
         },
         {
           "type": "subcategory",
           "label": "MLB Combos",
-          "icon": "\ud83c\udfaf"
+          "icon": "🎯"
         },
         {
           "type": "subcategory",
           "label": "MLB",
-          "icon": "\u26be"
+          "icon": "⚾"
         },
         {
           "type": "subcategory",
           "label": "NHL",
-          "icon": "\ud83c\udfd2"
+          "icon": "🏒"
         },
         {
           "type": "subcategory",
           "label": "NBA",
-          "icon": "\ud83c\udfc0"
+          "icon": "🏀"
         },
         {
           "type": "subcategory",
           "label": "WNBA",
-          "icon": "\ud83c\udfc0"
+          "icon": "🏀"
         },
         {
           "type": "category",
           "label": "Crypto",
-          "icon": "\u20bf"
+          "icon": "₿"
         },
         {
           "type": "category",
           "label": "Commodities",
-          "icon": "\ud83d\udee2\ufe0f"
+          "icon": "🛢️"
         },
         {
           "type": "category",
           "label": "Financials",
-          "icon": "\ud83d\udcc8"
+          "icon": "📈"
         },
         {
           "type": "category",
           "label": "Politics",
-          "icon": "\ud83c\udfdb\ufe0f"
+          "icon": "🏛️"
         }
       ],
       "THURSDAY": [
         {
           "type": "category",
           "label": "Sports",
-          "icon": "\ud83c\udfc6"
+          "icon": "🏆"
         },
         {
           "type": "event",
           "label": "Thunder @ Spurs",
-          "icon": "\ud83c\udfc0"
+          "icon": "🏀"
         },
         {
           "type": "subcategory",
           "label": "NBA Combos",
-          "icon": "\ud83c\udfaf"
+          "icon": "🎯"
         },
         {
           "type": "subcategory",
           "label": "MLB Combos",
-          "icon": "\ud83c\udfaf"
+          "icon": "🎯"
         },
         {
           "type": "subcategory",
           "label": "MLB",
-          "icon": "\u26be"
+          "icon": "⚾"
         },
         {
           "type": "subcategory",
           "label": "NHL",
-          "icon": "\ud83c\udfd2"
+          "icon": "🏒"
         },
         {
           "type": "subcategory",
           "label": "NBA",
-          "icon": "\ud83c\udfc0"
+          "icon": "🏀"
         },
         {
           "type": "subcategory",
           "label": "WNBA",
-          "icon": "\ud83c\udfc0"
+          "icon": "🏀"
         },
         {
           "type": "category",
           "label": "Crypto",
-          "icon": "\u20bf"
+          "icon": "₿"
         },
         {
           "type": "category",
           "label": "Commodities",
-          "icon": "\ud83d\udee2\ufe0f"
+          "icon": "🛢️"
         },
         {
           "type": "category",
           "label": "Financials",
-          "icon": "\ud83d\udcc8"
+          "icon": "📈"
         },
         {
           "type": "category",
           "label": "Politics",
-          "icon": "\ud83c\udfdb\ufe0f"
+          "icon": "🏛️"
         }
       ],
       "FRIDAY": [
         {
           "type": "category",
           "label": "Sports",
-          "icon": "\ud83c\udfc6"
+          "icon": "🏆"
         },
         {
           "type": "event",
           "label": "Knicks @ Cavaliers",
-          "icon": "\ud83c\udfc0"
+          "icon": "🏀"
         },
         {
           "type": "subcategory",
           "label": "NBA Combos",
-          "icon": "\ud83c\udfaf"
+          "icon": "🎯"
         },
         {
           "type": "subcategory",
           "label": "MLB Combos",
-          "icon": "\ud83c\udfaf"
+          "icon": "🎯"
         },
         {
           "type": "subcategory",
           "label": "MLB",
-          "icon": "\u26be"
+          "icon": "⚾"
         },
         {
           "type": "subcategory",
           "label": "NHL",
-          "icon": "\ud83c\udfd2"
+          "icon": "🏒"
         },
         {
           "type": "subcategory",
           "label": "UCL",
-          "icon": "\u26bd"
+          "icon": "⚽"
         },
         {
           "type": "subcategory",
           "label": "NBA",
-          "icon": "\ud83c\udfc0"
+          "icon": "🏀"
         },
         {
           "type": "subcategory",
           "label": "WNBA",
-          "icon": "\ud83c\udfc0"
+          "icon": "🏀"
         },
         {
           "type": "category",
           "label": "Crypto",
-          "icon": "\u20bf"
+          "icon": "₿"
         },
         {
           "type": "category",
           "label": "Commodities",
-          "icon": "\ud83d\udee2\ufe0f"
+          "icon": "🛢️"
         },
         {
           "type": "category",
           "label": "Financials",
-          "icon": "\ud83d\udcc8"
+          "icon": "📈"
         },
         {
           "type": "category",
           "label": "Politics",
-          "icon": "\ud83c\udfdb\ufe0f"
+          "icon": "🏛️"
         }
       ],
       "SATURDAY": [
         {
           "type": "category",
           "label": "Sports",
-          "icon": "\ud83c\udfc6"
+          "icon": "🏆"
         },
         {
           "type": "event",
           "label": "Spurs @ Thunder",
-          "icon": "\ud83c\udfc0"
+          "icon": "🏀"
         },
         {
           "type": "subcategory",
           "label": "NBA Combos",
-          "icon": "\ud83c\udfaf"
+          "icon": "🎯"
         },
         {
           "type": "subcategory",
           "label": "MLB Combos",
-          "icon": "\ud83c\udfaf"
+          "icon": "🎯"
         },
         {
           "type": "subcategory",
           "label": "MLB",
-          "icon": "\u26be"
+          "icon": "⚾"
         },
         {
           "type": "subcategory",
           "label": "NHL",
-          "icon": "\ud83c\udfd2"
+          "icon": "🏒"
         },
         {
           "type": "subcategory",
           "label": "NBA",
-          "icon": "\ud83c\udfc0"
+          "icon": "🏀"
         },
         {
           "type": "subcategory",
           "label": "WNBA",
-          "icon": "\ud83c\udfc0"
+          "icon": "🏀"
         },
         {
           "type": "category",
           "label": "Crypto",
-          "icon": "\u20bf"
+          "icon": "₿"
         },
         {
           "type": "category",
           "label": "Commodities",
-          "icon": "\ud83d\udee2\ufe0f"
+          "icon": "🛢️"
         },
         {
           "type": "category",
           "label": "Financials",
-          "icon": "\ud83d\udcc8"
+          "icon": "📈"
         },
         {
           "type": "category",
           "label": "Politics",
-          "icon": "\ud83c\udfdb\ufe0f"
+          "icon": "🏛️"
         }
       ],
       "SUNDAY": [
         {
           "type": "category",
           "label": "Sports",
-          "icon": "\ud83c\udfc6"
+          "icon": "🏆"
         },
         {
           "type": "event",
           "label": "Knicks @ Cavaliers",
-          "icon": "\ud83c\udfc0"
+          "icon": "🏀"
         },
         {
           "type": "subcategory",
           "label": "NBA Combos",
-          "icon": "\ud83c\udfaf"
+          "icon": "🎯"
         },
         {
           "type": "subcategory",
           "label": "MLB Combos",
-          "icon": "\ud83c\udfaf"
+          "icon": "🎯"
         },
         {
           "type": "subcategory",
           "label": "MLB",
-          "icon": "\u26be"
+          "icon": "⚾"
         },
         {
           "type": "subcategory",
           "label": "NHL",
-          "icon": "\ud83c\udfd2"
+          "icon": "🏒"
         },
         {
           "type": "subcategory",
           "label": "NBA",
-          "icon": "\ud83c\udfc0"
+          "icon": "🏀"
         },
         {
           "type": "subcategory",
           "label": "WNBA",
-          "icon": "\ud83c\udfc0"
+          "icon": "🏀"
         },
         {
           "type": "category",
           "label": "Crypto",
-          "icon": "\u20bf"
+          "icon": "₿"
         },
         {
           "type": "category",
           "label": "Commodities",
-          "icon": "\ud83d\udee2\ufe0f"
+          "icon": "🛢️"
         },
         {
           "type": "category",
           "label": "Financials",
-          "icon": "\ud83d\udcc8"
+          "icon": "📈"
         },
         {
           "type": "category",
           "label": "Politics",
-          "icon": "\ud83c\udfdb\ufe0f"
+          "icon": "🏛️"
         }
       ]
     }
