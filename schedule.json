@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-06-01T17:51:22.076Z",
+  "updated": "2026-06-01T17:51:40.671Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -3067,6 +3067,12 @@
           "type": "category",
           "label": "Sports",
           "icon": "🏆"
+        },
+        {
+          "type": "event",
+          "label": "Golden Knights @ Hurricanes",
+          "icon": "🏒",
+          "sport": "NHL"
         },
         {
           "type": "subcategory",
