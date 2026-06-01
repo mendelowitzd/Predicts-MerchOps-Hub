@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-06-01T16:09:55.721Z",
+  "updated": "2026-06-01T16:10:31.870Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -1917,11 +1917,6 @@
       ],
       "SATURDAY": [
         {
-          "sport": "MLB",
-          "item": "Mets @ Padres",
-          "time": "10:10 PM ET"
-        },
-        {
           "sport": "PGA",
           "item": "the Memorial Tournament pres. by Workday",
           "time": "12:00 AM ET"
@@ -2019,6 +2014,11 @@
         {
           "sport": "MLB",
           "item": "Angels @ Dodgers",
+          "time": "10:10 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Mets @ Padres",
           "time": "10:10 PM ET"
         }
       ]
