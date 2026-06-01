@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-06-01T17:53:40.201Z",
+  "updated": "2026-06-01T17:53:48.673Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -3416,12 +3416,6 @@
           "icon": "🏆"
         },
         {
-          "type": "event",
-          "label": "Knicks @ Spurs",
-          "icon": "🏀",
-          "sport": "NBA"
-        },
-        {
           "type": "subcategory",
           "label": "NBA Combos",
           "icon": "🎯"
@@ -3502,12 +3496,6 @@
           "type": "category",
           "label": "Sports",
           "icon": "🏆"
-        },
-        {
-          "type": "event",
-          "label": "Knicks @ Spurs",
-          "icon": "🏀",
-          "sport": "NBA"
         },
         {
           "type": "subcategory",
