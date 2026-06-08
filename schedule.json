@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-06-08T17:38:29.656Z",
+  "updated": "2026-06-08T17:38:42.690Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -4482,6 +4482,84 @@
           "label": "Hurricanes @ Golden Knights",
           "icon": "🏒",
           "sport": "NHL"
+        }
+      ],
+      "WEDNESDAY": [
+        {
+          "type": "category",
+          "label": "Sports",
+          "icon": "🏆"
+        },
+        {
+          "type": "subcategory",
+          "label": "NBA Combos",
+          "icon": "🎯"
+        },
+        {
+          "type": "subcategory",
+          "label": "MLB Combos",
+          "icon": "🎯"
+        },
+        {
+          "type": "subcategory",
+          "label": "MLB",
+          "icon": "⚾"
+        },
+        {
+          "type": "subcategory",
+          "label": "NBA Championship",
+          "icon": "🏆"
+        },
+        {
+          "type": "subcategory",
+          "label": "WNBA",
+          "icon": "🏀"
+        },
+        {
+          "type": "subcategory",
+          "label": "Stanley Cup",
+          "icon": "🏆"
+        },
+        {
+          "type": "subcategory",
+          "label": "World Cup",
+          "icon": "⚽"
+        },
+        {
+          "type": "subcategory",
+          "label": "WC Combos",
+          "icon": "📋"
+        },
+        {
+          "type": "subcategory",
+          "label": "WC Specials",
+          "icon": "📋"
+        },
+        {
+          "type": "category",
+          "label": "Crypto",
+          "icon": "₿"
+        },
+        {
+          "type": "category",
+          "label": "Commodities",
+          "icon": "🛢️"
+        },
+        {
+          "type": "category",
+          "label": "Financials",
+          "icon": "📈"
+        },
+        {
+          "type": "category",
+          "label": "Politics",
+          "icon": "🏛️"
+        },
+        {
+          "type": "event",
+          "label": "Spurs @ Knicks",
+          "icon": "🏀",
+          "sport": "NBA"
         }
       ]
     }
