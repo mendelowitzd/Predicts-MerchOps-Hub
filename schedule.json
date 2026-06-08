@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-06-08T17:43:47.834Z",
+  "updated": "2026-06-08T17:43:50.089Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -4660,6 +4660,78 @@
         }
       ],
       "SATURDAY": [
+        {
+          "type": "category",
+          "label": "Sports",
+          "icon": "🏆"
+        },
+        {
+          "type": "event",
+          "label": "WC Combos",
+          "icon": "🔹"
+        },
+        {
+          "type": "event",
+          "label": "WC Games",
+          "icon": "🔹"
+        },
+        {
+          "type": "event",
+          "label": "USA v Australia",
+          "icon": "🔹"
+        },
+        {
+          "type": "subcategory",
+          "label": "NBA Combos",
+          "icon": "🎯"
+        },
+        {
+          "type": "subcategory",
+          "label": "MLB Combos",
+          "icon": "🎯"
+        },
+        {
+          "type": "subcategory",
+          "label": "MLB",
+          "icon": "⚾"
+        },
+        {
+          "type": "subcategory",
+          "label": "WNBA",
+          "icon": "🏀"
+        },
+        {
+          "type": "subcategory",
+          "label": "NBA Championship",
+          "icon": "🏆"
+        },
+        {
+          "type": "subcategory",
+          "label": "Stanley Cup",
+          "icon": "🏆"
+        },
+        {
+          "type": "category",
+          "label": "Crypto",
+          "icon": "₿"
+        },
+        {
+          "type": "category",
+          "label": "Commodities",
+          "icon": "🛢️"
+        },
+        {
+          "type": "category",
+          "label": "Financials",
+          "icon": "📈"
+        },
+        {
+          "type": "category",
+          "label": "Politics",
+          "icon": "🏛️"
+        }
+      ],
+      "SUNDAY": [
         {
           "type": "category",
           "label": "Sports",
