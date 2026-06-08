@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-06-08T17:38:42.690Z",
+  "updated": "2026-06-08T17:38:49.192Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -4402,8 +4402,44 @@
         },
         {
           "type": "subcategory",
-          "label": "FIFA World Cup",
+          "label": "World Cup",
           "icon": "⚽"
+        },
+        {
+          "type": "subcategory",
+          "label": "WC Combos",
+          "icon": "📋"
+        },
+        {
+          "type": "subcategory",
+          "label": "WC Specials",
+          "icon": "📋"
+        },
+        {
+          "type": "category",
+          "label": "Crypto",
+          "icon": "₿"
+        },
+        {
+          "type": "category",
+          "label": "Commodities",
+          "icon": "🛢️"
+        },
+        {
+          "type": "category",
+          "label": "Financials",
+          "icon": "📈"
+        },
+        {
+          "type": "category",
+          "label": "Politics",
+          "icon": "🏛️"
+        },
+        {
+          "type": "event",
+          "label": "Golden Knights @ Hurricanes",
+          "icon": "🏒",
+          "sport": "NHL"
         }
       ],
       "TUESDAY": [
