@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-06-08T17:44:00.258Z",
+  "updated": "2026-06-08T17:44:09.516Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -4384,11 +4384,6 @@
           "type": "event",
           "label": "WC Games",
           "icon": "🔹"
-        },
-        {
-          "type": "subcategory",
-          "label": "NBA Combos",
-          "icon": "🎯"
         },
         {
           "type": "subcategory",
