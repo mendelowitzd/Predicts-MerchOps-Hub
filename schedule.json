@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-06-08T17:44:09.516Z",
+  "updated": "2026-06-08T17:44:15.273Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -4741,11 +4741,6 @@
           "type": "event",
           "label": "USA v Australia",
           "icon": "🔹"
-        },
-        {
-          "type": "subcategory",
-          "label": "NBA Combos",
-          "icon": "🎯"
         },
         {
           "type": "subcategory",
