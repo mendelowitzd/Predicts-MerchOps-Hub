@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-06-08T16:54:58.658Z",
+  "updated": "2026-06-08T17:38:14.057Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -4291,6 +4291,119 @@
           "type": "category",
           "label": "Sports",
           "icon": "🏆"
+        },
+        {
+          "type": "event",
+          "label": "Spurs @ Knicks",
+          "icon": "🏀",
+          "sport": "NBA"
+        },
+        {
+          "type": "subcategory",
+          "label": "NBA Combos",
+          "icon": "🎯"
+        },
+        {
+          "type": "subcategory",
+          "label": "MLB Combos",
+          "icon": "🎯"
+        },
+        {
+          "type": "subcategory",
+          "label": "MLB",
+          "icon": "⚾"
+        },
+        {
+          "type": "subcategory",
+          "label": "NBA Championship",
+          "icon": "🏆"
+        },
+        {
+          "type": "subcategory",
+          "label": "WNBA",
+          "icon": "🏀"
+        },
+        {
+          "type": "subcategory",
+          "label": "Stanley Cup",
+          "icon": "🏆"
+        },
+        {
+          "type": "subcategory",
+          "label": "World Cup",
+          "icon": "⚽"
+        },
+        {
+          "type": "subcategory",
+          "label": "WC Combos",
+          "icon": "📋"
+        },
+        {
+          "type": "subcategory",
+          "label": "WC Specials",
+          "icon": "📋"
+        },
+        {
+          "type": "category",
+          "label": "Crypto",
+          "icon": "₿"
+        },
+        {
+          "type": "category",
+          "label": "Commodities",
+          "icon": "🛢️"
+        },
+        {
+          "type": "category",
+          "label": "Financials",
+          "icon": "📈"
+        },
+        {
+          "type": "category",
+          "label": "Politics",
+          "icon": "🏛️"
+        }
+      ],
+      "THURSDAY": [
+        {
+          "type": "category",
+          "label": "Sports",
+          "icon": "🏆"
+        },
+        {
+          "type": "subcategory",
+          "label": "NBA Combos",
+          "icon": "🎯"
+        },
+        {
+          "type": "subcategory",
+          "label": "MLB Combos",
+          "icon": "🎯"
+        },
+        {
+          "type": "subcategory",
+          "label": "MLB",
+          "icon": "⚾"
+        },
+        {
+          "type": "subcategory",
+          "label": "NBA Championship",
+          "icon": "🏆"
+        },
+        {
+          "type": "subcategory",
+          "label": "WNBA",
+          "icon": "🏀"
+        },
+        {
+          "type": "subcategory",
+          "label": "Stanley Cup",
+          "icon": "🏆"
+        },
+        {
+          "type": "subcategory",
+          "label": "FIFA World Cup",
+          "icon": "⚽"
         }
       ]
     }
