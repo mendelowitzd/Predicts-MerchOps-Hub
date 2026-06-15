@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-06-15T14:46:23.131Z",
+  "updated": "2026-06-15T14:46:44.789Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -7028,6 +7028,63 @@
             {
               "sport": "MLB",
               "item": "Nationals @ Rays",
+              "time": "4:10 PM ET"
+            }
+          ]
+        }
+      ],
+      "SUNDAY": [
+        {
+          "name": "",
+          "items": [
+            {
+              "sport": "MLB",
+              "item": "Reds @ Yankees",
+              "time": "1:35 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Brewers @ Braves",
+              "time": "1:35 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "White Sox @ Tigers",
+              "time": "1:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Giants @ Marlins",
+              "time": "1:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Nationals @ Rays",
+              "time": "1:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Guardians @ Astros",
+              "time": "2:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Blue Jays @ Cubs",
+              "time": "2:20 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Padres @ Rangers",
+              "time": "2:35 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Orioles @ Dodgers",
+              "time": "4:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Red Sox @ Mariners",
               "time": "4:10 PM ET"
             }
           ]
