@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-06-15T14:45:48.704Z",
+  "updated": "2026-06-15T14:46:07.850Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -6950,6 +6950,11 @@
             },
             {
               "sport": "MLB",
+              "item": "Brewers @ Braves",
+              "time": "7:15 PM ET"
+            },
+            {
+              "sport": "MLB",
               "item": "Padres @ Rangers",
               "time": "8:05 PM ET"
             },
@@ -6967,11 +6972,6 @@
               "sport": "MLB",
               "item": "Pirates @ Rockies",
               "time": "8:40 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Angels @ Athletics",
-              "time": "9:40 PM ET"
             },
             {
               "sport": "MLB",
