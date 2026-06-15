@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-06-15T14:46:07.850Z",
+  "updated": "2026-06-15T14:46:23.131Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -6987,6 +6987,48 @@
               "sport": "MLB",
               "item": "Red Sox @ Mariners",
               "time": "10:10 PM ET"
+            }
+          ]
+        }
+      ],
+      "SATURDAY": [
+        {
+          "name": "",
+          "items": [
+            {
+              "sport": "MLB",
+              "item": "White Sox @ Tigers",
+              "time": "1:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Reds @ Yankees",
+              "time": "1:35 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Blue Jays @ Cubs",
+              "time": "2:20 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Padres @ Rangers",
+              "time": "4:05 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Brewers @ Braves",
+              "time": "4:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Giants @ Marlins",
+              "time": "4:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Nationals @ Rays",
+              "time": "4:10 PM ET"
             }
           ]
         }
