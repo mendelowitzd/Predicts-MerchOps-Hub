@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-06-22T16:15:56.710Z",
+  "updated": "2026-06-22T16:17:02.144Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -3758,6 +3758,98 @@
           "sport": "WNBA",
           "item": "Liberty @ Storm",
           "time": "10:00 PM ET"
+        }
+      ],
+      "FRIDAY": [
+        {
+          "sport": "MLB",
+          "item": "Reds @ Pirates",
+          "time": "6:40 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Astros @ Tigers",
+          "time": "6:40 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Nationals @ Orioles",
+          "time": "7:05 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Rangers @ Blue Jays",
+          "time": "7:07 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Diamondbacks @ Rays",
+          "time": "7:10 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Yankees @ Red Sox",
+          "time": "7:10 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Phillies @ Mets",
+          "time": "7:10 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Mariners @ Guardians",
+          "time": "7:10 PM ET"
+        },
+        {
+          "sport": "WNBA",
+          "item": "Mystics @ Sun",
+          "time": "7:30 PM ET"
+        },
+        {
+          "sport": "WNBA",
+          "item": "Fire @ Sky",
+          "time": "7:30 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Royals @ White Sox",
+          "time": "7:40 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Cubs @ Brewers",
+          "time": "7:45 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Rockies @ Twins",
+          "time": "8:10 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Marlins @ Cardinals",
+          "time": "8:15 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Athletics @ Angels",
+          "time": "9:38 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Dodgers @ Padres",
+          "time": "9:45 PM ET"
+        },
+        {
+          "sport": "WNBA",
+          "item": "Dream @ Valkyries",
+          "time": "10:00 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Braves @ Giants",
+          "time": "10:15 PM ET"
         }
       ]
     }
