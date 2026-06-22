@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-06-22T16:22:58.698Z",
+  "updated": "2026-06-22T16:23:12.813Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -7919,6 +7919,78 @@
             {
               "sport": "WNBA",
               "item": "Dream @ Valkyries",
+              "time": "10:00 PM ET"
+            }
+          ]
+        }
+      ],
+      "THURSDAY": [
+        {
+          "name": "",
+          "items": [
+            {
+              "sport": "MLB",
+              "item": "Royals @ Rays",
+              "time": "12:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Mariners @ Pirates",
+              "time": "12:35 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Athletics @ Giants",
+              "time": "3:45 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Astros @ Tigers",
+              "time": "6:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Phillies @ Nationals",
+              "time": "6:45 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Rangers @ Blue Jays",
+              "time": "7:07 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Cubs @ Mets",
+              "time": "7:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Yankees @ Red Sox",
+              "time": "7:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Diamondbacks @ Cardinals",
+              "time": "7:45 PM ET"
+            }
+          ]
+        },
+        {
+          "name": "",
+          "items": [
+            {
+              "sport": "WNBA",
+              "item": "Sparks @ Tempo",
+              "time": "7:00 PM ET"
+            },
+            {
+              "sport": "WNBA",
+              "item": "Wings @ Aces",
+              "time": "10:00 PM ET"
+            },
+            {
+              "sport": "WNBA",
+              "item": "Liberty @ Storm",
               "time": "10:00 PM ET"
             }
           ]
