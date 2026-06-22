@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-06-22T16:23:58.896Z",
+  "updated": "2026-06-22T16:24:15.766Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -8176,6 +8176,88 @@
               "sport": "WNBA",
               "item": "Dream @ Storm",
               "time": "9:00 PM ET"
+            }
+          ]
+        }
+      ],
+      "SUNDAY": [
+        {
+          "name": "",
+          "items": [
+            {
+              "sport": "MLB",
+              "item": "Nationals @ Orioles",
+              "time": "1:35 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Reds @ Pirates",
+              "time": "1:35 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Rangers @ Blue Jays",
+              "time": "1:37 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Diamondbacks @ Rays",
+              "time": "1:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Astros @ Tigers",
+              "time": "1:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Phillies @ Mets",
+              "time": "1:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Mariners @ Guardians",
+              "time": "1:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Cubs @ Brewers",
+              "time": "2:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Rockies @ Twins",
+              "time": "2:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Royals @ White Sox",
+              "time": "2:10 PM ET"
+            }
+          ]
+        },
+        {
+          "name": "",
+          "items": [
+            {
+              "sport": "WNBA",
+              "item": "Lynx @ Wings",
+              "time": "2:00 PM ET"
+            },
+            {
+              "sport": "WNBA",
+              "item": "Fire @ Mystics",
+              "time": "3:00 PM ET"
+            },
+            {
+              "sport": "WNBA",
+              "item": "Aces @ Sky",
+              "time": "4:00 PM ET"
+            },
+            {
+              "sport": "WNBA",
+              "item": "Liberty @ Valkyries",
+              "time": "7:00 PM ET"
             }
           ]
         }
