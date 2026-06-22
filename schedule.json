@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-06-22T16:21:04.347Z",
+  "updated": "2026-06-22T16:21:26.683Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -7781,6 +7781,63 @@
               "sport": "WNBA",
               "item": "Wings @ Storm",
               "time": "10:00 PM ET"
+            }
+          ]
+        }
+      ],
+      "TUESDAY": [
+        {
+          "name": "",
+          "items": [
+            {
+              "sport": "MLB",
+              "item": "Astros @ Blue Jays",
+              "time": "4:07 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Royals @ Rays",
+              "time": "6:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Yankees @ Tigers",
+              "time": "6:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Mariners @ Pirates",
+              "time": "6:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Rangers @ Marlins",
+              "time": "6:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Phillies @ Nationals",
+              "time": "6:45 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Cubs @ Mets",
+              "time": "7:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Brewers @ Reds",
+              "time": "7:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Dodgers @ Twins",
+              "time": "7:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Guardians @ White Sox",
+              "time": "7:40 PM ET"
             }
           ]
         }
