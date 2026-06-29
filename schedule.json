@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-06-29T16:20:38.127Z",
+  "updated": "2026-06-29T16:20:45.094Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -10002,6 +10002,26 @@
           "event": "Ecuador @ Mexico",
           "sport": "WorldCup",
           "time": "9:00 PM ET"
+        }
+      ],
+      "WEDNESDAY": [
+        {
+          "title": "",
+          "event": "Congo DR @ England",
+          "sport": "WorldCup",
+          "time": "12:00 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Senegal @ Belgium",
+          "sport": "WorldCup",
+          "time": "4:00 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Bosnia-Herz @ USA",
+          "sport": "WorldCup",
+          "time": "8:00 PM ET"
         }
       ]
     }
