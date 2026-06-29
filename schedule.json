@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-06-29T16:21:26.005Z",
+  "updated": "2026-06-29T16:21:41.044Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -4326,11 +4326,6 @@
       ],
       "THURSDAY": [
         {
-          "sport": "PGA",
-          "item": "John Deere Classic",
-          "time": "12:00 AM ET"
-        },
-        {
           "sport": "ATP",
           "item": "Wimbledon",
           "time": "Final"
@@ -4412,11 +4407,6 @@
         }
       ],
       "FRIDAY": [
-        {
-          "sport": "PGA",
-          "item": "John Deere Classic",
-          "time": "12:00 AM ET"
-        },
         {
           "sport": "ATP",
           "item": "Wimbledon",
@@ -4514,11 +4504,6 @@
         }
       ],
       "SATURDAY": [
-        {
-          "sport": "PGA",
-          "item": "John Deere Classic",
-          "time": "12:00 AM ET"
-        },
         {
           "sport": "ATP",
           "item": "Wimbledon",
@@ -4621,11 +4606,6 @@
         }
       ],
       "SUNDAY": [
-        {
-          "sport": "PGA",
-          "item": "John Deere Classic",
-          "time": "12:00 AM ET"
-        },
         {
           "sport": "ATP",
           "item": "Wimbledon",
