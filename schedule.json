@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-06-29T16:19:55.128Z",
+  "updated": "2026-06-29T16:20:01.828Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -9941,6 +9941,21 @@
               "sport": "MLB",
               "item": "Giants @ Rockies",
               "time": "4:00 PM ET"
+            }
+          ]
+        },
+        {
+          "name": "WNBA",
+          "items": [
+            {
+              "sport": "WNBA",
+              "item": "Wings @ Tempo",
+              "time": "3:00 PM ET"
+            },
+            {
+              "sport": "WNBA",
+              "item": "Fever @ Aces",
+              "time": "7:00 PM ET"
             }
           ]
         }
