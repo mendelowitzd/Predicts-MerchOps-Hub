@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-06-29T16:08:14.345Z",
+  "updated": "2026-06-29T16:08:25.703Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -6882,6 +6882,70 @@
           "type": "subcategory",
           "label": "Golf",
           "icon": "⛳"
+        },
+        {
+          "type": "category",
+          "label": "Crypto",
+          "icon": "₿"
+        },
+        {
+          "type": "category",
+          "label": "Commodities",
+          "icon": "🛢️"
+        },
+        {
+          "type": "category",
+          "label": "Financials",
+          "icon": "📈"
+        },
+        {
+          "type": "category",
+          "label": "Politics",
+          "icon": "🏛️"
+        }
+      ],
+      "THURSDAY": [
+        {
+          "type": "category",
+          "label": "Sports",
+          "icon": "🏆",
+          "permanent": true,
+          "pinnedPos": 1
+        },
+        {
+          "type": "subcategory",
+          "label": "WC Combos",
+          "icon": "📋"
+        },
+        {
+          "type": "subcategory",
+          "label": "MLB Combos",
+          "icon": "🎯"
+        },
+        {
+          "type": "subcategory",
+          "label": "MLB",
+          "icon": "⚾"
+        },
+        {
+          "type": "subcategory",
+          "label": "Golf",
+          "icon": "⛳"
+        },
+        {
+          "type": "subcategory",
+          "label": "Mens Tennis",
+          "icon": "🎾"
+        },
+        {
+          "type": "subcategory",
+          "label": "Womens Tennis",
+          "icon": "🎾"
+        },
+        {
+          "type": "subcategory",
+          "label": "WC Games",
+          "icon": "⚽"
         },
         {
           "type": "category",
