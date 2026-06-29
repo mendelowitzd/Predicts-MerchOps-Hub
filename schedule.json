@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-06-29T16:21:02.845Z",
+  "updated": "2026-06-29T16:21:13.795Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -10062,6 +10062,20 @@
           "event": "Ghana @ Colombia",
           "sport": "WorldCup",
           "time": "9:30 PM ET"
+        }
+      ],
+      "SATURDAY": [
+        {
+          "title": "",
+          "event": "RD32 W3 @ Canada",
+          "sport": "WorldCup",
+          "time": "1:00 PM ET"
+        },
+        {
+          "title": "",
+          "event": "RD32 W5 @ RD32 W2",
+          "sport": "WorldCup",
+          "time": "5:00 PM ET"
         }
       ]
     }
