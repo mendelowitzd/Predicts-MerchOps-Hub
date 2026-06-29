@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-06-29T13:44:44.995Z",
+  "updated": "2026-06-29T13:49:35.167Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -4725,6 +4725,11 @@
           "sport": "MLB",
           "item": "Padres @ Dodgers",
           "time": "7:20 PM ET"
+        },
+        {
+          "sport": "WNBA",
+          "item": "Fever @ Aces",
+          "time": "7:00 PM ET"
         },
         {
           "sport": "MLB",
