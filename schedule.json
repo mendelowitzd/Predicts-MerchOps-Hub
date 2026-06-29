@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-06-29T16:21:13.795Z",
+  "updated": "2026-06-29T16:21:26.005Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -10076,6 +10076,32 @@
           "event": "RD32 W5 @ RD32 W2",
           "sport": "WorldCup",
           "time": "5:00 PM ET"
+        }
+      ],
+      "SUNDAY": [
+        {
+          "title": "",
+          "event": "British Grand Prix — Race",
+          "sport": "F1",
+          "time": "10:00 AM ET"
+        },
+        {
+          "title": "",
+          "event": "RD32 W6 @ RD32 W4",
+          "sport": "WorldCup",
+          "time": "4:00 PM ET"
+        },
+        {
+          "title": "",
+          "event": "RD32 W8 @ RD32 W7",
+          "sport": "WorldCup",
+          "time": "8:00 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Quaker State 400 — Atlanta Motor Speedway",
+          "sport": "NASCAR",
+          "time": "7:00 PM ET"
         }
       ]
     }
