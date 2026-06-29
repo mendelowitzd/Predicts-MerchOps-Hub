@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-06-29T16:17:20.246Z",
+  "updated": "2026-06-29T16:17:36.775Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -9524,6 +9524,68 @@
               "sport": "MLB",
               "item": "Marlins @ Rockies",
               "time": "8:40 PM ET"
+            }
+          ]
+        }
+      ],
+      "TUESDAY": [
+        {
+          "name": "Around the Diamond",
+          "items": [
+            {
+              "sport": "MLB",
+              "item": "White Sox @ Orioles",
+              "time": "6:35 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Pirates @ Phillies",
+              "time": "6:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Rangers @ Guardians",
+              "time": "6:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Tigers @ Yankees",
+              "time": "7:05 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Mets @ Blue Jays",
+              "time": "7:07 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Nationals @ Red Sox",
+              "time": "7:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Cardinals @ Braves",
+              "time": "7:15 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Reds @ Brewers",
+              "time": "7:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Rays @ Royals",
+              "time": "7:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Padres @ Cubs",
+              "time": "8:05 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Twins @ Astros",
+              "time": "8:10 PM ET"
             }
           ]
         }
