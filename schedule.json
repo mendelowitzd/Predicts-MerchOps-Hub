@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-06-29T13:43:32.591Z",
+  "updated": "2026-06-29T13:44:44.995Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -4525,10 +4525,6 @@
           "time": "Final"
         },
         {
-          "sport": "F1",
-          "item": "Pirelli British Grand Prix"
-        },
-        {
           "sport": "WorldCup",
           "item": "RD32 W3 @ Canada",
           "time": "1:00 PM ET"
@@ -4622,6 +4618,118 @@
           "sport": "MLB",
           "item": "Padres @ Dodgers",
           "time": "10:10 PM ET"
+        }
+      ],
+      "SUNDAY": [
+        {
+          "sport": "PGA",
+          "item": "John Deere Classic",
+          "time": "12:00 AM ET"
+        },
+        {
+          "sport": "ATP",
+          "item": "Wimbledon",
+          "time": "Final"
+        },
+        {
+          "sport": "F1",
+          "item": "British Grand Prix — Race",
+          "time": "10:00 AM ET"
+        },
+        {
+          "sport": "WorldCup",
+          "item": "RD32 W6 @ RD32 W4",
+          "time": "4:00 PM ET"
+        },
+        {
+          "sport": "WorldCup",
+          "item": "RD32 W8 @ RD32 W7",
+          "time": "8:00 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Mets @ Braves",
+          "time": "12:30 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Pirates @ Nationals",
+          "time": "1:00 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Orioles @ Reds",
+          "time": "1:05 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Twins @ Yankees",
+          "time": "1:35 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "White Sox @ Guardians",
+          "time": "2:00 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Cardinals @ Cubs",
+          "time": "2:30 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Phillies @ Royals",
+          "time": "3:00 PM ET"
+        },
+        {
+          "sport": "WNBA",
+          "item": "Wings @ Tempo",
+          "time": "3:00 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Tigers @ Rangers",
+          "time": "3:30 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Rays @ Astros",
+          "time": "3:30 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Giants @ Rockies",
+          "time": "4:00 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Brewers @ Diamondbacks",
+          "time": "4:10 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Marlins @ Athletics",
+          "time": "4:30 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Blue Jays @ Mariners",
+          "time": "5:00 PM ET"
+        },
+        {
+          "sport": "NASCAR",
+          "item": "Quaker State 400 — Atlanta Motor Speedway",
+          "time": "7:00 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Padres @ Dodgers",
+          "time": "7:20 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Red Sox @ Angels",
+          "time": "9:30 PM ET"
         }
       ]
     }
