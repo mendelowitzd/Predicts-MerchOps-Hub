@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-06-29T13:41:11.881Z",
+  "updated": "2026-06-29T13:41:32.600Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -4421,6 +4421,21 @@
           "sport": "ATP",
           "item": "Wimbledon",
           "time": "Final"
+        },
+        {
+          "sport": "WorldCup",
+          "item": "Egypt @ Australia",
+          "time": "2:00 PM ET"
+        },
+        {
+          "sport": "WorldCup",
+          "item": "Cape Verde @ Argentina",
+          "time": "6:00 PM ET"
+        },
+        {
+          "sport": "WorldCup",
+          "item": "Ghana @ Colombia",
+          "time": "9:30 PM ET"
         },
         {
           "sport": "MLB",
