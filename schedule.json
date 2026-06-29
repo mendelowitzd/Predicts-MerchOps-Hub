@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-06-29T16:08:33.973Z",
+  "updated": "2026-06-29T16:08:39.015Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -6817,6 +6817,11 @@
           "type": "subcategory",
           "label": "WC Games",
           "icon": "⚽"
+        },
+        {
+          "type": "subcategory",
+          "label": "WNBA",
+          "icon": "🏀"
         },
         {
           "type": "category",
