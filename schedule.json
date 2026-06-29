@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-06-29T16:20:01.828Z",
+  "updated": "2026-06-29T16:20:17.812Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -9962,5 +9962,28 @@
       ]
     }
   },
-  "marquee_weeks": {}
+  "marquee_weeks": {
+    "2026-06-29": {
+      "MONDAY": [
+        {
+          "title": "",
+          "event": "Japan @ Brazil",
+          "sport": "WorldCup",
+          "time": "1:00 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Paraguay @ Germany",
+          "sport": "WorldCup",
+          "time": "4:30 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Morocco @ Netherlands",
+          "sport": "WorldCup",
+          "time": "9:00 PM ET"
+        }
+      ]
+    }
+  }
 }
