@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-06-29T16:19:02.507Z",
+  "updated": "2026-06-29T16:19:32.195Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -9797,6 +9797,78 @@
               "sport": "MLB",
               "item": "Brewers @ Diamondbacks",
               "time": "9:45 PM ET"
+            }
+          ]
+        },
+        {
+          "name": "WNBA",
+          "items": [
+            {
+              "sport": "WNBA",
+              "item": "Lynx @ Liberty",
+              "time": "7:30 PM ET"
+            },
+            {
+              "sport": "WNBA",
+              "item": "Sky @ Aces",
+              "time": "10:00 PM ET"
+            }
+          ]
+        }
+      ],
+      "SATURDAY": [
+        {
+          "name": "Around the Diamond",
+          "items": [
+            {
+              "sport": "MLB",
+              "item": "Pirates @ Nationals",
+              "time": "11:05 AM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Twins @ Yankees",
+              "time": "1:35 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Tigers @ Rangers",
+              "time": "4:05 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Blue Jays @ Mariners",
+              "time": "4:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Orioles @ Reds",
+              "time": "7:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "White Sox @ Guardians",
+              "time": "7:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Rays @ Astros",
+              "time": "7:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Mets @ Braves",
+              "time": "8:08 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Cardinals @ Cubs",
+              "time": "8:08 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Phillies @ Royals",
+              "time": "8:10 PM ET"
             }
           ]
         }
