@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-06-29T16:19:32.195Z",
+  "updated": "2026-06-29T16:19:38.657Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -9869,6 +9869,21 @@
               "sport": "MLB",
               "item": "Phillies @ Royals",
               "time": "8:10 PM ET"
+            }
+          ]
+        },
+        {
+          "name": "WNBA",
+          "items": [
+            {
+              "sport": "WNBA",
+              "item": "Valkyries @ Dream",
+              "time": "1:00 PM ET"
+            },
+            {
+              "sport": "WNBA",
+              "item": "Fire @ Storm",
+              "time": "9:00 PM ET"
             }
           ]
         }
