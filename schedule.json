@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-06-29T16:07:50.938Z",
+  "updated": "2026-06-29T16:08:14.345Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -6782,6 +6782,126 @@
           "icon": "🏆",
           "permanent": true,
           "pinnedPos": 1
+        },
+        {
+          "type": "subcategory",
+          "label": "WC Combos",
+          "icon": "📋"
+        },
+        {
+          "type": "subcategory",
+          "label": "MLB Combos",
+          "icon": "🎯"
+        },
+        {
+          "type": "subcategory",
+          "label": "MLB",
+          "icon": "⚾"
+        },
+        {
+          "type": "subcategory",
+          "label": "Mens Tennis",
+          "icon": "🎾"
+        },
+        {
+          "type": "subcategory",
+          "label": "Womens Tennis",
+          "icon": "🎾"
+        },
+        {
+          "type": "subcategory",
+          "label": "WC Games",
+          "icon": "⚽"
+        },
+        {
+          "type": "category",
+          "label": "Crypto",
+          "icon": "₿"
+        },
+        {
+          "type": "category",
+          "label": "Commodities",
+          "icon": "🛢️"
+        },
+        {
+          "type": "category",
+          "label": "Financials",
+          "icon": "📈"
+        },
+        {
+          "type": "category",
+          "label": "Politics",
+          "icon": "🏛️"
+        }
+      ],
+      "WEDNESDAY": [
+        {
+          "type": "category",
+          "label": "Sports",
+          "icon": "🏆",
+          "permanent": true,
+          "pinnedPos": 1
+        },
+        {
+          "type": "subcategory",
+          "label": "WC Combos",
+          "icon": "📋"
+        },
+        {
+          "type": "subcategory",
+          "label": "MLB Combos",
+          "icon": "🎯"
+        },
+        {
+          "type": "event",
+          "label": "Bosnia-Herz @ USA",
+          "icon": "⚽",
+          "sport": "WorldCup"
+        },
+        {
+          "type": "subcategory",
+          "label": "MLB",
+          "icon": "⚾"
+        },
+        {
+          "type": "subcategory",
+          "label": "Mens Tennis",
+          "icon": "🎾"
+        },
+        {
+          "type": "subcategory",
+          "label": "Womens Tennis",
+          "icon": "🎾"
+        },
+        {
+          "type": "subcategory",
+          "label": "WC Games",
+          "icon": "⚽"
+        },
+        {
+          "type": "subcategory",
+          "label": "Golf",
+          "icon": "⛳"
+        },
+        {
+          "type": "category",
+          "label": "Crypto",
+          "icon": "₿"
+        },
+        {
+          "type": "category",
+          "label": "Commodities",
+          "icon": "🛢️"
+        },
+        {
+          "type": "category",
+          "label": "Financials",
+          "icon": "📈"
+        },
+        {
+          "type": "category",
+          "label": "Politics",
+          "icon": "🏛️"
         }
       ]
     }
