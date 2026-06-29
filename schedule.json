@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-06-29T16:19:38.657Z",
+  "updated": "2026-06-29T16:19:55.128Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -9884,6 +9884,63 @@
               "sport": "WNBA",
               "item": "Fire @ Storm",
               "time": "9:00 PM ET"
+            }
+          ]
+        }
+      ],
+      "SUNDAY": [
+        {
+          "name": "Around the Diamond",
+          "items": [
+            {
+              "sport": "MLB",
+              "item": "Mets @ Braves",
+              "time": "12:30 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Pirates @ Nationals",
+              "time": "1:00 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Orioles @ Reds",
+              "time": "1:05 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Twins @ Yankees",
+              "time": "1:35 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "White Sox @ Guardians",
+              "time": "2:00 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Cardinals @ Cubs",
+              "time": "2:30 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Phillies @ Royals",
+              "time": "3:00 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Tigers @ Rangers",
+              "time": "3:30 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Rays @ Astros",
+              "time": "3:30 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Giants @ Rockies",
+              "time": "4:00 PM ET"
             }
           ]
         }
