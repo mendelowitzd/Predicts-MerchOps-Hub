@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-07-05T16:54:07.232Z",
+  "updated": "2026-07-05T16:55:10.530Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -11803,6 +11803,22 @@
           "event": "Quaker State 400 â Atlanta Motor Speedway",
           "sport": "NASCAR",
           "time": "7:00 PM ET"
+        }
+      ]
+    },
+    "2026-07-06": {
+      "MONDAY": [
+        {
+          "title": "",
+          "event": "Spain @ Portugal",
+          "sport": "WorldCup",
+          "time": "3:00 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Belgium @ USA",
+          "sport": "WorldCup",
+          "time": "8:00 PM ET"
         }
       ]
     }
