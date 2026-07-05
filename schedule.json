@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-07-05T16:55:24.049Z",
+  "updated": "2026-07-05T16:56:26.885Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -11831,6 +11831,34 @@
         {
           "title": "",
           "event": "Colombia @ Switzerland",
+          "sport": "WorldCup",
+          "time": "4:00 PM ET"
+        }
+      ],
+      "WEDNESDAY": [
+        {
+          "title": "",
+          "event": "Blue Jays @ Giants",
+          "sport": "MLB",
+          "time": "3:45 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Phillies @ Reds",
+          "sport": "MLB",
+          "time": "7:00 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Diamondbacks @ Padres",
+          "sport": "MLB",
+          "time": "10:00 PM ET"
+        }
+      ],
+      "THURSDAY": [
+        {
+          "title": "",
+          "event": "Morocco @ France",
           "sport": "WorldCup",
           "time": "4:00 PM ET"
         }
