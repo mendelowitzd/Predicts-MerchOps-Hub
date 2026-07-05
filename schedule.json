@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-07-05T16:51:24.314Z",
+  "updated": "2026-07-05T16:51:46.240Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -11324,6 +11324,63 @@
               "sport": "MLB",
               "item": "Brewers @ Cardinals",
               "time": "7:45 PM ET"
+            }
+          ]
+        }
+      ],
+      "THURSDAY": [
+        {
+          "name": "Around the Diamond",
+          "items": [
+            {
+              "sport": "MLB",
+              "item": "Braves @ Pirates",
+              "time": "12:35 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Yankees @ Rays",
+              "time": "1:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Royals @ Mets",
+              "time": "1:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Guardians @ Twins",
+              "time": "1:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Red Sox @ White Sox",
+              "time": "2:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Cubs @ Orioles",
+              "time": "6:35 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Mariners @ Marlins",
+              "time": "6:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Phillies @ Reds",
+              "time": "7:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Brewers @ Cardinals",
+              "time": "7:45 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Angels @ Rangers",
+              "time": "8:05 PM ET"
             }
           ]
         }
