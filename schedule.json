@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-07-05T16:56:26.885Z",
+  "updated": "2026-07-05T17:00:45.112Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -11861,6 +11861,20 @@
           "event": "Morocco @ France",
           "sport": "WorldCup",
           "time": "4:00 PM ET"
+        }
+      ],
+      "FRIDAY": [
+        {
+          "title": "",
+          "event": "Wimbledon",
+          "sport": "ATP",
+          "time": "Final"
+        },
+        {
+          "title": "",
+          "event": "RD16 W6 @ RD16 W5",
+          "sport": "WorldCup",
+          "time": "3:00 PM ET"
         }
       ]
     }
