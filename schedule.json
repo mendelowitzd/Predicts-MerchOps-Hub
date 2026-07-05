@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-07-05T17:00:45.112Z",
+  "updated": "2026-07-05T17:00:50.343Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -11875,6 +11875,26 @@
           "event": "RD16 W6 @ RD16 W5",
           "sport": "WorldCup",
           "time": "3:00 PM ET"
+        }
+      ],
+      "SATURDAY": [
+        {
+          "title": "",
+          "event": "Wimbledon",
+          "sport": "WTA",
+          "time": "Final"
+        },
+        {
+          "title": "",
+          "event": "RD16 W4 @ RD16 W3",
+          "sport": "WorldCup",
+          "time": "5:00 PM ET"
+        },
+        {
+          "title": "",
+          "event": "RD16 W8 @ RD16 W7",
+          "sport": "WorldCup",
+          "time": "9:00 PM ET"
         }
       ]
     }
