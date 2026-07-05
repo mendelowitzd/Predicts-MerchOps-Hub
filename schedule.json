@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-07-05T16:40:03.367Z",
+  "updated": "2026-07-05T16:40:24.497Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -7903,7 +7903,80 @@
       ]
     },
     "2026-07-06": {
-      "SUNDAY": [],
+      "SUNDAY": [
+        {
+          "type": "category",
+          "label": "Sports",
+          "icon": "🏆"
+        },
+        {
+          "type": "subcategory",
+          "label": "WC Combos",
+          "icon": "📋",
+          "permanent": true
+        },
+        {
+          "type": "subcategory",
+          "label": "MLB",
+          "icon": "⚾"
+        },
+        {
+          "type": "subcategory",
+          "label": "ATP",
+          "icon": "🎾"
+        },
+        {
+          "type": "subcategory",
+          "label": "WTA",
+          "icon": "🎾"
+        },
+        {
+          "type": "subcategory",
+          "label": "Golf",
+          "icon": "⛳"
+        },
+        {
+          "type": "subcategory",
+          "label": "FIFA World Cup",
+          "icon": "⚽"
+        },
+        {
+          "type": "event",
+          "label": "NASCAR",
+          "icon": "🏁"
+        },
+        {
+          "type": "subcategory",
+          "label": "WNBA",
+          "icon": "🏀"
+        },
+        {
+          "type": "subcategory",
+          "label": "LeBron",
+          "icon": "📋",
+          "permanent": true
+        },
+        {
+          "type": "category",
+          "label": "Crypto",
+          "icon": "₿"
+        },
+        {
+          "type": "category",
+          "label": "Commodities",
+          "icon": "🛢️"
+        },
+        {
+          "type": "category",
+          "label": "Financials",
+          "icon": "📈"
+        },
+        {
+          "type": "category",
+          "label": "Politics",
+          "icon": "🏛️"
+        }
+      ],
       "MONDAY": [
         {
           "type": "category",
