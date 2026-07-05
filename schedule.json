@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-07-05T16:40:24.497Z",
+  "updated": "2026-07-05T16:50:24.587Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -11126,6 +11126,75 @@
               "sport": "WNBA",
               "item": "Fever @ Aces",
               "time": "7:00 PM ET"
+            }
+          ]
+        }
+      ]
+    },
+    "2026-07-06": {
+      "MONDAY": [
+        {
+          "name": "Around the Diamond",
+          "items": [
+            {
+              "sport": "MLB",
+              "item": "Phillies @ Royals",
+              "time": "2:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Yankees @ Rays",
+              "time": "6:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Astros @ Nationals",
+              "time": "6:45 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Mets @ Braves",
+              "time": "7:15 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Brewers @ Cardinals",
+              "time": "7:45 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Diamondbacks @ Padres",
+              "time": "9:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Blue Jays @ Giants",
+              "time": "9:45 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Rockies @ Dodgers",
+              "time": "10:10 PM ET"
+            }
+          ]
+        },
+        {
+          "name": "WNBA",
+          "items": [
+            {
+              "sport": "WNBA",
+              "item": "Valkyries @ Mystics",
+              "time": "7:30 PM ET"
+            },
+            {
+              "sport": "WNBA",
+              "item": "Sun @ Lynx",
+              "time": "8:00 PM ET"
+            },
+            {
+              "sport": "WNBA",
+              "item": "Storm @ Sparks",
+              "time": "10:00 PM ET"
             }
           ]
         }
