@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-07-05T16:55:10.530Z",
+  "updated": "2026-07-05T16:55:24.049Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -11819,6 +11819,20 @@
           "event": "Belgium @ USA",
           "sport": "WorldCup",
           "time": "8:00 PM ET"
+        }
+      ],
+      "TUESDAY": [
+        {
+          "title": "",
+          "event": "Egypt @ Argentina",
+          "sport": "WorldCup",
+          "time": "12:00 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Colombia @ Switzerland",
+          "sport": "WorldCup",
+          "time": "4:00 PM ET"
         }
       ]
     }
