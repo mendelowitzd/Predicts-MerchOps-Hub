@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-07-05T16:51:56.080Z",
+  "updated": "2026-07-05T16:52:06.857Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -11401,6 +11401,26 @@
               "sport": "MLB",
               "item": "Angels @ Rangers",
               "time": "8:05 PM ET"
+            }
+          ]
+        },
+        {
+          "name": "WNBA",
+          "items": [
+            {
+              "sport": "WNBA",
+              "item": "Storm @ Dream",
+              "time": "8:00 PM ET"
+            },
+            {
+              "sport": "WNBA",
+              "item": "Fever @ Mercury",
+              "time": "10:00 PM ET"
+            },
+            {
+              "sport": "WNBA",
+              "item": "Aces @ Fire",
+              "time": "10:00 PM ET"
             }
           ]
         }
