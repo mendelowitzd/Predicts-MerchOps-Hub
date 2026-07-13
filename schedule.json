@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-07-13T16:14:03.820Z",
+  "updated": "2026-07-13T16:14:39.661Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -13052,7 +13052,78 @@
       "SUNDAY": [
         {
           "name": "MLB",
-          "items": []
+          "items": [
+            {
+              "sport": "MLB",
+              "item": "White Sox @ Blue Jays",
+              "time": "12:15 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Mets @ Phillies",
+              "time": "1:35 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Rays @ Red Sox",
+              "time": "1:35 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Rangers @ Braves",
+              "time": "1:35 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Pirates @ Guardians",
+              "time": "1:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Orioles @ Astros",
+              "time": "2:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Marlins @ Brewers",
+              "time": "2:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Padres @ Royals",
+              "time": "2:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Twins @ Cubs",
+              "time": "2:20 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Reds @ Rockies",
+              "time": "3:10 PM ET"
+            }
+          ]
+        },
+        {
+          "name": "WNBA",
+          "items": [
+            {
+              "sport": "WNBA",
+              "item": "Sparks @ Wings",
+              "time": "1:00 PM ET"
+            },
+            {
+              "sport": "WNBA",
+              "item": "Sky @ Dream",
+              "time": "4:00 PM ET"
+            },
+            {
+              "sport": "WNBA",
+              "item": "Sun @ Mercury",
+              "time": "7:00 PM ET"
+            }
+          ]
         }
       ]
     }
