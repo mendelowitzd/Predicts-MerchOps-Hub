@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-07-13T16:05:55.108Z",
+  "updated": "2026-07-13T16:06:02.487Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -9187,6 +9187,11 @@
           "type": "subcategory",
           "label": "British Open",
           "icon": "⛳"
+        },
+        {
+          "type": "subcategory",
+          "label": "MLB",
+          "icon": "⚾"
         },
         {
           "type": "event",
