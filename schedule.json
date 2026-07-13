@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-07-13T16:12:05.147Z",
+  "updated": "2026-07-13T16:12:13.232Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -12772,6 +12772,21 @@
               "sport": "NBASL",
               "item": "Clippers @ Lakers",
               "time": "10:00 PM ET"
+            }
+          ]
+        },
+        {
+          "name": "WNBA",
+          "items": [
+            {
+              "sport": "WNBA",
+              "item": "Fire @ Sun",
+              "time": "11:00 AM ET"
+            },
+            {
+              "sport": "WNBA",
+              "item": "Mystics @ Tempo",
+              "time": "7:00 PM ET"
             }
           ]
         }
