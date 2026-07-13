@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-07-13T16:04:45.695Z",
+  "updated": "2026-07-13T16:05:55.108Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -8999,6 +8999,199 @@
           "icon": "🏆",
           "permanent": true,
           "pinnedPos": 1
+        },
+        {
+          "type": "subcategory",
+          "label": "NBA",
+          "icon": "🏀"
+        },
+        {
+          "type": "subcategory",
+          "label": "WNBA",
+          "icon": "🏀"
+        },
+        {
+          "type": "subcategory",
+          "label": "WC Combos",
+          "icon": "📋",
+          "permanent": true
+        },
+        {
+          "type": "subcategory",
+          "label": "WC Specials",
+          "icon": "📋"
+        },
+        {
+          "type": "subcategory",
+          "label": "LeBron",
+          "icon": "📋",
+          "permanent": true
+        },
+        {
+          "type": "category",
+          "label": "Crypto",
+          "icon": "₿"
+        },
+        {
+          "type": "category",
+          "label": "Commodities",
+          "icon": "🛢️"
+        },
+        {
+          "type": "category",
+          "label": "Financials",
+          "icon": "📈"
+        },
+        {
+          "type": "category",
+          "label": "Politics",
+          "icon": "🏛️"
+        }
+      ],
+      "WEDNESDAY": [
+        {
+          "type": "category",
+          "label": "Sports",
+          "icon": "🏆",
+          "permanent": true,
+          "pinnedPos": 1
+        },
+        {
+          "type": "subcategory",
+          "label": "British Open",
+          "icon": "⛳"
+        },
+        {
+          "type": "subcategory",
+          "label": "NBA",
+          "icon": "🏀"
+        },
+        {
+          "type": "subcategory",
+          "label": "WNBA",
+          "icon": "🏀"
+        },
+        {
+          "type": "subcategory",
+          "label": "WC Combos",
+          "icon": "📋",
+          "permanent": true
+        },
+        {
+          "type": "subcategory",
+          "label": "WC Specials",
+          "icon": "📋"
+        },
+        {
+          "type": "subcategory",
+          "label": "LeBron",
+          "icon": "📋",
+          "permanent": true
+        },
+        {
+          "type": "category",
+          "label": "Crypto",
+          "icon": "₿"
+        },
+        {
+          "type": "category",
+          "label": "Commodities",
+          "icon": "🛢️"
+        },
+        {
+          "type": "category",
+          "label": "Financials",
+          "icon": "📈"
+        },
+        {
+          "type": "category",
+          "label": "Politics",
+          "icon": "🏛️"
+        }
+      ],
+      "THURSDAY": [
+        {
+          "type": "category",
+          "label": "Sports",
+          "icon": "🏆",
+          "permanent": true,
+          "pinnedPos": 1
+        },
+        {
+          "type": "subcategory",
+          "label": "British Open",
+          "icon": "⛳"
+        },
+        {
+          "type": "event",
+          "label": "World Cup Final",
+          "icon": "🔹"
+        },
+        {
+          "type": "subcategory",
+          "label": "NBA",
+          "icon": "🏀"
+        },
+        {
+          "type": "subcategory",
+          "label": "WNBA",
+          "icon": "🏀"
+        },
+        {
+          "type": "subcategory",
+          "label": "WC Combos",
+          "icon": "📋",
+          "permanent": true
+        },
+        {
+          "type": "subcategory",
+          "label": "WC Specials",
+          "icon": "📋"
+        },
+        {
+          "type": "subcategory",
+          "label": "LeBron",
+          "icon": "📋",
+          "permanent": true
+        },
+        {
+          "type": "category",
+          "label": "Crypto",
+          "icon": "₿"
+        },
+        {
+          "type": "category",
+          "label": "Commodities",
+          "icon": "🛢️"
+        },
+        {
+          "type": "category",
+          "label": "Financials",
+          "icon": "📈"
+        },
+        {
+          "type": "category",
+          "label": "Politics",
+          "icon": "🏛️"
+        }
+      ],
+      "FRIDAY": [
+        {
+          "type": "category",
+          "label": "Sports",
+          "icon": "🏆",
+          "permanent": true,
+          "pinnedPos": 1
+        },
+        {
+          "type": "subcategory",
+          "label": "British Open",
+          "icon": "⛳"
+        },
+        {
+          "type": "event",
+          "label": "World Cup Final",
+          "icon": "🔹"
         },
         {
           "type": "subcategory",
