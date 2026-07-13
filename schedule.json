@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-07-13T16:12:36.497Z",
+  "updated": "2026-07-13T16:12:57.218Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -12854,6 +12854,63 @@
               "sport": "WNBA",
               "item": "Valkyries @ Fever",
               "time": "8:00 PM ET"
+            }
+          ]
+        }
+      ],
+      "THURSDAY": [
+        {
+          "name": "NBA Summer League",
+          "items": [
+            {
+              "sport": "NBASL",
+              "item": "Mavericks @ Thunder",
+              "time": "4:00 PM ET"
+            },
+            {
+              "sport": "NBASL",
+              "item": "Nets @ Rockets",
+              "time": "4:30 PM ET"
+            },
+            {
+              "sport": "NBASL",
+              "item": "Lakers @ Bulls",
+              "time": "6:00 PM ET"
+            },
+            {
+              "sport": "NBASL",
+              "item": "Warriors @ Knicks",
+              "time": "7:00 PM ET"
+            },
+            {
+              "sport": "NBASL",
+              "item": "Grizzlies @ Hawks",
+              "time": "8:00 PM ET"
+            },
+            {
+              "sport": "NBASL",
+              "item": "Raptors @ Heat",
+              "time": "9:00 PM ET"
+            },
+            {
+              "sport": "NBASL",
+              "item": "Trail Blazers @ Nuggets",
+              "time": "10:00 PM ET"
+            }
+          ]
+        },
+        {
+          "name": "WNBA",
+          "items": [
+            {
+              "sport": "WNBA",
+              "item": "Fire @ Mystics",
+              "time": "7:00 PM ET"
+            },
+            {
+              "sport": "WNBA",
+              "item": "Liberty @ Wings",
+              "time": "9:00 PM ET"
             }
           ]
         }
