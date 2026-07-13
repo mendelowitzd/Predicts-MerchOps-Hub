@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-07-13T15:45:30.925Z",
+  "updated": "2026-07-13T15:45:57.804Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -5555,6 +5555,68 @@
           "sport": "NBASL",
           "item": "Clippers @ Lakers",
           "time": "10:00 PM ET"
+        }
+      ],
+      "WEDNESDAY": [
+        {
+          "sport": "WorldCup",
+          "item": "Argentina @ England",
+          "time": "3:00 PM ET"
+        },
+        {
+          "sport": "WNBA",
+          "item": "Storm @ Sky",
+          "time": "12:00 PM ET"
+        },
+        {
+          "sport": "WNBA",
+          "item": "Sparks @ Lynx",
+          "time": "1:00 PM ET"
+        },
+        {
+          "sport": "NBASL",
+          "item": "Pacers @ Timberwolves",
+          "time": "3:30 PM ET"
+        },
+        {
+          "sport": "NBASL",
+          "item": "Magic @ 76ers",
+          "time": "4:00 PM ET"
+        },
+        {
+          "sport": "NBASL",
+          "item": "Pelicans @ Cavaliers",
+          "time": "5:30 PM ET"
+        },
+        {
+          "sport": "NBASL",
+          "item": "Suns @ Pistons",
+          "time": "6:00 PM ET"
+        },
+        {
+          "sport": "NBASL",
+          "item": "Bucks @ Hornets",
+          "time": "7:30 PM ET"
+        },
+        {
+          "sport": "NBASL",
+          "item": "Celtics @ Kings",
+          "time": "8:00 PM ET"
+        },
+        {
+          "sport": "WNBA",
+          "item": "Valkyries @ Fever",
+          "time": "8:00 PM ET"
+        },
+        {
+          "sport": "NBASL",
+          "item": "Jazz @ Spurs",
+          "time": "9:30 PM ET"
+        },
+        {
+          "sport": "NBASL",
+          "item": "Wizards @ Clippers",
+          "time": "10:30 PM ET"
         }
       ]
     }
