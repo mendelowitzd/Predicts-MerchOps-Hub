@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-07-13T16:09:29.932Z",
+  "updated": "2026-07-13T16:10:05.397Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -13003,6 +13003,38 @@
           "event": "Wizards @ Clippers",
           "sport": "NBASL",
           "time": "10:30 PM ET"
+        }
+      ],
+      "THURSDAY": [
+        {
+          "title": "",
+          "event": "Mets @ Phillies",
+          "sport": "MLB",
+          "time": "7:00 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Nets @ Rockets",
+          "sport": "NBASL",
+          "time": "4:30 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Warriors @ Knicks",
+          "sport": "NBASL",
+          "time": "7:00 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Raptors @ Heat",
+          "sport": "NBASL",
+          "time": "9:00 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Trail Blazers @ Nuggets",
+          "sport": "NBASL",
+          "time": "10:00 PM ET"
         }
       ]
     }
