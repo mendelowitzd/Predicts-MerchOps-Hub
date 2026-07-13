@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-07-13T16:11:48.265Z",
+  "updated": "2026-07-13T16:12:05.147Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -12735,6 +12735,43 @@
               "sport": "WNBA",
               "item": "Mercury @ Lynx",
               "time": "9:00 PM ET"
+            }
+          ]
+        }
+      ],
+      "TUESDAY": [
+        {
+          "name": "NBA Summer League",
+          "items": [
+            {
+              "sport": "NBASL",
+              "item": "76ers @ Rockets",
+              "time": "4:00 PM ET"
+            },
+            {
+              "sport": "NBASL",
+              "item": "Kings @ Nets",
+              "time": "6:00 PM ET"
+            },
+            {
+              "sport": "NBASL",
+              "item": "Grizzlies @ Warriors",
+              "time": "7:00 PM ET"
+            },
+            {
+              "sport": "NBASL",
+              "item": "Wizards @ Bulls",
+              "time": "8:00 PM ET"
+            },
+            {
+              "sport": "NBASL",
+              "item": "Nuggets @ Thunder",
+              "time": "9:00 PM ET"
+            },
+            {
+              "sport": "NBASL",
+              "item": "Clippers @ Lakers",
+              "time": "10:00 PM ET"
             }
           ]
         }
