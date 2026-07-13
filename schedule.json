@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-07-13T16:13:40.660Z",
+  "updated": "2026-07-13T16:14:03.820Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -12983,6 +12983,73 @@
         }
       ],
       "SATURDAY": [
+        {
+          "name": "MLB",
+          "items": [
+            {
+              "sport": "MLB",
+              "item": "Twins @ Cubs",
+              "time": "2:20 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "White Sox @ Blue Jays",
+              "time": "3:07 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Reds @ Rockies",
+              "time": "3:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Mets @ Phillies",
+              "time": "4:05 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Pirates @ Guardians",
+              "time": "4:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Rays @ Red Sox",
+              "time": "4:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Rangers @ Braves",
+              "time": "4:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Orioles @ Astros",
+              "time": "4:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Marlins @ Brewers",
+              "time": "4:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Padres @ Royals",
+              "time": "4:10 PM ET"
+            }
+          ]
+        },
+        {
+          "name": "NBA Summer League",
+          "items": [
+            {
+              "sport": "NBASL",
+              "item": "TBD @ TBD",
+              "time": "4:30 PM ET"
+            }
+          ]
+        }
+      ],
+      "SUNDAY": [
         {
           "name": "MLB",
           "items": []
