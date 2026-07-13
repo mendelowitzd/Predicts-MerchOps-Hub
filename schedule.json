@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-07-13T15:45:57.804Z",
+  "updated": "2026-07-13T15:46:26.721Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -5617,6 +5617,63 @@
           "sport": "NBASL",
           "item": "Wizards @ Clippers",
           "time": "10:30 PM ET"
+        }
+      ],
+      "THURSDAY": [
+        {
+          "sport": "PGA",
+          "item": "The Open",
+          "time": "12:00 AM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Mets @ Phillies",
+          "time": "7:00 PM ET"
+        },
+        {
+          "sport": "NBASL",
+          "item": "Mavericks @ Thunder",
+          "time": "4:00 PM ET"
+        },
+        {
+          "sport": "NBASL",
+          "item": "Nets @ Rockets",
+          "time": "4:30 PM ET"
+        },
+        {
+          "sport": "NBASL",
+          "item": "Lakers @ Bulls",
+          "time": "6:00 PM ET"
+        },
+        {
+          "sport": "NBASL",
+          "item": "Warriors @ Knicks",
+          "time": "7:00 PM ET"
+        },
+        {
+          "sport": "WNBA",
+          "item": "Fire @ Mystics",
+          "time": "7:00 PM ET"
+        },
+        {
+          "sport": "NBASL",
+          "item": "Grizzlies @ Hawks",
+          "time": "8:00 PM ET"
+        },
+        {
+          "sport": "NBASL",
+          "item": "Raptors @ Heat",
+          "time": "9:00 PM ET"
+        },
+        {
+          "sport": "WNBA",
+          "item": "Liberty @ Wings",
+          "time": "9:00 PM ET"
+        },
+        {
+          "sport": "NBASL",
+          "item": "Trail Blazers @ Nuggets",
+          "time": "10:00 PM ET"
         }
       ]
     }
