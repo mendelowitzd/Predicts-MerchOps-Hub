@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-07-13T16:10:05.397Z",
+  "updated": "2026-07-13T16:10:30.512Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -13035,6 +13035,28 @@
           "event": "Trail Blazers @ Nuggets",
           "sport": "NBASL",
           "time": "10:00 PM ET"
+        }
+      ],
+      "FRIDAY": [
+        {
+          "title": "",
+          "event": "Dodgers @ Yankees",
+          "sport": "MLB",
+          "time": "7:05 PM ET"
+        },
+        {
+          "title": "",
+          "event": "TBD @ TBD",
+          "sport": "NBASL",
+          "time": "6:30 PM ET"
+        }
+      ],
+      "SATURDAY": [
+        {
+          "title": "",
+          "event": "World Cup 3rd Place Match",
+          "sport": "WorldCup",
+          "time": "3:00 PM ET"
         }
       ]
     }
