@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-07-13T15:44:58.582Z",
+  "updated": "2026-07-13T15:45:30.925Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -5503,6 +5503,58 @@
           "sport": "NBASL",
           "item": "Timberwolves @ Trail Blazers",
           "time": "11:00 PM ET"
+        }
+      ],
+      "TUESDAY": [
+        {
+          "sport": "WorldCup",
+          "item": "Spain @ France",
+          "time": "3:00 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "American @ National",
+          "time": "8:00 PM ET"
+        },
+        {
+          "sport": "WNBA",
+          "item": "Fire @ Sun",
+          "time": "11:00 AM ET"
+        },
+        {
+          "sport": "NBASL",
+          "item": "76ers @ Rockets",
+          "time": "4:00 PM ET"
+        },
+        {
+          "sport": "NBASL",
+          "item": "Kings @ Nets",
+          "time": "6:00 PM ET"
+        },
+        {
+          "sport": "NBASL",
+          "item": "Grizzlies @ Warriors",
+          "time": "7:00 PM ET"
+        },
+        {
+          "sport": "WNBA",
+          "item": "Mystics @ Tempo",
+          "time": "7:00 PM ET"
+        },
+        {
+          "sport": "NBASL",
+          "item": "Wizards @ Bulls",
+          "time": "8:00 PM ET"
+        },
+        {
+          "sport": "NBASL",
+          "item": "Nuggets @ Thunder",
+          "time": "9:00 PM ET"
+        },
+        {
+          "sport": "NBASL",
+          "item": "Clippers @ Lakers",
+          "time": "10:00 PM ET"
         }
       ]
     }
