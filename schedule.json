@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-07-13T16:07:37.400Z",
+  "updated": "2026-07-13T16:07:49.217Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -12963,6 +12963,20 @@
           "event": "Timberwolves @ Trail Blazers",
           "sport": "NBASL",
           "time": "11:00 PM ET"
+        }
+      ],
+      "TUESDAY": [
+        {
+          "title": "",
+          "event": "Spain @ France",
+          "sport": "WorldCup",
+          "time": "3:00 PM ET"
+        },
+        {
+          "title": "",
+          "event": "American @ National",
+          "sport": "MLB",
+          "time": "8:00 PM ET"
         }
       ]
     }
