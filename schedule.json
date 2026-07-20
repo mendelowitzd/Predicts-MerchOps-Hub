@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-07-20T14:53:51.273Z",
+  "updated": "2026-07-20T14:54:16.501Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -6469,6 +6469,98 @@
           "sport": "MLB",
           "item": "Mariners @ Rangers",
           "time": "7:15 PM ET"
+        }
+      ],
+      "SUNDAY": [
+        {
+          "sport": "PGA",
+          "item": "3M Open",
+          "time": "12:00 AM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Guardians @ Rays",
+          "time": "12:15 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Diamondbacks @ Nationals",
+          "time": "1:35 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Braves @ Orioles",
+          "time": "1:35 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Cubs @ Pirates",
+          "time": "1:35 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Blue Jays @ Red Sox",
+          "time": "1:35 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Royals @ Tigers",
+          "time": "1:40 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Dodgers @ Mets",
+          "time": "1:40 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Padres @ Marlins",
+          "time": "1:40 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Athletics @ Twins",
+          "time": "2:10 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Rockies @ Brewers",
+          "time": "2:10 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Astros @ White Sox",
+          "time": "2:10 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Reds @ Cardinals",
+          "time": "2:15 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Mariners @ Rangers",
+          "time": "2:35 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Angels @ Giants",
+          "time": "4:05 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Yankees @ Phillies",
+          "time": "7:20 PM ET"
+        },
+        {
+          "sport": "F1",
+          "item": "Belgian Grand Prix — Race",
+          "time": "9:00 AM ET"
+        },
+        {
+          "sport": "NASCAR",
+          "item": "FireKeepers Casino 400 — Michigan",
+          "time": "2:30 PM ET"
         }
       ]
     }
