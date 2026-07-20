@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-07-20T14:56:39.163Z",
+  "updated": "2026-07-20T14:57:13.231Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -9987,8 +9987,23 @@
         },
         {
           "type": "subcategory",
-          "label": "WNBA",
-          "icon": "🏀"
+          "label": "Golf",
+          "icon": "⛳"
+        },
+        {
+          "type": "subcategory",
+          "label": "Soccer",
+          "icon": "📋"
+        },
+        {
+          "type": "subcategory",
+          "label": "F1",
+          "icon": "🏎️"
+        },
+        {
+          "type": "subcategory",
+          "label": "NASCAR",
+          "icon": "🏁"
         },
         {
           "type": "subcategory",
@@ -9999,6 +10014,26 @@
           "type": "event",
           "label": "LeBron",
           "icon": "🔹"
+        },
+        {
+          "type": "category",
+          "label": "Crypto",
+          "icon": "₿"
+        },
+        {
+          "type": "category",
+          "label": "Commodities",
+          "icon": "🛢️"
+        },
+        {
+          "type": "category",
+          "label": "Financials",
+          "icon": "📈"
+        },
+        {
+          "type": "category",
+          "label": "Politics",
+          "icon": "🏛️"
         }
       ],
       "MONDAY": [
@@ -14455,6 +14490,28 @@
           "event": "Dodgers @ Yankees",
           "sport": "MLB",
           "time": "7:20 PM ET"
+        }
+      ]
+    },
+    "2026-07-20": {
+      "MONDAY": [
+        {
+          "title": "",
+          "event": "Dodgers @ Phillies",
+          "sport": "MLB",
+          "time": "7:00 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Cardinals @ Angels",
+          "sport": "MLB",
+          "time": "10:00 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Aces @ Tempo",
+          "sport": "WNBA",
+          "time": "8:00 PM ET"
         }
       ]
     }
