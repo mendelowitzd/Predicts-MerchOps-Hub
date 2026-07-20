@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-07-20T15:03:07.062Z",
+  "updated": "2026-07-20T15:12:41.228Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -10220,6 +10220,11 @@
         },
         {
           "type": "subcategory",
+          "label": "UFC",
+          "icon": "📋"
+        },
+        {
+          "type": "subcategory",
           "label": "NFL",
           "icon": "📋"
         },
@@ -10273,6 +10278,11 @@
         {
           "type": "subcategory",
           "label": "NFL",
+          "icon": "📋"
+        },
+        {
+          "type": "subcategory",
+          "label": "UFC",
           "icon": "📋"
         },
         {
