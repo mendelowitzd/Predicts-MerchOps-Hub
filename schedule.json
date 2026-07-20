@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-07-20T14:56:16.746Z",
+  "updated": "2026-07-20T14:56:21.662Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -10125,6 +10125,58 @@
           "type": "subcategory",
           "label": "WNBA",
           "icon": "🏀"
+        },
+        {
+          "type": "subcategory",
+          "label": "Soccer",
+          "icon": "📋"
+        },
+        {
+          "type": "subcategory",
+          "label": "NFL",
+          "icon": "📋"
+        },
+        {
+          "type": "event",
+          "label": "LeBron",
+          "icon": "🔹"
+        },
+        {
+          "type": "category",
+          "label": "Crypto",
+          "icon": "₿"
+        },
+        {
+          "type": "category",
+          "label": "Commodities",
+          "icon": "🛢️"
+        },
+        {
+          "type": "category",
+          "label": "Financials",
+          "icon": "📈"
+        },
+        {
+          "type": "category",
+          "label": "Politics",
+          "icon": "🏛️"
+        }
+      ],
+      "THURSDAY": [
+        {
+          "type": "category",
+          "label": "Sports",
+          "icon": "🏆"
+        },
+        {
+          "type": "subcategory",
+          "label": "MLB",
+          "icon": "⚾"
+        },
+        {
+          "type": "subcategory",
+          "label": "Golf",
+          "icon": "⛳"
         },
         {
           "type": "subcategory",
