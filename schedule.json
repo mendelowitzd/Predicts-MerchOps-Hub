@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-07-20T15:17:22.305Z",
+  "updated": "2026-07-20T15:17:44.073Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -14369,6 +14369,63 @@
               "sport": "MLB",
               "item": "Royals @ Tigers",
               "time": "6:40 PM ET"
+            }
+          ]
+        }
+      ],
+      "FRIDAY": [
+        {
+          "name": "",
+          "items": [
+            {
+              "sport": "MLB",
+              "item": "Cubs @ Pirates",
+              "time": "6:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Royals @ Tigers",
+              "time": "6:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Diamondbacks @ Nationals",
+              "time": "6:45 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Braves @ Orioles",
+              "time": "7:05 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Dodgers @ Mets",
+              "time": "7:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Guardians @ Rays",
+              "time": "7:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Padres @ Marlins",
+              "time": "7:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Astros @ White Sox",
+              "time": "7:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Mariners @ Rangers",
+              "time": "8:05 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Reds @ Cardinals",
+              "time": "8:15 PM ET"
             }
           ]
         }
