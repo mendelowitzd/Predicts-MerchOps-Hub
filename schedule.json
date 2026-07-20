@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-07-20T15:14:19.620Z",
+  "updated": "2026-07-20T15:14:46.974Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -14188,6 +14188,63 @@
               "sport": "WNBA",
               "item": "Lynx @ Storm",
               "time": "10:00 PM ET"
+            }
+          ]
+        }
+      ],
+      "TUESDAY": [
+        {
+          "name": "",
+          "items": [
+            {
+              "sport": "MLB",
+              "item": "Twins @ Guardians",
+              "time": "6:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Pirates @ Yankees",
+              "time": "7:05 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Rays @ Blue Jays",
+              "time": "7:07 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Orioles @ Red Sox",
+              "time": "7:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Padres @ Braves",
+              "time": "7:15 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Mets @ Brewers",
+              "time": "7:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Giants @ Royals",
+              "time": "7:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "White Sox @ Rangers",
+              "time": "8:05 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Marlins @ Astros",
+              "time": "8:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Nationals @ Rockies",
+              "time": "8:40 PM ET"
             }
           ]
         }
