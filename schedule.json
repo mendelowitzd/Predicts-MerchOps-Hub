@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-07-20T14:58:36.231Z",
+  "updated": "2026-07-20T14:59:00.819Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -14558,6 +14558,32 @@
           "event": "Wings @ Fire",
           "sport": "WNBA",
           "time": "10:00 PM ET"
+        }
+      ],
+      "THURSDAY": [
+        {
+          "title": "",
+          "event": "3M Open",
+          "sport": "PGA",
+          "time": "12:00 AM ET"
+        },
+        {
+          "title": "",
+          "event": "Padres @ Braves",
+          "sport": "MLB",
+          "time": "12:15 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Rays @ Blue Jays",
+          "sport": "MLB",
+          "time": "3:07 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Royals @ Tigers",
+          "sport": "MLB",
+          "time": "6:40 PM ET"
         }
       ]
     }
