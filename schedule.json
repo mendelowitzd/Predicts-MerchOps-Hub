@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-07-20T14:58:00.063Z",
+  "updated": "2026-07-20T14:58:36.231Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -14532,6 +14532,32 @@
           "event": "Reds @ Mariners",
           "sport": "MLB",
           "time": "9:40 PM ET"
+        }
+      ],
+      "WEDNESDAY": [
+        {
+          "title": "",
+          "event": "Pirates @ Yankees",
+          "sport": "MLB",
+          "time": "1:35 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Tigers @ Cubs",
+          "sport": "MLB",
+          "time": "8:00 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Sun @ Fever",
+          "sport": "WNBA",
+          "time": "8:00 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Wings @ Fire",
+          "sport": "WNBA",
+          "time": "10:00 PM ET"
         }
       ]
     }
