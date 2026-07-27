@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-07-27T13:21:52.428Z",
+  "updated": "2026-07-27T13:22:19.879Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -11188,6 +11188,12 @@
           "type": "subcategory",
           "label": "Tennis",
           "icon": "🎾",
+          "permanent": true
+        },
+        {
+          "type": "subcategory",
+          "label": "UFC",
+          "icon": "📋",
           "permanent": true
         },
         {
