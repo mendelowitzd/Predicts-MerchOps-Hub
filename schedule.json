@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-07-27T13:16:26.763Z",
+  "updated": "2026-07-27T13:17:12.429Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -6814,6 +6814,78 @@
           "sport": "WNBA",
           "item": "Valkyries @ Mercury",
           "time": "10:00 PM ET"
+        }
+      ],
+      "THURSDAY": [
+        {
+          "sport": "WNBA",
+          "item": "Liberty @ Aces",
+          "time": "10:00 PM ET"
+        },
+        {
+          "sport": "PGA",
+          "item": "Rocket Classic",
+          "time": "12:00 AM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Rangers @ Rays",
+          "time": "12:10 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Royals @ Twins",
+          "time": "1:40 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Yankees @ White Sox",
+          "time": "2:10 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Cubs @ Cardinals",
+          "time": "2:15 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Nationals @ Braves",
+          "time": "7:00 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Marlins @ Mets",
+          "time": "7:10 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Pirates @ Reds",
+          "time": "7:10 PM ET"
+        },
+        {
+          "sport": "WNBA",
+          "item": "Lynx @ Tempo",
+          "time": "8:00 PM ET"
+        },
+        {
+          "sport": "WNBA",
+          "item": "Sun @ Sky",
+          "time": "8:00 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Red Sox @ Athletics",
+          "time": "9:40 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Giants @ Padres",
+          "time": "9:40 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Mariners @ Dodgers",
+          "time": "10:10 PM ET"
         }
       ]
     }
