@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-07-27T14:28:26.105Z",
+  "updated": "2026-07-27T14:29:40.488Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -15768,6 +15768,63 @@
               "sport": "WNBA",
               "item": "Valkyries @ Mercury",
               "time": "10:00 PM ET"
+            }
+          ]
+        }
+      ],
+      "THURSDAY": [
+        {
+          "name": "",
+          "items": [
+            {
+              "sport": "MLB",
+              "item": "Rangers @ Rays",
+              "time": "12:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Royals @ Twins",
+              "time": "1:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Yankees @ White Sox",
+              "time": "2:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Cubs @ Cardinals",
+              "time": "2:15 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Nationals @ Braves",
+              "time": "7:00 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Marlins @ Mets",
+              "time": "7:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Pirates @ Reds",
+              "time": "7:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Red Sox @ Athletics",
+              "time": "9:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Giants @ Padres",
+              "time": "9:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Mariners @ Dodgers",
+              "time": "10:10 PM ET"
             }
           ]
         }
