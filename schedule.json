@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-07-27T13:21:17.627Z",
+  "updated": "2026-07-27T13:21:52.428Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -11080,6 +11080,109 @@
           "type": "subcategory",
           "label": "WNBA",
           "icon": "🏀"
+        },
+        {
+          "type": "subcategory",
+          "label": "Tennis",
+          "icon": "🎾",
+          "permanent": true
+        },
+        {
+          "type": "subcategory",
+          "label": "NFL",
+          "icon": "📋",
+          "permanent": true
+        },
+        {
+          "type": "category",
+          "label": "Crypto",
+          "icon": "₿"
+        },
+        {
+          "type": "category",
+          "label": "Commodities",
+          "icon": "🛢️"
+        },
+        {
+          "type": "category",
+          "label": "Financials",
+          "icon": "📈"
+        },
+        {
+          "type": "category",
+          "label": "Politics",
+          "icon": "🏛️"
+        }
+      ],
+      "TUESDAY": [
+        {
+          "type": "category",
+          "label": "Sports",
+          "icon": "🏆"
+        },
+        {
+          "type": "subcategory",
+          "label": "MLB",
+          "icon": "⚾"
+        },
+        {
+          "type": "subcategory",
+          "label": "WNBA",
+          "icon": "🏀"
+        },
+        {
+          "type": "subcategory",
+          "label": "Tennis",
+          "icon": "🎾",
+          "permanent": true
+        },
+        {
+          "type": "subcategory",
+          "label": "NFL",
+          "icon": "📋",
+          "permanent": true
+        },
+        {
+          "type": "category",
+          "label": "Crypto",
+          "icon": "₿"
+        },
+        {
+          "type": "category",
+          "label": "Commodities",
+          "icon": "🛢️"
+        },
+        {
+          "type": "category",
+          "label": "Financials",
+          "icon": "📈"
+        },
+        {
+          "type": "category",
+          "label": "Politics",
+          "icon": "🏛️"
+        }
+      ],
+      "WEDNESDAY": [
+        {
+          "type": "category",
+          "label": "Sports",
+          "icon": "🏆"
+        },
+        {
+          "type": "subcategory",
+          "label": "MLB",
+          "icon": "⚾"
+        },
+        {
+          "type": "subcategory",
+          "label": "WNBA",
+          "icon": "🏀"
+        },
+        {
+          "type": "subcategory",
+          "label": "Golf",
+          "icon": "⛳"
         },
         {
           "type": "subcategory",
