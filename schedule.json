@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-07-28T18:49:27.543Z",
+  "updated": "2026-07-28T18:51:09.590Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -17223,7 +17223,8 @@
               {
                 "label": "Fights"
               }
-            ]
+            ],
+            "removeAfter": "2026-08-01"
           },
           {
             "label": "NFL",
@@ -17256,8 +17257,137 @@
             ]
           }
         ]
+      },
+      "SUNDAY": {
+        "tabs": [
+          {
+            "label": "MLB",
+            "icon": "⚾",
+            "sport": "MLB",
+            "subtabs": [
+              {
+                "label": "Games"
+              },
+              {
+                "label": "Props"
+              },
+              {
+                "label": "Season Long"
+              }
+            ]
+          },
+          {
+            "label": "WNBA",
+            "icon": "🏀",
+            "sport": "WNBA",
+            "subtabs": [
+              {
+                "label": "Games"
+              },
+              {
+                "label": "Season Long"
+              }
+            ]
+          },
+          {
+            "label": "Soccer",
+            "icon": "⚽",
+            "sport": "Soccer",
+            "subtabs": [
+              {
+                "label": "MLS Games"
+              },
+              {
+                "label": "MLS Season Long"
+              },
+              {
+                "label": "UCL Season Long"
+              }
+            ]
+          },
+          {
+            "label": "Tennis",
+            "icon": "🎾",
+            "sport": "Tennis",
+            "subtabs": [
+              {
+                "label": "ATP"
+              },
+              {
+                "label": "WTA"
+              }
+            ]
+          },
+          {
+            "label": "Golf",
+            "icon": "⛳",
+            "sport": "Golf",
+            "subtabs": [
+              {
+                "label": "Rocket Classic"
+              },
+              {
+                "label": "AIG Women's Open"
+              }
+            ],
+            "removeAfter": "2026-08-02"
+          },
+          {
+            "label": "NFL",
+            "icon": "🏈",
+            "sport": "NFL",
+            "subtabs": [
+              {
+                "label": "Season Long"
+              }
+            ]
+          },
+          {
+            "label": "NBA",
+            "icon": "🏀",
+            "sport": "NBA",
+            "subtabs": [
+              {
+                "label": "Season Long"
+              }
+            ]
+          },
+          {
+            "label": "F1",
+            "icon": "🏎️",
+            "sport": "F1",
+            "subtabs": [
+              {
+                "label": "Formula 1"
+              }
+            ]
+          },
+          {
+            "label": "NASCAR",
+            "icon": "🏁",
+            "sport": "NASCAR",
+            "subtabs": [
+              {
+                "label": "Season Long"
+              }
+            ]
+          }
+        ]
       }
     }
   },
-  "reminders": []
+  "reminders": [
+    {
+      "id": "rem_1785264595406_yux3pl",
+      "label": "UFC",
+      "dueDate": "2026-08-01",
+      "createdAt": "2026-07-28T18:49:55.406Z"
+    },
+    {
+      "id": "rem_1785264663205_s3wzct",
+      "label": "Golf",
+      "dueDate": "2026-08-02",
+      "createdAt": "2026-07-28T18:51:03.205Z"
+    }
+  ]
 }
