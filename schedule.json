@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-07-28T18:52:48.588Z",
+  "updated": "2026-07-30T20:37:27.476Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -6818,11 +6818,6 @@
       ],
       "THURSDAY": [
         {
-          "sport": "WNBA",
-          "item": "Liberty @ Aces",
-          "time": "10:00 PM ET"
-        },
-        {
           "sport": "PGA",
           "item": "Rocket Classic",
           "time": "12:00 AM ET"
@@ -6886,6 +6881,11 @@
           "sport": "MLB",
           "item": "Mariners @ Dodgers",
           "time": "10:10 PM ET"
+        },
+        {
+          "sport": "WNBA",
+          "item": "Liberty @ Aces",
+          "time": "10:00 PM ET"
         }
       ],
       "FRIDAY": [
