@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-08-03T14:56:45.644Z",
+  "updated": "2026-08-03T15:47:59.973Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -17470,6 +17470,32 @@
           "event": "Cardinals @ Yankees",
           "sport": "MLB",
           "time": "7:05 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Padres @ Diamondbacks",
+          "sport": "MLB",
+          "time": "9:40 PM ET"
+        }
+      ],
+      "THURSDAY": [
+        {
+          "title": "",
+          "event": "Panthers @ Cardinals",
+          "sport": "NFL",
+          "time": "8:00 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Angels @ Orioles",
+          "sport": "MLB",
+          "time": "12:35 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Tigers @ Mariners",
+          "sport": "MLB",
+          "time": "4:10 PM ET"
         },
         {
           "title": "",
