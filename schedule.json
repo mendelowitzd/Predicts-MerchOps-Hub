@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-08-03T15:47:59.973Z",
+  "updated": "2026-08-03T15:48:17.843Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -17500,6 +17500,26 @@
         {
           "title": "",
           "event": "Padres @ Diamondbacks",
+          "sport": "MLB",
+          "time": "9:40 PM ET"
+        }
+      ],
+      "FRIDAY": [
+        {
+          "title": "",
+          "event": "Wyndham Championship",
+          "sport": "PGA",
+          "time": "12:00 AM ET"
+        },
+        {
+          "title": "",
+          "event": "Braves @ Yankees",
+          "sport": "MLB",
+          "time": "7:05 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Dodgers @ Diamondbacks",
           "sport": "MLB",
           "time": "9:40 PM ET"
         }
