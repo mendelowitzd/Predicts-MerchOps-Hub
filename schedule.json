@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-08-03T15:49:11.330Z",
+  "updated": "2026-08-03T16:20:57.112Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -16820,6 +16820,274 @@
               "sport": "WNBA",
               "item": "Mercury @ Sky",
               "time": "9:00 PM ET"
+            }
+          ]
+        }
+      ],
+      "TUESDAY": [
+        {
+          "name": "",
+          "items": [
+            {
+              "sport": "MLB",
+              "item": "Angels @ Orioles",
+              "time": "6:35 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Nationals @ Phillies",
+              "time": "6:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Mets @ Guardians",
+              "time": "6:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Cardinals @ Yankees",
+              "time": "7:05 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "White Sox @ Red Sox",
+              "time": "7:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Marlins @ Braves",
+              "time": "7:15 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Twins @ Royals",
+              "time": "7:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Pirates @ Brewers",
+              "time": "7:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Giants @ Rangers",
+              "time": "8:05 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Blue Jays @ Astros",
+              "time": "8:10 PM ET"
+            }
+          ]
+        }
+      ],
+      "WEDNESDAY": [
+        {
+          "name": "",
+          "items": [
+            {
+              "sport": "MLB",
+              "item": "Blue Jays @ Astros",
+              "time": "2:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Giants @ Rangers",
+              "time": "2:35 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Rays @ Rockies",
+              "time": "3:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Angels @ Orioles",
+              "time": "6:35 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Nationals @ Phillies",
+              "time": "6:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Cardinals @ Yankees",
+              "time": "7:05 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Mets @ Guardians",
+              "time": "6:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "White Sox @ Red Sox",
+              "time": "7:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Marlins @ Braves",
+              "time": "7:15 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Pirates @ Brewers",
+              "time": "7:30 PM ET"
+            }
+          ]
+        },
+        {
+          "name": "",
+          "items": [
+            {
+              "sport": "WNBA",
+              "item": "Mercury @ Dream",
+              "time": "7:00 PM ET"
+            },
+            {
+              "sport": "WNBA",
+              "item": "Storm @ Liberty",
+              "time": "7:00 PM ET"
+            },
+            {
+              "sport": "WNBA",
+              "item": "Wings @ Mystics",
+              "time": "7:30 PM ET"
+            },
+            {
+              "sport": "WNBA",
+              "item": "Sparks @ Sky",
+              "time": "9:00 PM ET"
+            }
+          ]
+        }
+      ],
+      "THURSDAY": [
+        {
+          "name": "",
+          "items": [
+            {
+              "sport": "MLB",
+              "item": "Angels @ Orioles",
+              "time": "12:35 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Mets @ Guardians",
+              "time": "1:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Pirates @ Brewers",
+              "time": "2:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Blue Jays @ Cubs",
+              "time": "2:20 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Tigers @ Mariners",
+              "time": "4:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Nationals @ Phillies",
+              "time": "6:05 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Marlins @ Braves",
+              "time": "7:15 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Twins @ Royals",
+              "time": "7:30 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Padres @ Diamondbacks",
+              "time": "9:40 PM ET"
+            }
+          ]
+        },
+        {
+          "name": "",
+          "items": [
+            {
+              "sport": "WNBA",
+              "item": "Aces @ Fever",
+              "time": "7:00 PM ET"
+            },
+            {
+              "sport": "WNBA",
+              "item": "Sparks @ Lynx",
+              "time": "9:00 PM ET"
+            },
+            {
+              "sport": "WNBA",
+              "item": "Tempo @ Fire",
+              "time": "10:00 PM ET"
+            }
+          ]
+        }
+      ],
+      "FRIDAY": [
+        {
+          "name": "",
+          "items": [
+            {
+              "sport": "MLB",
+              "item": "Blue Jays @ Phillies",
+              "time": "6:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Mets @ Pirates",
+              "time": "6:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Reds @ Nationals",
+              "time": "6:45 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Angels @ Marlins",
+              "time": "7:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Guardians @ White Sox",
+              "time": "7:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Twins @ Brewers",
+              "time": "7:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Cubs @ Royals",
+              "time": "8:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Orioles @ Rangers",
+              "time": "8:15 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Rockies @ Cardinals",
+              "time": "8:15 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Astros @ Padres",
+              "time": "9:40 PM ET"
             }
           ]
         }
