@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-08-03T16:20:57.112Z",
+  "updated": "2026-08-03T16:21:05.798Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -17088,6 +17088,26 @@
               "sport": "MLB",
               "item": "Astros @ Padres",
               "time": "9:40 PM ET"
+            }
+          ]
+        },
+        {
+          "name": "",
+          "items": [
+            {
+              "sport": "WNBA",
+              "item": "Mercury @ Sun",
+              "time": "7:30 PM ET"
+            },
+            {
+              "sport": "WNBA",
+              "item": "Dream @ Mystics",
+              "time": "7:30 PM ET"
+            },
+            {
+              "sport": "WNBA",
+              "item": "Valkyries @ Wings",
+              "time": "9:30 PM ET"
             }
           ]
         }
