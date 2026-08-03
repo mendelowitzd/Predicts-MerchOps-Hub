@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-08-03T16:23:43.705Z",
+  "updated": "2026-08-03T16:23:56.313Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -12103,6 +12103,11 @@
           "type": "subcategory",
           "label": "Soccer",
           "icon": "⚽"
+        },
+        {
+          "type": "subcategory",
+          "label": "Golf",
+          "icon": "⛳"
         },
         {
           "type": "category",
