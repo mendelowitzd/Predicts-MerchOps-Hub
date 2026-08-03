@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-08-03T16:25:30.281Z",
+  "updated": "2026-08-03T16:27:24.983Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -19095,6 +19095,65 @@
     },
     "2026-08-03": {
       "MONDAY": {
+        "tabs": [
+          {
+            "label": "MLB",
+            "icon": "⚾",
+            "sport": "MLB",
+            "subtabs": [
+              {
+                "label": "Games"
+              },
+              {
+                "label": "Props"
+              }
+            ]
+          },
+          {
+            "label": "WNBA",
+            "icon": "🏀",
+            "sport": "WNBA",
+            "subtabs": [
+              {
+                "label": "Games"
+              }
+            ]
+          },
+          {
+            "label": "Tennis",
+            "icon": "🎾",
+            "sport": null,
+            "subtabs": [
+              {
+                "label": "ATP"
+              },
+              {
+                "label": "WTA"
+              }
+            ]
+          },
+          {
+            "label": "Soccer",
+            "icon": "⚽",
+            "sport": "MLS",
+            "subtabs": [
+              {
+                "label": "MLS"
+              },
+              {
+                "label": "Liga MX"
+              },
+              {
+                "label": "Brazil Serie A"
+              },
+              {
+                "label": "Argentina Primera"
+              }
+            ]
+          }
+        ]
+      },
+      "SUNDAY": {
         "tabs": []
       }
     }
