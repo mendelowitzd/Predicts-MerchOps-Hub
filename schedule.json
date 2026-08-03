@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-08-03T16:27:24.983Z",
+  "updated": "2026-08-03T16:30:26.873Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -19155,8 +19155,204 @@
       },
       "SUNDAY": {
         "tabs": []
+      },
+      "TUESDAY": {
+        "tabs": [
+          {
+            "label": "MLB",
+            "icon": "⚾",
+            "sport": "MLB",
+            "subtabs": [
+              {
+                "label": "Games"
+              },
+              {
+                "label": "Props"
+              }
+            ]
+          },
+          {
+            "label": "WNBA",
+            "icon": "🏀",
+            "sport": "WNBA",
+            "subtabs": [
+              {
+                "label": "Games"
+              }
+            ]
+          },
+          {
+            "label": "PGA",
+            "icon": "⛳",
+            "sport": "PGA",
+            "subtabs": [
+              {
+                "label": "Wyndham Championship"
+              }
+            ]
+          },
+          {
+            "label": "Tennis",
+            "icon": "🎾",
+            "sport": null,
+            "subtabs": [
+              {
+                "label": "ATP"
+              },
+              {
+                "label": "WTA"
+              }
+            ]
+          },
+          {
+            "label": "Soccer",
+            "icon": "⚽",
+            "sport": "MLS",
+            "subtabs": [
+              {
+                "label": "MLS"
+              },
+              {
+                "label": "Liga MX"
+              },
+              {
+                "label": "Brazil Serie A"
+              },
+              {
+                "label": "Argentina Primera"
+              }
+            ]
+          },
+          {
+            "label": "UFC",
+            "icon": "🥊",
+            "sport": "UFC",
+            "subtabs": [
+              {
+                "label": "Fight Night"
+              }
+            ],
+            "removeAfter": "2026-08-08"
+          }
+        ]
+      },
+      "WEDNESDAY": {
+        "tabs": [
+          {
+            "label": "MLB",
+            "icon": "⚾",
+            "sport": "MLB",
+            "subtabs": [
+              {
+                "label": "Games"
+              },
+              {
+                "label": "Props"
+              }
+            ]
+          },
+          {
+            "label": "NFL",
+            "icon": "🏈",
+            "sport": "NFL",
+            "subtabs": [
+              {
+                "label": "Preseason"
+              },
+              {
+                "label": "Week One"
+              },
+              {
+                "label": "Season Long"
+              }
+            ]
+          },
+          {
+            "label": "WNBA",
+            "icon": "🏀",
+            "sport": "WNBA",
+            "subtabs": [
+              {
+                "label": "Games"
+              }
+            ]
+          },
+          {
+            "label": "PGA",
+            "icon": "⛳",
+            "sport": "PGA",
+            "subtabs": [
+              {
+                "label": "Wyndham Championship"
+              }
+            ]
+          },
+          {
+            "label": "Tennis",
+            "icon": "🎾",
+            "sport": null,
+            "subtabs": [
+              {
+                "label": "ATP"
+              },
+              {
+                "label": "WTA"
+              }
+            ]
+          },
+          {
+            "label": "Soccer",
+            "icon": "⚽",
+            "sport": "MLS",
+            "subtabs": [
+              {
+                "label": "MLS"
+              },
+              {
+                "label": "Liga MX"
+              },
+              {
+                "label": "Brazil Serie A"
+              },
+              {
+                "label": "Argentina Primera"
+              }
+            ]
+          },
+          {
+            "label": "UFC",
+            "icon": "🥊",
+            "sport": "UFC",
+            "subtabs": [
+              {
+                "label": "Fight Night"
+              }
+            ],
+            "removeAfter": "2026-08-08"
+          },
+          {
+            "label": "CFB",
+            "icon": "🏈",
+            "sport": "CFB",
+            "subtabs": [
+              {
+                "label": "Week 0"
+              },
+              {
+                "label": "Season Long"
+              }
+            ]
+          }
+        ]
       }
     }
   },
-  "reminders": []
+  "reminders": [
+    {
+      "id": "rem_1785774555442_i1g91y",
+      "label": "UFC",
+      "dueDate": "2026-08-08",
+      "createdAt": "2026-08-03T16:29:15.443Z"
+    }
+  ]
 }
