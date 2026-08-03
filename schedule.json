@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-08-02T14:34:53.727Z",
+  "updated": "2026-08-03T14:49:02.116Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -7241,6 +7241,88 @@
           "sport": "MLB",
           "item": "Padres @ Diamondbacks",
           "time": "9:40 PM ET"
+        }
+      ],
+      "TUESDAY": [
+        {
+          "sport": "MLB",
+          "item": "Angels @ Orioles",
+          "time": "6:35 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Nationals @ Phillies",
+          "time": "6:40 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Mets @ Guardians",
+          "time": "6:40 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Athletics @ Reds",
+          "time": "6:40 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Cardinals @ Yankees",
+          "time": "7:05 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "White Sox @ Red Sox",
+          "time": "7:10 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Marlins @ Braves",
+          "time": "7:15 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Twins @ Royals",
+          "time": "7:40 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Pirates @ Brewers",
+          "time": "7:40 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Dodgers @ Cubs",
+          "time": "8:05 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Giants @ Rangers",
+          "time": "8:05 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Blue Jays @ Astros",
+          "time": "8:10 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Rays @ Rockies",
+          "time": "8:40 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Tigers @ Mariners",
+          "time": "9:40 PM ET"
+        },
+        {
+          "sport": "MLB",
+          "item": "Padres @ Diamondbacks",
+          "time": "9:40 PM ET"
+        },
+        {
+          "sport": "WNBA",
+          "item": "Tempo @ Valkyries",
+          "time": "10:00 PM ET"
         }
       ]
     }
@@ -17577,14 +17659,12 @@
           }
         ]
       }
+    },
+    "2026-08-03": {
+      "MONDAY": {
+        "tabs": []
+      }
     }
   },
-  "reminders": [
-    {
-      "id": "rem_1785264761022_1x9m0x",
-      "label": "Golf",
-      "dueDate": "2026-08-02",
-      "createdAt": "2026-07-28T18:52:41.022Z"
-    }
-  ]
+  "reminders": []
 }
