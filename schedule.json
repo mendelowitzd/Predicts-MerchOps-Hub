@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-08-03T16:21:05.798Z",
+  "updated": "2026-08-03T16:22:07.529Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -17108,6 +17108,63 @@
               "sport": "WNBA",
               "item": "Valkyries @ Wings",
               "time": "9:30 PM ET"
+            }
+          ]
+        }
+      ],
+      "SATURDAY": [
+        {
+          "name": "",
+          "items": [
+            {
+              "sport": "MLB",
+              "item": "Angels @ Marlins",
+              "time": "4:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Blue Jays @ Phillies",
+              "time": "6:05 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Mets @ Pirates",
+              "time": "6:40 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Reds @ Nationals",
+              "time": "6:45 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Cubs @ Royals",
+              "time": "7:10 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Guardians @ White Sox",
+              "time": "7:15 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Orioles @ Rangers",
+              "time": "7:15 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Astros @ Padres",
+              "time": "7:15 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Tigers @ Giants",
+              "time": "7:15 PM ET"
+            },
+            {
+              "sport": "MLB",
+              "item": "Twins @ Brewers",
+              "time": "7:10 PM ET"
             }
           ]
         }
