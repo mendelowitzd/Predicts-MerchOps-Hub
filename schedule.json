@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-08-03T14:56:16.199Z",
+  "updated": "2026-08-03T14:56:45.644Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -17450,6 +17450,26 @@
           "event": "Dodgers @ Cubs",
           "sport": "MLB",
           "time": "8:05 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Padres @ Diamondbacks",
+          "sport": "MLB",
+          "time": "9:40 PM ET"
+        }
+      ],
+      "WEDNESDAY": [
+        {
+          "title": "",
+          "event": "Dodgers @ Cubs",
+          "sport": "MLB",
+          "time": "2:20 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Cardinals @ Yankees",
+          "sport": "MLB",
+          "time": "7:05 PM ET"
         },
         {
           "title": "",
