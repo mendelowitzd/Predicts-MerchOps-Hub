@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-08-03T14:52:18.122Z",
+  "updated": "2026-08-03T14:52:25.297Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -7429,6 +7429,11 @@
           "time": "12:00 AM ET"
         },
         {
+          "sport": "NFL",
+          "item": "Panthers @ Cardinals",
+          "time": "8:00 PM ET"
+        },
+        {
           "sport": "MLB",
           "item": "Angels @ Orioles",
           "time": "12:35 PM ET"
@@ -7497,11 +7502,6 @@
           "sport": "WNBA",
           "item": "Tempo @ Fire",
           "time": "10:00 PM ET"
-        },
-        {
-          "sport": "NFL",
-          "item": "Panthers @ Cardinals",
-          "time": "8:00 PM ET"
         }
       ]
     }
