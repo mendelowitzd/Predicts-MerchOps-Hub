@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-08-03T16:31:56.760Z",
+  "updated": "2026-08-03T16:33:13.625Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -19154,7 +19154,114 @@
         ]
       },
       "SUNDAY": {
-        "tabs": []
+        "tabs": [
+          {
+            "label": "MLB",
+            "icon": "⚾",
+            "sport": "MLB",
+            "subtabs": [
+              {
+                "label": "Games"
+              },
+              {
+                "label": "Props"
+              }
+            ]
+          },
+          {
+            "label": "NFL",
+            "icon": "🏈",
+            "sport": "NFL",
+            "subtabs": [
+              {
+                "label": "Preseason"
+              },
+              {
+                "label": "Week One"
+              },
+              {
+                "label": "Season Long"
+              }
+            ]
+          },
+          {
+            "label": "WNBA",
+            "icon": "🏀",
+            "sport": "WNBA",
+            "subtabs": [
+              {
+                "label": "Games"
+              }
+            ]
+          },
+          {
+            "label": "PGA",
+            "icon": "⛳",
+            "sport": null,
+            "subtabs": [
+              {
+                "label": "Wyndham Championship"
+              }
+            ],
+            "removeAfter": "2026-08-09"
+          },
+          {
+            "label": "Tennis",
+            "icon": "🎾",
+            "sport": null,
+            "subtabs": [
+              {
+                "label": "ATP"
+              },
+              {
+                "label": "WTA"
+              }
+            ]
+          },
+          {
+            "label": "Soccer",
+            "icon": "⚽",
+            "sport": "MLS",
+            "subtabs": [
+              {
+                "label": "MLS"
+              },
+              {
+                "label": "Liga MX"
+              },
+              {
+                "label": "Brazil Serie A"
+              },
+              {
+                "label": "Argentina Primera"
+              }
+            ]
+          },
+          {
+            "label": "CFB",
+            "icon": "🏈",
+            "sport": "CFB",
+            "subtabs": [
+              {
+                "label": "Week 0"
+              },
+              {
+                "label": "Season Long"
+              }
+            ]
+          },
+          {
+            "label": "NASCAR",
+            "icon": "🏁",
+            "sport": "NASCAR",
+            "subtabs": [
+              {
+                "label": "Iowa Corn 350",
+                "removeAfter": "2026-08-09"
+              }
+            ]
+          }
+        ]
       },
       "TUESDAY": {
         "tabs": [
@@ -19356,6 +19463,369 @@
             ]
           }
         ]
+      },
+      "THURSDAY": {
+        "tabs": [
+          {
+            "label": "MLB",
+            "icon": "⚾",
+            "sport": "MLB",
+            "subtabs": [
+              {
+                "label": "Games"
+              },
+              {
+                "label": "Props"
+              }
+            ]
+          },
+          {
+            "label": "NFL",
+            "icon": "🏈",
+            "sport": "NFL",
+            "subtabs": [
+              {
+                "label": "Preseason"
+              },
+              {
+                "label": "Week One"
+              },
+              {
+                "label": "Season Long"
+              }
+            ]
+          },
+          {
+            "label": "WNBA",
+            "icon": "🏀",
+            "sport": "WNBA",
+            "subtabs": [
+              {
+                "label": "Games"
+              }
+            ]
+          },
+          {
+            "label": "PGA",
+            "icon": "⛳",
+            "sport": null,
+            "subtabs": [
+              {
+                "label": "Wyndham Championship"
+              }
+            ],
+            "removeAfter": "2026-08-09"
+          },
+          {
+            "label": "Tennis",
+            "icon": "🎾",
+            "sport": null,
+            "subtabs": [
+              {
+                "label": "ATP"
+              },
+              {
+                "label": "WTA"
+              }
+            ]
+          },
+          {
+            "label": "Soccer",
+            "icon": "⚽",
+            "sport": "MLS",
+            "subtabs": [
+              {
+                "label": "MLS"
+              },
+              {
+                "label": "Liga MX"
+              },
+              {
+                "label": "Brazil Serie A"
+              },
+              {
+                "label": "Argentina Primera"
+              }
+            ]
+          },
+          {
+            "label": "UFC",
+            "icon": "🥊",
+            "sport": "UFC",
+            "subtabs": [
+              {
+                "label": "Fight Night"
+              }
+            ],
+            "removeAfter": "2026-08-08"
+          },
+          {
+            "label": "CFB",
+            "icon": "🏈",
+            "sport": "CFB",
+            "subtabs": [
+              {
+                "label": "Week 0"
+              },
+              {
+                "label": "Season Long"
+              }
+            ]
+          },
+          {
+            "label": "NASCAR",
+            "icon": "🏁",
+            "sport": "NASCAR",
+            "subtabs": [
+              {
+                "label": "Iowa Corn 350",
+                "removeAfter": "2026-08-09"
+              }
+            ]
+          }
+        ]
+      },
+      "FRIDAY": {
+        "tabs": [
+          {
+            "label": "MLB",
+            "icon": "⚾",
+            "sport": "MLB",
+            "subtabs": [
+              {
+                "label": "Games"
+              },
+              {
+                "label": "Props"
+              }
+            ]
+          },
+          {
+            "label": "NFL",
+            "icon": "🏈",
+            "sport": "NFL",
+            "subtabs": [
+              {
+                "label": "Preseason"
+              },
+              {
+                "label": "Week One"
+              },
+              {
+                "label": "Season Long"
+              }
+            ]
+          },
+          {
+            "label": "WNBA",
+            "icon": "🏀",
+            "sport": "WNBA",
+            "subtabs": [
+              {
+                "label": "Games"
+              }
+            ]
+          },
+          {
+            "label": "PGA",
+            "icon": "⛳",
+            "sport": null,
+            "subtabs": [
+              {
+                "label": "Wyndham Championship"
+              }
+            ],
+            "removeAfter": "2026-08-09"
+          },
+          {
+            "label": "Tennis",
+            "icon": "🎾",
+            "sport": null,
+            "subtabs": [
+              {
+                "label": "ATP"
+              },
+              {
+                "label": "WTA"
+              }
+            ]
+          },
+          {
+            "label": "Soccer",
+            "icon": "⚽",
+            "sport": "MLS",
+            "subtabs": [
+              {
+                "label": "MLS"
+              },
+              {
+                "label": "Liga MX"
+              },
+              {
+                "label": "Brazil Serie A"
+              },
+              {
+                "label": "Argentina Primera"
+              }
+            ]
+          },
+          {
+            "label": "UFC",
+            "icon": "🥊",
+            "sport": "UFC",
+            "subtabs": [
+              {
+                "label": "Fight Night"
+              }
+            ],
+            "removeAfter": "2026-08-08"
+          },
+          {
+            "label": "CFB",
+            "icon": "🏈",
+            "sport": "CFB",
+            "subtabs": [
+              {
+                "label": "Week 0"
+              },
+              {
+                "label": "Season Long"
+              }
+            ]
+          },
+          {
+            "label": "NASCAR",
+            "icon": "🏁",
+            "sport": "NASCAR",
+            "subtabs": [
+              {
+                "label": "Iowa Corn 350",
+                "removeAfter": "2026-08-09"
+              }
+            ]
+          }
+        ]
+      },
+      "SATURDAY": {
+        "tabs": [
+          {
+            "label": "MLB",
+            "icon": "⚾",
+            "sport": "MLB",
+            "subtabs": [
+              {
+                "label": "Games"
+              },
+              {
+                "label": "Props"
+              }
+            ]
+          },
+          {
+            "label": "NFL",
+            "icon": "🏈",
+            "sport": "NFL",
+            "subtabs": [
+              {
+                "label": "Preseason"
+              },
+              {
+                "label": "Week One"
+              },
+              {
+                "label": "Season Long"
+              }
+            ]
+          },
+          {
+            "label": "WNBA",
+            "icon": "🏀",
+            "sport": "WNBA",
+            "subtabs": [
+              {
+                "label": "Games"
+              }
+            ]
+          },
+          {
+            "label": "PGA",
+            "icon": "⛳",
+            "sport": null,
+            "subtabs": [
+              {
+                "label": "Wyndham Championship"
+              }
+            ],
+            "removeAfter": "2026-08-09"
+          },
+          {
+            "label": "Tennis",
+            "icon": "🎾",
+            "sport": null,
+            "subtabs": [
+              {
+                "label": "ATP"
+              },
+              {
+                "label": "WTA"
+              }
+            ]
+          },
+          {
+            "label": "Soccer",
+            "icon": "⚽",
+            "sport": "MLS",
+            "subtabs": [
+              {
+                "label": "MLS"
+              },
+              {
+                "label": "Liga MX"
+              },
+              {
+                "label": "Brazil Serie A"
+              },
+              {
+                "label": "Argentina Primera"
+              }
+            ]
+          },
+          {
+            "label": "UFC",
+            "icon": "🥊",
+            "sport": "UFC",
+            "subtabs": [
+              {
+                "label": "Fight Night"
+              }
+            ],
+            "removeAfter": "2026-08-08"
+          },
+          {
+            "label": "CFB",
+            "icon": "🏈",
+            "sport": "CFB",
+            "subtabs": [
+              {
+                "label": "Week 0"
+              },
+              {
+                "label": "Season Long"
+              }
+            ]
+          },
+          {
+            "label": "NASCAR",
+            "icon": "🏁",
+            "sport": "NASCAR",
+            "subtabs": [
+              {
+                "label": "Iowa Corn 350",
+                "removeAfter": "2026-08-09"
+              }
+            ]
+          }
+        ]
       }
     }
   },
@@ -19364,19 +19834,22 @@
       "id": "rem_1785774555442_i1g91y",
       "label": "UFC",
       "dueDate": "2026-08-08",
-      "createdAt": "2026-08-03T16:29:15.443Z"
+      "createdAt": "2026-08-03T16:29:15.443Z",
+      "promptCopiedAt": "2026-08-03T16:32:11.928Z"
     },
     {
       "id": "rem_1785774641527_tfndei",
       "label": "PGA",
       "dueDate": "2026-08-09",
-      "createdAt": "2026-08-03T16:30:41.527Z"
+      "createdAt": "2026-08-03T16:30:41.527Z",
+      "promptCopiedAt": "2026-08-03T16:32:11.928Z"
     },
     {
       "id": "rem_1785774713361_0bk2ly",
       "label": "Iowa Corn 350",
       "dueDate": "2026-08-09",
-      "createdAt": "2026-08-03T16:31:53.361Z"
+      "createdAt": "2026-08-03T16:31:53.361Z",
+      "promptCopiedAt": "2026-08-03T16:32:11.928Z"
     }
   ]
 }
