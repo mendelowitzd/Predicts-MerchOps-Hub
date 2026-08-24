@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-08-24T17:14:42.113Z",
+  "updated": "2026-08-24T17:14:52.746Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -18519,6 +18519,11 @@
           "items": [
             {
               "sport": "MLB",
+              "item": "Red Sox @ Yankees",
+              "time": "1:35 PM ET"
+            },
+            {
+              "sport": "MLB",
               "item": "Rockies @ Braves",
               "time": "1:35 PM ET"
             },
@@ -18556,11 +18561,6 @@
               "sport": "MLB",
               "item": "Pirates @ Cardinals",
               "time": "2:15 PM ET"
-            },
-            {
-              "sport": "MLB",
-              "item": "Astros @ Mets",
-              "time": "3:10 PM ET"
             },
             {
               "sport": "MLB",
