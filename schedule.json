@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-08-03T16:33:13.625Z",
+  "updated": "2026-08-24T16:31:34.450Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -12440,6 +12440,20 @@
           "icon": "🏛️"
         }
       ]
+    },
+    "2026-08-24": {
+      "MONDAY": [
+        {
+          "type": "category",
+          "label": "Sports",
+          "icon": "🏆"
+        },
+        {
+          "type": "subcategory",
+          "label": "MLB",
+          "icon": "⚾"
+        }
+      ]
     }
   },
   "carousel_weeks": {
@@ -19829,27 +19843,6 @@
       }
     }
   },
-  "reminders": [
-    {
-      "id": "rem_1785774555442_i1g91y",
-      "label": "UFC",
-      "dueDate": "2026-08-08",
-      "createdAt": "2026-08-03T16:29:15.443Z",
-      "promptCopiedAt": "2026-08-03T16:32:11.928Z"
-    },
-    {
-      "id": "rem_1785774641527_tfndei",
-      "label": "PGA",
-      "dueDate": "2026-08-09",
-      "createdAt": "2026-08-03T16:30:41.527Z",
-      "promptCopiedAt": "2026-08-03T16:32:11.928Z"
-    },
-    {
-      "id": "rem_1785774713361_0bk2ly",
-      "label": "Iowa Corn 350",
-      "dueDate": "2026-08-09",
-      "createdAt": "2026-08-03T16:31:53.361Z",
-      "promptCopiedAt": "2026-08-03T16:32:11.928Z"
-    }
-  ]
+  "reminders": [],
+  "marquee_sport_weeks": {}
 }
