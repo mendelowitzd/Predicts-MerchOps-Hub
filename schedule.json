@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-08-24T16:59:26.953Z",
+  "updated": "2026-08-24T17:12:23.602Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -12557,6 +12557,11 @@
         },
         {
           "type": "subcategory",
+          "label": "F1",
+          "icon": "🏎️"
+        },
+        {
+          "type": "subcategory",
           "label": "Esports",
           "icon": "🎮"
         },
@@ -12631,6 +12636,11 @@
           "type": "subcategory",
           "label": "UFC",
           "icon": "🥊"
+        },
+        {
+          "type": "subcategory",
+          "label": "F1",
+          "icon": "🏎️"
         },
         {
           "type": "subcategory",
@@ -12711,6 +12721,11 @@
         },
         {
           "type": "subcategory",
+          "label": "F1",
+          "icon": "🏎️"
+        },
+        {
+          "type": "subcategory",
           "label": "Esports",
           "icon": "🎮"
         },
@@ -12785,6 +12800,11 @@
           "type": "subcategory",
           "label": "UFC",
           "icon": "🥊"
+        },
+        {
+          "type": "subcategory",
+          "label": "F1",
+          "icon": "🏎️"
         },
         {
           "type": "subcategory",
@@ -12865,6 +12885,11 @@
         },
         {
           "type": "subcategory",
+          "label": "F1",
+          "icon": "🏎️"
+        },
+        {
+          "type": "subcategory",
           "label": "Esports",
           "icon": "🎮"
         },
@@ -12937,8 +12962,8 @@
         },
         {
           "type": "subcategory",
-          "label": "UFC",
-          "icon": "🥊"
+          "label": "F1",
+          "icon": "🏎️"
         },
         {
           "type": "subcategory",
@@ -20671,5 +20696,217 @@
     }
   },
   "reminders": [],
-  "marquee_sport_weeks": {}
+  "marquee_sport_weeks": {
+    "2026-08-24": {
+      "MONDAY": {
+        "NBA": [],
+        "MLB": [
+          {
+            "title": "",
+            "event": "Red Sox @ Marlins",
+            "sport": "MLB",
+            "time": "6:40 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Cubs @ Diamondbacks",
+            "sport": "MLB",
+            "time": "9:40 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Phillies @ Mariners",
+            "sport": "MLB",
+            "time": "9:40 PM ET"
+          }
+        ]
+      },
+      "TUESDAY": {
+        "MLB": [
+          {
+            "title": "",
+            "event": "Dodgers @ Braves",
+            "sport": "MLB",
+            "time": "7:15 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Astros @ Yankees",
+            "sport": "MLB",
+            "time": "7:05 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Phillies @ Mariners",
+            "sport": "MLB",
+            "time": "9:40 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Cubs @ Diamondbacks",
+            "sport": "MLB",
+            "time": "9:40 PM ET"
+          }
+        ]
+      },
+      "WEDNESDAY": {
+        "MLB": [
+          {
+            "title": "",
+            "event": "Rays @ Tigers",
+            "sport": "MLB",
+            "time": "1:10 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Phillies @ Mariners",
+            "sport": "MLB",
+            "time": "4:10 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Dodgers @ Braves",
+            "sport": "MLB",
+            "time": "7:15 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Astros @ Yankees",
+            "sport": "MLB",
+            "time": "7:05 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Twins @ Athletics",
+            "sport": "MLB",
+            "time": "9:05 PM ET"
+          }
+        ]
+      },
+      "THURSDAY": {
+        "MLB": [
+          {
+            "title": "",
+            "event": "Rockies @ Nationals",
+            "sport": "MLB",
+            "time": "1:05 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Dodgers @ Braves",
+            "sport": "MLB",
+            "time": "7:15 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Astros @ Yankees",
+            "sport": "MLB",
+            "time": "7:05 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Diamondbacks @ Giants",
+            "sport": "MLB",
+            "time": "9:45 PM ET"
+          }
+        ]
+      },
+      "FRIDAY": {
+        "MLB": [
+          {
+            "title": "",
+            "event": "Reds @ Cubs",
+            "sport": "MLB",
+            "time": "2:20 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Red Sox @ Yankees",
+            "sport": "MLB",
+            "time": "7:15 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Mariners @ Blue Jays",
+            "sport": "MLB",
+            "time": "7:15 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Diamondbacks @ Giants",
+            "sport": "MLB",
+            "time": "10:15 PM ET"
+          }
+        ]
+      },
+      "SATURDAY": {
+        "MLB": [
+          {
+            "title": "",
+            "event": "Red Sox @ Yankees",
+            "sport": "MLB",
+            "time": "1:05 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Dodgers @ Tigers",
+            "sport": "MLB",
+            "time": "1:10 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Astros @ Mets",
+            "sport": "MLB",
+            "time": "4:10 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Red Sox @ Yankees",
+            "sport": "MLB",
+            "time": "7:15 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Rangers @ Brewers",
+            "sport": "MLB",
+            "time": "7:15 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Phillies @ Angels",
+            "sport": "MLB",
+            "time": "10:07 PM ET"
+          }
+        ]
+      },
+      "SUNDAY": {
+        "MLB": [
+          {
+            "title": "",
+            "event": "Marlins @ Nationals",
+            "sport": "MLB",
+            "time": "12:15 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Red Sox @ Yankees",
+            "sport": "MLB",
+            "time": "1:35 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Astros @ Mets",
+            "sport": "MLB",
+            "time": "3:10 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Reds @ Cubs",
+            "sport": "MLB",
+            "time": "7:20 PM ET"
+          }
+        ]
+      }
+    }
+  }
 }
