@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-08-24T17:15:11.331Z",
+  "updated": "2026-08-24T17:15:21.697Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -18589,6 +18589,21 @@
               "sport": "MLB",
               "item": "Astros @ Mets",
               "time": "4:10 PM ET"
+            }
+          ]
+        },
+        {
+          "name": "",
+          "items": [
+            {
+              "sport": "NFL",
+              "item": "Lions @ Colts",
+              "time": "1:00 PM ET"
+            },
+            {
+              "sport": "NFL",
+              "item": "Bears @ Titans",
+              "time": "6:00 PM ET"
             }
           ]
         }
