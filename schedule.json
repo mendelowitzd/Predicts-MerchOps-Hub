@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-08-24T16:36:25.266Z",
+  "updated": "2026-08-24T16:37:36.456Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -12452,6 +12452,61 @@
           "type": "subcategory",
           "label": "MLB",
           "icon": "⚾"
+        },
+        {
+          "type": "subcategory",
+          "label": "NFL",
+          "icon": "🏈"
+        },
+        {
+          "type": "subcategory",
+          "label": "Soccer",
+          "icon": "⚽"
+        },
+        {
+          "type": "subcategory",
+          "label": "WNBA",
+          "icon": "🏀"
+        },
+        {
+          "type": "subcategory",
+          "label": "Tennis",
+          "icon": "🎾"
+        },
+        {
+          "type": "subcategory",
+          "label": "CFB",
+          "icon": "🏈"
+        },
+        {
+          "type": "subcategory",
+          "label": "Esports",
+          "icon": "🎮"
+        },
+        {
+          "type": "category",
+          "label": "Culture",
+          "icon": "🎭"
+        },
+        {
+          "type": "category",
+          "label": "Crypto",
+          "icon": "₿"
+        },
+        {
+          "type": "category",
+          "label": "Commodities",
+          "icon": "🛢️"
+        },
+        {
+          "type": "category",
+          "label": "Financials",
+          "icon": "📈"
+        },
+        {
+          "type": "category",
+          "label": "Politics",
+          "icon": "🏛️"
         }
       ]
     }
