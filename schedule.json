@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-08-24T16:58:26.518Z",
+  "updated": "2026-08-24T16:59:26.953Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -19198,6 +19198,44 @@
           "event": "Phillies @ Angels",
           "sport": "MLB",
           "time": "10:07 PM ET"
+        }
+      ],
+      "SUNDAY": [
+        {
+          "title": "",
+          "event": "Brighton @ Chelsea",
+          "sport": "EPL",
+          "time": "9:00 AM ET"
+        },
+        {
+          "title": "",
+          "event": "Ipswich @ Man United",
+          "sport": "EPL",
+          "time": "11:30 AM ET"
+        },
+        {
+          "title": "",
+          "event": "Marlins @ Nationals",
+          "sport": "MLB",
+          "time": "12:15 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Red Sox @ Yankees",
+          "sport": "MLB",
+          "time": "1:35 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Astros @ Mets",
+          "sport": "MLB",
+          "time": "3:10 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Reds @ Cubs",
+          "sport": "MLB",
+          "time": "7:20 PM ET"
         }
       ]
     }
