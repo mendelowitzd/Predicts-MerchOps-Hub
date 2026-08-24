@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-08-24T17:14:52.746Z",
+  "updated": "2026-08-24T17:15:11.331Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -18397,6 +18397,31 @@
               "time": "9:45 PM ET"
             }
           ]
+        },
+        {
+          "name": "",
+          "items": [
+            {
+              "sport": "NFL",
+              "item": "Steelers @ Bills",
+              "time": "7:00 PM ET"
+            },
+            {
+              "sport": "NFL",
+              "item": "Patriots @ Browns",
+              "time": "8:00 PM ET"
+            },
+            {
+              "sport": "NFL",
+              "item": "49ers @ Raiders",
+              "time": "8:00 PM ET"
+            },
+            {
+              "sport": "NFL",
+              "item": "Rams @ Chargers",
+              "time": "10:00 PM ET"
+            }
+          ]
         }
       ],
       "FRIDAY": [
@@ -18452,6 +18477,61 @@
               "sport": "MLB",
               "item": "Pirates @ Cardinals",
               "time": "8:15 PM ET"
+            }
+          ]
+        },
+        {
+          "name": "",
+          "items": [
+            {
+              "sport": "NFL",
+              "item": "Commanders @ Ravens",
+              "time": "6:00 PM ET"
+            },
+            {
+              "sport": "NFL",
+              "item": "Falcons @ Dolphins",
+              "time": "7:00 PM ET"
+            },
+            {
+              "sport": "NFL",
+              "item": "Texans @ Panthers",
+              "time": "7:00 PM ET"
+            },
+            {
+              "sport": "NFL",
+              "item": "Giants @ Jets",
+              "time": "7:30 PM ET"
+            },
+            {
+              "sport": "NFL",
+              "item": "Buccaneers @ Jaguars",
+              "time": "7:30 PM ET"
+            },
+            {
+              "sport": "NFL",
+              "item": "Saints @ Cowboys",
+              "time": "8:00 PM ET"
+            },
+            {
+              "sport": "NFL",
+              "item": "Cardinals @ Packers",
+              "time": "8:00 PM ET"
+            },
+            {
+              "sport": "NFL",
+              "item": "Seahawks @ Chiefs",
+              "time": "8:00 PM ET"
+            },
+            {
+              "sport": "NFL",
+              "item": "Bengals @ Eagles",
+              "time": "8:00 PM ET"
+            },
+            {
+              "sport": "NFL",
+              "item": "Vikings @ Broncos",
+              "time": "9:00 PM ET"
             }
           ]
         }
