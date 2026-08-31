@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-08-31T14:58:23.728Z",
+  "updated": "2026-08-31T15:42:47.003Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -20205,6 +20205,176 @@
           "time": "7:20 PM ET"
         }
       ]
+    },
+    "2026-08-31": {
+      "MONDAY": [
+        {
+          "title": "",
+          "event": "Arsenal @ Aston Villa",
+          "sport": "EPL",
+          "time": "3:00 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Giants @ Braves",
+          "sport": "MLB",
+          "time": "6:05 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Brewers @ Cubs",
+          "sport": "MLB",
+          "time": "7:40 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Phillies @ Diamondbacks",
+          "sport": "MLB",
+          "time": "9:40 PM ET"
+        }
+      ],
+      "TUESDAY": [
+        {
+          "title": "",
+          "event": "Mariners @ Red Sox",
+          "sport": "MLB",
+          "time": "6:45 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Brewers @ Cubs",
+          "sport": "MLB",
+          "time": "7:40 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Cardinals @ Dodgers",
+          "sport": "MLB",
+          "time": "10:10 PM ET"
+        }
+      ],
+      "WEDNESDAY": [
+        {
+          "title": "",
+          "event": "Padres @ Reds",
+          "sport": "MLB",
+          "time": "12:40 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Mariners @ Red Sox",
+          "sport": "MLB",
+          "time": "4:10 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Brewers @ Cubs",
+          "sport": "MLB",
+          "time": "7:40 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Cardinals @ Dodgers",
+          "sport": "MLB",
+          "time": "10:10 PM ET"
+        }
+      ],
+      "THURSDAY": [
+        {
+          "title": "",
+          "event": "Giants @ Pirates",
+          "sport": "MLB",
+          "time": "12:35 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Brewers @ Cubs",
+          "sport": "MLB",
+          "time": "7:15 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Colorado @ Georgia Tech",
+          "sport": "CFB",
+          "time": "8:00 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Cardinals @ Dodgers",
+          "sport": "MLB",
+          "time": "10:10 PM ET"
+        }
+      ],
+      "FRIDAY": [
+        {
+          "title": "",
+          "event": "Tigers @ Guardians",
+          "sport": "MLB",
+          "time": "2:10 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Liverpool @ Ipswich",
+          "sport": "EPL",
+          "time": "3:00 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Braves @ Phillies",
+          "sport": "MLB",
+          "time": "6:40 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Miami @ Stanford",
+          "sport": "CFB",
+          "time": "9:00 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Fresno St @ USC",
+          "sport": "CFB",
+          "time": "9:00 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Yankees @ Padres",
+          "sport": "MLB",
+          "time": "9:40 PM ET"
+        }
+      ],
+      "SATURDAY": [
+        {
+          "title": "",
+          "event": "Bournemouth @ Newcastle",
+          "sport": "EPL",
+          "time": "7:30 AM ET"
+        },
+        {
+          "title": "",
+          "event": "East Carolina @ Alabama",
+          "sport": "CFB",
+          "time": "12:00 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Baylor @ Auburn",
+          "sport": "CFB",
+          "time": "3:30 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Clemson @ LSU",
+          "sport": "CFB",
+          "time": "7:30 PM ET"
+        },
+        {
+          "title": "",
+          "event": "UCLA @ California",
+          "sport": "CFB",
+          "time": "10:30 PM ET"
+        }
+      ]
     }
   },
   "sportstabs_weeks": {
@@ -21846,6 +22016,197 @@
             "event": "Reds @ Cubs",
             "sport": "MLB",
             "time": "7:20 PM ET"
+          }
+        ]
+      }
+    },
+    "2026-08-31": {
+      "MONDAY": {
+        "NBA": [],
+        "MLB": [
+          {
+            "title": "",
+            "event": "Giants @ Braves",
+            "sport": "MLB",
+            "time": "6:05 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Brewers @ Cubs",
+            "sport": "MLB",
+            "time": "7:40 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Phillies @ Diamondbacks",
+            "sport": "MLB",
+            "time": "9:40 PM ET"
+          }
+        ]
+      },
+      "TUESDAY": {
+        "MLB": [
+          {
+            "title": "",
+            "event": "Mariners @ Red Sox",
+            "sport": "MLB",
+            "time": "6:45 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Brewers @ Cubs",
+            "sport": "MLB",
+            "time": "7:40 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Cardinals @ Dodgers",
+            "sport": "MLB",
+            "time": "10:10 PM ET"
+          }
+        ]
+      },
+      "WEDNESDAY": {
+        "MLB": [
+          {
+            "title": "",
+            "event": "Padres @ Reds",
+            "sport": "MLB",
+            "time": "12:40 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Mariners @ Red Sox",
+            "sport": "MLB",
+            "time": "4:10 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Brewers @ Cubs",
+            "sport": "MLB",
+            "time": "7:40 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Cardinals @ Dodgers",
+            "sport": "MLB",
+            "time": "10:10 PM ET"
+          }
+        ]
+      },
+      "THURSDAY": {
+        "MLB": [
+          {
+            "title": "",
+            "event": "Giants @ Pirates",
+            "sport": "MLB",
+            "time": "12:35 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Brewers @ Cubs",
+            "sport": "MLB",
+            "time": "7:15 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Cardinals @ Dodgers",
+            "sport": "MLB",
+            "time": "10:10 PM ET"
+          }
+        ]
+      },
+      "FRIDAY": {
+        "MLB": [
+          {
+            "title": "",
+            "event": "Tigers @ Guardians",
+            "sport": "MLB",
+            "time": "2:10 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Braves @ Phillies",
+            "sport": "MLB",
+            "time": "6:40 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Yankees @ Padres",
+            "sport": "MLB",
+            "time": "9:40 PM ET"
+          }
+        ]
+      },
+      "SATURDAY": {
+        "MLB": [
+          {
+            "title": "",
+            "event": "Cubs @ Marlins",
+            "sport": "MLB",
+            "time": "4:10 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Yankees @ Padres",
+            "sport": "MLB",
+            "time": "7:15 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Diamondbacks @ Astros",
+            "sport": "MLB",
+            "time": "7:15 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Nationals @ Dodgers",
+            "sport": "MLB",
+            "time": "9:10 PM ET"
+          }
+        ],
+        "CFB": [
+          {
+            "title": "",
+            "event": "East Carolina @ Alabama",
+            "sport": "CFB",
+            "time": "12:00 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Oregon St @ Houston",
+            "sport": "CFB",
+            "time": "12:00 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Baylor @ Auburn",
+            "sport": "CFB",
+            "time": "3:30 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Boise St @ Oregon",
+            "sport": "CFB",
+            "time": "3:30 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Clemson @ LSU",
+            "sport": "CFB",
+            "time": "7:30 PM ET"
+          },
+          {
+            "title": "",
+            "event": "FAU @ Florida",
+            "sport": "CFB",
+            "time": "7:45 PM ET"
+          },
+          {
+            "title": "",
+            "event": "UCLA @ California",
+            "sport": "CFB",
+            "time": "10:30 PM ET"
           }
         ]
       }
