@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "updated": "2026-08-31T15:42:47.003Z",
+  "updated": "2026-08-31T15:44:18.490Z",
   "weeks": {
     "2026-05-25": {
       "MONDAY": [
@@ -20374,6 +20374,50 @@
           "sport": "CFB",
           "time": "10:30 PM ET"
         }
+      ],
+      "SUNDAY": [
+        {
+          "title": "",
+          "event": "Braves @ Phillies",
+          "sport": "MLB",
+          "time": "1:10 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Washington St @ Washington",
+          "sport": "CFB",
+          "time": "4:00 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Louisville @ Ole Miss",
+          "sport": "CFB",
+          "time": "7:30 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Wisconsin @ Notre Dame",
+          "sport": "CFB",
+          "time": "7:30 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Twins @ White Sox",
+          "sport": "MLB",
+          "time": "6:20 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Nationals @ Dodgers",
+          "sport": "MLB",
+          "time": "10:10 PM ET"
+        },
+        {
+          "title": "",
+          "event": "Man United @ Everton",
+          "sport": "EPL",
+          "time": "9:00 AM ET"
+        }
       ]
     }
   },
@@ -22136,6 +22180,14 @@
             "sport": "MLB",
             "time": "9:40 PM ET"
           }
+        ],
+        "EPL": [
+          {
+            "title": "",
+            "event": "Liverpool @ Ipswich",
+            "sport": "EPL",
+            "time": "3:00 PM ET"
+          }
         ]
       },
       "SATURDAY": {
@@ -22207,6 +22259,88 @@
             "event": "UCLA @ California",
             "sport": "CFB",
             "time": "10:30 PM ET"
+          }
+        ],
+        "EPL": [
+          {
+            "title": "",
+            "event": "Bournemouth @ Newcastle",
+            "sport": "EPL",
+            "time": "7:30 AM ET"
+          },
+          {
+            "title": "",
+            "event": "Spurs @ Nottm Forest",
+            "sport": "EPL",
+            "time": "10:00 AM ET"
+          },
+          {
+            "title": "",
+            "event": "Aston Villa @ Hull",
+            "sport": "EPL",
+            "time": "12:30 PM ET"
+          }
+        ]
+      },
+      "SUNDAY": {
+        "MLB": [
+          {
+            "title": "",
+            "event": "Braves @ Phillies",
+            "sport": "MLB",
+            "time": "1:10 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Yankees @ Padres",
+            "sport": "MLB",
+            "time": "4:10 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Twins @ White Sox",
+            "sport": "MLB",
+            "time": "6:20 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Nationals @ Dodgers",
+            "sport": "MLB",
+            "time": "10:10 PM ET"
+          }
+        ],
+        "CFB": [
+          {
+            "title": "",
+            "event": "Washington St @ Washington",
+            "sport": "CFB",
+            "time": "4:00 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Louisville @ Ole Miss",
+            "sport": "CFB",
+            "time": "7:30 PM ET"
+          },
+          {
+            "title": "",
+            "event": "Wisconsin @ Notre Dame",
+            "sport": "CFB",
+            "time": "7:30 PM ET"
+          }
+        ],
+        "EPL": [
+          {
+            "title": "",
+            "event": "Man United @ Everton",
+            "sport": "EPL",
+            "time": "9:00 AM ET"
+          },
+          {
+            "title": "",
+            "event": "Chelsea @ Arsenal",
+            "sport": "EPL",
+            "time": "11:30 AM ET"
           }
         ]
       }
